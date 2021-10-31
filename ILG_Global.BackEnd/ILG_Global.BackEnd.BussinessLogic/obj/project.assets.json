@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\hesham.salem\\.nuget\\packages\\": {}
+    "C:\\Users\\sheriff.kurdi.ILG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+      "projectUniqueName": "D:\\ILG_Projects\\dd\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
       "projectName": "ILG_Global.BackEnd.BussinessLogic",
-      "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
-      "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
+      "projectPath": "D:\\ILG_Projects\\dd\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+      "packagesPath": "C:\\Users\\sheriff.kurdi.ILG\\.nuget\\packages\\",
+      "outputPath": "D:\\ILG_Projects\\dd\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sheriff.kurdi.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FSUS/fsZSRI9cwl27KLR+hhoAdlNDvlyfuQK6yeU+nUj+MI4p5pgGwEAYLC3RMkjdKKJlr/+1X25RSLdDq0kpQ==",
+  "dgSpecHash": "QHZSmib7ZOACyPOrlUa418M0qpKHdXAUcHOOJ4fleOjuVI3PSeQX/4rOlaMfEcWfbTladxacyDWqw88Yvwqk7Q==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+  "projectFilePath": "D:\\ILG_Projects\\dd\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
