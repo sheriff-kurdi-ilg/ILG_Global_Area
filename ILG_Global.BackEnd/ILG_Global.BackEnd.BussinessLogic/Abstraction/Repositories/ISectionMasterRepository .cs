@@ -13,7 +13,7 @@ namespace ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories
         Task<IEnumerable<SectionMaster>> SelectAll();
         Task UpdateById(SectionMaster entity);
         Task Insert(SectionMaster entity);
-        Task DeleteById(string Id);
+        Task DeleteById(int Id);
         Task SaveSectionMaster(SectionMaster entity);
     }
 }
