@@ -34,7 +34,7 @@ namespace ILG_Global.BackEnd.DataAccess
             return await _context.SectionMasters.FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
-        public async Task DeleteById(string Id)
+        public async Task DeleteById(int Id)
         {
             SectionMaster SectionMaster = await _context.SectionMasters.FindAsync(Id);
             _context.SectionMasters.Remove(SectionMaster);

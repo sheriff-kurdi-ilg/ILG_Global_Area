@@ -1,5 +1,7 @@
 using ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BackEnd.BussinessLogic.Abstraction.Services;
 using ILG_Global.BackEnd.DataAccess;
+using ILG_Global.BackEnd.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -32,6 +34,11 @@ namespace ILG_Global.BackEnd.Web
             services.AddScoped<ISectionDetailRepository, SectionDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
             services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
+
+            services.AddScoped<IImageDetailService, ImageDetailService>();
+            services.AddScoped<ISectionDetailService, SectionDetailService>();
+            services.AddScoped<IImageMasterService, ImageMasterService>();
+            services.AddScoped<ISectionMasterService, SectionMasterService>();
 
 
         }

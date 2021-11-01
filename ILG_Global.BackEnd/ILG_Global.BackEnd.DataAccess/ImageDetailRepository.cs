@@ -34,7 +34,7 @@ namespace ILG_Global.BackEnd.DataAccess
             return await _context.ImageDetails.FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
-        public async Task DeleteById(string Id)
+        public async Task DeleteById(int Id)
         {
             ImageDetail ImageDetail = await _context.ImageDetails.FindAsync(Id);
             _context.ImageDetails.Remove(ImageDetail);

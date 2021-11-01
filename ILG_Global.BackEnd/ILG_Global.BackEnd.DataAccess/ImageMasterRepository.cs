@@ -34,7 +34,7 @@ namespace ILG_Global.BackEnd.DataAccess
             return await _context.ImageMasters.FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
-        public async Task DeleteById(string Id)
+        public async Task DeleteById(int Id)
         {
             ImageMaster ImageMaster = await _context.ImageMasters.FindAsync(Id);
             _context.ImageMasters.Remove(ImageMaster);
