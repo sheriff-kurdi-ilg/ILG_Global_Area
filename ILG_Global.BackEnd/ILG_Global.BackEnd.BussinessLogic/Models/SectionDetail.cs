@@ -13,9 +13,9 @@ namespace ILG_Global.BackEnd.BussinessLogic.Models
         public string LanguageCode { get; set; }
 
 
-        [ForeignKey("Master")]
-        public int MasterID { get; set; }
-        public SectionMaster Master { get; set; }
+        [ForeignKey("SectionMaster")]
+        public int SectionMasterID { get; set; }
+        public SectionMaster SectionMaster { get; set; }
 
         public string SectionTitle { get; set; }
         public string Title { get; set; }

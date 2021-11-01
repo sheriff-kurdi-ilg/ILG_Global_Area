@@ -11,9 +11,9 @@ namespace ILG_Global.BackEnd.BussinessLogic.Models
     {
         public int ID { get; set; }
 
-        [ForeignKey("Section")]
-        public int SectionID { get; set; }
-        public SectionDetail Section { get; set; }
+        [ForeignKey("SectionMaster")]
+        public int SectionMasterID { get; set; }
+        public SectionMaster SectionMaster { get; set; }
         public int Width { get; set; }
 
         public int Height { get; set; }

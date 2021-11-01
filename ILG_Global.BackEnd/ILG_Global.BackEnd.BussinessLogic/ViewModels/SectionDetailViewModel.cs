@@ -13,5 +13,6 @@ namespace ILG_Global.BackEnd.BussinessLogic.ViewModels
         public string SectionTitle { get; set; }
         public string Title { get; set; }
         public string Summary { get; set; }
+        public int SectionMasterID { get; set; }
     }
 }

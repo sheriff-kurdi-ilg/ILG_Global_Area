@@ -11,21 +11,17 @@ namespace ILG_Global.BackEnd.BussinessLogic.Models
     {
         public int ID { get; set; }
 
-        [ForeignKey("Master")]
-        public int ImageID { get; set; }
-        public ImageMaster Master { get; set; } 
+        [ForeignKey("Language")]
+        public int LanguageCode { get; set; }
+        public Language Language  { get; set; }
 
-        
-        [ForeignKey("Section")]
-        public int SectionID { get; set; }
-        public SectionDetail Section { get; set; }
-
+        [ForeignKey("ImageMaster")]
+        public int ImageMasterID { get; set; }
+        public ImageMaster ImageMaster { get; set; } 
 
 
 
         public string Name  { get; set; }
-
-        public string LanguageCode { get; set; }
 
         public string  Title { get; set; }
 
