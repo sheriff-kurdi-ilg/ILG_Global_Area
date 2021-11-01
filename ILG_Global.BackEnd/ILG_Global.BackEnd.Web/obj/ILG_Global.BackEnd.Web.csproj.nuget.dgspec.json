@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {}
+    "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
+    "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+        "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
         "projectName": "ILG_Global.BackEnd.BussinessLogic",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
-        "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
+        "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+        "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
+        "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,21 +57,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
+    "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
+        "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
         "projectName": "ILG_Global.BackEnd.DataAccess",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
-        "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\obj\\",
+        "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
+        "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,8 +88,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
-                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj"
+              "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
+                "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj"
               }
             }
           }
@@ -118,21 +124,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {
+    "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
+        "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
         "projectName": "ILG_Global.BackEnd.Web",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
-        "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\obj\\",
+        "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
+        "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
+        "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -146,8 +155,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
-                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj"
+              "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
+                "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj"
               }
             }
           }
@@ -201,7 +210,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
