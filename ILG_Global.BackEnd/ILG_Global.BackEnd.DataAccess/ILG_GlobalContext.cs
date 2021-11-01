@@ -18,5 +18,6 @@ namespace ILG_Global.BackEnd.DataAccess
         public DbSet<ImageMaster> ImageMasters { get; set; }
         public DbSet<SectionDetail> SectionDetails { get; set; }
         public DbSet<SectionMaster> SectionMasters { get; set; }
+        public DbSet<ImageDetail> ImageDetails { get; set; }
     }
 }
