@@ -1,4 +1,9 @@
-ILG_Global.BackEnd\.vs\
+
 ILG_Global.BackEnd\ILG_Global.BackEnd.Web\bin\
 ILG_Global.BackEnd\ILG_Global.BackEnd.Web\obj\
 ILG_Global.FrontEnd\node_modules\
+ILG_Global.BackEnd\ILG_Global.BackEnd.Web\bin
+ILG_Global.BackEnd/.gitignore.
+ILG_Global.BackEnd/.vs/ILG_Global.BackEnd/DesignTimeBuild/.dtbcache.v2
+ILG_Global.BackEnd/.vs/ILG_Global.BackEnd/DesignTimeBuild/.dtbcache.v2
+ILG_Global.BackEnd\.vs\
