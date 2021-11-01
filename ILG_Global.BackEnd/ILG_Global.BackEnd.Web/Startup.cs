@@ -1,3 +1,4 @@
+using ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BackEnd.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,6 +28,11 @@ namespace ILG_Global.BackEnd.Web
         {
             services.AddRazorPages();
             services.AddDbContext<ILG_GlobalContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ILG_GlobalConnectionString")));
+            services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
+            services.AddScoped<ISectionDetailRepository, SectionDetailRepository>();
+            services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
+            services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
+
 
         }
 
