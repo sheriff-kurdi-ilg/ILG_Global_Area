@@ -10,7 +10,7 @@ namespace ILG_Global.BackEnd.BussinessLogic.ViewModels
     {
         public int ID { get; set; }
         public int Width { get; set; }
-
+        public int SectionMasterID { get; set; }
         public int Height { get; set; }
         public bool IsEnabled { get; set; }
     }
