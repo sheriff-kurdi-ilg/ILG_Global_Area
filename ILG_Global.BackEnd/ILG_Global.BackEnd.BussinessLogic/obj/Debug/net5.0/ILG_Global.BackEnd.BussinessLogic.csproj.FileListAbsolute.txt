@@ -1,0 +1,12 @@
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\bin\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.deps.json
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\bin\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.dll
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\bin\Debug\net5.0\ref\ILG_Global.BackEnd.BussinessLogic.dll
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\bin\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.pdb
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.csproj.AssemblyReference.cache
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.AssemblyInfoInputs.cache
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.AssemblyInfo.cs
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.csproj.CoreCompileInputs.cache
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.dll
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ref\ILG_Global.BackEnd.BussinessLogic.dll
+D:\Projects\Bussiness\ILG_Global\ILG_Global.BackEnd\ILG_Global.BackEnd.BussinessLogic\obj\Debug\net5.0\ILG_Global.BackEnd.BussinessLogic.pdb
