@@ -26,12 +26,12 @@ namespace ILG_Global.BackEnd.DataAccess
 
         public async Task<IEnumerable<SectionDetail>> SelectAll()
         {
-            return await _context.SectionDetails.ToListAsync();
+            return await _context.SectionDetails.Include(c => c.SectionMaster).ToListAsync();
         }
 
         public async Task<SectionDetail> SelectById(int Id)
         {
-            return await _context.SectionDetails.FirstOrDefaultAsync(ow => ow.ID == Id);
+            return await _context.SectionDetails.Include(c=>c.SectionMaster).FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
         public async Task DeleteById(int Id)

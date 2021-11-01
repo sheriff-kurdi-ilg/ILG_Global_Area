@@ -26,12 +26,12 @@ namespace ILG_Global.BackEnd.DataAccess
 
         public async Task<IEnumerable<ImageDetail>> SelectAll()
         {
-            return await _context.ImageDetails.ToListAsync();
+            return await _context.ImageDetails.Include(c=>c.ImageMaster).Include(c=>c.Language).ToListAsync();
         }
 
         public async Task<ImageDetail> SelectById(int Id)
         {
-            return await _context.ImageDetails.FirstOrDefaultAsync(ow => ow.ID == Id);
+            return await _context.ImageDetails.Include(c => c.ImageMaster).Include(c => c.Language).FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
         public async Task DeleteById(int Id)
