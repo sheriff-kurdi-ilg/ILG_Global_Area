@@ -13,7 +13,7 @@ namespace ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories
         Task<IEnumerable<ImageDetail>> SelectAll();
         Task UpdateById(ImageDetail entity);
         Task Insert(ImageDetail entity);
-        Task DeleteById(string Id);
+        Task DeleteById(int Id);
         Task SaveImageDetail(ImageDetail entity);
     }
 }

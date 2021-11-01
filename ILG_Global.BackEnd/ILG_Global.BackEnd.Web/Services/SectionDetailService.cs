@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.BackEnd.Web.Services
 {
-    public class SectionService : ISectionService
+    public class SectionDetailService : ISectionDetailService
     {
         private readonly ISectionDetailRepository oSectionDetailRepository;
 
-        public SectionService(ISectionDetailRepository oSectionDetailRepository)
+        public SectionDetailService(ISectionDetailRepository oSectionDetailRepository)
         {
             this.oSectionDetailRepository = oSectionDetailRepository;
         }

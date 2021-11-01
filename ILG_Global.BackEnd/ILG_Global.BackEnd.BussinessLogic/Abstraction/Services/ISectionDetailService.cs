@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.BackEnd.BussinessLogic.Abstraction.Services
 {
-    public interface ISectionService
+    public interface ISectionDetailService
     {
         Task<SectionDetailViewModel> SelectByIdAsync(int nID);
         Task<List<SectionDetailViewModel>> SelectAllAsync();
