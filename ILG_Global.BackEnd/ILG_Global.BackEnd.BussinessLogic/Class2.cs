@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.BackEnd.BussinessLogic
 {
-    class Class1
+    class Class2
     {
-        public int MyProperty { get; set; }
-        public int MyProperty2 { get; set; }
+        public Class2()
+        {
+            Class1 oClass1 = new Class1();
+        }
     }
 }
