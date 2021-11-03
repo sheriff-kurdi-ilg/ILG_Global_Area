@@ -5,9 +5,14 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global.BackEnd.Web", "ILG_Global.BackEnd.Web\ILG_Global.BackEnd.Web.csproj", "{E3829359-CBD1-49ED-B45F-77FBA5616528}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILG_Global.BackEnd.DataAccess", "ILG_Global.BackEnd.DataAccess\ILG_Global.BackEnd.DataAccess.csproj", "{1D8BA5D7-0DCC-4041-AB84-E2BFB8C3EB5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global.BackEnd.DataAccess", "ILG_Global.BackEnd.DataAccess\ILG_Global.BackEnd.DataAccess.csproj", "{1D8BA5D7-0DCC-4041-AB84-E2BFB8C3EB5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILG_Global.BackEnd.BussinessLogic", "ILG_Global.BackEnd.BussinessLogic\ILG_Global.BackEnd.BussinessLogic.csproj", "{BC525995-83B1-457C-AD8D-B77D612BADFD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global.BackEnd.BussinessLogic", "ILG_Global.BackEnd.BussinessLogic\ILG_Global.BackEnd.BussinessLogic.csproj", "{BC525995-83B1-457C-AD8D-B77D612BADFD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{5B3C32FF-F93D-4998-8A7B-3229A9276E79}"
+	ProjectSection(SolutionItems) = preProject
+		Web.txt = Web.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
