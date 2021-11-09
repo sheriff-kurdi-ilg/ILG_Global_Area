@@ -151,3 +151,9 @@ D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.dll
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ref\ILG_Global.Web.dll
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.pdb
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.genruntimeconfig.cache
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_ContactUs.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_Footer.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_LeaderBoard.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_NavigationBar.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_OurServices.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_SuccessStories.cshtml.g.cs

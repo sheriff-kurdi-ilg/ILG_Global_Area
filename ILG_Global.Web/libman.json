@@ -2,9 +2,16 @@
   "version": "1.0",
   "defaultProvider": "cdnjs",
   "libraries": [
+
     {
+      "provider": "jsdelivr",
+      "library": "@popperjs/core@2.10.2",
+      "destination": "wwwroot/lib/popperjs/core/"
+    },
+    {
+      "provider": "jsdelivr",
       "library": "bootstrap@5.1.3",
-      "destination": "wwwroot/Assets/Plugins/bootstrap/"
+      "destination": "wwwroot/lib/bootstrap/"
     }
   ]
 }
