@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ILG_Global.Web/1.0.0": {
         "dependencies": {
+          "ILG_Global.BussinessLogic": "1.0.0",
           "ILG_Global.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "Newtonsoft.Json": "13.0.1",

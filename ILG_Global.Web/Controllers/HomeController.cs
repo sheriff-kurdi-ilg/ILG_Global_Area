@@ -27,7 +27,10 @@ namespace ILG_Global.BackEnd.Web.Controllers
         public async Task<ActionResult> Index()
         {
             HomePageVM oHomePageVM = new HomePageVM();
+
             oHomePageVM.LeaderBoardHTML = await oLeaderBoardHTMLCreate();
+
+
              // await vSetLeaderBoardModel();
 
 

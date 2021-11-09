@@ -35,7 +35,10 @@ namespace ILG_Global.BackEnd.Web
             // services.AddRazorPages();
             services.AddMvc();
 
-            services.AddDbContext<ILG_GlobalContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("ILG_GlobalConnectionString")));
+            services.AddDbContext<ILG_GlobalContext>(opt => opt.UseSqlServer(
+                Configuration.GetConnectionString("ILG_GlobalConnectionString")));
+
+            services.AddScoped<IHtmlContentDetailRepository, HtmlContentDetailRepository>();
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<ISectionDetailRepository, SectionDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
