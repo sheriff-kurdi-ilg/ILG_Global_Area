@@ -7,6 +7,9 @@ namespace ILG_Global.BussinessLogic.Models
     {
         [Key]
         public int HtmlContentID { get; set; }
+        [ForeignKey("HtmlContentID")]
+        public HtmlContentMaster HtmlContentMaster { get; set; }
+
         public string LanguageCode { get; set; }
         [ForeignKey("LanguageCode")]
         public Language Language { get; set; }
@@ -16,7 +19,6 @@ namespace ILG_Global.BussinessLogic.Models
         public string Description { get; set; }
         public int HtmlContentMasterID { get; set; }
 
-        [ForeignKey("HtmlContentMasterID")]
-        public HtmlContentMaster HtmlContentMaster { get; set; }
+ 
     }
 }

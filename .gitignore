@@ -24,3 +24,6 @@ ILG_Global.BussinessLogic/Models/HtmlContentDetail.cs
 *.pdb
 *.cache
 *.cache
+*.cache
+*.cache
+.vs/ILG_Global/v16/.suo
