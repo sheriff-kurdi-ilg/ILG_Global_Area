@@ -18,3 +18,9 @@ ILG_Global.Web/obj/Debug/net5.0/ILG_Global.Web.GeneratedMSBuildEditorConfig.edit
 ILG_Global.Web/obj/Debug/net5.0/project.razor.json
 .vs/ILG_Global/v16/.suo
 .vs/ILG_Global/v16/.suo
+.vs/ILG_Global/v16/.suo
+ILG_Global.BussinessLogic/bin/Debug/net5.0/ILG_Global.BussinessLogic.pdb
+ILG_Global.BussinessLogic/Models/HtmlContentDetail.cs
+*.pdb
+*.cache
+*.cache
