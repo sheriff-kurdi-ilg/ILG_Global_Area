@@ -1,19 +1,13 @@
 
-/ILG_Global.Web/bin/
-/ILG_Global.Web/obj/
+ILG_Global.Web/bin/
+ILG_Global.Web/obj/
 ILG_Global.FrontEnd/node_modules/
-/.vs/
-/ILG_Global.BussinessLogic/bin/
-/ILG_Global.BussinessLogic/obj/
-/ILG_Global.DataAccess/bin/
-/ILG_Global.DataAccess/obj/
+.vs/
+ILG_Global.BussinessLogic/bin/
+ILG_Global.BussinessLogic/obj/
+ILG_Global.DataAccess/bin/
+ILG_Global.DataAccess/obj/
 
 *.dll
-ILG_Global.BussinessLogic/obj/Debug/net5.0/ILG_Global.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
-ILG_Global.BussinessLogic/obj/Debug/net5.0/ILG_Global.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
-ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-ILG_Global.Web/obj/Debug/net5.0/ILG_Global.Web.csproj.AssemblyReference.cache
-ILG_Global.Web/obj/Debug/net5.0/ILG_Global.Web.GeneratedMSBuildEditorConfig.editorconfig
-ILG_Global.Web/obj/Debug/net5.0/project.razor.json
 *.cache
 *.pdb
