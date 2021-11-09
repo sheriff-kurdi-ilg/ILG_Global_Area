@@ -25,14 +25,14 @@ namespace ILG_Global.DataAccess
             await _context.SectionDetails.AddAsync(entity);
         }
 
-        public async Task<IEnumerable<SectionDetail>> SelectAll()
+        public async Task<IEnumerable<SectionDetail>> SelectAll(string sLanguageCode)
         {
-            return await _context.SectionDetails.Include(c => c.SectionMaster).ToListAsync();
+            return await _context.SectionDetails.Where(m=>m.LanguageCode == sLanguageCode).Include(c => c.SectionMaster).ToListAsync();
         }
 
-        public async Task<SectionDetail> SelectById(int Id)
+        public async Task<SectionDetail> SelectById(int Id, string sLanguageCode)
         {
-            return await _context.SectionDetails.Include(c=>c.SectionMaster).FirstOrDefaultAsync(ow => ow.ID == Id);
+            return await _context.SectionDetails.Where(m=>m.LanguageCode == sLanguageCode).Include(c=>c.SectionMaster).FirstOrDefaultAsync(ow => ow.ID == Id);
         }
 
         public async Task DeleteById(int Id)

@@ -4,10 +4,10 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.BussinessLogic.Abstraction.Repositories
 {
-    public interface ISectionDetailRepository
+    public interface x_ISectionDetailRepository
     {
-        Task<SectionDetail> SelectById(int id);
-        Task<IEnumerable<SectionDetail>> SelectAll();
+        Task<SectionDetail> SelectById(int id, string sLanguageCode);
+        Task<IEnumerable<SectionDetail>> SelectAll( string sLanguageCode);
         Task UpdateById(SectionDetail entity);
         Task Insert(SectionDetail entity);
         Task DeleteById(int Id);

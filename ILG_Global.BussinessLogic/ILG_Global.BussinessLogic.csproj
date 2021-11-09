@@ -4,4 +4,9 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Abstraction\Repositories\x_ISectionDetailRepository.cs" />
+    <Compile Remove="Abstraction\Repositories\x_ISectionMasterRepository .cs" />
+  </ItemGroup>
+
 </Project>

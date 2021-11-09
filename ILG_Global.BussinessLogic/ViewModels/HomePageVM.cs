@@ -9,6 +9,10 @@ namespace ILG_Global.BussinessLogic.ViewModels
 {
     public class HomePageVM
     {
-        public HtmlContentDetail LeaderBoardHTML { get; set; }
+        public HtmlContentDetail LeaderBoardHtmlContentDetail { get; set; }
+
+        public HtmlContentDetail OurServiceHtmlContentDetail { get; set; }
+     
+
     }
 }

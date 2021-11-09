@@ -2,7 +2,7 @@
 
 namespace ILG_Global.DataAccess.Migrations
 {
-    public partial class AddForignKeys4 : Migration
+    public partial class AddForignKeys1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

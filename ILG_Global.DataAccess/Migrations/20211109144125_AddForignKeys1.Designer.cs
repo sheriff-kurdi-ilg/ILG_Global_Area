@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    [Migration("20211109134438_AddForignKeys4")]
-    partial class AddForignKeys4
+    [Migration("20211109144125_AddForignKeys1")]
+    partial class AddForignKeys1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,9 +24,7 @@ namespace ILG_Global.DataAccess.Migrations
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.HtmlContentDetail", b =>
                 {
                     b.Property<int>("HtmlContentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -47,8 +45,6 @@ namespace ILG_Global.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HtmlContentID");
-
-                    b.HasIndex("HtmlContentMasterID");
 
                     b.HasIndex("LanguageCode");
 
@@ -239,7 +235,7 @@ namespace ILG_Global.DataAccess.Migrations
                 {
                     b.HasOne("ILG_Global.BussinessLogic.Models.HtmlContentMaster", "HtmlContentMaster")
                         .WithMany("HtmlContentDetails")
-                        .HasForeignKey("HtmlContentMasterID")
+                        .HasForeignKey("HtmlContentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

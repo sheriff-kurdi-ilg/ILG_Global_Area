@@ -22,9 +22,7 @@ namespace ILG_Global.DataAccess.Migrations
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.HtmlContentDetail", b =>
                 {
                     b.Property<int>("HtmlContentID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
 
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
@@ -45,8 +43,6 @@ namespace ILG_Global.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("HtmlContentID");
-
-                    b.HasIndex("HtmlContentMasterID");
 
                     b.HasIndex("LanguageCode");
 
@@ -237,7 +233,7 @@ namespace ILG_Global.DataAccess.Migrations
                 {
                     b.HasOne("ILG_Global.BussinessLogic.Models.HtmlContentMaster", "HtmlContentMaster")
                         .WithMany("HtmlContentDetails")
-                        .HasForeignKey("HtmlContentMasterID")
+                        .HasForeignKey("HtmlContentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

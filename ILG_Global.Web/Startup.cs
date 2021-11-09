@@ -1,7 +1,6 @@
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.DataAccess;
-using ILG_Global.BackEnd.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -18,7 +17,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
 
-namespace ILG_Global.BackEnd.Web
+namespace ILG_Global.Web
 {
     public class Startup
     {
@@ -40,14 +39,13 @@ namespace ILG_Global.BackEnd.Web
 
             services.AddScoped<IHtmlContentDetailRepository, HtmlContentDetailRepository>();
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
-            services.AddScoped<ISectionDetailRepository, SectionDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
-            services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
+            //services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
 
-            services.AddScoped<IImageDetailService, ImageDetailService>();
-            services.AddScoped<ISectionDetailService, SectionDetailService>();
-            services.AddScoped<IImageMasterService, ImageMasterService>();
-            services.AddScoped<ISectionMasterService, SectionMasterService>();
+            //services.AddScoped<IImageDetailService, ImageDetailService>();
+            //services.AddScoped<ISectionDetailService, SectionDetailService>();
+            //services.AddScoped<IImageMasterService, ImageMasterService>();
+            //services.AddScoped<ISectionMasterService, SectionMasterService>();
 
             services.AddSwaggerGen();
 

@@ -1,4 +1,5 @@
-﻿using ILG_Global.BussinessLogic.Models;
+﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
@@ -8,16 +9,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.Web.Controllers
+namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
        
         #region DI
+     
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
-        public HomeController(IHtmlContentDetailRepository htmlContentDetailRepository)
+        public HomeController(
+
+            IHtmlContentDetailRepository sectionDetailRepository)
         {
-            HtmlContentDetailRepository = htmlContentDetailRepository;
+
+            HtmlContentDetailRepository = sectionDetailRepository;
         }
 
         #endregion
@@ -28,7 +33,7 @@ namespace ILG_Global.BackEnd.Web.Controllers
         {
             HomePageVM oHomePageVM = new HomePageVM();
 
-            oHomePageVM.LeaderBoardHTML = await oLeaderBoardHTMLCreate();
+            oHomePageVM.LeaderBoardHtmlContentDetail= await oLeaderBoardHTMLCreate();
 
 
              // await vSetLeaderBoardModel();
@@ -39,7 +44,7 @@ namespace ILG_Global.BackEnd.Web.Controllers
 
         private async Task<HtmlContentDetail> oLeaderBoardHTMLCreate()
         {
-            HtmlContentDetail oHtmlContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(1);
+            HtmlContentDetail oHtmlContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(1,"en");
 
             return oHtmlContentDetail;
         }

@@ -1,0 +1,5 @@
+D:\ILG_Projects\ILG_Global\ILG_Global.BussinessLogic\obj\Debug\net5.0\ILG_Global.BussinessLogic.csproj.AssemblyReference.cache
+D:\ILG_Projects\ILG_Global\ILG_Global.BussinessLogic\obj\Debug\net5.0\ILG_Global.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\ILG_Projects\ILG_Global\ILG_Global.BussinessLogic\obj\Debug\net5.0\ILG_Global.BussinessLogic.AssemblyInfoInputs.cache
+D:\ILG_Projects\ILG_Global\ILG_Global.BussinessLogic\obj\Debug\net5.0\ILG_Global.BussinessLogic.AssemblyInfo.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.BussinessLogic\obj\Debug\net5.0\ILG_Global.BussinessLogic.csproj.CoreCompileInputs.cache

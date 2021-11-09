@@ -6,7 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.Web.Pages
+namespace ILG_Global.Web.Pages
 {
     public class IndexModel : PageModel
     {

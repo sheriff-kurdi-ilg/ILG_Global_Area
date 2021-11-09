@@ -19,7 +19,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ILG_Global.BackEnd.Web": {
+    "ILG_Global.Web": {
       "commandName": "IIS",
       "launchBrowser": true,
       "environmentVariables": {

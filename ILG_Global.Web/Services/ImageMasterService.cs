@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.Web.Services
+namespace ILG_Global.Web.Services
 {
     public class ImageMasterService : IImageMasterService
     {

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace ILG_Global.DataAccess
 {
@@ -16,13 +17,13 @@ namespace ILG_Global.DataAccess
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<HtmlContentDetail>> SelectAllAsync()
+        public async Task<IEnumerable<HtmlContentDetail>> SelectAllAsync(string sLanguageCode)
         {
             List<HtmlContentDetail> lHtmlContentDetails = new List<HtmlContentDetail>();
 
             try
             {
-                lHtmlContentDetails = await applicationDbContext.HtmlContentDetails.ToListAsync();
+                lHtmlContentDetails = await applicationDbContext.HtmlContentDetails.Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
             }
             catch (Exception)
             {
@@ -32,13 +33,13 @@ namespace ILG_Global.DataAccess
             return lHtmlContentDetails;
         }
 
-        public async Task<HtmlContentDetail> SelectByIdAsync(int nID)
+        public async Task<HtmlContentDetail> SelectByIdAsync(int nID,string sLanguageCode)
         {
             HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
 
             try
             {
-                oHtmlContentDetail = await applicationDbContext.HtmlContentDetails.FirstOrDefaultAsync(m => m.HtmlContentID == nID);
+                oHtmlContentDetail = await applicationDbContext.HtmlContentDetails.FirstOrDefaultAsync(m => m.HtmlContentID == nID && m.LanguageCode == sLanguageCode);
             }
             catch (Exception oException)
             {

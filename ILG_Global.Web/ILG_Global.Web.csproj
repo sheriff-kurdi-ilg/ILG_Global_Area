@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\ImageDetailService.cs" />
+    <Compile Remove="Services\ImageMasterService.cs" />
+    <Compile Remove="Services\SectionDetailService.cs" />
+    <Compile Remove="Services\SectionMasterService.cs" />
     <Compile Remove="Tools\CookieUtility.cs" />
     <Compile Remove="Tools\HtmlHelperViewExtensions.cs" />
     <Compile Remove="Tools\HttpContextAccessor.cs" />
@@ -27,6 +31,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services\" />
     <Folder Include="Tools\" />
   </ItemGroup>
 
