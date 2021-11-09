@@ -1,4 +1,5 @@
 ﻿using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -23,18 +24,24 @@ namespace ILG_Global.BackEnd.Web.Controllers
 
         #region  Index 
 
-        //public async ActionResult Index()
-        //{
+        public async Task<ActionResult> Index()
+        {
+            HomePageVM oHomePageVM = new HomePageVM();
 
-        //    vSetLeaderBoardModel();
+            oHomePageVM.LeaderBoardHTML = await oLeaderBoardHTMLCreate();
 
 
-        //    return View();
-        //}
+             // await vSetLeaderBoardModel();
 
-        private async Task vSetLeaderBoardModel()
+
+            return View();
+        }
+
+        private async Task<HtmlContentDetail> oLeaderBoardHTMLCreate()
         {
             HtmlContentDetail oHtmlContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(1);
+
+            return oHtmlContentDetail;
         }
 
         //public PartialViewResult _LeaderBoard()
