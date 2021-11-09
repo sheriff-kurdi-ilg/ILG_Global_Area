@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Models
+namespace ILG_Global.BussinessLogic.Models
 {
     public class ImageDetail
     {
         public int ID { get; set; }
 
-        [ForeignKey("Language")]
-        public int LanguageCode { get; set; }
-        public Language Language  { get; set; }
+        public string LanguageCode { get; set; }
+        [ForeignKey("LanguageCode")]
+        public Language Language { get; set; }
 
         [ForeignKey("ImageMaster")]
         public int ImageMasterID { get; set; }

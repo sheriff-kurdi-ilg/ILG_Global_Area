@@ -1,4 +1,6 @@
-﻿using ILG_Global.BackEnd.BussinessLogic.Models;
+﻿
+using ILG_Global.BussinessLogic.Models;
+
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -6,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.DataAccess
+namespace ILG_Global.DataAccess
 {
     public class ILG_GlobalContext:DbContext
     {
@@ -21,6 +23,9 @@ namespace ILG_Global.BackEnd.DataAccess
         public DbSet<ImageDetail> ImageDetails { get; set; }
         public DbSet<SucessStoryDetail> SucessStoryDetails { get; set; }
         public DbSet<SucessStoryMaster> SucessStoryMasters { get; set; }
+
+        public DbSet<HtmlContentMaster> HtmlContentMasters { get; set; }
+        public DbSet<HtmlContentDetail> HtmlContentDetails { get; set; }
 
     }
 }

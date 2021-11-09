@@ -1,7 +1,8 @@
-﻿using ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories;
-using ILG_Global.BackEnd.BussinessLogic.Abstraction.Services;
-using ILG_Global.BackEnd.BussinessLogic.Models;
-using ILG_Global.BackEnd.BussinessLogic.ViewModels;
+﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Abstraction.Services;
+using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.ViewModels;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

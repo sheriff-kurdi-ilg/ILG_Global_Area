@@ -1,12 +1,10 @@
-﻿using ILG_Global.BackEnd.BussinessLogic.Models;
-using ILG_Global.BackEnd.BussinessLogic.ViewModels;
-using System;
+﻿
+using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.ViewModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Abstraction.Services
+namespace ILG_Global.BussinessLogic.Abstraction.Services
 {
     public interface ISectionDetailService
     {

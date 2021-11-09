@@ -1,6 +1,6 @@
-using ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories;
-using ILG_Global.BackEnd.BussinessLogic.Abstraction.Services;
-using ILG_Global.BackEnd.DataAccess;
+using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Abstraction.Services;
+using ILG_Global.DataAccess;
 using ILG_Global.BackEnd.Web.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -14,6 +14,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
+using Microsoft.AspNetCore.Http;
+
 
 namespace ILG_Global.BackEnd.Web
 {

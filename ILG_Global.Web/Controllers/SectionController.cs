@@ -1,5 +1,5 @@
-﻿using ILG_Global.BackEnd.BussinessLogic.Abstraction.Services;
-using ILG_Global.BackEnd.BussinessLogic.ViewModels;
+﻿using ILG_Global.BussinessLogic.Abstraction.Services;
+using ILG_Global.BussinessLogic.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

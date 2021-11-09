@@ -1,11 +1,12 @@
-﻿using ILG_Global.BackEnd.BussinessLogic.Models;
+﻿
+using ILG_Global.BussinessLogic.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Abstraction.Repositories
+namespace ILG_Global.BussinessLogic.Abstraction.Repositories
 {
     public interface ISectionMasterRepository
     {

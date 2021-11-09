@@ -5,12 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Models
+namespace ILG_Global.BussinessLogic.Models
 {
     public class SectionDetail
     {
         public int ID { get; set; }
+
         public string LanguageCode { get; set; }
+
+        [ForeignKey("LanguageCode")]
+        public Language Language { get; set; }
 
 
         [ForeignKey("SectionMaster")]

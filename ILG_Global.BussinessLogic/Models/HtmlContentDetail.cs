@@ -1,0 +1,22 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ILG_Global.BussinessLogic.Models
+{
+    public class HtmlContentDetail
+    {
+        [Key]
+        public int HtmlContentID { get; set; }
+        public string LanguageCode { get; set; }
+        [ForeignKey("LanguageCode")]
+        public Language Language { get; set; }
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string Summary { get; set; }
+        public string Description { get; set; }
+        public int HtmlContentMasterID { get; set; }
+
+        [ForeignKey("HtmlContentMasterID")]
+        public HtmlContentMaster HtmlContentMaster { get; set; }
+    }
+}

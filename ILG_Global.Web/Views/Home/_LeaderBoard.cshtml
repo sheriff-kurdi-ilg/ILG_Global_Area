@@ -1,4 +1,4 @@
-﻿
+﻿@model string
 @{
     Layout = null;
 }
@@ -8,6 +8,9 @@
     <div class="container mx-auto header-content d-flex flex-column justify-content-center text-white">
         <h5 class="card-title pb-5">About</h5>
         <h1 class="card-text pt-3 pb-5">
+            <div style="color:red">
+                @Model
+            </div>
             Integrated
             <br>
             Legal Group

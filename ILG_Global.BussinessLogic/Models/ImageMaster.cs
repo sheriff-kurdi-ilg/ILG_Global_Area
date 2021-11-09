@@ -5,8 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Models
-{
+namespace ILG_Global.BussinessLogic.Models { 
     public class ImageMaster
     {
         public int ID { get; set; }

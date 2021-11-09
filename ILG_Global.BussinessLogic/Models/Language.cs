@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Models
+namespace ILG_Global.BussinessLogic.Models
 {
     public class Language
     {
         [Key]
-        public int Code { get; set; }
+        public string Code { get; set; }
         public int Title { get; set; }
     }
 }

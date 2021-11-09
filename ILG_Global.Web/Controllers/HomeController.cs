@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using ILG_Global.BussinessLogic.Models;
+using ILG_Global.DataAccess;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,11 +11,46 @@ namespace ILG_Global.BackEnd.Web.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: HomeController
-        public ActionResult Index()
+       
+        #region DI
+        public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
+        public HomeController(IHtmlContentDetailRepository htmlContentDetailRepository)
         {
-            return View();
+            HtmlContentDetailRepository = htmlContentDetailRepository;
         }
+
+        #endregion
+
+        #region  Index 
+
+        //public async ActionResult Index()
+        //{
+
+        //    vSetLeaderBoardModel();
+
+
+        //    return View();
+        //}
+
+        private async Task vSetLeaderBoardModel()
+        {
+            HtmlContentDetail oHtmlContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(1);
+        }
+
+        //public PartialViewResult _LeaderBoard()
+        //{
+        //    string x = "sasa";
+
+        //    return PartialView(x);
+        //}
+
+
+        #endregion
+
+
+
+
+
 
         // GET: HomeController/Details/5
         public ActionResult Details(int id)

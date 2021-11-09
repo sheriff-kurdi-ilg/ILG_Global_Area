@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.ViewModels
+namespace ILG_Global.BussinessLogic.ViewModels
 {
     public class SectionDetailViewModel
     {

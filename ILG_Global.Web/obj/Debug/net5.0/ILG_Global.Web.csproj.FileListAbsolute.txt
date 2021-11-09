@@ -143,6 +143,12 @@ D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Pages\Shared\_V
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_ContactUs.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_Footer.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_LeaderBoard.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_NavigationBar.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_OurServices.cshtml.g.cs
+D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_SuccessStories.cshtml.g.cs
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.RazorTargetAssemblyInfo.cache
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.RazorTargetAssemblyInfo.cs
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.Views.pdb
@@ -151,9 +157,3 @@ D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.dll
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ref\ILG_Global.Web.dll
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.pdb
 D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\ILG_Global.Web.genruntimeconfig.cache
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_ContactUs.cshtml.g.cs
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_Footer.cshtml.g.cs
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_LeaderBoard.cshtml.g.cs
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_NavigationBar.cshtml.g.cs
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_OurServices.cshtml.g.cs
-D:\ILG_Projects\ILG_Global\ILG_Global.Web\obj\Debug\net5.0\Razor\Views\Home\_SuccessStories.cshtml.g.cs

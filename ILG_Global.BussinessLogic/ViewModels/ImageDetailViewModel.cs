@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BackEnd.BussinessLogic.Models
+namespace ILG_Global.BussinessLogic.Models
 {
     public class ImageDetailViewModel
     {
         public int ID { get; set; }
-        public int LanguageCode { get; set; }
+        public string LanguageCode { get; set; }
         public int ImageMasterID { get; set; }
         public string Name { get; set; }
         public string  Title { get; set; }
