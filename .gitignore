@@ -10,3 +10,9 @@ ILG_Global.BackEnd/ILG_Global.BackEnd.DataAccess/bin/
 ILG_Global.BackEnd/ILG_Global.BackEnd.DataAccess/obj/
 
 *.dll
+ILG_Global.BussinessLogic/obj/Debug/net5.0/ILG_Global.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+ILG_Global.BussinessLogic/obj/Debug/net5.0/ILG_Global.BussinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+ILG_Global.Web/obj/Debug/net5.0/ILG_Global.Web.csproj.AssemblyReference.cache
+ILG_Global.Web/obj/Debug/net5.0/ILG_Global.Web.GeneratedMSBuildEditorConfig.editorconfig
+ILG_Global.Web/obj/Debug/net5.0/project.razor.json
