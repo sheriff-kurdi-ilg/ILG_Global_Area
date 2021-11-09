@@ -6938,6 +6938,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "ILG_Global.BussinessLogic >= 1.0.0",
       "ILG_Global.DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11",
@@ -6950,8 +6951,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kurdi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -6959,14 +6959,11 @@
       "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
       "projectName": "ILG_Global.Web",
       "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
-      "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
       "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6980,6 +6977,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+              "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+            },
             "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj": {
               "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj"
             }
@@ -7051,7 +7051,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   }
