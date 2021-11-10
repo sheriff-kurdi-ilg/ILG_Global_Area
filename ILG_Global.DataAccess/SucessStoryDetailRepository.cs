@@ -28,9 +28,9 @@ namespace ILG_Global.DataAccess
             return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).ToListAsync();
         }
 
-        public async Task<SucessStoryDetail> SelectById(int Id)
+        public async Task<SucessStoryDetail> SelectById(string languageCode, int successStoryMasterId)
         {
-            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).FirstOrDefaultAsync(ow => ow.ID == Id);
+            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.SucessStoryMasterID == successStoryMasterId);
         }
 
         public async Task DeleteById(int Id)

@@ -30,9 +30,9 @@ namespace ILG_Global.DataAccess
             return await _context.ImageDetails.Include(c=>c.ImageMaster).Include(c=>c.Language).ToListAsync();
         }
 
-        public async Task<ImageDetail> SelectById(int Id)
+        public async Task<ImageDetail> SelectById(string languageCode, int imageMasterId)
         {
-            return await _context.ImageDetails.Include(c => c.ImageMaster).Include(c => c.Language).FirstOrDefaultAsync(ow => ow.ID == Id);
+            return await _context.ImageDetails.Include(c => c.ImageMaster).Include(c => c.Language).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.ImageMasterID == imageMasterId);
         }
 
         public async Task DeleteById(int Id)

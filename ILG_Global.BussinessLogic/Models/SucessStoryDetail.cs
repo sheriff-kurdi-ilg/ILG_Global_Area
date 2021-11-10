@@ -9,7 +9,8 @@ namespace ILG_Global.BussinessLogic.Models
 {
     public class SucessStoryDetail
     {
-        public int ID { get; set; }
+        public int SucessStoryMasterID { get; set; }
+        [ForeignKey("SucessStoryMasterID")]
         public SucessStoryMaster SucessStoryMaster { get; set; }
         public string LanguageCode { get; set; }
         [ForeignKey("LanguageCode")]

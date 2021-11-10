@@ -12,7 +12,6 @@ namespace ILG_Global.BussinessLogic.Models {
 
         [ForeignKey("SectionMaster")]
         public int SectionMasterID { get; set; }
-        public SectionMaster SectionMaster { get; set; }
         public int Width { get; set; }
 
         public int Height { get; set; }

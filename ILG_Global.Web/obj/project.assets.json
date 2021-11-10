@@ -6910,8 +6910,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Kurdi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -6919,14 +6918,11 @@
       "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
       "projectName": "ILG_Global.Web",
       "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
-      "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
       "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6993,6 +6989,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[5.0.12, 5.0.12]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7001,7 +7003,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

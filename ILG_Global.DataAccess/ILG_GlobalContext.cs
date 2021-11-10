@@ -27,5 +27,24 @@ namespace ILG_Global.DataAccess
         public DbSet<HtmlContentMaster> HtmlContentMasters { get; set; }
         public DbSet<HtmlContentDetail> HtmlContentDetails { get; set; }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<SucessStoryDetail>()
+                .HasKey(a => new { a.LanguageCode, a.SucessStoryMasterID });  
+            
+            modelBuilder.Entity<ImageDetail>()
+                .HasKey(a => new { a.LanguageCode, a.ImageMasterID });
+
+            modelBuilder.Entity<HtmlContentDetail>()
+               .HasKey(a => new { a.LanguageCode, a.HtmlContentMasterID });
+
+
+
+
+        }
+
     }
+
+ 
 }

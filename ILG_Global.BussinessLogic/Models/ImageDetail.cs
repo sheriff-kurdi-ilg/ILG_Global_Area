@@ -9,7 +9,6 @@ namespace ILG_Global.BussinessLogic.Models
 {
     public class ImageDetail
     {
-        public int ID { get; set; }
 
         public string LanguageCode { get; set; }
         [ForeignKey("LanguageCode")]

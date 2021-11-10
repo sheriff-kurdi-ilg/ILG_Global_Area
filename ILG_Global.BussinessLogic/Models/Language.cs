@@ -11,6 +11,6 @@ namespace ILG_Global.BussinessLogic.Models
     {
         [Key]
         public string Code { get; set; }
-        public int Title { get; set; }
+        public string Title { get; set; }
     }
 }
