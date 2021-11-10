@@ -1,8 +1,13 @@
+<<<<<<< Updated upstream
 ﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
+=======
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Localization;
+>>>>>>> Stashed changes
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -127,6 +132,19 @@ namespace ILG_Global.Web.Controllers
             {
                 return View();
             }
+        }
+
+
+
+        [HttpPost]
+        public IActionResult SetLanguage(string culture, string returnUrl)
+        {
+            Response.Cookies.Append(
+                CookieRequestCultureProvider.DefaultCookieName,
+                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+                );
+            return LocalRedirect(returnUrl);
         }
     }
 }

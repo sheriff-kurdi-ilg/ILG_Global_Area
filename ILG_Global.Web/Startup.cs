@@ -2,11 +2,26 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+<<<<<<< Updated upstream
+=======
+using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc.Razor;
+>>>>>>> Stashed changes
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+<<<<<<< Updated upstream
+=======
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Threading.Tasks;
+>>>>>>> Stashed changes
 
 
 namespace ILG_Global.Web
@@ -70,13 +85,46 @@ namespace ILG_Global.Web
                 });
             });
 
-            services.AddControllersWithViews();
 
+            services.AddLocalization(opts => opts.ResourcesPath = "Resources");
+
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+
+            services.Configure<RequestLocalizationOptions>(oOptions =>
+            {
+                List<CultureInfo> lSupportedCultureInfos = lCultureInfoCreate();
+
+                oOptions.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+                oOptions.SupportedCultures = lSupportedCultureInfos;
+                oOptions.SupportedUICultures = lSupportedCultureInfos;
+            });
+
+            services.AddControllersWithViews();
         }
+
+        private List<CultureInfo> lCultureInfoCreate()
+        {
+            List<CultureInfo> lCultureInfos = new List<CultureInfo>();
+
+            lCultureInfos.Add(new CultureInfo("en-GB"));
+            lCultureInfos.Add(new CultureInfo("en-US"));
+            lCultureInfos.Add(new CultureInfo("en"));
+            lCultureInfos.Add(new CultureInfo("ar-KW"));
+            lCultureInfos.Add(new CultureInfo("ar-EG"));
+            lCultureInfos.Add(new CultureInfo("ar"));
+
+            return lCultureInfos;
+        }
+
+
+  
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            var LocaOptions = app.ApplicationServices.GetServices<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(LocaOptions.Select(ff => ff.Value).SingleOrDefault());
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -97,6 +145,7 @@ namespace ILG_Global.Web
             app.UseStaticFiles();
 
             app.UseRouting();
+
 
             app.UseAuthorization();
 
