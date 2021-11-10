@@ -2,26 +2,24 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-<<<<<<< Updated upstream
-=======
+
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
->>>>>>> Stashed changes
+
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-<<<<<<< Updated upstream
-=======
+
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
->>>>>>> Stashed changes
+
 
 
 namespace ILG_Global.Web

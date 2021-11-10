@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Localization;
 @using Microsoft.AspNetCore.Mvc.Localization;
 @using Microsoft.Extensions.Localization;
-@using ILG_Global.BackEnd.Web;
+
 
 @inject IViewLocalizer Localizer
 
@@ -13,10 +13,6 @@
     
 }
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 <footer class="d-flex align-items-center ">
     <section class="container position-relative">
         <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
@@ -59,12 +55,12 @@
                             <li class="footer-col-title d-block  d-sm-block pb-4">@Localizer["JOIN OUR NEWSLETTER"]</li>
                             <li>
                                 <div class="input-group mb-3 join-us-input">
-                                    <input type="text" class="form-control" placeholder="Enter Your Email Address"
+                                    <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
                                            aria-label="Example text with button addon"
                                            aria-describedby="button-addon1">
 
                                     <button class="btn shadow-sm px-4 py-2" type="button" id="button-addon1">
-                                        Subscribe
+                                        @Localizer["Subscribe"]
                                     </button>
                                 </div>
                             </li>
@@ -77,10 +73,10 @@
         <div class="row justify-content-between align-items-center py-3 footer-bottom">
             <div class="col-12 col-sm-12 col-md-6">
                 <ul class="row flex-column flex-sm-column flex-md-row justify-content-between w-100 p-0 footer-bottom-row m-0">
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">Copyright © 2021 ilg. All Rights Reserved.</li>
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">Terms of Use</a></li>
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">Privacy Policy</a></li>
-                </ul>
+                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
+                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
+                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Privacy Policy"]</a></li>
+</ul>
             </div>
             <div class="footer-icon-col col-6 col-sm-6 col-md-2 pt-4 pt-sm-4 pt-md-0">
                 <div class="row justify-content-center align-items-center">
