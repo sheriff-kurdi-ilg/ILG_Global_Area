@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj": {}
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj",
-        "projectName": "ILG_Global.BussinessLogic",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj",
+        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+        "projectName": "ILG_Global.BackEnd.BussinessLogic",
+        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
         "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\obj\\",
+        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -58,14 +58,14 @@
         }
       }
     },
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj": {
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
-        "projectName": "ILG_Global.DataAccess",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
+        "projectName": "ILG_Global.BackEnd.DataAccess",
+        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj",
         "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
+        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
-                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
+                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj"
               }
             }
           }
@@ -98,31 +98,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.3.3, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.11, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[5.0.11, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.2, )"
             }
           },
           "imports": [
@@ -144,14 +122,14 @@
         }
       }
     },
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj": {
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
-        "projectName": "ILG_Global.Web",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
+        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
+        "projectName": "ILG_Global.BackEnd.Web",
+        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
         "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.Web\\obj\\",
+        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -168,8 +146,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj": {
-                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj"
+              "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
+                "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj"
               }
             }
           }
@@ -184,21 +162,25 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.CodeAnalysis.Analyzers": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.3.3, )"
-            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.11, )"
             },
-            "Newtonsoft.Json": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[13.0.1, )"
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -215,6 +197,10 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[6.2.3, )"
+            },
+            "Swashbuckle.Core": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [

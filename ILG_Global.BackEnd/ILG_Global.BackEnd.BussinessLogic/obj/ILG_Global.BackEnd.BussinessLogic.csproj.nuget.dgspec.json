@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {}
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+    "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj",
-        "projectName": "ILG_Global.BussinessLogic",
-        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj",
+        "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
+        "projectName": "ILG_Global.BackEnd.BussinessLogic",
+        "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\ILG_Global.BackEnd.BussinessLogic.csproj",
         "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\obj\\",
+        "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.BussinessLogic\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
