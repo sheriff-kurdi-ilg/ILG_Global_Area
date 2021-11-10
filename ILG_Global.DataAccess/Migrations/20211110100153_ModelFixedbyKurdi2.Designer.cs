@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211110100153_ModelFixedbyKurdi2")]
+    partial class ModelFixedbyKurdi2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,10 +58,15 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<bool>("CanBeDeletedByUser")
                         .HasColumnType("bit");
 
+                    b.Property<int>("ImageMasterId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("ImageMasterId");
 
                     b.ToTable("HtmlContentMasters");
                 });
@@ -73,6 +80,9 @@ namespace ILG_Global.DataAccess.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("AlternateText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
@@ -95,24 +105,16 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<int>("Height")
                         .HasColumnType("int");
 
-                    b.Property<int?>("HtmlContentMasterID")
-                        .HasColumnType("int");
-
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("OurServiceMasterID")
+                    b.Property<int>("SectionMasterID")
                         .HasColumnType("int");
 
                     b.Property<int>("Width")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("HtmlContentMasterID");
 
                     b.ToTable("ImageMasters");
                 });
@@ -130,48 +132,6 @@ namespace ILG_Global.DataAccess.Migrations
                     b.ToTable("Language");
                 });
 
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.OurServiceDetail", b =>
-                {
-                    b.Property<string>("LanguageCode")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("OurServiceID")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SubTitle")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("LanguageCode", "OurServiceID");
-
-                    b.HasIndex("OurServiceID");
-
-                    b.ToTable("OurServiceDetails");
-                });
-
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.OurServiceMaster", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsEnabled")
-                        .HasColumnType("bit");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("OurServiceMasters");
-                });
-
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.SucessStoryDetail", b =>
                 {
                     b.Property<string>("LanguageCode")
@@ -180,12 +140,15 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<int>("SucessStoryID")
                         .HasColumnType("int");
 
+                    b.Property<int?>("SucessStoryMasterID")
+                        .HasColumnType("int");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("LanguageCode", "SucessStoryID");
 
-                    b.HasIndex("SucessStoryID");
+                    b.HasIndex("SucessStoryMasterID");
 
                     b.ToTable("SucessStoryDetails");
                 });
@@ -202,9 +165,6 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
-
-                    b.Property<string>("PhoneNumber")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -230,6 +190,17 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Navigation("Language");
                 });
 
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.HtmlContentMaster", b =>
+                {
+                    b.HasOne("ILG_Global.BussinessLogic.Models.ImageMaster", "ImageMaster")
+                        .WithMany()
+                        .HasForeignKey("ImageMasterId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ImageMaster");
+                });
+
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ImageDetail", b =>
                 {
                     b.HasOne("ILG_Global.BussinessLogic.Models.ImageMaster", "ImageMaster")
@@ -249,32 +220,6 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Navigation("Language");
                 });
 
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ImageMaster", b =>
-                {
-                    b.HasOne("ILG_Global.BussinessLogic.Models.HtmlContentMaster", null)
-                        .WithMany("ImageMasters")
-                        .HasForeignKey("HtmlContentMasterID");
-                });
-
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.OurServiceDetail", b =>
-                {
-                    b.HasOne("ILG_Global.BussinessLogic.Models.Language", "Language")
-                        .WithMany()
-                        .HasForeignKey("LanguageCode")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ILG_Global.BussinessLogic.Models.OurServiceMaster", "OurServiceMaster")
-                        .WithMany("OurServiceDetails")
-                        .HasForeignKey("OurServiceID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Language");
-
-                    b.Navigation("OurServiceMaster");
-                });
-
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.SucessStoryDetail", b =>
                 {
                     b.HasOne("ILG_Global.BussinessLogic.Models.Language", "Language")
@@ -285,9 +230,7 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.HasOne("ILG_Global.BussinessLogic.Models.SucessStoryMaster", "SucessStoryMaster")
                         .WithMany()
-                        .HasForeignKey("SucessStoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SucessStoryMasterID");
 
                     b.Navigation("Language");
 
@@ -297,13 +240,6 @@ namespace ILG_Global.DataAccess.Migrations
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.HtmlContentMaster", b =>
                 {
                     b.Navigation("HtmlContentDetails");
-
-                    b.Navigation("ImageMasters");
-                });
-
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.OurServiceMaster", b =>
-                {
-                    b.Navigation("OurServiceDetails");
                 });
 #pragma warning restore 612, 618
         }

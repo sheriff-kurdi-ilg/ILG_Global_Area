@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211110121652_OurServicesTableAdded")]
+    partial class OurServicesTableAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -75,6 +77,9 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<string>("AlternateText")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
@@ -100,9 +105,6 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("OurServiceMasterID")
                         .HasColumnType("int");

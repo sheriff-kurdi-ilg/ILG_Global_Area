@@ -18,8 +18,6 @@ namespace ILG_Global.DataAccess
         }
 
         public DbSet<ImageMaster> ImageMasters { get; set; }
-        //public DbSet<SectionDetail> SectionDetails { get; set; }
-        //public DbSet<SectionMaster> SectionMasters { get; set; }
         public DbSet<ImageDetail> ImageDetails { get; set; }
         public DbSet<SucessStoryDetail> SucessStoryDetails { get; set; }
         public DbSet<SucessStoryMaster> SucessStoryMasters { get; set; }
@@ -27,17 +25,23 @@ namespace ILG_Global.DataAccess
         public DbSet<HtmlContentMaster> HtmlContentMasters { get; set; }
         public DbSet<HtmlContentDetail> HtmlContentDetails { get; set; }
 
+        public DbSet<OurServiceMaster> OurServiceMasters { get; set; }
+        public DbSet<OurServiceDetail> OurServiceDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.Entity<SucessStoryDetail>()
-                .HasKey(a => new { a.LanguageCode, a.SucessStoryMasterID });  
+                .HasKey(a => new { a.LanguageCode, a.SucessStoryID });  
             
             modelBuilder.Entity<ImageDetail>()
-                .HasKey(a => new { a.LanguageCode, a.ImageMasterID });
+                .HasKey(a => new { a.LanguageCode, a.ImageID });
 
             modelBuilder.Entity<HtmlContentDetail>()
-               .HasKey(a => new { a.LanguageCode, a.HtmlContentMasterID });
+               .HasKey(a => new { a.LanguageCode, a.HtmlContentID });
+
+            modelBuilder.Entity<OurServiceDetail>()
+                .HasKey(a => new { a.LanguageCode, a.OurServiceID });
 
 
 

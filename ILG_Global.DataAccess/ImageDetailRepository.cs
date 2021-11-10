@@ -32,7 +32,7 @@ namespace ILG_Global.DataAccess
 
         public async Task<ImageDetail> SelectById(string languageCode, int imageMasterId)
         {
-            return await _context.ImageDetails.Include(c => c.ImageMaster).Include(c => c.Language).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.ImageMasterID == imageMasterId);
+            return await _context.ImageDetails.Include(c => c.ImageMaster).Include(c => c.Language).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.ImageID == imageMasterId);
         }
 
         public async Task DeleteById(int Id)

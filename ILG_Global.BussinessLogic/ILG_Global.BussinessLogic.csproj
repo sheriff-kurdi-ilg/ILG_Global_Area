@@ -11,6 +11,10 @@
     <Compile Remove="Abstraction\Services\IImageMasterService .cs" />
     <Compile Remove="Abstraction\Services\ISectionDetailService.cs" />
     <Compile Remove="Abstraction\Services\ISectionMasterService.cs" />
+    <Compile Remove="ViewModels\ImageDetailViewModel.cs" />
+    <Compile Remove="ViewModels\ImageMasterViewModel.cs" />
+    <Compile Remove="ViewModels\SectionDetailViewModel.cs" />
+    <Compile Remove="ViewModels\SectionMasterViewModel.cs" />
   </ItemGroup>
 
   <ItemGroup>

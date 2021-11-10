@@ -30,7 +30,7 @@ namespace ILG_Global.DataAccess
 
         public async Task<SucessStoryDetail> SelectById(string languageCode, int successStoryMasterId)
         {
-            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.SucessStoryMasterID == successStoryMasterId);
+            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.SucessStoryID == successStoryMasterId);
         }
 
         public async Task DeleteById(int Id)
