@@ -1,20 +1,12 @@
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
-using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using Microsoft.AspNetCore.Http;
 
 
 namespace ILG_Global.Web
@@ -40,8 +32,8 @@ namespace ILG_Global.Web
             services.AddScoped<IHtmlContentDetailRepository, HtmlContentDetailRepository>();
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
-            //services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
 
+            //services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
             //services.AddScoped<IImageDetailService, ImageDetailService>();
             //services.AddScoped<ISectionDetailService, SectionDetailService>();
             //services.AddScoped<IImageMasterService, ImageMasterService>();

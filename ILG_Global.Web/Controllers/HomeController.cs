@@ -35,10 +35,6 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.LeaderBoardHtmlContentDetail= await oLeaderBoardHTMLCreate();
 
-
-             // await vSetLeaderBoardModel();
-
-
             return View();
         }
 

@@ -7,6 +7,14 @@
   <ItemGroup>
     <Compile Remove="Abstraction\Repositories\x_ISectionDetailRepository.cs" />
     <Compile Remove="Abstraction\Repositories\x_ISectionMasterRepository .cs" />
+    <Compile Remove="Abstraction\Services\IImageDetailService.cs" />
+    <Compile Remove="Abstraction\Services\IImageMasterService .cs" />
+    <Compile Remove="Abstraction\Services\ISectionDetailService.cs" />
+    <Compile Remove="Abstraction\Services\ISectionMasterService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstraction\Services\" />
   </ItemGroup>
 
 </Project>
