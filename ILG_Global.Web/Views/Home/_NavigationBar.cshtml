@@ -11,6 +11,7 @@
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
 @{ IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    QueryStringRequestCultureProvider ss = Context.Features.Get<QueryStringRequestCultureProvider>();
 
     List<SelectListItem> cultureItems = LocOptions.Value.SupportedUICultures
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
@@ -19,7 +20,7 @@
     CultureInfo enculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "en").SingleOrDefault();
     CultureInfo arculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "ar").SingleOrDefault();
     string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
-    
+
     }
 
 

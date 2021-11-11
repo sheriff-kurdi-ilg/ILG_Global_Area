@@ -11,3 +11,5 @@ ILG_Global.DataAccess/obj/
 *.cache
 *.pdb
 ILG_Global.BackEnd/.gitignore.
+*.v2
+.vs/ILG_Global/v16/.suo
