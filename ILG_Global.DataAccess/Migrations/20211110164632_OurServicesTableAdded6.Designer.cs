@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211110164632_OurServicesTableAdded6")]
+    partial class OurServicesTableAdded6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -238,9 +240,6 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
-
-                    b.Property<string>("PDF_FileName")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
                         .HasColumnType("nvarchar(max)");

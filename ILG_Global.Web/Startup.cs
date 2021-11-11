@@ -1,3 +1,4 @@
+using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Builder;
@@ -45,6 +46,10 @@ namespace ILG_Global.Web
             services.AddScoped<IHtmlContentDetailRepository, HtmlContentDetailRepository>();
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
+            services.AddScoped<IOurServiceDetailRepository, OurServiceDetailRepository>();
+            services.AddScoped<ISucessStoryDetailRepository, SucessStoryDetailRepository>();
+            services.AddScoped<IContactInformationDetailRepository, ContactInformationDetailRepository>();
+
 
 
             services.AddSwaggerGen();

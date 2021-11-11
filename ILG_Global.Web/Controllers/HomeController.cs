@@ -1,8 +1,8 @@
 
-﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Abstraction;
+using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
-using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
 
 
@@ -22,12 +22,22 @@ namespace ILG_Global.Web.Controllers
         #region DI
      
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
-        public HomeController(
+        public IOurServiceDetailRepository OurServiceDetailRepository { get; }
+        public ISucessStoryDetailRepository SucessStoryDetailRepository { get; }
+        public IContactInformationDetailRepository ContactInformationDetailRepository { get; }
 
-            IHtmlContentDetailRepository htmlContentDetailRepository)
+        public HomeController(
+            IHtmlContentDetailRepository htmlContentDetailRepository,
+            IOurServiceDetailRepository ourServiceDetailRepository,
+            ISucessStoryDetailRepository sucessStoryDetailRepository,
+            IContactInformationDetailRepository  contactInformationDetailRepository
+            )
         {
 
             HtmlContentDetailRepository = htmlContentDetailRepository;
+            OurServiceDetailRepository = ourServiceDetailRepository;
+            SucessStoryDetailRepository = sucessStoryDetailRepository;
+            ContactInformationDetailRepository = contactInformationDetailRepository;
         }
 
         #endregion
@@ -40,16 +50,18 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
 
-            return View();
+            oHomePageVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
+
+            oHomePageVM.SuccessStoriesSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(3, "en");
+            oHomePageVM.SucessStoryDetails = await SucessStoryDetailRepository.SelectAllAsync("en");
+
+            oHomePageVM.ContactUsSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(4, "en");
+            oHomePageVM.ContactInformationDetails = await ContactInformationDetailRepository.SelectAllAsync("en");
+
+            return View(oHomePageVM);
         }
 
-
         #endregion
-
-
-
-
-
 
         // GET: HomeController/Details/5
         public ActionResult Details(int id)

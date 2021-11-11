@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ILG_Global.BussinessLogic.Models
 {
-    public class SucessStoryMaster
+    public class ContactInformationMaster
     {
         public int ID { get; set; }
-        public string PhoneNumber { get; set; }
-        public string ImageName { get; set; }
-        public string PDF_FileName { get; set; }
+        public string FontAwsomeIconCssClass { get; set; }
         public bool IsEnabled { get; set; }
+        public List<ContactInformationDetail> ContactInformationDetails { get; set; }
     }
 }

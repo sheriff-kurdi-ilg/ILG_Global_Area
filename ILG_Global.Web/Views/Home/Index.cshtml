@@ -1,3 +1,4 @@
+
 @using Microsoft.AspNetCore.Localization;
 @using Microsoft.AspNetCore.Mvc.Localization;
 @using Microsoft.AspNetCore.Builder;
@@ -5,8 +6,11 @@
 @using Microsoft.AspNetCore.Http.Features;
 @using Microsoft.Extensions.Options;
 
+
+@model ILG_Global.BussinessLogic.ViewModels.HomePageVM
+    
 @{ 
-    IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
+
 
 }
 
@@ -58,9 +62,13 @@
 
         <!--main-->
         <main>
-            
-    
-            <partial  action="_LeaderBoard" />
+
+
+            @Html.Partial("_LeaderBoard", Model.LeaderBoardSectionHeaderContent)
+
+
+
+            <partial action="_LeaderBoard" />
 
 
             @Html.Partial("_OurServices")
@@ -111,7 +119,7 @@
                     items: 8
                 }
             }
-<<<<<<< Updated upstream
+
         })
         $('#our-service-slider').owlCarousel({
             autoPlay: 3000,
@@ -120,7 +128,7 @@
             margin: 20,
             items: 1,
         })</script>
-=======
+
         }
     })
         $('#our-service-slider').owlCarousel({
@@ -132,7 +140,7 @@
         margin:20,
         items:1,
     })</script>
->>>>>>> Stashed changes
+
 
 </body>
 </html>

@@ -1,57 +1,98 @@
-﻿using ILG_Global.BussinessLogic.Models;
+﻿
+using ILG_Global.BussinessLogic.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+using ILG_Global.BussinessLogic.Abstraction;
 
 namespace ILG_Global.DataAccess
 {
-    public class SucessStoryDetailRepository
+    public class SucessStoryDetailRepository : ISucessStoryDetailRepository
     {
-        private readonly ILG_GlobalContext _context;
-        private DbSet<SucessStoryDetail> SucessStoryDetailEntity;
+        private readonly ILG_GlobalContext applicationDbContext;
 
-        public SucessStoryDetailRepository(ILG_GlobalContext context)
+        public SucessStoryDetailRepository(ILG_GlobalContext applicationDbContext)
         {
-            _context = context;
-            SucessStoryDetailEntity = context.Set<SucessStoryDetail>();
-        }
-        public async Task Insert(SucessStoryDetail entity)
-        {
-            await _context.SucessStoryDetails.AddAsync(entity);
+            this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<SucessStoryDetail>> SelectAll()
+        public async Task<IEnumerable<SucessStoryDetail>> SelectAllAsync(string sLanguageCode)
         {
-            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).ToListAsync();
+            List<SucessStoryDetail> lSucessStoryDetails = new List<SucessStoryDetail>();
+
+            try
+            {
+                lSucessStoryDetails = await applicationDbContext.SucessStoryDetails.Include(m=> m.SucessStoryMaster).Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return lSucessStoryDetails;
         }
 
-        public async Task<SucessStoryDetail> SelectById(string languageCode, int successStoryMasterId)
+        public async Task<SucessStoryDetail> SelectByIdAsync(int nID,string sLanguageCode)
         {
-            return await _context.SucessStoryDetails.Include(c => c.SucessStoryMaster).FirstOrDefaultAsync(ow => ow.LanguageCode == languageCode && ow.SucessStoryID == successStoryMasterId);
+            SucessStoryDetail oSucessStoryDetail = new SucessStoryDetail();
+
+            try
+            {
+                oSucessStoryDetail = await applicationDbContext.SucessStoryDetails.FirstOrDefaultAsync(m => m.SucessStoryID == nID && m.LanguageCode == sLanguageCode);
+            }
+            catch (Exception oException)
+            {
+
+            }
+
+            return oSucessStoryDetail;
         }
 
-        public async Task DeleteById(int Id)
+        public async Task<bool> Insert(SucessStoryDetail oSucessStoryDetail)
         {
-            SucessStoryDetail SucessStoryDetail = await _context.SucessStoryDetails.FindAsync(Id);
-            _context.SucessStoryDetails.Remove(SucessStoryDetail);
+            try
+            {
+                applicationDbContext.SucessStoryDetails.Add(oSucessStoryDetail);
+                applicationDbContext.SaveChanges();
+                return await Task.FromResult(true);
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
-
-
-        public async Task SaveSucessStoryDetail(SucessStoryDetail entity)
+        public async Task<bool> Update(SucessStoryDetail oSucessStoryDetail)
         {
-            await _context.SaveChangesAsync();
+            try
+            {
+                applicationDbContext.Entry(oSucessStoryDetail).State = EntityState.Modified;
+                applicationDbContext.SaveChanges();
+                return await Task.FromResult(true);
+            }
+            catch (Exception)
+            {
+                return await Task.FromResult(false);
+            }
         }
 
-        public async Task UpdateById(SucessStoryDetail entity)
+        public async Task<bool> DeleteByID(int nID)
         {
-            SucessStoryDetailEntity.Attach(entity);
-            _context.Entry(entity).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
-        }
+            try
+            {
+                SucessStoryDetail oSucessStoryDetail = applicationDbContext.SucessStoryDetails.Find(nID);
 
+                applicationDbContext.SucessStoryDetails.Remove(oSucessStoryDetail);
+                applicationDbContext.SaveChanges();
+
+                return await Task.FromResult(true);
+            }
+            catch (Exception)
+            {
+                return await Task.FromResult(false);
+            }
+        }
     }
 }

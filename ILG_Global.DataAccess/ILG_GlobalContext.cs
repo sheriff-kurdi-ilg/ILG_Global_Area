@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.DataAccess
 {
-    public class ILG_GlobalContext:DbContext
+    public class ILG_GlobalContext : DbContext
     {
         public ILG_GlobalContext(DbContextOptions<ILG_GlobalContext> options) : base(options)
         {
@@ -28,22 +28,26 @@ namespace ILG_Global.DataAccess
         public DbSet<OurServiceMaster> OurServiceMasters { get; set; }
         public DbSet<OurServiceDetail> OurServiceDetails { get; set; }
 
+        public DbSet<ContactInformationMaster> ContactInformationMasters { get; set; }
+        public DbSet<ContactInformationDetail> ContactInformationDetails { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
             modelBuilder.Entity<SucessStoryDetail>()
-                .HasKey(a => new { a.LanguageCode, a.SucessStoryID });  
+                .HasKey(a => new {  a.SucessStoryID, a.LanguageCode });  
             
             modelBuilder.Entity<ImageDetail>()
-                .HasKey(a => new { a.LanguageCode, a.ImageID });
+                .HasKey(a => new {  a.ImageID, a.LanguageCode });
 
             modelBuilder.Entity<HtmlContentDetail>()
-               .HasKey(a => new { a.LanguageCode, a.HtmlContentID });
+               .HasKey(a => new {  a.HtmlContentID, a.LanguageCode });
 
             modelBuilder.Entity<OurServiceDetail>()
-                .HasKey(a => new { a.LanguageCode, a.OurServiceID });
+                .HasKey(a => new {  a.OurServiceID, a.LanguageCode });
 
-
+            modelBuilder.Entity<ContactInformationDetail>()
+                .HasKey(a => new {  a.ContactInformationID, a.LanguageCode, });
 
 
         }

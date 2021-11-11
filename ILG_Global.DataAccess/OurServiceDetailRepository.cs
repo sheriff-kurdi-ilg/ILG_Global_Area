@@ -9,52 +9,52 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
 namespace ILG_Global.DataAccess
 {
-    public class HtmlContentDetailRepository : IHtmlContentDetailRepository
+    public class OurServiceDetailRepository : IOurServiceDetailRepository
     {
         private readonly ILG_GlobalContext applicationDbContext;
 
-        public HtmlContentDetailRepository(ILG_GlobalContext applicationDbContext)
+        public OurServiceDetailRepository(ILG_GlobalContext applicationDbContext)
         {
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<HtmlContentDetail>> SelectAllAsync(string sLanguageCode)
+        public async Task<IEnumerable<OurServiceDetail>> SelectAllAsync(string sLanguageCode)
         {
-            List<HtmlContentDetail> lHtmlContentDetails = new List<HtmlContentDetail>();
+            List<OurServiceDetail> lOurServiceDetails = new List<OurServiceDetail>();
 
             try
             {
-                lHtmlContentDetails = await applicationDbContext.HtmlContentDetails.Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
+                lOurServiceDetails = await applicationDbContext.OurServiceDetails.Include(m=> m.OurServiceMaster).Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
             }
             catch (Exception)
             {
 
             }
 
-            return lHtmlContentDetails;
+            return lOurServiceDetails;
         }
 
-        public async Task<HtmlContentDetail> SelectByIdAsync(int nID,string sLanguageCode)
+        public async Task<OurServiceDetail> SelectByIdAsync(int nID,string sLanguageCode)
         {
-            HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
+            OurServiceDetail oOurServiceDetail = new OurServiceDetail();
 
             try
             {
-                oHtmlContentDetail = await applicationDbContext.HtmlContentDetails.FirstOrDefaultAsync(m => m.HtmlContentID == nID && m.LanguageCode == sLanguageCode);
+                oOurServiceDetail = await applicationDbContext.OurServiceDetails.FirstOrDefaultAsync(m => m.OurServiceID == nID && m.LanguageCode == sLanguageCode);
             }
             catch (Exception oException)
             {
 
             }
 
-            return oHtmlContentDetail;
+            return oOurServiceDetail;
         }
 
-        public async Task<bool> Insert(HtmlContentDetail oHtmlContentDetail)
+        public async Task<bool> Insert(OurServiceDetail oOurServiceDetail)
         {
             try
             {
-                applicationDbContext.HtmlContentDetails.Add(oHtmlContentDetail);
+                applicationDbContext.OurServiceDetails.Add(oOurServiceDetail);
                 applicationDbContext.SaveChanges();
                 return await Task.FromResult(true);
             }
@@ -64,11 +64,11 @@ namespace ILG_Global.DataAccess
             }
         }
 
-        public async Task<bool> Update(HtmlContentDetail oHtmlContentDetail)
+        public async Task<bool> Update(OurServiceDetail oOurServiceDetail)
         {
             try
             {
-                applicationDbContext.Entry(oHtmlContentDetail).State = EntityState.Modified;
+                applicationDbContext.Entry(oOurServiceDetail).State = EntityState.Modified;
                 applicationDbContext.SaveChanges();
                 return await Task.FromResult(true);
             }
@@ -82,9 +82,9 @@ namespace ILG_Global.DataAccess
         {
             try
             {
-                HtmlContentDetail oHtmlContentDetail = applicationDbContext.HtmlContentDetails.Find(nID);
+                OurServiceDetail oOurServiceDetail = applicationDbContext.OurServiceDetails.Find(nID);
 
-                applicationDbContext.HtmlContentDetails.Remove(oHtmlContentDetail);
+                applicationDbContext.OurServiceDetails.Remove(oOurServiceDetail);
                 applicationDbContext.SaveChanges();
 
                 return await Task.FromResult(true);

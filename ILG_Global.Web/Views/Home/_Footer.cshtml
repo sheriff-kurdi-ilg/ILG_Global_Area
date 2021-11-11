@@ -6,7 +6,6 @@
 
 @inject IViewLocalizer Localizer
 
-
 @{
   
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
