@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211111122113_AddedNewsLetterSubscribebyHesham")]
+    partial class AddedNewsLetterSubscribebyHesham
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -143,7 +145,7 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<bool?>("IsEnabled")
                         .HasColumnType("bit");
 
-                    b.Property<string>("PreferredLanguage")
+                    b.Property<string>("PrefairedLanguage")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");

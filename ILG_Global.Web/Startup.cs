@@ -45,6 +45,7 @@ namespace ILG_Global.Web
             services.AddScoped<IHtmlContentDetailRepository, HtmlContentDetailRepository>();
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
+            services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
 
 
             services.AddSwaggerGen();

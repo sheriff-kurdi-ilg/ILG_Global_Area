@@ -10,9 +10,9 @@
 @inject IViewLocalizer Localizer
 @inject IOptions<RequestLocalizationOptions> LocOptions
 
-@{ IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    QueryStringRequestCultureProvider ss = Context.Features.Get<QueryStringRequestCultureProvider>();
-
+@{ 
+    IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    var ll =requestCulture.RequestCulture.Culture.Name;
     List<SelectListItem> cultureItems = LocOptions.Value.SupportedUICultures
         .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
         .ToList();
@@ -76,7 +76,7 @@
                                             <i class="fas fa-globe"></i>
                                             EN
                                         </button>
-
+                                        
                                     </form>
                                 </div> }
                             else

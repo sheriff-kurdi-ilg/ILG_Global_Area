@@ -1,5 +1,5 @@
 
-﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
+﻿using ILG_Global.DataAccess;
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
@@ -18,16 +18,19 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-       
+        private readonly INewsLetterSubscribeRepository newsLetterSubscribeRepository;
+
         #region DI
-     
+
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
         public HomeController(
 
-            IHtmlContentDetailRepository htmlContentDetailRepository)
+            IHtmlContentDetailRepository htmlContentDetailRepository,
+            INewsLetterSubscribeRepository newsLetterSubscribeRepository)
         {
 
             HtmlContentDetailRepository = htmlContentDetailRepository;
+            this.newsLetterSubscribeRepository = newsLetterSubscribeRepository;
         }
 
         #endregion
@@ -131,6 +134,16 @@ namespace ILG_Global.Web.Controllers
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
                 );
             return LocalRedirect(returnUrl);
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
+        {
+            newsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

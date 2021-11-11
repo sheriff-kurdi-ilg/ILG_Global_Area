@@ -32,6 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ILG_Global.BussinessLogic\ILG_Global.BussinessLogic.csproj" />
     <ProjectReference Include="..\ILG_Global.DataAccess\ILG_Global.DataAccess.csproj" />
   </ItemGroup>
 
