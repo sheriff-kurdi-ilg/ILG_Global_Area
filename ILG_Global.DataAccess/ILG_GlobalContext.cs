@@ -27,6 +27,7 @@ namespace ILG_Global.DataAccess
 
         public DbSet<OurServiceMaster> OurServiceMasters { get; set; }
         public DbSet<OurServiceDetail> OurServiceDetails { get; set; }
+        public DbSet<NewsLetterSubscribe> NewsLetterSubscribes { get; set; }
 
         public DbSet<ContactInformationMaster> ContactInformationMasters { get; set; }
         public DbSet<ContactInformationDetail> ContactInformationDetails { get; set; }

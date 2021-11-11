@@ -1,6 +1,10 @@
 
+
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
+
+﻿using ILG_Global.DataAccess;
+
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -18,9 +22,10 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-       
+        private readonly INewsLetterSubscribeRepository newsLetterSubscribeRepository;
+
         #region DI
-     
+
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
         public IOurServiceDetailRepository OurServiceDetailRepository { get; }
         public ISucessStoryDetailRepository SucessStoryDetailRepository { get; }
@@ -38,6 +43,14 @@ namespace ILG_Global.Web.Controllers
             OurServiceDetailRepository = ourServiceDetailRepository;
             SucessStoryDetailRepository = sucessStoryDetailRepository;
             ContactInformationDetailRepository = contactInformationDetailRepository;
+
+            IHtmlContentDetailRepository htmlContentDetailRepository,
+            INewsLetterSubscribeRepository newsLetterSubscribeRepository)
+        {
+
+            HtmlContentDetailRepository = htmlContentDetailRepository;
+            this.newsLetterSubscribeRepository = newsLetterSubscribeRepository;
+
         }
 
         #endregion
@@ -143,6 +156,16 @@ namespace ILG_Global.Web.Controllers
                 new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
                 );
             return LocalRedirect(returnUrl);
+        }
+
+
+
+
+        [HttpPost]
+        public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
+        {
+            newsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+            return RedirectToAction(nameof(Index));
         }
     }
 }
