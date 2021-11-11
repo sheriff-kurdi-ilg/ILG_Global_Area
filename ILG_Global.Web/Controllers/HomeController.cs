@@ -1,13 +1,13 @@
-<<<<<<< Updated upstream
+
 ﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
-=======
-﻿using Microsoft.AspNetCore.Http;
+
+
 using Microsoft.AspNetCore.Localization;
->>>>>>> Stashed changes
+
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
