@@ -46,11 +46,6 @@ namespace ILG_Global.Web
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
-            //services.AddScoped<ISectionMasterRepository, SectionMasterRepository>();
-            //services.AddScoped<IImageDetailService, ImageDetailService>();
-            //services.AddScoped<ISectionDetailService, SectionDetailService>();
-            //services.AddScoped<IImageMasterService, ImageMasterService>();
-            //services.AddScoped<ISectionMasterService, SectionMasterService>();
 
             services.AddSwaggerGen();
 

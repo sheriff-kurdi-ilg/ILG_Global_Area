@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace ILG_Global.DataAccess
 {
-    public class x_HtmlContentMasterRepository
+    public class HtmlContentMasterRepository
     {
         private readonly ILG_GlobalContext _context;
 
-        public x_HtmlContentMasterRepository(ILG_GlobalContext context)
+        public HtmlContentMasterRepository(ILG_GlobalContext context)
         {
             this._context = context;
         }

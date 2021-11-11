@@ -10,10 +10,12 @@ namespace ILG_Global.BussinessLogic.Models {
     {
         public int ID { get; set; }
 
-        [ForeignKey("SectionMaster")]
-        public int SectionMasterID { get; set; }
+        //[ForeignKey("HtmlContentMaster")]
+        public int? HtmlContentMasterID { get; set; }
+        //[ForeignKey("OurServiceMaster")]
+        public int? OurServiceMasterID { get; set; }
+        public string Name { get; set; }
         public int Width { get; set; }
-
         public int Height { get; set; }
         public bool IsEnabled { get; set; }
     }

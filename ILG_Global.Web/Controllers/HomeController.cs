@@ -24,10 +24,10 @@ namespace ILG_Global.Web.Controllers
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
         public HomeController(
 
-            IHtmlContentDetailRepository sectionDetailRepository)
+            IHtmlContentDetailRepository htmlContentDetailRepository)
         {
 
-            HtmlContentDetailRepository = sectionDetailRepository;
+            HtmlContentDetailRepository = htmlContentDetailRepository;
         }
 
         #endregion
@@ -38,24 +38,10 @@ namespace ILG_Global.Web.Controllers
         {
             HomePageVM oHomePageVM = new HomePageVM();
 
-            oHomePageVM.LeaderBoardHtmlContentDetail= await oLeaderBoardHTMLCreate();
+            oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
 
             return View();
         }
-
-        private async Task<HtmlContentDetail> oLeaderBoardHTMLCreate()
-        {
-            HtmlContentDetail oHtmlContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(1,"en");
-
-            return oHtmlContentDetail;
-        }
-
-        //public PartialViewResult _LeaderBoard()
-        //{
-        //    string x = "sasa";
-
-        //    return PartialView(x);
-        //}
 
 
         #endregion

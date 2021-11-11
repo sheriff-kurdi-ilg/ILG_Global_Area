@@ -9,6 +9,7 @@ namespace ILG_Global.BussinessLogic.Models
     public class SucessStoryMaster
     {
         public int ID { get; set; }
+        public string PhoneNumber { get; set; }
         public string ImageName { get; set; }
         public bool IsEnabled { get; set; }
     }

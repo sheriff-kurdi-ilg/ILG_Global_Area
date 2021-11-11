@@ -11,31 +11,6 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "Microsoft.AspNet.WebApi.Client/4.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Net.Http": "[2.0.20710, 2.1.0)",
-          "Newtonsoft.Json": "4.5.6"
-        },
-        "compile": {
-          "lib/net40/System.Net.Http.Formatting.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Net.Http.Formatting.dll": {}
-        }
-      },
-      "Microsoft.AspNet.WebApi.Core/4.0.20710": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Client": "[4.0.20710, 4.1.0)"
-        },
-        "compile": {
-          "lib/net40/System.Web.Http.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Web.Http.dll": {}
-        }
-      },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -91,10 +66,11 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
+      "Microsoft.CodeAnalysis.Analyzers/3.3.3": {
         "type": "package",
         "build": {
-          "build/_._": {}
+          "build/Microsoft.CodeAnalysis.Analyzers.props": {},
+          "build/Microsoft.CodeAnalysis.Analyzers.targets": {}
         }
       },
       "Microsoft.CodeAnalysis.Common/3.8.0": {
@@ -503,17 +479,6 @@
           "lib/netstandard2.1/_._": {}
         }
       },
-      "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
-        "type": "package",
-        "build": {
-          "build/Microsoft.Extensions.ApiDescription.Server.props": {},
-          "build/Microsoft.Extensions.ApiDescription.Server.targets": {}
-        },
-        "buildMultiTargeting": {
-          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props": {},
-          "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
-        }
-      },
       "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
         "type": "package",
         "dependencies": {
@@ -704,15 +669,6 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
-      "Microsoft.Net.Http/2.0.20710": {
-        "type": "package",
-        "compile": {
-          "lib/net45/_._": {}
-        },
-        "runtime": {
-          "lib/net45/_._": {}
-        }
-      },
       "Microsoft.NETCore.Platforms/3.1.0": {
         "type": "package",
         "compile": {
@@ -729,15 +685,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Microsoft.OpenApi/1.2.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.OpenApi.dll": {}
         }
       },
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/5.0.2": {
@@ -870,70 +817,6 @@
         },
         "runtime": {
           "lib/netstandard1.0/_._": {}
-        }
-      },
-      "Swashbuckle.AspNetCore/6.2.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "6.2.3",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.2.3",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.2.3"
-        },
-        "build": {
-          "build/Swashbuckle.AspNetCore.props": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/6.2.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.2.3"
-        },
-        "compile": {
-          "lib/net5.0/Swashbuckle.AspNetCore.Swagger.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Swashbuckle.AspNetCore.Swagger.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": {
-        "type": "package",
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.2.3"
-        },
-        "compile": {
-          "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
-        "type": "package",
-        "compile": {
-          "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "runtime": {
-          "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
-      "Swashbuckle.Core/5.6.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNet.WebApi.Core": "4.0.20710",
-          "Newtonsoft.Json": "7.0.1"
-        },
-        "compile": {
-          "lib/net40/Swashbuckle.Core.dll": {}
-        },
-        "runtime": {
-          "lib/net40/Swashbuckle.Core.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -2082,28 +1965,14 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "ILG_Global.BackEnd.BussinessLogic/1.0.0": {
+      "ILG_Global.BussinessLogic/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "compile": {
-          "bin/placeholder/ILG_Global.BackEnd.BussinessLogic.dll": {}
+          "bin/placeholder/ILG_Global.BussinessLogic.dll": {}
         },
         "runtime": {
-          "bin/placeholder/ILG_Global.BackEnd.BussinessLogic.dll": {}
-        }
-      },
-      "ILG_Global.BackEnd.DataAccess/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "ILG_Global.BackEnd.BussinessLogic": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "5.0.11"
-        },
-        "compile": {
-          "bin/placeholder/ILG_Global.BackEnd.DataAccess.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/ILG_Global.BackEnd.DataAccess.dll": {}
+          "bin/placeholder/ILG_Global.BussinessLogic.dll": {}
         }
       }
     }
@@ -2123,33 +1992,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Microsoft.AspNet.WebApi.Client/4.0.20710": {
-      "sha512": "BwFtW0cGr8tg02XalvF8MmznOpYrhquD2eXWI0oF3LLSqLMFoFkb8Pmke/7SnqkiNc+YfsaUqdXEKbjhv1Ctrw==",
-      "type": "package",
-      "path": "microsoft.aspnet.webapi.client/4.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Net.Http.Formatting.dll",
-        "lib/net40/System.Net.Http.Formatting.xml",
-        "microsoft.aspnet.webapi.client.4.0.20710.nupkg.sha512",
-        "microsoft.aspnet.webapi.client.nuspec"
-      ]
-    },
-    "Microsoft.AspNet.WebApi.Core/4.0.20710": {
-      "sha512": "ufD+tH4W7+eNsb4pzX5oFTDcgI6J3lffughFTkyLHPBZ+A4Eo+VncAxt3lbt9zxxbLHXIbgJHYRLvtgR5YEZAQ==",
-      "type": "package",
-      "path": "microsoft.aspnet.webapi.core/4.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "content/web.config.transform",
-        "lib/net40/System.Web.Http.dll",
-        "lib/net40/System.Web.Http.xml",
-        "microsoft.aspnet.webapi.core.4.0.20710.nupkg.sha512",
-        "microsoft.aspnet.webapi.core.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
@@ -2230,15 +2072,15 @@
         "version.txt"
       ]
     },
-    "Microsoft.CodeAnalysis.Analyzers/3.0.0": {
-      "sha512": "ojG5pGAhTPmjxRGTNvuszO3H8XPZqksDwr9xLd4Ae/JBjZZdl6GuoLk7uLMf+o7yl5wO0TAqoWcEKkEWqrZE5g==",
+    "Microsoft.CodeAnalysis.Analyzers/3.3.3": {
+      "sha512": "j/rOZtLMVJjrfLRlAMckJLPW/1rze9MT1yfWqSIbUPGRu1m1P0fuo9PmqapwsmePfGB5PJrudQLvmUOAMF0DqQ==",
       "type": "package",
-      "path": "microsoft.codeanalysis.analyzers/3.0.0",
+      "path": "microsoft.codeanalysis.analyzers/3.3.3",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "EULA.rtf",
+        "Icon.png",
         "ThirdPartyNotices.rtf",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.Analyzers.dll",
         "analyzers/dotnet/cs/Microsoft.CodeAnalysis.CSharp.Analyzers.dll",
@@ -2272,6 +2114,156 @@
         "analyzers/dotnet/vb/zh-Hant/Microsoft.CodeAnalysis.Analyzers.resources.dll",
         "build/Microsoft.CodeAnalysis.Analyzers.props",
         "build/Microsoft.CodeAnalysis.Analyzers.targets",
+        "build/config/analysislevel_2_9_8_all.editorconfig",
+        "build/config/analysislevel_2_9_8_default.editorconfig",
+        "build/config/analysislevel_2_9_8_minimum.editorconfig",
+        "build/config/analysislevel_2_9_8_none.editorconfig",
+        "build/config/analysislevel_2_9_8_recommended.editorconfig",
+        "build/config/analysislevel_3_3_all.editorconfig",
+        "build/config/analysislevel_3_3_default.editorconfig",
+        "build/config/analysislevel_3_3_minimum.editorconfig",
+        "build/config/analysislevel_3_3_none.editorconfig",
+        "build/config/analysislevel_3_3_recommended.editorconfig",
+        "build/config/analysislevel_3_all.editorconfig",
+        "build/config/analysislevel_3_default.editorconfig",
+        "build/config/analysislevel_3_minimum.editorconfig",
+        "build/config/analysislevel_3_none.editorconfig",
+        "build/config/analysislevel_3_recommended.editorconfig",
+        "build/config/analysislevelcorrectness_2_9_8_all.editorconfig",
+        "build/config/analysislevelcorrectness_2_9_8_default.editorconfig",
+        "build/config/analysislevelcorrectness_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelcorrectness_2_9_8_none.editorconfig",
+        "build/config/analysislevelcorrectness_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelcorrectness_3_3_all.editorconfig",
+        "build/config/analysislevelcorrectness_3_3_default.editorconfig",
+        "build/config/analysislevelcorrectness_3_3_minimum.editorconfig",
+        "build/config/analysislevelcorrectness_3_3_none.editorconfig",
+        "build/config/analysislevelcorrectness_3_3_recommended.editorconfig",
+        "build/config/analysislevelcorrectness_3_all.editorconfig",
+        "build/config/analysislevelcorrectness_3_default.editorconfig",
+        "build/config/analysislevelcorrectness_3_minimum.editorconfig",
+        "build/config/analysislevelcorrectness_3_none.editorconfig",
+        "build/config/analysislevelcorrectness_3_recommended.editorconfig",
+        "build/config/analysislevellibrary_2_9_8_all.editorconfig",
+        "build/config/analysislevellibrary_2_9_8_default.editorconfig",
+        "build/config/analysislevellibrary_2_9_8_minimum.editorconfig",
+        "build/config/analysislevellibrary_2_9_8_none.editorconfig",
+        "build/config/analysislevellibrary_2_9_8_recommended.editorconfig",
+        "build/config/analysislevellibrary_3_3_all.editorconfig",
+        "build/config/analysislevellibrary_3_3_default.editorconfig",
+        "build/config/analysislevellibrary_3_3_minimum.editorconfig",
+        "build/config/analysislevellibrary_3_3_none.editorconfig",
+        "build/config/analysislevellibrary_3_3_recommended.editorconfig",
+        "build/config/analysislevellibrary_3_all.editorconfig",
+        "build/config/analysislevellibrary_3_default.editorconfig",
+        "build/config/analysislevellibrary_3_minimum.editorconfig",
+        "build/config/analysislevellibrary_3_none.editorconfig",
+        "build/config/analysislevellibrary_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscompatibility_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysiscorrectness_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdesign_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisdocumentation_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysislocalization_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisperformance_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_2_9_8_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_3_recommended.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_all.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_default.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_minimum.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_none.editorconfig",
+        "build/config/analysislevelmicrosoftcodeanalysisreleasetracking_3_recommended.editorconfig",
         "documentation/Analyzer Configuration.md",
         "documentation/Microsoft.CodeAnalysis.Analyzers.md",
         "documentation/Microsoft.CodeAnalysis.Analyzers.sarif",
@@ -2300,7 +2292,7 @@
         "editorconfig/MicrosoftCodeAnalysisReleaseTrackingRulesEnabled/.editorconfig",
         "editorconfig/PortedFromFxCopRulesDefault/.editorconfig",
         "editorconfig/PortedFromFxCopRulesEnabled/.editorconfig",
-        "microsoft.codeanalysis.analyzers.3.0.0.nupkg.sha512",
+        "microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
         "microsoft.codeanalysis.analyzers.nuspec",
         "rulesets/AllRulesDefault.ruleset",
         "rulesets/AllRulesDisabled.ruleset",
@@ -2784,33 +2776,6 @@
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
-    "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
-      "sha512": "LH4OE/76F6sOCslif7+Xh3fS/wUUrE5ryeXAMcoCnuwOQGT5Smw0p57IgDh/pHgHaGz/e+AmEQb7pRgb++wt0w==",
-      "type": "package",
-      "path": "microsoft.extensions.apidescription.server/3.0.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Microsoft.Extensions.ApiDescription.Server.props",
-        "build/Microsoft.Extensions.ApiDescription.Server.targets",
-        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.props",
-        "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets",
-        "microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
-        "microsoft.extensions.apidescription.server.nuspec",
-        "tools/Newtonsoft.Json.dll",
-        "tools/dotnet-getdocument.deps.json",
-        "tools/dotnet-getdocument.dll",
-        "tools/dotnet-getdocument.runtimeconfig.json",
-        "tools/net461-x86/GetDocument.Insider.exe",
-        "tools/net461-x86/GetDocument.Insider.exe.config",
-        "tools/net461/GetDocument.Insider.exe",
-        "tools/net461/GetDocument.Insider.exe.config",
-        "tools/netcoreapp2.1/GetDocument.Insider.deps.json",
-        "tools/netcoreapp2.1/GetDocument.Insider.dll",
-        "tools/netcoreapp2.1/GetDocument.Insider.runtimeconfig.json"
-      ]
-    },
     "Microsoft.Extensions.Caching.Abstractions/5.0.0": {
       "sha512": "bu8As90/SBAouMZ6fJ+qRNo1X+KgHGrVueFhhYi+E5WqEhcnp2HoWRFnMzXQ6g4RdZbvPowFerSbKNH4Dtg5yg==",
       "type": "package",
@@ -3146,22 +3111,6 @@
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Microsoft.Net.Http/2.0.20710": {
-      "sha512": "OsB/5QO9tYJRLYIgBOhRl4Tssh3pw7+UAO9tMGMBg63f98GfjsniVIwLWRC0vcRr/F6HLP/NvRlHyGBhtD7Bmw==",
-      "type": "package",
-      "path": "microsoft.net.http/2.0.20710",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/System.Net.Http.WebRequest.dll",
-        "lib/net40/System.Net.Http.WebRequest.xml",
-        "lib/net40/System.Net.Http.dll",
-        "lib/net40/System.Net.Http.xml",
-        "lib/net45/_._",
-        "microsoft.net.http.2.0.20710.nupkg.sha512",
-        "microsoft.net.http.nuspec"
-      ]
-    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "sha512": "z7aeg8oHln2CuNulfhiLYxCVMPEwBl3rzicjvIX+4sUuCwvXw5oXQEtbiU2c0z4qYL5L3Kmx0mMA/+t/SbY67w==",
       "type": "package",
@@ -3192,23 +3141,6 @@
         "microsoft.netcore.targets.1.1.3.nupkg.sha512",
         "microsoft.netcore.targets.nuspec",
         "runtime.json"
-      ]
-    },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
-      "type": "package",
-      "path": "microsoft.openapi/1.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
-        "lib/netstandard2.0/Microsoft.OpenApi.dll",
-        "lib/netstandard2.0/Microsoft.OpenApi.pdb",
-        "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
-        "microsoft.openapi.nuspec"
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/5.0.2": {
@@ -3395,105 +3327,11 @@
       "path": "runtime.native.system/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
         "runtime.native.system.4.3.0.nupkg.sha512",
         "runtime.native.system.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore/6.2.3": {
-      "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore/6.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Swashbuckle.AspNetCore.props",
-        "swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.Swagger/6.2.3": {
-      "sha512": "qOF7j1sL0bWm8g/qqHVPCvkO3JlVvUIB8WfC98kSh6BT5y5DAnBNctfac7XR5EZf+eD7/WasvANncTqwZYfmWQ==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/6.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net5.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/net6.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swagger.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": {
-      "sha512": "+Xq7WdMCCfcXlnbLJVFNgY8ITdP2TRYIlpbt6IKzDw5FwFxdi9lBfNDtcT+/wkKwX70iBBFmXldnnd02/VO72A==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/6.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggergen.nuspec"
-      ]
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/6.2.3": {
-      "sha512": "bCRI87uKJVb4G+KURWm8LQrL64St04dEFZcF6gIM67Zc0Sr/N47EO83ybLMYOvfNdO1DCv8xwPcrz9J/VEhQ5g==",
-      "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/6.2.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net5.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/net6.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.pdb",
-        "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
-        "swashbuckle.aspnetcore.swaggerui.nuspec"
-      ]
-    },
-    "Swashbuckle.Core/5.6.0": {
-      "sha512": "GhVWgtB8hCOxQhx7zLiiRyoi6flm7fNDDGILYHWktxLMkykRUz90fhmLRZECmnbvCcepFyROiw3phS1XorhdDg==",
-      "type": "package",
-      "path": "swashbuckle.core/5.6.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Swashbuckle.Core.dll",
-        "swashbuckle.core.5.6.0.nupkg.sha512",
-        "swashbuckle.core.nuspec"
       ]
     },
     "System.Collections/4.3.0": {
@@ -3502,7 +3340,6 @@
       "path": "system.collections/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3570,7 +3407,6 @@
       "path": "system.collections.concurrent/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3664,7 +3500,6 @@
       "path": "system.collections.nongeneric/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3703,7 +3538,6 @@
       "path": "system.collections.specialized/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3742,7 +3576,6 @@
       "path": "system.componentmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3891,7 +3724,6 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3930,7 +3762,6 @@
       "path": "system.componentmodel.typeconverter/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3983,7 +3814,6 @@
       "path": "system.composition/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "system.composition.1.0.31.nupkg.sha512",
@@ -3996,7 +3826,6 @@
       "path": "system.composition.attributedmodel/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.AttributedModel.dll",
@@ -4011,7 +3840,6 @@
       "path": "system.composition.convention/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Convention.dll",
@@ -4026,7 +3854,6 @@
       "path": "system.composition.hosting/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Hosting.dll",
@@ -4041,7 +3868,6 @@
       "path": "system.composition.runtime/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.Runtime.dll",
@@ -4056,7 +3882,6 @@
       "path": "system.composition.typedparts/1.0.31",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/System.Composition.TypedParts.dll",
@@ -4094,7 +3919,6 @@
       "path": "system.diagnostics.debug/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4190,7 +4014,6 @@
       "path": "system.diagnostics.tools/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4247,7 +4070,6 @@
       "path": "system.diagnostics.tracing/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4376,7 +4198,6 @@
       "path": "system.globalization/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4444,7 +4265,6 @@
       "path": "system.globalization.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4506,7 +4326,6 @@
       "path": "system.io/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4587,7 +4406,6 @@
       "path": "system.io.filesystem/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4625,7 +4443,6 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4664,7 +4481,6 @@
       "path": "system.linq/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4736,7 +4552,6 @@
       "path": "system.linq.expressions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4843,7 +4658,6 @@
       "path": "system.net.nameresolution/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4885,7 +4699,6 @@
       "path": "system.net.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -4964,7 +4777,6 @@
       "path": "system.objectmodel/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5034,7 +4846,6 @@
       "path": "system.private.datacontractserialization/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.3/System.Private.DataContractSerialization.dll",
@@ -5064,7 +4875,6 @@
       "path": "system.reflection/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5145,7 +4955,6 @@
       "path": "system.reflection.emit/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5181,7 +4990,6 @@
       "path": "system.reflection.emit.ilgeneration/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5271,7 +5079,6 @@
       "path": "system.reflection.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5352,7 +5159,6 @@
       "path": "system.reflection.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5409,7 +5215,6 @@
       "path": "system.reflection.typeextensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5463,7 +5268,6 @@
       "path": "system.resources.resourcemanager/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5520,7 +5324,6 @@
       "path": "system.runtime/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5678,7 +5481,6 @@
       "path": "system.runtime.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5759,7 +5561,6 @@
       "path": "system.runtime.handles/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5797,7 +5598,6 @@
       "path": "system.runtime.interopservices/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5890,7 +5690,6 @@
       "path": "system.runtime.serialization.formatters/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -5978,7 +5777,6 @@
       "path": "system.runtime.serialization.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6160,7 +5958,6 @@
       "path": "system.security.cryptography.primitives/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6356,7 +6153,6 @@
       "path": "system.text.encoding/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6464,7 +6260,6 @@
       "path": "system.text.encoding.extensions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6551,7 +6346,6 @@
       "path": "system.text.regularexpressions/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6635,7 +6429,6 @@
       "path": "system.threading/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6706,7 +6499,6 @@
       "path": "system.threading.tasks/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6832,7 +6624,6 @@
       "path": "system.xml.readerwriter/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6904,7 +6695,6 @@
       "path": "system.xml.xdocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -6974,7 +6764,6 @@
       "path": "system.xml.xmldocument/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7013,7 +6802,6 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
         ".nupkg.metadata",
-        ".signature.p7s",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -7078,60 +6866,36 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "ILG_Global.BackEnd.BussinessLogic/1.0.0": {
+    "ILG_Global.BussinessLogic/1.0.0": {
       "type": "project",
-      "path": "../ILG_Global.BackEnd.BussinessLogic/ILG_Global.BackEnd.BussinessLogic.csproj",
-      "msbuildProject": "../ILG_Global.BackEnd.BussinessLogic/ILG_Global.BackEnd.BussinessLogic.csproj"
-    },
-    "ILG_Global.BackEnd.DataAccess/1.0.0": {
-      "type": "project",
-      "path": "../ILG_Global.BackEnd.DataAccess/ILG_Global.BackEnd.DataAccess.csproj",
-      "msbuildProject": "../ILG_Global.BackEnd.DataAccess/ILG_Global.BackEnd.DataAccess.csproj"
+      "path": "../ILG_Global.BussinessLogic/ILG_Global.BussinessLogic.csproj",
+      "msbuildProject": "../ILG_Global.BussinessLogic/ILG_Global.BussinessLogic.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "ILG_Global.BackEnd.DataAccess >= 1.0.0",
+      "ILG_Global.BussinessLogic >= 1.0.0",
+      "Microsoft.CodeAnalysis.Analyzers >= 3.3.3",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.11",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.11",
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore >= 5.0.2",
-      "Swashbuckle.AspNetCore >= 6.2.3",
-      "Swashbuckle.AspNetCore.Swagger >= 6.2.3",
-      "Swashbuckle.AspNetCore.SwaggerGen >= 6.2.3",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 6.2.3",
-      "Swashbuckle.Core >= 5.6.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore >= 5.0.2"
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD:ILG_Global.Web/obj/project.assets.json
     "C:\\Users\\Kurdi\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\hesham.salem\\.nuget\\packages\\": {}
->>>>>>> 0088d2d57303d4cf1259f5a0dadb87a250ff8f76:ILG_Global.BackEnd/ILG_Global.BackEnd.Web/obj/project.assets.json
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD:ILG_Global.Web/obj/project.assets.json
-      "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
-      "projectName": "ILG_Global.Web",
-      "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\ILG_Global.Web.csproj",
+      "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "projectName": "ILG_Global.DataAccess",
+      "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
-      "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.Web\\obj\\",
+      "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
-      "projectName": "ILG_Global.BackEnd.Web",
-      "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\ILG_Global.BackEnd.Web.csproj",
-      "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.Web\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 0088d2d57303d4cf1259f5a0dadb87a250ff8f76:ILG_Global.BackEnd/ILG_Global.BackEnd.Web/obj/project.assets.json
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7145,8 +6909,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj": {
-              "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BackEnd\\ILG_Global.BackEnd.DataAccess\\ILG_Global.BackEnd.DataAccess.csproj"
+            "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+              "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
             }
           }
         }
@@ -7161,6 +6925,12 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
+          "Microsoft.CodeAnalysis.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[3.3.3, )"
+          },
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
@@ -7180,26 +6950,6 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": {
             "target": "Package",
             "version": "[5.0.2, )"
-          },
-          "Swashbuckle.AspNetCore": {
-            "target": "Package",
-            "version": "[6.2.3, )"
-          },
-          "Swashbuckle.AspNetCore.Swagger": {
-            "target": "Package",
-            "version": "[6.2.3, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerGen": {
-            "target": "Package",
-            "version": "[6.2.3, )"
-          },
-          "Swashbuckle.AspNetCore.SwaggerUI": {
-            "target": "Package",
-            "version": "[6.2.3, )"
-          },
-          "Swashbuckle.Core": {
-            "target": "Package",
-            "version": "[5.6.0, )"
           }
         },
         "imports": [
@@ -7212,68 +6962,13 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.12, 5.0.12]"
-          }
-        ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-<<<<<<< HEAD:ILG_Global.Web/obj/project.assets.json
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-=======
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
->>>>>>> 0088d2d57303d4cf1259f5a0dadb87a250ff8f76:ILG_Global.BackEnd/ILG_Global.BackEnd.Web/obj/project.assets.json
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Client 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.WebApi.Client",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 4.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.AspNet.WebApi.Core",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.Net.Http 2.0.20710' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.Net.Http",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Swashbuckle.Core 5.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Swashbuckle.Core",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }

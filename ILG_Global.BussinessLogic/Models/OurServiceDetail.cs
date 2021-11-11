@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ILG_Global.BussinessLogic.Models
 {
-    public class HtmlContentDetail
+    public class OurServiceDetail
     {
-        public int HtmlContentID { get; set; }
-        [ForeignKey("HtmlContentID")]
-        public HtmlContentMaster HtmlContentMaster { get; set; }
+        public int OurServiceID { get; set; }
+        [ForeignKey("OurServiceID")]
+        public OurServiceMaster OurServiceMaster { get; set; }
 
         public string LanguageCode { get; set; }
         [ForeignKey("LanguageCode")]
