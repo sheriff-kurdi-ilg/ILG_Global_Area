@@ -11,7 +11,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
     {
         public HtmlContentDetail LeaderBoardSectionHeaderContent{ get; set; }
 
-        public IEnumerable<OurServiceDetail> OurServiceDetails { get; set; }
+        public OurServiceVM OurServices { get; set; }
 
         public SuccessStoriesVM SuccessStoriesViewModel { get; set; }
 

@@ -12,7 +12,9 @@ namespace ILG_Global.BussinessLogic.Models {
 
         //[ForeignKey("HtmlContentMaster")]
         public int? HtmlContentMasterID { get; set; }
-        // [ForeignKey("OurServiceMaster")]
+
+        [ForeignKey("OurServiceMasterID")]
+        public OurServiceMaster OurServiceMaster { get; set; }
         public int? OurServiceMasterID { get; set; }
         public string Name { get; set; }
         public int Width { get; set; }

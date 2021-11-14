@@ -59,7 +59,7 @@ namespace ILG_Global.Web.Controllers
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
            //  oHomePageVM.OurServiceDetails = OurServiceDetailRepository.
 
-            oHomePageVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
+            oHomePageVM.OurServices = await oOurserviceViewModelCreate();
 
             oHomePageVM.SuccessStoriesViewModel = oSuccessStoriesViewModelCreate();
       
@@ -79,6 +79,18 @@ namespace ILG_Global.Web.Controllers
             oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
 
             return oSuccessStoriesVM;
+        }
+
+        private async Task<OurServiceVM> oOurserviceViewModelCreate()
+        {
+            OurServiceVM ourServiceVM = new OurServiceVM();
+            ourServiceVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
+            foreach(OurServiceDetail ourServiceDetail in ourServiceVM.OurServiceDetails)
+            {
+                ourServiceVM.ImageDetails =ourServiceDetail.OurServiceMaster.ImageDetails;
+            }
+
+            return ourServiceVM;
         }
 
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate()

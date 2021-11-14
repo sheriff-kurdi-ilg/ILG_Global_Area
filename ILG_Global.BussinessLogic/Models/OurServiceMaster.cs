@@ -11,6 +11,9 @@ namespace ILG_Global.BussinessLogic.Models
     {
         public int ID { get; set; }
         public bool IsEnabled { get; set; }
+        [ForeignKey("ImageMastersId")]
+        public List<ImageMaster> ImageMasters { get; set; }
+        public int ImageMastersId { get; set; }
 
         public List<OurServiceDetail> OurServiceDetails { get; set; }
 

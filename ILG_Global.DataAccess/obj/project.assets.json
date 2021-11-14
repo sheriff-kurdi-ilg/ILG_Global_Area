@@ -6888,11 +6888,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\hesham.salem\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\Kurdi\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "projectName": "ILG_Global.DataAccess",
       "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
@@ -6901,6 +6906,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "projectUniqueName": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "projectName": "ILG_Global.DataAccess",
+      "projectPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
+      "outputPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6914,8 +6929,13 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+<<<<<<< Updated upstream
             "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
               "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+=======
+            "D:\\ILG_Projects\\Ilg_global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+              "projectPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+>>>>>>> Stashed changes
             }
           }
         }
@@ -6972,7 +6992,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }
