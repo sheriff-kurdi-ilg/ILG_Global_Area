@@ -21,6 +21,8 @@ namespace ILG_Global.Web.Controllers
     public class HomeController : Controller
     {
         private readonly INewsLetterSubscribeRepository newsLetterSubscribeRepository;
+        private readonly IImageDetailRepository imageDetailRepository;
+        private readonly IImageMasterRepository imageMasterRepository;
 
         #region DI
 
@@ -35,13 +37,17 @@ namespace ILG_Global.Web.Controllers
             IOurServiceDetailRepository ourServiceDetailRepository,
             ISucessStoryDetailRepository sucessStoryDetailRepository,
             IContactInformationDetailRepository  contactInformationDetailRepository,
-            INewsLetterSubscribeRepository newsLetterSubscribeRepository)
+            INewsLetterSubscribeRepository newsLetterSubscribeRepository,
+            IImageDetailRepository imageDetailRepository,
+            IImageMasterRepository imageMasterRepository)
         {
             this.HtmlContentDetailRepository = htmlContentDetailRepository;
             this.OurServiceDetailRepository = ourServiceDetailRepository;
             this.SucessStoryDetailRepository = sucessStoryDetailRepository;
             this.ContactInformationDetailRepository = contactInformationDetailRepository;
             this.NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
+            this.imageDetailRepository = imageDetailRepository;
+            this.imageMasterRepository = imageMasterRepository;
         }
 
         #endregion
@@ -85,9 +91,10 @@ namespace ILG_Global.Web.Controllers
         {
             OurServiceVM ourServiceVM = new OurServiceVM();
             ourServiceVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
-            foreach(OurServiceDetail ourServiceDetail in ourServiceVM.OurServiceDetails)
+            foreach (OurServiceDetail ourServiceDetail in ourServiceVM.OurServiceDetails)
             {
-                ourServiceVM.ImageDetails =ourServiceDetail.OurServiceMaster.ImageDetails;
+                ourServiceVM.ImageDetails.AddRange(imageDetailRepository.SelectAll().Result.Where(i => i.LanguageCode == "en" && i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
+                ourServiceVM.ImageMasters.AddRange(imageMasterRepository.SelectAll().Result.Where(i=>  i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
             }
 
             return ourServiceVM;

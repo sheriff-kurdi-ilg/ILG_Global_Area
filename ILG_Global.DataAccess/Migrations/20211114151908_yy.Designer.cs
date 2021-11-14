@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211114151908_yy")]
+    partial class yy
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -111,7 +113,7 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<string>("AlternateText")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("OurServiceMasterID")
+                    b.Property<int>("OurServiceMasterID")
                         .HasColumnType("int");
 
                     b.Property<string>("Title")
@@ -338,13 +340,17 @@ namespace ILG_Global.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ILG_Global.BussinessLogic.Models.OurServiceMaster", null)
+                    b.HasOne("ILG_Global.BussinessLogic.Models.OurServiceMaster", "OurServiceMaster")
                         .WithMany("ImageDetails")
-                        .HasForeignKey("OurServiceMasterID");
+                        .HasForeignKey("OurServiceMasterID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("ImageMaster");
 
                     b.Navigation("Language");
+
+                    b.Navigation("OurServiceMaster");
                 });
 
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ImageMaster", b =>

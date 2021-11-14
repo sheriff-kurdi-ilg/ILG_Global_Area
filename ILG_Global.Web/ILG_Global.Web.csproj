@@ -16,6 +16,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.jpg" />
+    <Content Remove="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.png" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\House.jpg" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\House.png" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\Ring.jpg" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\Ring.png" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\Spliter.jpg" />
+    <Content Remove="wwwroot\Assets\UserFiles\OurServices\Spliter.png" />
+    <Content Remove="wwwroot\Assets\UserFiles\SuccessStories\DNA_2x.jpg" />
+    <Content Remove="wwwroot\Assets\UserFiles\SuccessStories\Splitter_2x.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -40,6 +53,19 @@
     <Folder Include="Services\" />
     <Folder Include="Tools\" />
     <Folder Include="UserFiles\SuccessStories\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.jpg" />
+    <None Include="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.png" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\House.jpg" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\House.png" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\Ring.jpg" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\Ring.png" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\Spliter.jpg" />
+    <None Include="wwwroot\Assets\UserFiles\OurServices\Spliter.png" />
+    <None Include="wwwroot\Assets\UserFiles\SuccessStories\DNA_2x.jpg" />
+    <None Include="wwwroot\Assets\UserFiles\SuccessStories\Splitter_2x.jpg" />
   </ItemGroup>
 
 </Project>

@@ -48,6 +48,8 @@ namespace ILG_Global.Web
             services.AddScoped<IOurServiceDetailRepository, OurServiceDetailRepository>();
             services.AddScoped<ISucessStoryDetailRepository, SucessStoryDetailRepository>();
             services.AddScoped<IContactInformationDetailRepository, ContactInformationDetailRepository>();
+            services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
+            services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
 

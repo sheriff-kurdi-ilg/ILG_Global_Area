@@ -10,6 +10,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
     public  class OurServiceVM
     {
         public IEnumerable<OurServiceDetail> OurServiceDetails { get; set; }
-        public List<ImageDetail> ImageDetails { get; set; }
+        public List<ImageMaster> ImageMasters { get; set; } = new List<ImageMaster>();
+        public List<ImageDetail> ImageDetails { get; set; } = new List<ImageDetail>();
     }
 }

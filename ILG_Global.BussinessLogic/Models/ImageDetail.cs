@@ -20,5 +20,8 @@ namespace ILG_Global.BussinessLogic.Models
         public string  Title { get; set; }
 
         public string AlternateText { get; set; }
+        public int? OurServiceMasterID { get; set; }
+        [ForeignKey("OurServiceMasterID")]
+        public OurServiceMaster OurServiceMaster { get; set; }
     }
 }
