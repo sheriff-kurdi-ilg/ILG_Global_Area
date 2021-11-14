@@ -1,7 +1,7 @@
 
 ILG_Global.Web/bin/
 ILG_Global.Web/obj/
-.vs/
+.vs -f
 ILG_Global.BussinessLogic/bin/
 ILG_Global.BussinessLogic/obj/
 ILG_Global.DataAccess/bin/

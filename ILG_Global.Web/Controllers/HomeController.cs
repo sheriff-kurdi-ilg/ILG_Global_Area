@@ -3,8 +3,6 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
-﻿using ILG_Global.DataAccess;
-
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -30,27 +28,20 @@ namespace ILG_Global.Web.Controllers
         public IOurServiceDetailRepository OurServiceDetailRepository { get; }
         public ISucessStoryDetailRepository SucessStoryDetailRepository { get; }
         public IContactInformationDetailRepository ContactInformationDetailRepository { get; }
+        public INewsLetterSubscribeRepository NewsLetterSubscribeRepository { get; set; }
 
         public HomeController(
             IHtmlContentDetailRepository htmlContentDetailRepository,
             IOurServiceDetailRepository ourServiceDetailRepository,
             ISucessStoryDetailRepository sucessStoryDetailRepository,
-            IContactInformationDetailRepository  contactInformationDetailRepository
-            )
-        {
-
-            HtmlContentDetailRepository = htmlContentDetailRepository;
-            OurServiceDetailRepository = ourServiceDetailRepository;
-            SucessStoryDetailRepository = sucessStoryDetailRepository;
-            ContactInformationDetailRepository = contactInformationDetailRepository;
-
-            IHtmlContentDetailRepository htmlContentDetailRepository,
+            IContactInformationDetailRepository  contactInformationDetailRepository,
             INewsLetterSubscribeRepository newsLetterSubscribeRepository)
         {
-
-            HtmlContentDetailRepository = htmlContentDetailRepository;
-            this.newsLetterSubscribeRepository = newsLetterSubscribeRepository;
-
+            this.HtmlContentDetailRepository = htmlContentDetailRepository;
+            this.OurServiceDetailRepository = ourServiceDetailRepository;
+            this.SucessStoryDetailRepository = sucessStoryDetailRepository;
+            this.ContactInformationDetailRepository = contactInformationDetailRepository;
+            this.NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
         }
 
         #endregion
@@ -59,19 +50,44 @@ namespace ILG_Global.Web.Controllers
 
         public async Task<ActionResult> Index()
         {
+
+            // HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
+            // oHtmlContentDetail.HtmlContentMaster.ImageMasters[0]
+
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
 
             oHomePageVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
 
-            oHomePageVM.SuccessStoriesSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(3, "en");
-            oHomePageVM.SucessStoryDetails = await SucessStoryDetailRepository.SelectAllAsync("en");
+            oHomePageVM.SuccessStoriesViewModel = oSuccessStoriesViewModelCreate();
+      
 
-            oHomePageVM.ContactUsSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(4, "en");
-            oHomePageVM.ContactInformationDetails = await ContactInformationDetailRepository.SelectAllAsync("en");
+            oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
+
+            oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
             return View(oHomePageVM);
+        }
+
+        private SuccessStoriesVM oSuccessStoriesViewModelCreate( )
+        {
+            SuccessStoriesVM oSuccessStoriesVM = new SuccessStoriesVM();
+
+            oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, "en").Result;
+            oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
+
+            return oSuccessStoriesVM;
+        }
+
+        private async Task<ContactUsSectionVM> oContactUsViewModelCreate()
+        {
+            ContactUsSectionVM oContactUsSectionVM = new ContactUsSectionVM();
+
+            oContactUsSectionVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
+            oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync("en").Result;
+
+            return oContactUsSectionVM;
         }
 
         #endregion

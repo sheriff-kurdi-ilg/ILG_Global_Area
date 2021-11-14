@@ -1,11 +1,12 @@
 ﻿
 using ILG_Global.BussinessLogic.Models;
-using Microsoft.EntityFrameworkCore;
+
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Linq;
 using ILG_Global.BussinessLogic.Abstraction;
+using Microsoft.EntityFrameworkCore;
 
 namespace ILG_Global.DataAccess
 {
@@ -18,7 +19,7 @@ namespace ILG_Global.DataAccess
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<SucessStoryDetail>> SelectAllAsync(string sLanguageCode)
+        public async Task<List<SucessStoryDetail>> SelectAllAsync(string sLanguageCode)
         {
             List<SucessStoryDetail> lSucessStoryDetails = new List<SucessStoryDetail>();
 

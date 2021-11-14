@@ -1,3 +1,53 @@
 Microsoft.AspNetCore.StaticFiles
 
 Microsoft.EntityFrameworkCore.Tools
+
+
+        @if (Model.Any())
+        {
+            List<OurServiceDetail> lOurServiceDetails = Model.ToList();
+            for (int nCurrentOurServiceDetailIndex = 0; nCurrentOurServiceDetailIndex < lOurServiceDetails.Count(); nCurrentOurServiceDetailIndex++)
+            {
+                <div class="row contact-list justify-content-between align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                        <div class="our-service-slider-image-col">
+
+                            @if (lOurServiceDetails[nCurrentOurServiceDetailIndex] != null)
+                            {
+                                OurServiceDetail oOurServiceDetail = lOurServiceDetails[nCurrentOurServiceDetailIndex];
+
+                                for (int nCurrentImageIndex = 0; nCurrentImageIndex < lOurServiceDetails.Count(); nCurrentImageIndex++)
+                                {
+                                    <div class="our-service-slider-image" style="bottom: 30px">
+                                        <img src="../UserFiles/OurServices/@oOurServiceDetail.OurServiceMaster" class="w-100 h-100 ">
+                                    </div>
+                                }
+                            }
+
+                            @*<div class="our-service-slider-image" style="bottom: 30px">
+                                <img src="assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                            </div>
+                            <div class="our-service-slider-image" style="left: 30px;">
+                                <img src="assets/images/Mask_gg@2x.png" class="w-100 h-100 ">
+                            </div>
+                            <div class="our-service-slider-image main-slider-image" style="left: 50px">
+                                <img src="assets/images/Mask_bz@2x.png" class="w-100 h-100 ">
+                            </div>*@
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
+                        <div class="row title">
+                            <div class="col-12 col-sm-12 col-md-12">
+                                <h5 class="pb-4 pt-5">OUR SERVICES</h5>
+                                <h6>
+                                    Learn More About <br /> Family Conflicts
+                                </h6>
+                            </div>
+                        </div>
+                        <p>
+                            <span>O</span>ur team of best family lawyers in Kuwait will help you stay ahead during these times of emotional distress. With our expert team of family lawyers, you will be girded with different strategies that will be helpful in your cause. You can be ensured that you will be well guided through every step of the legal proceedings by our family lawyers with an object to alleviate anxiety and reduce stress.
+                        </p>
+                    </div>
+                </div>
+            }
+        }

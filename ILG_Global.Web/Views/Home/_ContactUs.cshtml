@@ -1,4 +1,9 @@
 ﻿
+@using ILG_Global.BussinessLogic.ViewModels
+@using ILG_Global.BussinessLogic.Models
+@using System.Collections.Generic
+@model ContactUsSectionVM
+
 @{
     Layout = null;
 }
@@ -6,32 +11,27 @@
 <section class="container contact-us-section general-section">
     <div class="row title">
         <div class="col-12 col-sm-12 col-md-6">
-            <h5 class="pb-4 pt-5">CONTACT US</h5>
+            <h5 class="pb-4 pt-5">@Model.SuccessStoriesSectionHeaderContent.Title</h5>
             <h6>
-                Ready To Solve Your Case,
-                We Have Got You Covered!
+                @Model.SuccessStoriesSectionHeaderContent.SubTitle
             </h6>
         </div>
     </div>
     <div class="row contact-list flex-column-reverse flex-sm-column-reverse flex-md-row">
         <div class="col-12 col-sm-12 col-md-6">
             <ul class="col-12 col-sm-12 col-md-9 px-0">
-                <li class="py-4">
-                    <i class="fas fa-phone-volume"></i>
-                    <span class="px-4">+96522499777</span>
-                </li>
-                <li class="py-4">
-                    <i class="fas fa-envelope"></i>
-                    <span class="px-4"> info@ilgglobal.com</span>
-                </li>
-                <li class="py-4">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span class="px-4">Kuwait-Dasman- street 135-white house building #2-2nd floor</span>
-                </li>
-                <li class="py-4">
-                    <i class="fas fa-fax"></i>
-                    <span class="px-4">Kuwait-Dasman-15400</span>
-                </li>
+
+                @if (Model.ContactInformationDetails.Any())
+                {
+                    foreach (ContactInformationDetail oContactInformationDetail in Model.ContactInformationDetails)
+                    {
+                        <li class="py-4">
+                            <i class="@oContactInformationDetail.ContactInformationMaster.FontAwsomeIconCssClass hi123"></i>
+                            <span class="px-4">@oContactInformationDetail.Text</span>
+                        </li>
+                    }
+                }
+
             </ul>
         </div>
         <div class="col-12 col-sm-12 col-md-6">

@@ -13,5 +13,7 @@ namespace ILG_Global.BussinessLogic.Models
         public bool IsEnabled { get; set; }
 
         public List<OurServiceDetail> OurServiceDetails { get; set; }
+
+        public List<ImageDetail> ImageDetails { get; set; }
     }
 }

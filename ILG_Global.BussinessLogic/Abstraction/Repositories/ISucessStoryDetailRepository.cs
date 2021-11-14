@@ -8,7 +8,7 @@ namespace ILG_Global.BussinessLogic.Abstraction
     {
         Task<bool> DeleteByID(int nID);
         Task<bool> Insert(SucessStoryDetail oSucessStoryDetail);
-        Task<IEnumerable<SucessStoryDetail>> SelectAllAsync(string sLanguageCode);
+        Task<List<SucessStoryDetail>> SelectAllAsync(string sLanguageCode);
         Task<SucessStoryDetail> SelectByIdAsync(int nID, string sLanguageCode);
         Task<bool> Update(SucessStoryDetail oSucessStoryDetail);
     }

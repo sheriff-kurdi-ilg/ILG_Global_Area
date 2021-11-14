@@ -11,7 +11,6 @@
     
 @{ 
 
-
 }
 
 <!DOCTYPE html>
@@ -64,22 +63,23 @@
         <main>
 
 
-            @Html.Partial("_LeaderBoard", Model.LeaderBoardSectionHeaderContent)
+            @await Html.PartialAsync("_LeaderBoard", Model.LeaderBoardSectionHeaderContent)
 
 
 
             <partial action="_LeaderBoard" />
 
 
-            @Html.Partial("_OurServices")
+            @await Html.PartialAsync("_OurServices", Model.OurServiceDetails)
 
-            @Html.Partial("_SuccessStories")
+            @await Html.PartialAsync("_SuccessStories", Model.SuccessStoriesViewModel)
 
-            @Html.Partial("_ContactUs")
+            @await Html.PartialAsync("_ContactUs", Model.ContactUsSectionViewModel)
 
         </main>
 
-        @await Html.PartialAsync("_Footer")
+      
+        @await Html.PartialAsync("_Footer",Model.NewsLetterSubscribe)
 
     </div>
 

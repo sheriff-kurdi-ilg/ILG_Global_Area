@@ -26,7 +26,7 @@ namespace ILG_Global.DataAccess
             {
                 lContactInformationDetails = await applicationDbContext.ContactInformationDetails.Include(m=>m.ContactInformationMaster).Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
             }
-            catch (Exception)
+            catch (Exception oException)
             {
 
             }

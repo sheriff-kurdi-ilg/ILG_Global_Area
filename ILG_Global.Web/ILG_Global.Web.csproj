@@ -39,6 +39,7 @@
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="Tools\" />
+    <Folder Include="UserFiles\SuccessStories\" />
   </ItemGroup>
 
 </Project>
