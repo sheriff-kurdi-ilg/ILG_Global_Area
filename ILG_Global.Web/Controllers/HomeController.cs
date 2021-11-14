@@ -68,7 +68,7 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
-            return View();
+            return View(oHomePageVM);
         }
 
         private SuccessStoriesVM oSuccessStoriesViewModelCreate( )
