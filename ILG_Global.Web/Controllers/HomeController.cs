@@ -57,6 +57,7 @@ namespace ILG_Global.Web.Controllers
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
+           //  oHomePageVM.OurServiceDetails = OurServiceDetailRepository.
 
             oHomePageVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
 
