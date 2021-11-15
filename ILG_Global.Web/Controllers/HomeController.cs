@@ -5,6 +5,7 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
+using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
 
 
@@ -20,9 +21,7 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly INewsLetterSubscribeRepository newsLetterSubscribeRepository;
-        private readonly IImageDetailRepository imageDetailRepository;
-        private readonly IImageMasterRepository imageMasterRepository;
+
 
         #region DI
 
@@ -31,6 +30,8 @@ namespace ILG_Global.Web.Controllers
         public ISucessStoryDetailRepository SucessStoryDetailRepository { get; }
         public IContactInformationDetailRepository ContactInformationDetailRepository { get; }
         public INewsLetterSubscribeRepository NewsLetterSubscribeRepository { get; set; }
+        private IImageDetailRepository ImageDetailRepository;
+        private IImageMasterRepository ImageMasterRepository;
 
         public HomeController(
             IHtmlContentDetailRepository htmlContentDetailRepository,
@@ -39,15 +40,16 @@ namespace ILG_Global.Web.Controllers
             IContactInformationDetailRepository  contactInformationDetailRepository,
             INewsLetterSubscribeRepository newsLetterSubscribeRepository,
             IImageDetailRepository imageDetailRepository,
-            IImageMasterRepository imageMasterRepository)
+            IImageMasterRepository imageMasterRepository
+            )
         {
             this.HtmlContentDetailRepository = htmlContentDetailRepository;
             this.OurServiceDetailRepository = ourServiceDetailRepository;
             this.SucessStoryDetailRepository = sucessStoryDetailRepository;
             this.ContactInformationDetailRepository = contactInformationDetailRepository;
             this.NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
-            this.imageDetailRepository = imageDetailRepository;
-            this.imageMasterRepository = imageMasterRepository;
+            this.ImageDetailRepository = imageDetailRepository;
+            this.ImageMasterRepository = imageMasterRepository;
         }
 
         #endregion
@@ -93,8 +95,8 @@ namespace ILG_Global.Web.Controllers
             ourServiceVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
             foreach (OurServiceDetail ourServiceDetail in ourServiceVM.OurServiceDetails)
             {
-                ourServiceVM.ImageDetails.AddRange(imageDetailRepository.SelectAll().Result.Where(i => i.LanguageCode == "en" && i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
-                ourServiceVM.ImageMasters.AddRange(imageMasterRepository.SelectAll().Result.Where(i=>  i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
+                ourServiceVM.ImageDetails.AddRange(ImageDetailRepository.SelectAll().Result.Where(i => i.LanguageCode == "en" && i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
+                ourServiceVM.ImageMasters.AddRange(ImageMasterRepository.SelectAll().Result.Where(i=>  i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
             }
 
             return ourServiceVM;
@@ -200,7 +202,7 @@ namespace ILG_Global.Web.Controllers
         [HttpPost]
         public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
         {
-            newsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+            NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
     }
