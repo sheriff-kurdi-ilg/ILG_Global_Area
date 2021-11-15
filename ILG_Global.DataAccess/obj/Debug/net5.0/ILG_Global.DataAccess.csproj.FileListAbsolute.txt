@@ -15,6 +15,7 @@ D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Glob
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ref\ILG_Global.DataAccess.dll
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.pdb
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.genruntimeconfig.cache
+D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CopyComplete
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\bin\Debug\net5.0\ILG_Global.DataAccess.deps.json
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\bin\Debug\net5.0\ILG_Global.DataAccess.runtimeconfig.json
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\bin\Debug\net5.0\ILG_Global.DataAccess.runtimeconfig.dev.json
@@ -33,4 +34,3 @@ D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.Dat
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ref\ILG_Global.DataAccess.dll
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.pdb
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.genruntimeconfig.cache
-D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CopyComplete
