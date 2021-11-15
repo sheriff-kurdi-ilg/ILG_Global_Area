@@ -580,3 +580,22 @@ footer {
 .modal-backdrop.fade.show {
     z-index: 1 !important;
 }
+
+.go-to-action {
+    margin-top:40px;
+    padding: 10px;
+    background-image: url("../images/go-to-action-shrinked.png");
+    background-size: 100% 100%;
+    width: 100px;
+    height: 100px;
+    margin-left: 88%;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    float: left;
+}
+    .go-to-action:hover {
+        background-image: url("../images/go-to-action-expanded.png");
+        margin-left: 82%;
+        width: 342px;
+        height: 100px;
+    }
