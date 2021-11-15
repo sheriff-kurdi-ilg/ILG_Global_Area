@@ -18,7 +18,7 @@ namespace ILG_Global.DataAccess
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<IEnumerable<OurServiceDetail>> SelectAllAsync(string sLanguageCode)
+        public async Task<List<OurServiceDetail>> SelectAllAsync(string sLanguageCode)
         {
             List<OurServiceDetail> lOurServiceDetails = new List<OurServiceDetail>();
             lOurServiceDetails = await applicationDbContext.OurServiceDetails.Include(m => m.OurServiceMaster).ThenInclude(m =>m.ImageMasters).Include(m => m.OurServiceMaster.ImageDetails).Where(m => m.LanguageCode == sLanguageCode).ToListAsync();

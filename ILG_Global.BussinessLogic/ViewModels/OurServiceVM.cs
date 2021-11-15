@@ -9,8 +9,14 @@ namespace ILG_Global.BussinessLogic.ViewModels
 {
     public  class OurServiceVM
     {
-        public IEnumerable<OurServiceDetail> OurServiceDetails { get; set; }
-        public List<ImageMaster> ImageMasters { get; set; } = new List<ImageMaster>();
-        public List<ImageDetail> ImageDetails { get; set; } = new List<ImageDetail>();
+        public int OurServiceID { get; set; }
+        public bool IsEnabled { get; set; }
+        public string LanguageCode { get; set; }
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string Summary { get; set; }
+        public string Description { get; set; }
+
+        public List<ImageDetail> ImageDetails { get; set; }
     }
 }

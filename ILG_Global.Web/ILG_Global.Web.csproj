@@ -1731,6 +1731,10 @@
     <None Include="wwwroot\Assets\fontawesome\webfonts\fa-regular-400.woff2" />
     <None Include="wwwroot\Assets\fontawesome\webfonts\fa-solid-900.svg" />
     <None Include="wwwroot\Assets\fontawesome\webfonts\fa-solid-900.woff2" />
+    <None Include="wwwroot\Assets\Template\Popup\3-layers.svg" />
+    <None Include="wwwroot\Assets\Template\Popup\Icon_ionic-md-share.svg" />
+    <None Include="wwwroot\Assets\Template\Popup\Icon_material-call.svg" />
+    <None Include="wwwroot\Assets\Template\Popup\Icon_material-perm-contact-calendar.svg" />
     <None Include="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.jpg" />
     <None Include="wwwroot\Assets\UserFiles\LeaderBoard\LadyOfJustice.png" />
     <None Include="wwwroot\Assets\UserFiles\OurServices\House.jpg" />

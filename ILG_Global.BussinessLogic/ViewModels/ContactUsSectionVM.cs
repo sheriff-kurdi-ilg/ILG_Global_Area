@@ -9,7 +9,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
 {
     public class ContactUsSectionVM
     {
-        public HtmlContentDetail SuccessStoriesSectionHeaderContent { get; set; }
+        public HtmlContentDetail ContactUsSectionHeaderContent { get; set; }
 
         public IEnumerable<ContactInformationDetail> ContactInformationDetails { get; set; }
     }

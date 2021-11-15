@@ -1,4 +1,13 @@
-/*general style*/
+﻿/*general style*/
+@font-face {
+    font-family: 'Gotham';
+    src: url(../Fonts/Gotham_Medium/Gotham-Medium.eot);
+    src: local('☺'),url(../Fonts/Gotham_Medium/Gotham-Medium.woff) format('woff'),url(../Fonts/Gotham_Medium/Gotham-Medium.ttf) format('truetype'),url(../fonts/Gotham_Medium/Gotham-Medium.svg) format('svg');
+    font-weight: 400;
+    font-style: normal
+}
+
+
 :root {
     --main-color: rgba(12,38,76,1);
 }
@@ -21,7 +30,7 @@ label:focus,
 }
 
 body {
-    /*font-family: 'Gotham', serif !important;*/
+    font-family: 'Gotham', serif !important;
     font-family: serif !important;
 }
 

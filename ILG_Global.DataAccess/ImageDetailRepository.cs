@@ -25,7 +25,7 @@ namespace ILG_Global.DataAccess
             await _context.ImageDetails.AddAsync(entity);
         }
 
-        public async Task<IEnumerable<ImageDetail>> SelectAll()
+        public async Task<List<ImageDetail>> SelectAll(string languageCode)
         {
             return await _context.ImageDetails.Include(c=>c.ImageMaster).Include(c=>c.Language).ToListAsync();
         }
@@ -54,5 +54,7 @@ namespace ILG_Global.DataAccess
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+
+
     }
 }

@@ -37,7 +37,7 @@ namespace ILG_Global.Web.Controllers
             IHtmlContentDetailRepository htmlContentDetailRepository,
             IOurServiceDetailRepository ourServiceDetailRepository,
             ISucessStoryDetailRepository sucessStoryDetailRepository,
-            IContactInformationDetailRepository  contactInformationDetailRepository,
+            IContactInformationDetailRepository contactInformationDetailRepository,
             INewsLetterSubscribeRepository newsLetterSubscribeRepository,
             IImageDetailRepository imageDetailRepository,
             IImageMasterRepository imageMasterRepository
@@ -65,12 +65,12 @@ namespace ILG_Global.Web.Controllers
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
-           //  oHomePageVM.OurServiceDetails = OurServiceDetailRepository.
+            //  oHomePageVM.OurServiceDetails = OurServiceDetailRepository.
 
             oHomePageVM.OurServices = await oOurserviceViewModelCreate();
 
             oHomePageVM.SuccessStoriesViewModel = oSuccessStoriesViewModelCreate();
-      
+
 
             oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
 
@@ -79,7 +79,7 @@ namespace ILG_Global.Web.Controllers
             return View(oHomePageVM);
         }
 
-        private SuccessStoriesVM oSuccessStoriesViewModelCreate( )
+        private SuccessStoriesVM oSuccessStoriesViewModelCreate()
         {
             SuccessStoriesVM oSuccessStoriesVM = new SuccessStoriesVM();
 
@@ -89,27 +89,52 @@ namespace ILG_Global.Web.Controllers
             return oSuccessStoriesVM;
         }
 
-        private async Task<OurServiceVM> oOurserviceViewModelCreate()
+        private async Task<List<OurServiceVM>> oOurserviceViewModelCreate()
         {
-            OurServiceVM ourServiceVM = new OurServiceVM();
-            ourServiceVM.OurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
-            foreach (OurServiceDetail ourServiceDetail in ourServiceVM.OurServiceDetails)
+            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
+            List<OurServiceVM> lOurServiceVMs = new List<OurServiceVM>();
+
+            List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll("en");
+
+            foreach (OurServiceDetail oOurServiceDetail in lOurServiceDetails)
             {
-                ourServiceVM.ImageDetails.AddRange(ImageDetailRepository.SelectAll().Result.Where(i => i.LanguageCode == "en" && i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
-                ourServiceVM.ImageMasters.AddRange(ImageMasterRepository.SelectAll().Result.Where(i=>  i.OurServiceMasterID == ourServiceDetail.OurServiceMaster.ID));
+                List<ImageDetail> lCurrentServiceImageDetails =
+                    lImageDetails.Where(m =>
+                        m.ImageMaster.OurServiceMasterID == oOurServiceDetail.OurServiceID &&
+                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m=>m.ImageID).ToList();
+
+                OurServiceVM oOurServiceVM = oOurServiceVMCreate(oOurServiceDetail, lCurrentServiceImageDetails);
+                lOurServiceVMs.Add(oOurServiceVM);
             }
 
-            return ourServiceVM;
+            return await Task.FromResult(lOurServiceVMs) ;
         }
+
+        private OurServiceVM oOurServiceVMCreate(OurServiceDetail oOurServiceDetail, List<ImageDetail> lImageDetails)
+        {
+            OurServiceVM oOurServiceVM = new OurServiceVM();
+
+            oOurServiceVM.OurServiceID = oOurServiceDetail.OurServiceID;
+            oOurServiceVM.LanguageCode = oOurServiceDetail.LanguageCode;
+            oOurServiceVM.Title = oOurServiceDetail.Title;
+            oOurServiceVM.SubTitle = oOurServiceDetail.SubTitle;
+            oOurServiceVM.Summary = oOurServiceDetail.Summary;
+            oOurServiceVM.Description = oOurServiceDetail.Description;
+            oOurServiceVM.ImageDetails = lImageDetails;
+
+            return oOurServiceVM;
+        }
+
+       
 
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate()
         {
             ContactUsSectionVM oContactUsSectionVM = new ContactUsSectionVM();
 
-            oContactUsSectionVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
+            oContactUsSectionVM.ContactUsSectionHeaderContent= HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
             oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync("en").Result;
 
-            return oContactUsSectionVM;
+            return await Task.FromResult(oContactUsSectionVM) ;
         }
 
         #endregion

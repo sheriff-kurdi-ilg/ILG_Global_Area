@@ -8,7 +8,7 @@ namespace ILG_Global.BussinessLogic.Abstraction.Repositories
     public interface IImageDetailRepository
     {
         Task<ImageDetail> SelectById(string languageCode, int imageMasterId);
-        Task<IEnumerable<ImageDetail>> SelectAll();
+        Task<List<ImageDetail>> SelectAll(string languageCode);
         Task UpdateById(ImageDetail entity);
         Task Insert(ImageDetail entity);
         Task DeleteById(int Id);
