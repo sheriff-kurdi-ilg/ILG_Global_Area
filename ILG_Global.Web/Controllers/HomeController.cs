@@ -21,6 +21,8 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
+
+
         #region DI
 
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
