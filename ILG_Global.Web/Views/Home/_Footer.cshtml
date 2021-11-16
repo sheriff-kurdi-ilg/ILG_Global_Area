@@ -11,6 +11,8 @@
     string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 
+
+
 <footer class="d-flex align-items-center ">
     <section class="container position-relative">
         <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
@@ -57,14 +59,24 @@
                                           asp-action="SubscribeToNewsLetter"
                                           method="post" class="form-horizontal" role="form">
 
-                                        <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
-                                               aria-label="Example text with button addon"
-                                               aria-describedby="button-addon1"
-                                               asp-for="@Model.Email"/>
-                                        <input  type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge"/>
-                                        <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
-                                            @Localizer["Subscribe"]
-                                        </button>
+                                        <table style="">
+                                            <tr>
+                                                <td>
+                                                    <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
+                                                           aria-label="Example text with button addon"
+                                                           aria-describedby="button-addon1"
+                                                           asp-for="@Model.Email" />
+                                                    <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
+                                                        @Localizer["Subscribe"]
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                
+                                    
                                     </form>
                                 </div>
                             </li>
