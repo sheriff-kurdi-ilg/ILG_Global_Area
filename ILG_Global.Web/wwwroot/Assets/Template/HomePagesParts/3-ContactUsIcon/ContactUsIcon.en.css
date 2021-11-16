@@ -393,7 +393,7 @@
 }
 
 #Group_275 {
-    position: absolute;
+    position: static;
     width: 624.622px;
     height: 211.447px;
     left: 1279.378px;
@@ -403,11 +403,11 @@
 
 #Group_247 {
     position: absolute;
-    width: 145.047px;
+    width: 182.047px;
     height: 145.048px;
     left: 243.26px;
-    top: 33.77px;
-    overflow: visible
+    top: 45.77px;
+    overflow: visible;
 }
 
 #Path_106 {
@@ -440,12 +440,12 @@
 }
 
 #Group_246 {
-    position: absolute;
+    position: static;
     width: 76.857px;
     height: 76.925px;
     left: 34.095px;
     top: 34.062px;
-    overflow: visible
+    overflow: visible;
 }
 
 #Path_47 {
@@ -454,12 +454,12 @@
 
 .Path_47 {
     overflow: visible;
-    position: absolute;
+    position: static;
     width: 62.311px;
     height: 64.597px;
     left: 0;
     top: 12.329px;
-    transform: matrix(1,0,0,1,0,0)
+    transform: matrix(1,0,0,1,0,0);
 }
 
 #Path_48 {
@@ -595,12 +595,12 @@
 .Path_90 {
     filter: drop-shadow(0 3px 6px rgba(12, 188, 171, .408));
     overflow: visible;
-    position: absolute;
+    /* position: absolute; */
     width: 201.694px;
     height: 71.098px;
     left: 0;
     top: 0;
-    transform: matrix(1,0,0,1,0,0)
+    transform: matrix(1,0,0,1,0,0);
 }
 
 #Path_102 {
@@ -871,3 +871,18 @@
     top: 0;
     overflow: visible
 }
+
+
+.quick-contact {
+
+}
+
+    .quick-contact .center-circle.outer {
+    
+    }
+
+    .quick-contact .center-circle.inner {
+    }
+    .quick-contact .center-circle.inner .icon {
+    }
+

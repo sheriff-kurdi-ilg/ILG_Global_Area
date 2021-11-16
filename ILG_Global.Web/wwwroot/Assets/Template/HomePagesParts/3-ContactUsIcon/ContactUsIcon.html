@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -6,10 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ILG_Landing page design –English</title>
     <link type="text/css" href="ContactUsIcon.en.css" rel="stylesheet" />
-    
+    <script src="../../../js/jquery.min.js"></script>
+
+    <link href="../../../css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="../../../js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <div id="Group_275">
+    <div id="Group_275" class="quick-contact">
         <div id="Group_247">
             <svg class="Path_106" viewBox="0 0 145.047 145.048">
                 <path id="Path_106" d="M 72.52361297607422 0 C 112.5773010253906 0 145.0472259521484 32.47000503540039 145.0472259521484 72.52378082275391 C 145.0472259521484 112.5775527954102 112.5773010253906 145.0475616455078 72.52361297607422 145.0475616455078 C 32.46992874145508 145.0475616455078 0 112.5775527954102 0 72.52378082275391 C 0 32.47000503540039 32.46992874145508 0 72.52361297607422 0 Z">
@@ -95,5 +100,116 @@
             </div>
         </div>
     </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <div>
+        <style>
+
+            .quick-contact .right-wing,
+            .quick-contact .left-wing,
+            .quick-contact .center-circle {
+                border: solid 1px red;
+                height: 200px;
+            }
+
+            .quick-contact .left-wing {
+                background-image: url(../../../images/Quick-Call/left-wing.png);
+                width: 36%;
+                border: solid 1px green;
+                background-repeat: no-repeat;
+                position: relative;
+                left: 96px;
+                background-position-y: -9px;
+                z-index: 12;
+             
+                /* height: 10px!important; */
+            }
+
+            .quick-contact .center-circle {
+                background-image: url(../../../images/Quick-Call/quick-call-circle.png);
+                background-position-x: -22px;
+                background-repeat: no-repeat;
+                width: 16.5%;
+                z-index: 10;
+            }
+
+
+            .quick-contact .right-wing {
+                background-image: url(../../../images/Quick-Call/right-wing.png);
+                background-position-x: -27px;
+                position: relative;
+                left: -80px;
+                background-repeat: no-repeat;
+                width: 36%;
+                background-position-y: 61px;
+                border: solid 1px blue;
+                z-index: 12;
+             
+            }
+
+            .quick-contact .wings {
+                visibility: hidden;
+            }
+
+            .quick-contact .left-wing a.link {
+                cursor: pointer;
+                padding: 15px 94px;
+                border: solid 1px red;
+                position: relative;
+                top: 86px;
+                left: -4px;
+            }
+
+            .quick-contact .right-wing a.link {
+                cursor: pointer;
+                padding: 15px 91px;
+                border: solid 1px red;
+                position: relative;
+                top: 84px;
+                right: -110px;
+            }
+        </style>
+
+        <div class="row quick-contact">
+
+            <div class="row col-md-6 ">
+                <div class="col-md-4 left-wing wings quick-contact-container">
+                    <a class="link" href="#"></a>
+                </div>
+
+                <div class="col-md-3 center-circle quick-contact-container">
+
+                </div>
+                <div class="col-md-4 right-wing wings quick-contact-container">
+                    <a class="link" href="#"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function () {
+
+
+                $(".quick-contact-container").mouseenter(function () {
+                    $(".wings").css('visibility', 'visible');
+                });
+
+                $(".quick-contact-container").mouseleave(function () {
+                    $(".wings").css('visibility', 'hidden');
+                });
+
+
+
+            });
+
+        </script>
+    </div>
+
+
 </body>
 </html>

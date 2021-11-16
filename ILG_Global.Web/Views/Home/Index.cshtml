@@ -17,10 +17,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ILG Global | Home Page</title>
-
+    <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- js -->
     <script src="../../lib/jquery/dist/jquery.js"></script>
     <script src="../../Assets/js/jquery.min.js"></script>
@@ -28,6 +28,7 @@
     <script src="../../Assets/js/popper.min.js"></script>
     <script src="../../Assets/js/bootstrap.min.js"></script>
     <script src="../../Assets/js/owl.carousel.min.js"></script>
+    <link rel="icon" type="image/png" href="/Assets/images/FaveIcon.svg" />
 
     <!--font-->
     <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
@@ -41,8 +42,6 @@
 
     <!-- style -->
     <link href="../../Assets/css/bootstrap.min.css" rel="stylesheet" />
-
-
     <link href="~/Assets/css/site.en.css" rel="stylesheet" />
 
 
@@ -50,6 +49,12 @@
 </head>
 
 <body>
+
+    
+
+
+
+
     <div id="app">
         <!--navbar-->
         <header>
@@ -62,14 +67,122 @@
         <!--main-->
         <main>
 
-
             @await Html.PartialAsync("_LeaderBoard", Model.LeaderBoardSectionHeaderContent)
 
-
-
             <partial action="_LeaderBoard" />
-            <div class="go-to-action"> </div>
-            <div style=" clear: both;"></div>
+
+            <div class="quick-contact-container row">
+                <style>
+                    .quick-contact-container {
+                        position: fixed;
+                        bottom: 10px;
+                        left: 10px;
+                        width: 100%;
+                        z-index: 20000;
+                    }
+                    .quick-contact-container .quick-contact {
+                        bottom: 0;
+                        z-index: 100000;
+                    }
+
+                       .quick-contact-container .quick-contact .right-wing,
+                       .quick-contact-container .quick-contact .left-wing,
+                       .quick-contact-container .quick-contact .center-circle {
+                            border: solid 1px red;
+                            height: 200px;
+                        }
+
+                        .quick-contact-container .quick-contact .left-wing {
+                            background-image: url(../Assets/images/Quick-Call/left-wing.png);
+                            width: 36%;
+                            border: solid 1px green;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            left: 96px;
+                            background-position-y: -9px;
+                            z-index: 12;
+                            /* height: 10px!important; */
+                        }
+
+                        .quick-contact-container .quick-contact .center-circle {
+                            background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
+                            background-position-x: -22px;
+                            background-repeat: no-repeat;
+                            width: 16.5%;
+                            z-index: 10;
+                                position: static;
+                        }
+
+
+                       .quick-contact-container .quick-contact .right-wing {
+                            background-image: url(../Assets/images/Quick-Call/right-wing.png);
+                            background-position-x: -27px;
+                            position: relative;
+                            left: -80px;
+                            background-repeat: no-repeat;
+                            width: 36%;
+                            background-position-y: 61px;
+                            border: solid 1px blue;
+                            z-index: 12;
+                        }
+
+                        .quick-contact-container .quick-contact .wings {
+                            visibility: hidden;
+                        }
+
+                        .quick-contact-container .quick-contact .left-wing a.link {
+                            cursor: pointer;
+                            padding: 15px 94px;
+                            border: solid 1px red;
+                            position: relative;
+                            top: 86px;
+                            left: -4px;
+                        }
+
+                        .quick-contact-container .quick-contact .right-wing a.link {
+                            cursor: pointer;
+                            padding: 15px 91px;
+                            border: solid 1px red;
+                            position: relative;
+                            top: 84px;
+                            right: -110px;
+                        }
+
+                </style>
+
+                <div class="row quick-contact">
+
+
+
+                    <div class="row col-md-6 float-left">
+                        <div class="col-md-4 left-wing wings quick-contact-container">
+                            <a class="link" href="#"></a>
+                        </div>
+
+                        <div class="col-md-3 center-circle quick-contact-container">
+
+                        </div>
+                        <div class="col-md-4 right-wing wings quick-contact-container">
+                            <a class="link" href="#"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <script>
+                    $(document).ready(function () {
+
+                        $(".quick-contact-container").mouseenter(function () {
+                            $(".wings").css('visibility', 'visible');
+                        });
+
+                        $(".quick-contact-container").mouseleave(function () {
+                            $(".wings").css('visibility', 'hidden');
+                        });
+                    });
+                </script>
+            </div>
+    
 
 
             @await Html.PartialAsync("_OurServices", Model.OurServices)
