@@ -71,99 +71,107 @@
 
             <partial action="_LeaderBoard" />
 
-            <div class="quick-contact-container row">
+            <div class="quick-contact-main-container row">
                 <style>
-                    .quick-contact-container {
+                    .quick-contact-main-container {
                         position: fixed;
                         bottom: 10px;
                         left: 10px;
                         width: 100%;
                         z-index: 20000;
                     }
-                    .quick-contact-container .quick-contact {
-                        bottom: 0;
-                        z-index: 100000;
-                    }
-
-                       .quick-contact-container .quick-contact .right-wing,
-                       .quick-contact-container .quick-contact .left-wing,
-                       .quick-contact-container .quick-contact .center-circle {
-                            border: solid 1px red;
-                            height: 200px;
+                        .quick-contact-main-container .quick-contact {
+                            bottom: 0;
+                            z-index: 100000;
                         }
 
-                        .quick-contact-container .quick-contact .left-wing {
-                            background-image: url(../Assets/images/Quick-Call/left-wing.png);
-                            width: 36%;
-                            border: solid 1px green;
-                            background-repeat: no-repeat;
-                            position: relative;
-                            left: 96px;
-                            background-position-y: -9px;
-                            z-index: 12;
-                            /* height: 10px!important; */
-                        }
+                            .quick-contact-main-container .quick-contact .right-wing,
+                            .quick-contact-main-container .quick-contact .left-wing,
+                            .quick-contact-main-container .quick-contact .center-circle {
+                              /*  border: solid 1px red;*/
+                                height: 200px;
+                            }
 
-                        .quick-contact-container .quick-contact .center-circle {
-                            background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
-                            background-position-x: -22px;
-                            background-repeat: no-repeat;
-                            width: 16.5%;
-                            z-index: 10;
+                            .quick-contact-main-container .quick-contact .left-wing {
+                                background-image: url(../Assets/images/Quick-Call/left-wing.png);
+                                width: 36%;
+                                /*         border: solid 1px green;*/
+                                background-repeat: no-repeat;
+                                position: relative;
+                                left: 96px;
+                                background-position-y: -9px;
+                                z-index: 12;
+                                /* height: 10px!important; */
+                                background-position-x: -8px;
+                                background-position-y: -6px;
+                            }
+
+                            .quick-contact-main-container .quick-contact .center-circle {
+                                background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
+                                background-position-x: -22px;
+                                background-repeat: no-repeat;
+                                width: 16.5%;
+                                z-index: 10;
                                 position: static;
-                        }
+                            }
 
 
-                       .quick-contact-container .quick-contact .right-wing {
-                            background-image: url(../Assets/images/Quick-Call/right-wing.png);
-                            background-position-x: -27px;
-                            position: relative;
-                            left: -80px;
-                            background-repeat: no-repeat;
-                            width: 36%;
-                            background-position-y: 61px;
-                            border: solid 1px blue;
-                            z-index: 12;
-                        }
+                            .quick-contact-main-container .quick-contact .right-wing {
+                                background-image: url(../Assets/images/Quick-Call/right-wing.png);
+                                background-position-x: -27px;
+                                position: relative;
+                                left: -80px;
+                                background-repeat: no-repeat;
+                                width: 36%;
+                                background-position-y: 61px;
+                                /*border: solid 1px blue;*/
+                                z-index: 12;
+                            }
 
-                        .quick-contact-container .quick-contact .wings {
-                            visibility: hidden;
-                        }
+                            .quick-contact-main-container .quick-contact .wings {
+                                visibility: hidden;
+                            }
 
-                        .quick-contact-container .quick-contact .left-wing a.link {
-                            cursor: pointer;
-                            padding: 15px 94px;
-                            border: solid 1px red;
-                            position: relative;
-                            top: 86px;
-                            left: -4px;
-                        }
+                            .quick-contact-main-container .quick-contact .left-wing a.link {
+                                cursor: pointer;
+                                padding: 15px 94px;
+                                /*border: solid 1px red;*/
+                                position: relative;
+                                top: 86px;
+                                left: -4px;
+                      
+                            }
 
-                        .quick-contact-container .quick-contact .right-wing a.link {
-                            cursor: pointer;
-                            padding: 15px 91px;
-                            border: solid 1px red;
-                            position: relative;
-                            top: 84px;
-                            right: -110px;
-                        }
-
+                            .quick-contact-main-container .quick-contact .right-wing a.link {
+                                cursor: pointer;
+                                padding: 15px 91px;
+                                /*border: solid 1px red;*/
+                                position: relative;
+                                top: 84px;
+                                right: -110px;
+                            }
+                    .ilg-to-oppisit-direction {
+                        float: right;
+                        position: fixed;
+                        bottom: 10px;
+                        right: -10%;
+                    }
                 </style>
 
                 <div class="row quick-contact">
 
 
 
-                    <div class="row col-md-6 float-left">
+                    <div class="row col-md-6 float-right ilg-to-oppisit-direction">
                         <div class="col-md-4 left-wing wings quick-contact-container">
-                            <a class="link" href="#"></a>
+                            <a class="link" target="_blank" href="tel:96522499777"></a>
                         </div>
 
                         <div class="col-md-3 center-circle quick-contact-container">
 
                         </div>
                         <div class="col-md-4 right-wing wings quick-contact-container">
-                            <a class="link" href="#"></a>
+                            <a class="link" target="_blank" href="http://wa.me/96522499777"></a>
                         </div>
                     </div>
 
