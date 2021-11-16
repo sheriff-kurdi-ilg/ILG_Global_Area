@@ -33,3 +33,4 @@ D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Glob
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.AssemblyInfo.cs
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CoreCompileInputs.cache
 D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.genruntimeconfig.cache
+D:\Projects\Bussiness\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CopyComplete
