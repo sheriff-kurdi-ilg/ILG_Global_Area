@@ -19,6 +19,7 @@ namespace ILG_Global.BussinessLogic.Models
         public Language Language { get; set; }
 
         public string Title { get; set; }
+        public string? Summary { get; set; }
 
     }
 }

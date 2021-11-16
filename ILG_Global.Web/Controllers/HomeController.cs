@@ -8,6 +8,7 @@ using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
 
+using Newtonsoft.Json;
 
 using Microsoft.AspNetCore.Localization;
 
@@ -85,7 +86,7 @@ namespace ILG_Global.Web.Controllers
 
             oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, "en").Result;
             oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
-
+           
             return oSuccessStoriesVM;
         }
 
@@ -230,5 +231,8 @@ namespace ILG_Global.Web.Controllers
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
+
+
+        
     }
 }

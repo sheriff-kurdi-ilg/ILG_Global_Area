@@ -42,6 +42,11 @@
 
     <!-- style -->
     <link href="../../Assets/css/bootstrap.min.css" rel="stylesheet" />
+<<<<<<< Updated upstream
+=======
+    <link href="../../Assets/css/modal.css" rel="stylesheet" />
+
+>>>>>>> Stashed changes
     <link href="~/Assets/css/site.en.css" rel="stylesheet" />
 
 
@@ -220,15 +225,20 @@
             nav: true,
             navText: ["<i class=\"fas fa-arrow-left\"></i>", " <i class=\"fas fa-arrow-right\"></i>"],
             dots: false,
+            responsiveClass: true,
             responsive: {
                 0: {
-                    items: 1
+                    items: 1,
+                    nav: true
                 },
                 991: {
-                    items: 3
+                    items: 3,
+                    nav: false
                 },
                 1400: {
-                    items: 5
+                    items: 5,
+                    nav: true,
+                    loop: false
                 },
                 3500: {
                     items: 8
@@ -242,19 +252,25 @@
             loop: true,
             margin: 20,
             items: 1,
-        })</script>
+        })
 
-    }
-    })
-    $('#our-service-slider').owlCarousel({
-    autoplay: true,
-    autoplayTimeout: 3000,
-    autoplayHoverPause: true,
-    speed: 0.5,
-    loop: true,
-    margin:20,
-    items:1,
-    })</script>
+        $.noConflict();
+
+    </script>
+
+   
+    @*//$('#our-service-slider').owlCarousel({
+    //autoplay: true,
+    //autoplayTimeout: 3000,
+    //autoplayHoverPause: true,
+    //speed: 0.5,
+    //loop: true,
+    //margin:20,
+    //items:1,
+    //})*@
+
+    
+  
 
 
 </body><!-- hi -->

@@ -36,8 +36,12 @@ namespace ILG_Global.DataAccess
         {
 
             modelBuilder.Entity<SucessStoryDetail>()
-                .HasKey(a => new {  a.SucessStoryID, a.LanguageCode });  
-            
+                .HasKey(a => new { a.SucessStoryID, a.LanguageCode });
+
+            modelBuilder.Entity<SucessStoryDetail>()
+                .Property(sd=>sd.Summary)
+                .IsRequired(false);
+
             modelBuilder.Entity<ImageDetail>()
                 .HasKey(a => new {  a.ImageID, a.LanguageCode });
 
@@ -49,7 +53,7 @@ namespace ILG_Global.DataAccess
 
             modelBuilder.Entity<ContactInformationDetail>()
                 .HasKey(a => new {  a.ContactInformationID, a.LanguageCode, });
-
+          
 
         }
 
