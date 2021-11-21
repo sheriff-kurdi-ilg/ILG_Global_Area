@@ -36,13 +36,13 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-7">
                     <div class="our-service-slider-image-col">
                         <div class="our-service-slider-image" style="bottom: 30px">
-                            <img src="assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                            <img src="~/Assets/Template/ILG-Website-master/assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
                         </div>
 
                         @foreach (ImageDetail oImageDetail in oOurServiceVM.ImageDetails)
                         {
                             <div class="our-service-slider-image" style="left: @string.Concat(nCurrentImageSpacing,"px;")">
-                                <img src="assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
+                                <img src="~/Assets/Template/ILG-Website-master/assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
                             </div>
 
                             vIncreaseImageSpacing();

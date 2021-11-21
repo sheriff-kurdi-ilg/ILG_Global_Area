@@ -1,12 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ILG_Global.Web.Controllers
 {
-    public class _BaseController: Controller
+    public class _BaseController : Controller
     {
         #region Language Change
 

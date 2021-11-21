@@ -19,7 +19,11 @@
 
     CultureInfo enculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "en").SingleOrDefault();
     CultureInfo arculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "ar").SingleOrDefault();
-    string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    var dd = Context.Features.Get<QueryStringRequestCultureProvider>();
+    var dl = Context.Request.QueryString.Value;
+//string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value + Context.Request.QueryString.Value}";
+
 
     }
 
@@ -28,7 +32,7 @@
     <div class="container py-4 px-3 px-sm-3 px-md-0">
         <a class="navbar-brand" href="#">
             <img loading="lazy" class="img-brand w-100"
-                 src="assets/images/Mask_Group_25.png"
+                 src="~/Assets/images/Mask_Group_25.png"
                  alt="Ideaeg logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
