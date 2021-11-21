@@ -5,6 +5,7 @@ using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Builder;
 
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -23,9 +24,12 @@ namespace ILG_Global.Web
 {
     public class Startup
     {
+        private readonly IHttpContextAccessor httpContextAccessor;
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            
         }
 
         public IConfiguration Configuration { get; }
@@ -49,6 +53,8 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<CultureSessions>();
 
 
 
@@ -99,9 +105,9 @@ namespace ILG_Global.Web
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            var LocaOptions = app.ApplicationServices.GetServices<IOptions<RequestLocalizationOptions>>();
-
-            app.UseRequestLocalization(LocaOptions.Select(ff => ff.Value).SingleOrDefault());
+            //var LocaOptions = app.ApplicationServices.GetServices<IOptions<RequestLocalizationOptions>>();
+            
+            //app.UseRequestLocalization(LocaOptions.Select(ff => ff.Value).SingleOrDefault());
 
             if (env.IsDevelopment())
             {
@@ -125,8 +131,12 @@ namespace ILG_Global.Web
 
             requestLocalizationOptions.SupportedCultures = requestLocalizationOptions.SupportedUICultures =
               new CultureInfo[] { new CultureInfo("en"),new CultureInfo("ar") }.ToList();
-
+            
+           
+            
             requestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = requestLocalizationOptions });
+
+           
             app.UseRequestLocalization(requestLocalizationOptions);
 
             app.UseStaticFiles();

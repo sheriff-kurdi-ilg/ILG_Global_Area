@@ -59,7 +59,6 @@ namespace ILG_Global.Web.Controllers
 
             // HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
             // oHtmlContentDetail.HtmlContentMaster.ImageMasters[0]
-
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
