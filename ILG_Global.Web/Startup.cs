@@ -1,11 +1,12 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.DataAccess;
+using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 using Microsoft.EntityFrameworkCore;
@@ -14,12 +15,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-
-using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace ILG_Global.Web
 {
@@ -35,8 +33,7 @@ namespace ILG_Global.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            // services.AddRazorPages();
-            services.AddMvc();
+
 
             services.AddDbContext<ILG_GlobalContext>(opt => opt.UseSqlServer(
                 Configuration.GetConnectionString("ILG_GlobalConnectionString")));
@@ -89,43 +86,23 @@ namespace ILG_Global.Web
 
             services.AddLocalization(opts => opts.ResourcesPath = "Resources");
 
-            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
+            services.AddMvc(opts=>opts.EnableEndpointRouting=false).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
 
-            services.Configure<RequestLocalizationOptions>(oOptions =>
-            {
-                List<CultureInfo> lSupportedCultureInfos = lCultureInfoCreate();
-
-                oOptions.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
-                oOptions.SupportedCultures = lSupportedCultureInfos;
-                oOptions.SupportedUICultures = lSupportedCultureInfos;
-            });
-
-            services.AddControllersWithViews();
-        }
-
-        private List<CultureInfo> lCultureInfoCreate()
-        {
-            List<CultureInfo> lCultureInfos = new List<CultureInfo>();
-
-            lCultureInfos.Add(new CultureInfo("en-GB"));
-            lCultureInfos.Add(new CultureInfo("en-US"));
-            lCultureInfos.Add(new CultureInfo("en"));
-            lCultureInfos.Add(new CultureInfo("ar-KW"));
-            lCultureInfos.Add(new CultureInfo("ar-EG"));
-            lCultureInfos.Add(new CultureInfo("ar"));
-
-            return lCultureInfos;
+           
         }
 
 
-  
-        
+
+
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             var LocaOptions = app.ApplicationServices.GetServices<IOptions<RequestLocalizationOptions>>();
+
             app.UseRequestLocalization(LocaOptions.Select(ff => ff.Value).SingleOrDefault());
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -143,6 +120,15 @@ namespace ILG_Global.Web
             }
 
             app.UseHttpsRedirection();
+
+            RequestLocalizationOptions requestLocalizationOptions = new RequestLocalizationOptions();
+
+            requestLocalizationOptions.SupportedCultures = requestLocalizationOptions.SupportedUICultures =
+              new CultureInfo[] { new CultureInfo("en"),new CultureInfo("ar") }.ToList();
+
+            requestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = requestLocalizationOptions });
+            app.UseRequestLocalization(requestLocalizationOptions);
+
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -150,13 +136,20 @@ namespace ILG_Global.Web
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                             name: "default",
-                             pattern: "{controller=Home}/{action=Index}/{id?}");
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //                 name: "default",
+            //                 pattern: "/{controller=Home}/{action=Index}/{id?}/{culture?}");
 
+            //});
+
+
+            app.UseMvc(configureRoutes =>
+            {
+                configureRoutes.MapRoute(name: "Default", template: "{culture}/{controller}/{action}/{id?}", defaults: new { culture = "en", controller = "Home", action = "Index" });
             });
+
         }
     }
 }

@@ -5,10 +5,7 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
-using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
-
-using Newtonsoft.Json;
 
 using Microsoft.AspNetCore.Localization;
 
@@ -22,7 +19,7 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-
+        
 
         #region DI
 
@@ -86,7 +83,7 @@ namespace ILG_Global.Web.Controllers
 
             oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, "en").Result;
             oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
-           
+
             return oSuccessStoriesVM;
         }
 
@@ -102,13 +99,13 @@ namespace ILG_Global.Web.Controllers
                 List<ImageDetail> lCurrentServiceImageDetails =
                     lImageDetails.Where(m =>
                         m.ImageMaster.OurServiceMasterID == oOurServiceDetail.OurServiceID &&
-                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m=>m.ImageID).ToList();
+                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m => m.ImageID).ToList();
 
                 OurServiceVM oOurServiceVM = oOurServiceVMCreate(oOurServiceDetail, lCurrentServiceImageDetails);
                 lOurServiceVMs.Add(oOurServiceVM);
             }
 
-            return await Task.FromResult(lOurServiceVMs) ;
+            return await Task.FromResult(lOurServiceVMs);
         }
 
         private OurServiceVM oOurServiceVMCreate(OurServiceDetail oOurServiceDetail, List<ImageDetail> lImageDetails)
@@ -126,16 +123,16 @@ namespace ILG_Global.Web.Controllers
             return oOurServiceVM;
         }
 
-       
+
 
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate()
         {
             ContactUsSectionVM oContactUsSectionVM = new ContactUsSectionVM();
 
-            oContactUsSectionVM.ContactUsSectionHeaderContent= HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
+            oContactUsSectionVM.ContactUsSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
             oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync("en").Result;
 
-            return await Task.FromResult(oContactUsSectionVM) ;
+            return await Task.FromResult(oContactUsSectionVM);
         }
 
         #endregion
@@ -233,6 +230,6 @@ namespace ILG_Global.Web.Controllers
         }
 
 
-        
+
     }
 }
