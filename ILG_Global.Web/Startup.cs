@@ -147,7 +147,7 @@ namespace ILG_Global.Web
 
             app.UseMvc(configureRoutes =>
             {
-                configureRoutes.MapRoute(name: "Default", template: "{culture}/{controller}/{action}/{id?}", defaults: new { culture = "en", controller = "Home", action = "Index" });
+                configureRoutes.MapRoute(name: "Default", template: "{culture}/{controller}/{action}/{id?}", defaults: new { culture = "", controller = "Home", action = "Index" });
             });
 
         }

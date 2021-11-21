@@ -31,6 +31,7 @@ namespace ILG_Global.Web.Tools
 
             ProviderCultureResult requestCulture = new ProviderCultureResult(cultureCode);
 
+            
             return Task.FromResult(requestCulture);
         }
 

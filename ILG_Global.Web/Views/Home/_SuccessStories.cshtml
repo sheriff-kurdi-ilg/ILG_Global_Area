@@ -28,80 +28,24 @@
 
 
                     <div class="item position-relative">
-                        <img src="assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
+                        <img src="~/Assets/Template/ILG-Website-master/assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
                         <div class="overlay w-100 h-100 position-absolute"></div>
                         <div class="slider-content text-white position-absolute p-4">
                             <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
-                            <button class="btn p-0 ilg-modal-open-button " data-success-story-id="@oSucessStoryDetail.SucessStoryID">
+                            <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("ee",oSucessStoryDetail.SucessStoryID)">
                                 <span>Learn More</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
+
+                            @*<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@string.Concat("ee",oSucessStoryDetail.SucessStoryID)">
+                                Launch demo modal
+                            </button>*@
                         </div>
                     </div>
 
 
 
 
-
-                    @*<div class="modal fade" id="@string.Concat("ee",SuccessStory.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
-                            <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-
-
-                                        <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
-                                            <img src="~/Assets/fontawesome/svgs/Modal/3-layers.svg">
-                                        </button>
-                                    </div>
-
-                                    <div class="modal-body">
-                                        <h2 class="modal-title" id="modal-title"> </h2>
-                                        <p id="SusccessStorySummary">
-
-                                        </p>
-                                    </div>
-                                    <div class="modal-footer ">
-                                        <div class="row">
-                                            <div class="col-sm">
-                                                <button type="button" class="btn btn-secondary me-auto callus" data-bs-dismiss="modal">
-                                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
-                                                    <span class="txt">Call Us</span>
-                                                </button>
-                                            </div>
-                                            <div class="col-sm">
-                                                <button type="button" class="btn me-auto makeappointment">
-                                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
-                                                    <span class="txt">Make an appointmnent</span>
-                                                </button>
-                                            </div>
-                                            <div class="col-sm">
-                                                <div>
-                                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
-                                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
-                                                        <span class="txt">Share Via Email</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="collapse" id="coll">
-                                                    <div class="card card-header">
-                                                        <span>Share Via Email</span>
-                                                    </div>
-                                                    <div class="card card-body">
-                                                        <input type="email" placeholder="Enter Your Email">
-
-                                                    </div>
-                                                    <div class="card card-footer">
-                                                        <button class="btn SendButton">Send</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>*@
 
                 }
 
@@ -118,24 +62,88 @@
 
     @foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
     {
-        <div class="ilg-custom-popup">
-            <div class="ilg-modal-shadow-container">
+        @*<div class="ilg-custom-popup">
+                <div class="ilg-modal-shadow-container">
 
-            </div>
-            <div class="modal ilg-modal-box" data-success-story-id="@oSucessStoryDetail.SucessStoryID">
-                <div class="header">
-                    <a href="#" class="ilg-modal-cancel">X</a>
                 </div>
-                <div class="content">
+                <div class="modal ilg-modal-box" data-success-story-id="@oSucessStoryDetail.SucessStoryID">
+                    <div class="header">
+                        <a href="#" class="ilg-modal-cancel">X</a>
+                    </div>
+                    <div class="content">
 
-                    @oSucessStoryDetail.Title
+                        @oSucessStoryDetail.Title
+                    </div>
+                    <div class="footer">
+                        <button id="login">Iniciar Sesión</button>
+                        <button class="ilg-modal-cancel">Cancel</button>
+                    </div>
                 </div>
-                <div class="footer">
-                    <button id="login">Iniciar Sesión</button>
-                    <button class="ilg-modal-cancel">Cancel</button>
+            </div>*@
+
+
+        <div class="modal fade" id="@string.Concat("ee",oSucessStoryDetail.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
+            <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+
+                        <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
+                            <img src="~/Assets/fontawesome/svgs/Modal/3-layers.svg">
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+                        <h2 class="modal-title" id="modal-title">   @oSucessStoryDetail.Title</h2>
+                        <p id="SusccessStorySummary">
+                            @oSucessStoryDetail.Summary
+                        </p>
+                    </div>
+                    <div class="modal-footer ">
+                        <div class="row">
+                            <div class="col-sm">
+                                <button type="button" class="btn btn-secondary me-auto callus" data-bs-dismiss="modal">
+                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
+                                    <span class="txt">Call Us</span>
+                                </button>
+                            </div>
+                            <div class="col-sm">
+                                <button type="button" class="btn me-auto makeappointment">
+                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
+                                    <span class="txt">Make an appointmnent</span>
+                                </button>
+                            </div>
+                            <div class="col-sm">
+                                <div>
+                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
+                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
+                                        <span class="txt">Share Via Email</span>
+                                    </button>
+                                </div>
+
+                                <div class="collapse" id="coll">
+                                    <div class="card card-header">
+                                        <span>Share Via Email</span>
+                                    </div>
+                                    <div class="card card-body">
+                                        <input type="email" placeholder="Enter Your Email">
+
+                                    </div>
+                                    <div class="card card-footer">
+                                        <button class="btn SendButton">Send</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
+
         </div>
+
+
+
     }
 </section>
 
@@ -344,27 +352,27 @@
 
 
 @*<button class="ilg-modal-open-button" data-success-story-id="1">Open Modal 1</button>
-<button class="ilg-modal-open-button" data-success-story-id="2">Open Modal 2</button>
+    <button class="ilg-modal-open-button" data-success-story-id="2">Open Modal 2</button>
 
 
 
-<div class="ilg-custom-popup">
-    <div class="ilg-modal-shadow-container">
+    <div class="ilg-custom-popup">
+        <div class="ilg-modal-shadow-container">
 
-    </div>
-    <div class="modal ilg-modal-box" data-success-story-id="2">
-        <div class="header">
-            <a href="#" class="ilg-modal-cancel">X</a>
         </div>
-        <div class="content">
-            2
+        <div class="modal ilg-modal-box" data-success-story-id="2">
+            <div class="header">
+                <a href="#" class="ilg-modal-cancel">X</a>
+            </div>
+            <div class="content">
+                2
+            </div>
+            <div class="footer">
+                <button id="login">Iniciar Sesión</button>
+                <button class="ilg-modal-cancel">Cancel</button>
+            </div>
         </div>
-        <div class="footer">
-            <button id="login">Iniciar Sesión</button>
-            <button class="ilg-modal-cancel">Cancel</button>
-        </div>
-    </div>
-</div>*@
+    </div>*@
 
 
 <script>
@@ -381,14 +389,14 @@
         $(".ilg-modal-box").fadeOut();
     });
 
-    function vILG_ModalPopShow(nSuccessStoryID){
+    function vILG_ModalPopShow(nSuccessStoryID) {
         $(".ilg-modal-shadow-container").css("display", "block");
         $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").css("display", "block");
     }
 
-    function vILG_ModalPopHide(nSuccessStoryID){
+    function vILG_ModalPopHide(nSuccessStoryID) {
         $(".ilg-modal-shadow-container").fadeOut();
-        $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID+"']").fadeOut();
+        $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").fadeOut();
     }
 
 

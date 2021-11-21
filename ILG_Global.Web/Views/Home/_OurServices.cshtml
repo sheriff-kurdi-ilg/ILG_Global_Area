@@ -42,7 +42,7 @@
                         @foreach (ImageDetail oImageDetail in oOurServiceVM.ImageDetails)
                         {
                             <div class="our-service-slider-image" style="left: @string.Concat(nCurrentImageSpacing,"px;")">
-                                <img src="~/Assets/Template/ILG-Website-master/assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
+                                <img src="/Assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
                             </div>
 
                             vIncreaseImageSpacing();

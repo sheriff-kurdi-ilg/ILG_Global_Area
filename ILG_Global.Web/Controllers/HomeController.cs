@@ -74,6 +74,7 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
+          //  SaveCurrentCultureToCookie(culture);
             return View(oHomePageVM);
         }
 
@@ -209,11 +210,7 @@ namespace ILG_Global.Web.Controllers
         [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
-            Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-                );
+            SaveCurrentCultureToCookie(culture);
             return LocalRedirect(returnUrl);
         }
 
@@ -224,5 +221,16 @@ namespace ILG_Global.Web.Controllers
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
+
+
+        private void SaveCurrentCultureToCookie(string culture)
+        {
+            Response.Cookies.Append(
+               CookieRequestCultureProvider.DefaultCookieName,
+               CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+               new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+               );
+        }
+
     }
 }
