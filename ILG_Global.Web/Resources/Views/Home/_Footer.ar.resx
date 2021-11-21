@@ -171,4 +171,7 @@
   <data name="We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways" xml:space="preserve">
     <value>نقدم خدمات واستشارات قانونية متنوعة من قبل فريق من الخبراء من أجل الوصول إلى حلول قانونية وودية بأبسط الطرق</value>
   </data>
+  <data name="~/Assets/css/site.en.css" xml:space="preserve">
+    <value>~/Assets/css/site.en.css</value>
+  </data>
 </root>

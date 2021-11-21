@@ -209,8 +209,6 @@ namespace ILG_Global.Web.Controllers
             }
         }
 
-
-
         [HttpPost]
         public IActionResult SetLanguage(string culture, string returnUrl)
         {
@@ -223,16 +221,11 @@ namespace ILG_Global.Web.Controllers
         }
 
 
-
-
         [HttpPost]
         public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
         {
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
-
-
-        
     }
 }

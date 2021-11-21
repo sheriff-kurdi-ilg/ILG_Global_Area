@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample PopUp</title>
+    <script src="../../../js/jquery.min.js"></script>
+
+</head>
+<body>
+
+    <div class="ilg-custom-popup">
+
+        <style>
+            .ilg-custom-popup .main {
+                width: 100%;
+                height: 100vh;
+                text-align: center;
+            }
+
+                .ilg-custom-popup .main div {
+                    width: 400px;
+                    height: 400px;
+                    margin: 0 auto;
+                    text-align: center;
+                }
+
+                    .ilg-custom-popup .main div button {
+                        top: 500px;
+                        height: 30px;
+                        margin: 0 auto;
+                    }
+
+
+            .ilg-custom-popup .container {
+                display: none;
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                opacity: 0.9;
+                background: #222;
+                z-index: 40000;
+                top: 0;
+                left: 0;
+                overflow: hidden;
+                animation-name: fadeIn_Container;
+                animation-duration: 1s;
+            }
+
+            .ilg-custom-popup .modal {
+                display: none;
+                top: 0;
+                min-width: 250px;
+                width: 80%;
+                height: 400px;
+                margin: 0 auto;
+                position: fixed;
+                z-index: 40001;
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0px 0px 10px #000;
+                margin-top: 30px;
+                margin-left: 10%;
+                animation-name: fadeIn_Modal;
+                animation-duration: 0.8s;
+            }
+
+            .ilg-custom-popup .header {
+                width: 100%;
+                height: 70px;
+                border-radius: 10px 10px 0px 0px;
+                border-bottom: 2px solid #ccc;
+            }
+
+                .ilg-custom-popup .header a {
+                    text-decoration: none;
+                    float: right;
+                    line-height: 70px;
+                    margin-right: 20px;
+                    color: #aaa;
+                }
+
+            .ilg-custom-popup .content {
+                width: 100%;
+                height: 250px;
+            }
+
+            .ilg-custom-popup form {
+                margin-top: 20px;
+            }
+
+                .ilg-custom-popup form label {
+                    display: block;
+                    margin-left: 12%;
+                    margin-top: 10px;
+                    font-family: sans-serif;
+                    font-size: 1rem;
+                }
+
+                .ilg-custom-popup form input {
+                    display: block;
+                    width: 75%;
+                    margin-left: 12%;
+                    margin-top: 10px;
+                    border-radius: 3px;
+                    font-family: sans-serif;
+                }
+
+            .ilg-custom-popup #first_label {
+                padding-top: 30px;
+            }
+
+            .ilg-custom-popup #second_label {
+                padding-top: 25px;
+            }
+
+
+            .ilg-custom-popup .footer {
+                width: 100%;
+                height: 80px;
+                border-radius: 0px 0px 10px 10px;
+                border-top: 2px solid #ccc;
+            }
+
+            .ilg-custom-popup .fotter button {
+                float: right;
+                margin-right: 10px;
+                margin-top: 18px;
+                text-decoration: none;
+            }
+
+            /****MEDIA QUERIES****/
+
+            @media screen and (min-width: 600px) {
+
+                .ilg-custom-popup .modal {
+                    width: 500px;
+                    height: 300px;
+                    margin-left: calc(50vw - 250px);
+                    margin-top: calc(50vh - 150px);
+                }
+
+
+                .ilg-custom-popup .header {
+                    width: 100%;
+                    height: 40px;
+                }
+
+                    .ilg-custom-popup .header a {
+                        line-height: 40px;
+                        margin-right: 10px;
+                    }
+
+                .ilg-custom-popup .content {
+                    width: 100%;
+                    height: 190px;
+                }
+
+                .ilg-custom-popup form label {
+                    margin-left: 10%;
+                    margin-top: 10px;
+                }
+
+                .ilg-custom-popup form input {
+                    width: 75%;
+                    margin-left: 10%;
+                    margin-top: 10px;
+                }
+
+                .ilg-custom-popup #first_label {
+                    padding-top: 0px;
+                }
+
+                .ilg-custom-popup #second_label {
+                    padding-top: 0px;
+                }
+
+                .ilg-custom-popup .footer {
+                    width: 100%;
+                    height: 70px;
+                }
+
+                    .ilg-custom-popup .footer button {
+                        float: right;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                    }
+            }
+
+            /*LARGE SCREEN*/
+            @media screen and (min-width: 1300px) {
+            }
+
+            /****ANIMATIONS****/
+
+            @keyframes fadeIn_Modal {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fadeIn_Container {
+                from {
+                    opacity: 0;
+                }
+
+                to {
+                    opacity: 0.9;
+                }
+            }
+        </style>
+
+        <div class="main">
+            <div>
+                <button id="open" onclick="openModal">Open Modal</button>
+            </div>
+        </div>
+        <div class="container" id="a">
+            ddd
+        </div>
+        <div class="modal" id="ilg-modal">
+            <div class="header">
+                <a href="#" class="cancel">X</a>
+            </div>
+            <div class="content">
+                <form>
+                    <label id="first_label">Username</label>
+                    <input type="text" placeholder="Introduce tu username" />
+                    <label id="second_label">Password</label>
+                    <input type="password" placeholder="Introduce tu password" />
+                </form>
+            </div>
+            <div class="footer">
+                <button id="login">Iniciar Sesión</button>
+                <button class="cancel">Cancelar</button>
+            </div>
+        </div>
+
+        <script>
+            $("#open").click(function () {
+                $("#a").css("display", "block");
+                $("#ilg-modal").css("display", "block");
+            });
+
+
+            $(".cancel").click(function () {
+                $("#a").fadeOut();
+                $("#ilg-modal").fadeOut();
+            });
+        </script>
+    </div>
+
+
+</body>
+</html>
