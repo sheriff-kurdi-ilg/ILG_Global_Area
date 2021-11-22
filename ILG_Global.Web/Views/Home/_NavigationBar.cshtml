@@ -8,18 +8,24 @@
 
 
 @inject IViewLocalizer Localizer
-@inject IOptions<RequestLocalizationOptions> LocOptions
+
 
 @{ 
     IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
-    var ll =requestCulture.RequestCulture.Culture.Name;
-    List<SelectListItem> cultureItems = LocOptions.Value.SupportedUICultures
-        .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
-        .ToList();
+    string CurrentCulture =requestCulture.RequestCulture.Culture.Name;
 
-    CultureInfo enculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "en").SingleOrDefault();
-    CultureInfo arculture = LocOptions.Value.SupportedUICultures.Where(SS => SS.Name == "ar").SingleOrDefault();
-    string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    //List<SelectListItem> cultureItems = LocOptions.SupportedCultures
+    //    .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+    //    .ToList();
+    string arculture = "ar";
+    string enculture = "en";
+    //CultureInfo enculture = LocOptions.SupportedUICultures.Where(SS => SS.Name == "en").SingleOrDefault();
+    //CultureInfo arculture = LocOptions.SupportedUICultures.Where(SS => SS.Name == "ar").SingleOrDefault();
+    //var dd = Context.Features.Get<QueryStringRequestCultureProvider>();
+    //var dl = Context.Request.QueryString.Value;
+    //string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value + Context.Request.QueryString.Value}";
+
 
     }
 
@@ -28,7 +34,7 @@
     <div class="container py-4 px-3 px-sm-3 px-md-0">
         <a class="navbar-brand" href="#">
             <img loading="lazy" class="img-brand w-100"
-                 src="assets/images/Mask_Group_25.png"
+                 src="~/Assets/images/Mask_Group_25.png"
                  alt="Ideaeg logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -46,7 +52,7 @@
                 <ul class="navbar-nav justify-content-end w-100">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">@Localizer["About"]</a> 
+                            <a class="nav-link active" asp-controller="About" asp-action="Index" aria-current="page" >@Localizer["About"]</a> 
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">@Localizer["Our Services"]</a>
@@ -71,7 +77,8 @@
                                 <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
                                     <form id="SelectEnglish" asp-controller="Home"
                                           asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path"
-                                          method="post" class="form-horizontal" role="form">
+                                          method="POST" class="form-horizontal" role="form">
+                                       
                                         <button type="submit" class="btn btn-default btn-xs nav-link" value="@enculture" name="culture">
                                             <i class="fas fa-globe"></i>
                                             EN
@@ -84,7 +91,7 @@
                                 <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
                                     <form id="SelectEnglish" asp-controller="Home"
                                           asp-action="SetLanguage" asp-route-returnUrl="@Context.Request.Path"
-                                          method="post" class="form-horizontal" role="form">
+                                          method="POST" class="form-horizontal" role="form">
                                         <button type="submit" class="btn btn-default btn-xs nav-link" value="@arculture" name="culture">
                                             <i class="fas fa-globe"></i>
                                             AR

@@ -23,104 +23,423 @@
 
             @if (Model.SucessStoryDetails.Any())
             {
-                foreach (var SuccessStory in Model.SucessStoryDetails)
+                foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
                 {
-                    var coll = SuccessStory.Title.Replace(" ", "") + "ss";
+
 
                     <div class="item position-relative">
-                        <img src="assets/images/@SuccessStory.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
+                        <img src="~/Assets/Template/ILG-Website-master/assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
                         <div class="overlay w-100 h-100 position-absolute"></div>
                         <div class="slider-content text-white position-absolute p-4">
-                            <h5 class="pb-2">@SuccessStory.Title</h5>
-                            <button class="btn p-0" data-bs-toggle="modal" data-bs-target="#ee" onclick="GetSuccessStory(@JsonConvert.SerializeObject(@SuccessStory))">
+                            <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
+                            <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)">
                                 <span>Learn More</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
 
+                            @*<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#@string.Concat("ee",oSucessStoryDetail.SucessStoryID)">
+                                Launch demo modal
+                            </button>*@
                         </div>
                     </div>
+
+
+
+
+
                 }
+
+
+
             }
         </div>
 
 
 
+
     </div>
-</section>
 
 
+    @foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
+    {
+        @*<div class="ilg-custom-popup">
+                <div class="ilg-modal-shadow-container">
+
+                </div>
+                <div class="modal ilg-modal-box" data-success-story-id="@oSucessStoryDetail.SucessStoryID">
+                    <div class="header">
+                        <a href="#" class="ilg-modal-cancel">X</a>
+                    </div>
+                    <div class="content">
+
+                        @oSucessStoryDetail.Title
+                    </div>
+                    <div class="footer">
+                        <button id="login">Iniciar Sesión</button>
+                        <button class="ilg-modal-cancel">Cancel</button>
+                    </div>
+                </div>
+            </div>*@
 
 
-<div class="modal fade" id="ee" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
-    <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
-        <div class="modal-content">
-            <div class="modal-header">
+        <div class="modal fade ilg-modal-popup-window" id="@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
+            <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
+                <div class="modal-content">
+                    <div class="modal-header">
 
 
-                <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="~/Assets/fontawesome/svgs/Modal/3-layers.svg">
-                </button>
-            </div>
-
-            <div class="modal-body">
-                <h2 class="modal-title" id="modal-title"> </h2>
-                <p id="SusccessStorySummary">
-                   
-                </p>
-            </div>
-            <div class="modal-footer ">
-                <div class="row">
-                    <div class="col-sm">
-                        <button type="button" class="btn btn-secondary me-auto callus" data-bs-dismiss="modal">
-                            <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
-                            <span class="txt">Call Us</span>
+                        <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
+                            <img src="~/Assets/fontawesome/svgs/Modal/3-layers.svg">
                         </button>
                     </div>
-                    <div class="col-sm">
-                        <button type="button" class="btn me-auto makeappointment">
-                            <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
-                            <span class="txt">Make an appointmnent</span>
-                        </button>
+
+                    <div class="modal-body">
+                        <h2 class="modal-title" id="modal-title">   @oSucessStoryDetail.Title</h2>
+                        <p >
+                            @oSucessStoryDetail.Summary
+                        </p>
                     </div>
-                        <div class="col-sm">
-                            <div>
-                                <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
-                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
-                                    <span class="txt">Share Via Email</span>
+                    <div class="modal-footer ">
+                        <div class="row w-100">
+                            <div class="col-sm">
+                                <button type="button" class="btn btn-secondary me-auto callus" data-bs-dismiss="modal">
+                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
+                                    <span class="txt">Call Us</span>
                                 </button>
                             </div>
-                           
-                            <div class="collapse" id="coll">
-                                <div class="card card-header">
-                                    <span>Share Via Email</span>
+                            <div class="col-sm">
+                                <button type="button" class="btn me-auto makeappointment">
+                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
+                                    <span class="txt">Make an appointmnent</span>
+                                </button>
+                            </div>
+                            <div class="col-sm">
+                                <div>
+                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
+                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
+                                        <span class="txt">Share Via Email</span>
+                                    </button>
                                 </div>
-                                <div class="card card-body">
-                                    <input type="email" placeholder="Enter Your Email">
 
-                                </div>
-                                <div class="card card-footer">
-                                    <button class="btn SendButton">Send</button>
+                                <div class="collapse" id="coll">
+                                    <div class="card card-header">
+                                        <span>Share Via Email</span>
+                                    </div>
+                                    <div class="card card-body">
+                                        <input type="email" placeholder="Enter Your Email">
+
+                                    </div>
+                                    <div class="card card-footer">
+                                        <button class="btn SendButton">Send</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                 </div>
+            </div>
 
         </div>
-    </div>
-
-</div>
 
 
+
+    }
+</section>
+
+<style>
+    .ilg-modal-popup-window .modal-content {
+        border: solid 1px red;
+        border-radius:0;
+
+
+    }
+
+        .ilg-modal-popup-window .modal-content .modal-header {
+            border-bottom:none;
+        }
+
+        .ilg-modal-popup-window .modal-content .modal-body {
+        }
+
+
+        .ilg-modal-popup-window .modal-content .modal-footer {
+            border-top: none;
+
+        }
+
+        .ilg-modal-popup-window .modal-content .callus {
+            border-top: none;
+            background-color: rgba(12,188,171,1);
+            border: none;
+            border-radius: 35px;
+            padding: 15px 35px;
+        }
+
+
+
+
+    /* rgba(12,188,171,1)
+   .ilg-custom-popup .main {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+    }
+
+        .ilg-custom-popup .main div {
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+            .ilg-custom-popup .main div button {
+                top: 500px;
+                height: 30px;
+                margin: 0 auto;
+            }
+
+
+    .ilg-custom-popup .ilg-modal-shadow-container {
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        opacity: 0.9;
+        background: #222;
+        z-index: 40000;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        animation-name: fadeIn_Container;
+        animation-duration: 1s;
+    }
+
+    .ilg-custom-popup .modal {
+        display: none;
+        top: 0;
+        min-width: 250px;
+        width: 80%;
+        height: 400px;
+        margin: 0 auto;
+        position: fixed;
+        z-index: 40001;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #000;
+        margin-top: 30px;
+        margin-left: 10%;
+        animation-name: fadeIn_Modal;
+        animation-duration: 0.8s;
+    }
+
+    .ilg-custom-popup .header {
+        width: 100%;
+        height: 70px;
+        border-radius: 10px 10px 0px 0px;
+        border-bottom: 2px solid #ccc;
+    }
+
+        .ilg-custom-popup .header a {
+            text-decoration: none;
+            float: right;
+            line-height: 70px;
+            margin-right: 20px;
+            color: #aaa;
+        }
+
+    .ilg-custom-popup .content {
+        width: 100%;
+        height: 250px;
+    }
+
+    .ilg-custom-popup form {
+        margin-top: 20px;
+    }
+
+        .ilg-custom-popup form label {
+            display: block;
+            margin-left: 12%;
+            margin-top: 10px;
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+
+        .ilg-custom-popup form input {
+            display: block;
+            width: 75%;
+            margin-left: 12%;
+            margin-top: 10px;
+            border-radius: 3px;
+            font-family: sans-serif;
+        }
+
+    .ilg-custom-popup #first_label {
+        padding-top: 30px;
+    }
+
+    .ilg-custom-popup #second_label {
+        padding-top: 25px;
+    }
+
+
+    .ilg-custom-popup .footer {
+        width: 100%;
+        height: 80px;
+        border-radius: 0px 0px 10px 10px;
+        border-top: 2px solid #ccc;
+    }
+
+    .ilg-custom-popup .fotter button {
+        float: right;
+        margin-right: 10px;
+        margin-top: 18px;
+        text-decoration: none;
+    }
+
+    ***MEDIA QUERIES***
+
+    @@media screen and (min-width: 600px) {
+
+        .ilg-custom-popup .modal {
+            width: 500px;
+            height: 300px;
+            margin-left: calc(50vw - 250px);
+            margin-top: calc(50vh - 150px);
+        }
+
+
+        .ilg-custom-popup .header {
+            width: 100%;
+            height: 40px;
+        }
+
+            .ilg-custom-popup .header a {
+                line-height: 40px;
+                margin-right: 10px;
+            }
+
+        .ilg-custom-popup .content {
+            width: 100%;
+            height: 190px;
+        }
+
+        .ilg-custom-popup form label {
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+
+        .ilg-custom-popup form input {
+            width: 75%;
+            margin-left: 10%;
+            margin-top: 10px;
+        }
+
+        .ilg-custom-popup #first_label {
+            padding-top: 0px;
+        }
+
+        .ilg-custom-popup #second_label {
+            padding-top: 0px;
+        }
+
+        .ilg-custom-popup .footer {
+            width: 100%;
+            height: 70px;
+        }
+
+            .ilg-custom-popup .footer button {
+                float: right;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+    }
+
+    LARGE SCREEN
+    @@media screen and (min-width: 1300px) {
+    }
+
+    ***ANIMATIONS***
+
+    @@keyframes fadeIn_Modal {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @@keyframes fadeIn_Container {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 0.9;
+        }
+    }*/
+</style>
+
+
+@*<button class="ilg-modal-open-button" data-success-story-id="1">Open Modal 1</button>
+    <button class="ilg-modal-open-button" data-success-story-id="2">Open Modal 2</button>
+
+
+
+    <div class="ilg-custom-popup">
+        <div class="ilg-modal-shadow-container">
+
+        </div>
+        <div class="modal ilg-modal-box" data-success-story-id="2">
+            <div class="header">
+                <a href="#" class="ilg-modal-cancel">X</a>
+            </div>
+            <div class="content">
+                2
+            </div>
+            <div class="footer">
+                <button id="login">Iniciar Sesión</button>
+                <button class="ilg-modal-cancel">Cancel</button>
+            </div>
+        </div>
+    </div>*@
 
 
 <script>
 
-    function GetSuccessStory(SuccessStory) {
-        console.log(SuccessStory);
-        document.getElementById("modal-title").innerHTML = SuccessStory.Title
-        document.getElementById("SusccessStorySummary").innerHTML = SuccessStory.Summary
-    }
+    //$(".ilg-modal-open-button[data-success-story-id]").click(function () {
+
+    //    var nSuccessStoryID = $(this).attr("data-success-story-id");
+
+    //    vILG_ModalPopShow(nSuccessStoryID);
+    //});
+
+    //$(".ilg-modal-cancel").click(function () {
+    //    $(".ilg-modal-shadow-container").fadeOut();
+    //    $(".ilg-modal-box").fadeOut();
+    //});
+
+    //function vILG_ModalPopShow(nSuccessStoryID) {
+    //    $(".ilg-modal-shadow-container").css("display", "block");
+    //    $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").css("display", "block");
+    //}
+
+    //function vILG_ModalPopHide(nSuccessStoryID) {
+    //    $(".ilg-modal-shadow-container").fadeOut();
+    //    $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").fadeOut();
+    //}
+
+
+
+    //$("[data-success-story-id='1']").click(function () {
+    //    $(".ilg-modal-shadow-container").css("display", "block");
+    //    $(".ilg-modal-box").css("display", "block");
+    //});
+
+    //$(".ilg-modal-cancel").click(function () {
+    //    $(".ilg-modal-shadow-container").fadeOut();
+    //    $(".ilg-modal-box[data-success-story-id='1']").fadeOut();
+    //});
 </script>
-
-

@@ -5,10 +5,7 @@ using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.ViewModels;
-using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Http;
-
-using Newtonsoft.Json;
 
 using Microsoft.AspNetCore.Localization;
 
@@ -22,7 +19,7 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-
+        
 
         #region DI
 
@@ -62,7 +59,6 @@ namespace ILG_Global.Web.Controllers
 
             // HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
             // oHtmlContentDetail.HtmlContentMaster.ImageMasters[0]
-
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
@@ -77,6 +73,7 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
+          //  SaveCurrentCultureToCookie(culture);
             return View(oHomePageVM);
         }
 
@@ -86,7 +83,7 @@ namespace ILG_Global.Web.Controllers
 
             oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, "en").Result;
             oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
-           
+
             return oSuccessStoriesVM;
         }
 
@@ -102,13 +99,13 @@ namespace ILG_Global.Web.Controllers
                 List<ImageDetail> lCurrentServiceImageDetails =
                     lImageDetails.Where(m =>
                         m.ImageMaster.OurServiceMasterID == oOurServiceDetail.OurServiceID &&
-                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m=>m.ImageID).ToList();
+                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m => m.ImageID).ToList();
 
                 OurServiceVM oOurServiceVM = oOurServiceVMCreate(oOurServiceDetail, lCurrentServiceImageDetails);
                 lOurServiceVMs.Add(oOurServiceVM);
             }
 
-            return await Task.FromResult(lOurServiceVMs) ;
+            return await Task.FromResult(lOurServiceVMs);
         }
 
         private OurServiceVM oOurServiceVMCreate(OurServiceDetail oOurServiceDetail, List<ImageDetail> lImageDetails)
@@ -126,16 +123,16 @@ namespace ILG_Global.Web.Controllers
             return oOurServiceVM;
         }
 
-       
+
 
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate()
         {
             ContactUsSectionVM oContactUsSectionVM = new ContactUsSectionVM();
 
-            oContactUsSectionVM.ContactUsSectionHeaderContent= HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
+            oContactUsSectionVM.ContactUsSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
             oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync("en").Result;
 
-            return await Task.FromResult(oContactUsSectionVM) ;
+            return await Task.FromResult(oContactUsSectionVM);
         }
 
         #endregion
@@ -209,20 +206,12 @@ namespace ILG_Global.Web.Controllers
             }
         }
 
-
-
-        [HttpPost]
-        public IActionResult SetLanguage(string culture, string returnUrl)
-        {
-            Response.Cookies.Append(
-                CookieRequestCultureProvider.DefaultCookieName,
-                CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
-                new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
-                );
-            return LocalRedirect(returnUrl);
-        }
-
-
+        //[HttpPost]
+        //public IActionResult SetLanguage(string culture, string returnUrl)
+        //{
+        //    SaveCurrentCultureToCookie(culture);
+        //    return LocalRedirect(returnUrl);
+        //}
 
 
         [HttpPost]
@@ -233,6 +222,7 @@ namespace ILG_Global.Web.Controllers
         }
 
 
-        
+       
+
     }
 }
