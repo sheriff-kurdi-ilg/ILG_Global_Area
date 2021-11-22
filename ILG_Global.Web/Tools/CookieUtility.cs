@@ -2,13 +2,13 @@
 using System;
 using System.Net;
 using System.Web;
-using System.Web.Script.Serialization;
+// using System.Web.Script.Serialization;
 
 namespace ILG_Global.Web.Tools
 {
     public class CookieUtility<T>
     {
-        private static JavaScriptSerializer oJavaScriptSerializer = new JavaScriptSerializer();
+        // private static JavaScriptSerializer oJavaScriptSerializer = new JavaScriptSerializer();
         private HttpContextAccessor _httpContextAccessor;
 
         public CookieUtility(HttpContextAccessor httpContextAccessor)
@@ -28,39 +28,35 @@ namespace ILG_Global.Web.Tools
             //HttpContext.Current.Response.Cookies.Add(oHttpCookie);
         }
 
-        public T vReadCookie(string sCookieNameToReadFrom)
-        {
-            IRequestCookieCollection oHttpCookie = _httpContextAccessor.HttpContext.Request.Cookies[sCookieNameToReadFrom];
+        //public T vReadCookie(string sCookieNameToReadFrom)
+        //{
+        //    T cookieValueFromContext = (T)_httpContextAccessor.HttpContext.Request.Cookies["key"];
 
-            T oSavedObject =
-                oHttpCookie != null ?
-                 oJavaScriptSerializer.Deserialize<T>(oHttpCookie.Value) :
-                Activator.CreateInstance<T>();
-
-            return oSavedObject;
-        }
+        //    //read cookie from Request object  
+        // return cookieValueFromContext
+        //}
 
 
-        public static void vSaveCookieAsString(string sStringToSave, string sCookieNameToSaveIn)
-        {
-            HttpCookie oHttpCookie =
-                HttpContext.Current.Request.Cookies[sCookieNameToSaveIn] ??
-                new HttpCookie(sCookieNameToSaveIn);
+        //public static void vSaveCookieAsString(string sStringToSave, string sCookieNameToSaveIn)
+        //{
+        //    HttpCookie oHttpCookie =
+        //        HttpContext.Current.Request.Cookies[sCookieNameToSaveIn] ??
+        //        new HttpCookie(sCookieNameToSaveIn);
 
-            oHttpCookie.Value = sStringToSave;
-            oHttpCookie.Expires = DateTime.Now.AddYears(1);
+        //    oHttpCookie.Value = sStringToSave;
+        //    oHttpCookie.Expires = DateTime.Now.AddYears(1);
 
-            HttpContext.Current.Response.Cookies.Add(oHttpCookie);
-        }
+        //    HttpContext.Current.Response.Cookies.Add(oHttpCookie);
+        //}
 
-        public static string vReadStringCookie(string sCookieNameToReadFrom)
-        {
-            HttpCookie oHttpCookie = HttpContext.Current.Request.Cookies[sCookieNameToReadFrom];
+        //public static string vReadStringCookie(string sCookieNameToReadFrom)
+        //{
+        //    HttpCookie oHttpCookie = HttpContext.Current.Request.Cookies[sCookieNameToReadFrom];
 
-            string sSavedValue = oHttpCookie != null ? oHttpCookie.Value : string.Empty;
+        //    string sSavedValue = oHttpCookie != null ? oHttpCookie.Value : string.Empty;
 
-            return sSavedValue;
-        }
+        //    return sSavedValue;
+        //}
 
     }
 }

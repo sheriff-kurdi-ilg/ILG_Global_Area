@@ -37,6 +37,7 @@ namespace ILG_Global.Web.Tools
 
         private string GetDefaultCultureCode()
         {
+
             return this.Options.DefaultRequestCulture.Culture.TwoLetterISOLanguageName;
         }
 

@@ -32,7 +32,7 @@
                         <div class="overlay w-100 h-100 position-absolute"></div>
                         <div class="slider-content text-white position-absolute p-4">
                             <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
-                            <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("ee",oSucessStoryDetail.SucessStoryID)">
+                            <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)">
                                 <span>Learn More</span>
                                 <i class="fas fa-arrow-right"></i>
                             </button>
@@ -82,7 +82,7 @@
             </div>*@
 
 
-        <div class="modal fade" id="@string.Concat("ee",oSucessStoryDetail.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
+        <div class="modal fade ilg-modal-popup-window" id="@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
             <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -95,12 +95,12 @@
 
                     <div class="modal-body">
                         <h2 class="modal-title" id="modal-title">   @oSucessStoryDetail.Title</h2>
-                        <p id="SusccessStorySummary">
+                        <p >
                             @oSucessStoryDetail.Summary
                         </p>
                     </div>
                     <div class="modal-footer ">
-                        <div class="row">
+                        <div class="row w-100">
                             <div class="col-sm">
                                 <button type="button" class="btn btn-secondary me-auto callus" data-bs-dismiss="modal">
                                     <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
@@ -148,7 +148,39 @@
 </section>
 
 <style>
-    .ilg-custom-popup .main {
+    .ilg-modal-popup-window .modal-content {
+        border: solid 1px red;
+        border-radius:0;
+
+
+    }
+
+        .ilg-modal-popup-window .modal-content .modal-header {
+            border-bottom:none;
+        }
+
+        .ilg-modal-popup-window .modal-content .modal-body {
+        }
+
+
+        .ilg-modal-popup-window .modal-content .modal-footer {
+            border-top: none;
+
+        }
+
+        .ilg-modal-popup-window .modal-content .callus {
+            border-top: none;
+            background-color: rgba(12,188,171,1);
+            border: none;
+            border-radius: 35px;
+            padding: 15px 35px;
+        }
+
+
+
+
+    /* rgba(12,188,171,1)
+   .ilg-custom-popup .main {
         width: 100%;
         height: 100vh;
         text-align: center;
@@ -265,7 +297,7 @@
         text-decoration: none;
     }
 
-    /****MEDIA QUERIES****/
+    ***MEDIA QUERIES***
 
     @@media screen and (min-width: 600px) {
 
@@ -323,11 +355,11 @@
             }
     }
 
-    /*LARGE SCREEN*/
+    LARGE SCREEN
     @@media screen and (min-width: 1300px) {
     }
 
-    /****ANIMATIONS****/
+    ***ANIMATIONS***
 
     @@keyframes fadeIn_Modal {
         from {
@@ -347,7 +379,7 @@
         to {
             opacity: 0.9;
         }
-    }
+    }*/
 </style>
 
 
@@ -377,27 +409,27 @@
 
 <script>
 
-    $(".ilg-modal-open-button[data-success-story-id]").click(function () {
+    //$(".ilg-modal-open-button[data-success-story-id]").click(function () {
 
-        var nSuccessStoryID = $(this).attr("data-success-story-id");
+    //    var nSuccessStoryID = $(this).attr("data-success-story-id");
 
-        vILG_ModalPopShow(nSuccessStoryID);
-    });
+    //    vILG_ModalPopShow(nSuccessStoryID);
+    //});
 
-    $(".ilg-modal-cancel").click(function () {
-        $(".ilg-modal-shadow-container").fadeOut();
-        $(".ilg-modal-box").fadeOut();
-    });
+    //$(".ilg-modal-cancel").click(function () {
+    //    $(".ilg-modal-shadow-container").fadeOut();
+    //    $(".ilg-modal-box").fadeOut();
+    //});
 
-    function vILG_ModalPopShow(nSuccessStoryID) {
-        $(".ilg-modal-shadow-container").css("display", "block");
-        $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").css("display", "block");
-    }
+    //function vILG_ModalPopShow(nSuccessStoryID) {
+    //    $(".ilg-modal-shadow-container").css("display", "block");
+    //    $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").css("display", "block");
+    //}
 
-    function vILG_ModalPopHide(nSuccessStoryID) {
-        $(".ilg-modal-shadow-container").fadeOut();
-        $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").fadeOut();
-    }
+    //function vILG_ModalPopHide(nSuccessStoryID) {
+    //    $(".ilg-modal-shadow-container").fadeOut();
+    //    $(".ilg-modal-box[data-success-story-id='" + nSuccessStoryID + "']").fadeOut();
+    //}
 
 
 
