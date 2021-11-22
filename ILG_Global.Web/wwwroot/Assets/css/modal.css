@@ -1,5 +1,18 @@
+.modal-content {
+    border: solid 1px red;
+    border-radius: 0;
+}
+
+
+
+.modal-header {
+    border-bottom: none;
+}
+
 .modal-body{
     padding-left:146px ;
+    border-bottom:none;
+    border-top:none;
 }
 
 .modal-body h2{
@@ -23,7 +36,7 @@ line-height: normal;
 .modal-body p{
     /* Style for "Lorem ipsu" */
     width: auto;
-    height: 210px;
+    height: auto;
     padding-right: 148px;
     margin-top: 38px;
     color: rgba(17, 17, 17, 0.5);
@@ -41,18 +54,26 @@ line-height: normal;
 }
 
 
-.modal-footer{
-    display:flex;
-    flex-direction:column
+.modal-footer {
+    display: flex;
+    flex-direction: column;
+    border-top: none;
+    
 }
-.modal-footer .callus{
-   /* Style for "btn" */
-width: 237px;
-height: 66px;
-border-radius: 250px;
-box-shadow: 0 0 15px #0cbcab;
-background-color: #0cbcab;
-}
+    .modal-footer .callus {
+        /* Style for "btn" */
+        width: 237px;
+        height: 66px;
+        border-radius: 250px;
+        box-shadow: 0 0 15px #0cbcab;
+        background-color: #0cbcab;
+
+        border-top: none;
+        /*background-color: rgba(12,188,171,1);*/
+        border: none;
+        /*border-radius: 35px;*/
+        padding: 15px 35px;
+    }
 
 .modal-footer .callus .txt {
 /* Style for "Call Us" */
@@ -126,18 +147,22 @@ width: 28px;
 height: 31px;
 }
 
-
-
-.card-header{
-    color: #093b6d;
-    font-family: Gotham;
-    background-color: #ffffff;
-}
-
- .SendButton{
+    .modal-footer .card  {
+        border:none;
+    }
+.SendButton {
     width: auto;
     height: auto;
-    border-radius: 250px;
     box-shadow: 0 0 15px #0cbcab;
     background-color: #0cbcab;
-    }  
+}
+
+
+/*
+    .ilg-modal-popup-window .modal-content .callus {
+        border-top: none;
+        background-color: rgba(12,188,171,1);
+        border: none;
+        border-radius: 35px;
+        padding: 15px 35px;
+    }*/

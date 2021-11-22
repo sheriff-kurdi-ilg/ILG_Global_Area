@@ -156,6 +156,15 @@ namespace ILG_Global.Web.Controllers
         {
             try
             {
+<<<<<<< HEAD
+                emailRepository.Insert(email);
+
+
+
+                mailService.Send(email.EmailAddress, "Subscribing To ILG NewsLitter", "Thanks for subcribing to our newslitter");
+
+=======
+>>>>>>> parent of 61dc96b (service)
                 return RedirectToAction(nameof(Index));
             }
             catch

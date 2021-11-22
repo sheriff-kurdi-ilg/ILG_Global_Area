@@ -22,27 +22,30 @@
     <title>ILG Global | Home Page</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- js -->
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="../../lib/jquery/dist/jquery.js"></script>
+    <script src="../../Assets/js/jquery.min.js"></script>
 
-    <script src="~/Assets/js/popper.min.js"></script>
-    <script src="~/Assets/js/bootstrap.min.js"></script>
-    <script src="~/Assets/js/owl.carousel.min.js"></script>
-    <link rel="icon" type="image/png" href="~/Assets/images/FaveIcon.svg" />
+    <script src="../../Assets/js/popper.min.js"></script>
+    <script src="../../Assets/js/bootstrap.min.js"></script>
+    <script src="../../Assets/js/owl.carousel.min.js"></script>
+    <link rel="icon" type="image/png" href="/Assets/images/FaveIcon.svg" />
 
     <!--font-->
     <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
 
     <!-- Font Awesome-->
-    <link rel="stylesheet" href="~/Assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="../../Assets/fontawesome/css/all.css">
 
     <!-- Important Owl stylesheet -->
-    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../Assets/css/owl.theme.default.min.css">
 
     <!-- style -->
     <link href="../../Assets/css/bootstrap.min.css" rel="stylesheet" />
-    @*<link href="../../Assets/css/modal.css" rel="stylesheet" />*@
+<link href="../../Assets/css/modal.css" rel="stylesheet" />
+
+    <link href="../../Assets/css/modal.css" rel="stylesheet" />
+
     <link href="~/Assets/css/site.en.css" rel="stylesheet" />
 
 
@@ -51,7 +54,7 @@
 
 <body>
 
-    
+
 
 
 
@@ -81,81 +84,95 @@
                         width: 100%;
                         z-index: 20000;
                     }
-                        .quick-contact-main-container .quick-contact {
-                            bottom: 0;
-                            z-index: 100000;
-                        }
 
-                            .quick-contact-main-container .quick-contact .right-wing,
-                            .quick-contact-main-container .quick-contact .left-wing,
-                            .quick-contact-main-container .quick-contact .center-circle {
-                              /*  border: solid 1px red;*/
-                                height: 200px;
-                            }
+                    .quick-contact-main-container .quick-contact {
+                        bottom: 0;
+                        z-index: 100000;
+                    }
 
-                            .quick-contact-main-container .quick-contact .left-wing {
-                                background-image: url(../Assets/images/Quick-Call/left-wing.png);
-                                width: 36%;
-                                /*         border: solid 1px green;*/
-                                background-repeat: no-repeat;
-                                position: relative;
-                                left: 96px;
-                                background-position-y: -9px;
-                                z-index: 12;
-                                /* height: 10px!important; */
-                                background-position-x: -8px;
-                                background-position-y: -6px;
-                            }
+                    .quick-contact-main-container .quick-contact .right-wing,
+                    .quick-contact-main-container .quick-contact .left-wing,
+                    .quick-contact-main-container .quick-contact .center-circle {
+                        /*  border: solid 1px red;*/
+                        height: 200px;
+                    }
 
-                            .quick-contact-main-container .quick-contact .center-circle {
-                                background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
-                                background-position-x: -22px;
-                                background-repeat: no-repeat;
-                                width: 16.5%;
-                                z-index: 10;
-                                position: static;
-                            }
+                    .quick-contact-main-container .quick-contact .left-wing {
+                        background-image: url(../Assets/images/Quick-Call/left-wing.png);
+                        width: 36%;
+                        /* border: solid 1px green; */
+                        background-repeat: no-repeat;
+                        position: relative;
+                        left: 5%;
+                        background-position-y: -9px;
+                        z-index: 12;
+                        /* height: 10px!important; */
+                        background-position-x: 14px;
+                        background-position-y: 6px;
+                        background-size: 119%;
+                    }
+
+                    .quick-contact-main-container .quick-contact .center-circle {
+                        background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
+                        background-position-x: 2;
+                        background-repeat: no-repeat;
+                        width: 26.5%;
+                        z-index: 10;
+                        position: static;
+                        background-size: 107%;
+                    }
 
 
-                            .quick-contact-main-container .quick-contact .right-wing {
-                                background-image: url(../Assets/images/Quick-Call/right-wing.png);
-                                background-position-x: -27px;
-                                position: relative;
-                                left: -80px;
-                                background-repeat: no-repeat;
-                                width: 36%;
-                                background-position-y: 61px;
-                                /*border: solid 1px blue;*/
-                                z-index: 12;
-                            }
+                    .quick-contact-main-container .quick-contact .right-wing {
+                        background-image: url(../Assets/images/Quick-Call/right-wing.png);
+                        background-position-x: 189%;
+                        position: relative;
+                        /* left: -80px; */
+                        background-repeat: no-repeat;
+                        width: 36%;
+                        background-position-y: 40px;
+                        /* border: solid 1px blue; */
+                        z-index: 12;
+                        background-size: 119%;
+                    }
 
-                            .quick-contact-main-container .quick-contact .wings {
-                                visibility: hidden;
-                            }
+                    .quick-contact-main-container .quick-contact .wings {
+                        visibility: hidden;
+                    }
 
-                            .quick-contact-main-container .quick-contact .left-wing a.link {
-                                cursor: pointer;
-                                padding: 15px 94px;
-                                /*border: solid 1px red;*/
-                                position: relative;
-                                top: 86px;
-                                left: -4px;
-                      
-                            }
+                    .quick-contact-main-container .quick-contact .left-wing a.link {
+                        cursor: pointer;
+                        padding: 15px 94px;
+                        /*border: solid 1px red;*/
+                        position: relative;
+                        top: 86px;
+                        left: -4px;
 
-                            .quick-contact-main-container .quick-contact .right-wing a.link {
-                                cursor: pointer;
-                                padding: 15px 91px;
-                                /*border: solid 1px red;*/
-                                position: relative;
-                                top: 84px;
-                                right: -110px;
-                            }
+                    }
+
+                    .quick-contact-main-container .quick-contact .right-wing a.link {
+                        cursor: pointer;
+                        padding: 15px 91px;
+                        /*border: solid 1px red;*/
+                        position: relative;
+                        top: 84px;
+                        right: -110px;
+                    }
+
                     .ilg-to-oppisit-direction {
                         float: right;
                         position: fixed;
                         bottom: 10px;
-                        right: -10%;
+                        right: -4%;
+                    }
+
+                    @@media screen and (max-width: 600px) {
+                        .ilg-to-oppisit-direction {
+                            float: right;
+                            position: fixed;
+                            bottom: 10px;
+                            right: -0%;
+                        }
                     }
                 </style>
 
@@ -163,7 +180,7 @@
 
 
 
-                    <div class="row col-md-6 float-right ilg-to-oppisit-direction">
+                    <div class="row col-md-6 col-sm-12 float-right ilg-to-oppisit-direction">
                         <div class="col-md-4 left-wing wings quick-contact-container">
                             <a class="link" target="_blank" href="tel:0096522499777"></a>
                         </div>
@@ -172,7 +189,7 @@
 
                         </div>
                         <div class="col-md-4 right-wing wings quick-contact-container">
-                            <a class="link" target="_blank" href="http://wa.me/96565669292"></a>
+                            <a class="link" target="_blank" href="http://wa.me/96522499777"></a>
                         </div>
                     </div>
 
@@ -191,7 +208,7 @@
                     });
                 </script>
             </div>
-    
+
 
 
             @await Html.PartialAsync("_OurServices", Model.OurServices)
@@ -262,16 +279,8 @@
 
     </script>
 
-   
-    @*//$('#our-service-slider').owlCarousel({
-    //autoplay: true,
-    //autoplayTimeout: 3000,
-    //autoplayHoverPause: true,
-    //speed: 0.5,
-    //loop: true,
-    //margin:20,
-    //items:1,
-    //})*@
+
+
 
 </body>
 

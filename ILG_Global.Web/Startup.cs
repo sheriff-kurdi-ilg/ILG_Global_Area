@@ -1,5 +1,6 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Services;
 using ILG_Global.DataAccess;
 using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Builder;
@@ -53,8 +54,18 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
+<<<<<<< HEAD
+            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<IEmailRepository, EmailRepository>();
+
+
+=======
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<CultureSessions>();
+
+            services.AddScoped<MailService>();
+>>>>>>> parent of 61dc96b (service)
 
 
 

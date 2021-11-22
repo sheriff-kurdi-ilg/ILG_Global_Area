@@ -28,6 +28,7 @@
   
   <ItemGroup>
     <Folder Include="Abstraction\Services\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>
