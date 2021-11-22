@@ -165,6 +165,8 @@ namespace ILG_Global.Web.Controllers
             {
                 emailRepository.Insert(email);
 
+
+
                 mailService.Send(email.EmailAddress, "Subscribing To ILG NewsLitter", "Thanks for subcribing to our newslitter");
 
                 return RedirectToAction(nameof(Index));

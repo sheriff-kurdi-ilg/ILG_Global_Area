@@ -57,10 +57,8 @@ namespace ILG_Global.Web
             services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped<IEmailRepository, EmailRepository>();
-            services.AddScoped<CultureSessions>();
 
 
-            services.AddScoped<MailService>();
 
 
 
