@@ -54,8 +54,11 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+
+            services.AddScoped<IEmailRepository, EmailRepository>();
             services.AddScoped<CultureSessions>();
+
 
             services.AddScoped<MailService>();
 

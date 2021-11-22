@@ -4,14 +4,16 @@ using ILG_Global.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    partial class ILG_GlobalContextModelSnapshot : ModelSnapshot
+    [Migration("20211122135030_email")]
+    partial class email
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -53,6 +55,22 @@ namespace ILG_Global.DataAccess.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("ContactInformationMasters");
+                });
+
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.Email", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Emails");
                 });
 
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.HtmlContentDetail", b =>
@@ -242,22 +260,6 @@ namespace ILG_Global.DataAccess.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("OurServiceMasters");
-                });
-
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ShareViaEmailSubscriber", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("EmailAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("ShareViaEmailSubscriber");
                 });
 
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.SucessStoryDetail", b =>

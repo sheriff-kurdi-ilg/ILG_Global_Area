@@ -4,6 +4,7 @@ using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 
 using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.Services;
 using ILG_Global.BussinessLogic.ViewModels;
 using Microsoft.AspNetCore.Http;
 
@@ -30,6 +31,8 @@ namespace ILG_Global.Web.Controllers
         public INewsLetterSubscribeRepository NewsLetterSubscribeRepository { get; set; }
         private IImageDetailRepository ImageDetailRepository;
         private IImageMasterRepository ImageMasterRepository;
+        private readonly IEmailRepository emailRepository;
+        private readonly MailService mailService;
 
         public HomeController(
             IHtmlContentDetailRepository htmlContentDetailRepository,
@@ -38,7 +41,9 @@ namespace ILG_Global.Web.Controllers
             IContactInformationDetailRepository contactInformationDetailRepository,
             INewsLetterSubscribeRepository newsLetterSubscribeRepository,
             IImageDetailRepository imageDetailRepository,
-            IImageMasterRepository imageMasterRepository
+            IImageMasterRepository imageMasterRepository,
+            IEmailRepository emailRepository,
+            MailService mailService
             )
         {
             this.HtmlContentDetailRepository = htmlContentDetailRepository;
@@ -48,6 +53,8 @@ namespace ILG_Global.Web.Controllers
             this.NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
             this.ImageDetailRepository = imageDetailRepository;
             this.ImageMasterRepository = imageMasterRepository;
+            this.emailRepository = emailRepository;
+            this.mailService = mailService;
         }
 
         #endregion
@@ -152,10 +159,14 @@ namespace ILG_Global.Web.Controllers
         // POST: HomeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult ShareViaEmailSubscribe(ShareViaEmailSubscriber email)
         {
             try
             {
+                emailRepository.Insert(email);
+
+                mailService.Send(email.EmailAddress, "Subscribing To ILG NewsLitter", "Thanks for subcribing to our newslitter");
+
                 return RedirectToAction(nameof(Index));
             }
             catch
