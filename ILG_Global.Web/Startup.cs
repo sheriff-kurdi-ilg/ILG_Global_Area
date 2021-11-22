@@ -1,6 +1,5 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
-using ILG_Global.BussinessLogic.Services;
 using ILG_Global.DataAccess;
 using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Builder;
@@ -55,9 +54,7 @@ namespace ILG_Global.Web
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<CultureSessions>();
-
-            services.AddScoped<MailService>();
+        
 
 
 
