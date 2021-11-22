@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using System;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -13,28 +14,30 @@ namespace ILG_Global.Web.Tools
            
         public override Task<ProviderCultureResult> DetermineProviderCultureResult(HttpContext httpContext)
         {
-            string cultureCode = null;
+            string CultureCode = null;
 
             if (httpContext.Request.Path.HasValue && httpContext.Request.Path.Value == "/")
-                cultureCode = this.GetDefaultCultureCode(httpContext);
+                CultureCode = this.GetDefaultCultureCode(httpContext);
 
             // TODO: make it look more beautiful
             else if (httpContext.Request.Path.HasValue && httpContext.Request.Path.Value.Length >= 4 && httpContext.Request.Path.Value[0] == '/' && httpContext.Request.Path.Value[3] == '/')
             {
-                cultureCode = httpContext.Request.Path.Value.Substring(1, 2);
+                CultureCode = httpContext.Request.Path.Value.Substring(1, 2);
 
-                if (!this.CheckCultureCode(cultureCode))
-                    cultureCode = this.GetDefaultCultureCode(httpContext); //throw new HttpException(HttpStatusCode.NotFound);
+                if (!this.CheckCultureCode(CultureCode))
+                    CultureCode = this.GetDefaultCultureCode(httpContext); //throw new HttpException(HttpStatusCode.NotFound);
             }
 
-            else cultureCode = this.GetDefaultCultureCode(httpContext); //throw new HttpException(HttpStatusCode.NotFound);
+            else CultureCode = this.GetDefaultCultureCode(httpContext); //throw new HttpException(HttpStatusCode.NotFound);
 
             // TODO: from the SEO point of view, we should return 404 error code for unknown cultures
 
-            ProviderCultureResult requestCulture = new ProviderCultureResult(cultureCode);
+            ProviderCultureResult RequestCulture = new ProviderCultureResult(CultureCode);
 
-            
-            return Task.FromResult(requestCulture);
+
+              SaveCurrentCultureToCookie(httpContext, CultureCode);
+
+            return Task.FromResult(RequestCulture);
         }
 
         private string GetDefaultCultureCode(HttpContext httpContext)
@@ -54,6 +57,16 @@ namespace ILG_Global.Web.Tools
         private bool CheckCultureCode(string cultureCode)
         {
             return this.Options.SupportedCultures.Select(c => c.TwoLetterISOLanguageName).Contains(cultureCode);
+        }
+
+
+        private void SaveCurrentCultureToCookie(HttpContext httpContext,string culture)
+        {
+            httpContext.Response.Cookies.Append(
+               CookieRequestCultureProvider.DefaultCookieName,
+               CookieRequestCultureProvider.MakeCookieValue(new RequestCulture(culture)),
+               new CookieOptions { Expires = DateTimeOffset.UtcNow.AddYears(1) }
+               );
         }
     }
 

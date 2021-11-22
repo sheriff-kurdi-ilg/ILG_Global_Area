@@ -127,17 +127,17 @@ namespace ILG_Global.Web
 
             app.UseHttpsRedirection();
 
-            RequestLocalizationOptions requestLocalizationOptions = new RequestLocalizationOptions();
+            RequestLocalizationOptions RequestLocalizationOptions = new RequestLocalizationOptions();
 
-            requestLocalizationOptions.SupportedCultures = requestLocalizationOptions.SupportedUICultures =
+            RequestLocalizationOptions.SupportedCultures = RequestLocalizationOptions.SupportedUICultures =
               new CultureInfo[] { new CultureInfo("en"),new CultureInfo("ar") }.ToList();
             
            
             
-            requestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = requestLocalizationOptions });
+            RequestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = RequestLocalizationOptions });
 
            
-            app.UseRequestLocalization(requestLocalizationOptions);
+            app.UseRequestLocalization(RequestLocalizationOptions);
 
             app.UseStaticFiles();
 
