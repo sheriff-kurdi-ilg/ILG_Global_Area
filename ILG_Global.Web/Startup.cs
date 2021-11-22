@@ -54,11 +54,18 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
+<<<<<<< HEAD
             services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped<IEmailRepository, EmailRepository>();
 
 
+=======
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<CultureSessions>();
+
+            services.AddScoped<MailService>();
+>>>>>>> parent of 61dc96b (service)
 
 
 

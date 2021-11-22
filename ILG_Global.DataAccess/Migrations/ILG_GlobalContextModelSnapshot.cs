@@ -244,22 +244,6 @@ namespace ILG_Global.DataAccess.Migrations
                     b.ToTable("OurServiceMasters");
                 });
 
-            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ShareViaEmailSubscriber", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("EmailAddress")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("ShareViaEmailSubscriber");
-                });
-
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.SucessStoryDetail", b =>
                 {
                     b.Property<int>("SucessStoryID")
