@@ -1,5 +1,6 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Services;
 using ILG_Global.DataAccess;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -52,6 +53,8 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
+
+            services.AddScoped<MailService>();
 
 
 
