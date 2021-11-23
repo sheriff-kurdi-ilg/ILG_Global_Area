@@ -41,8 +41,6 @@ namespace ILG_Global.DataAccess
             _context.ImageDetails.Remove(ImageDetail);
         }
 
-
-
         public async Task SaveImageDetail(ImageDetail entity)
         {
             await _context.SaveChangesAsync();

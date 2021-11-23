@@ -105,7 +105,7 @@
 
                                             <div class="row">
                                                 <div class="col-10">
-                                                    <input asp-for="ShareViaEmailSubscriberEmail" class="form-control" type="email" placeholder="Enter Your Email">
+                                                    <input asp-for="ShareViaEmailSubscriberEmail" class="form-control" type="email" placeholder="Enter Your Email" id="Email" onchange="Alert()">
                                                 </div>
                                                 <div class="col-2">
                                                     <button type="submit" class="btn SendButton">Send</button>
@@ -136,12 +136,15 @@
 
 
 <script>
-    //function DrawHr() {
-    //    var x = document.getElementById('hr');
-    //    if (x.style.display === 'none') {
-    //        x.style.display = 'block';
-    //    } else {
-    //        x.style.display = 'none';
-    //    }
-    //}
+    // to hide quick call icon once the popup opens 
+    $('.ilg-modal-popup-window').on('hidden.bs.modal', function (e) {
+        $(".quick-contact").show(500);
+    });
+
+    $('.ilg-modal-popup-window').on('show.bs.modal', function (e) {
+        $(".quick-contact").hide(500);
+    });
+
+
+
 </script>

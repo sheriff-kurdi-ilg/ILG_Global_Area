@@ -65,6 +65,9 @@ nav.navbar.scroll {
     transition: 0.6s;
 }
 
+    nav.navbar.scroll .img-brand {
+        width:50%!important;
+    }
 
     nav.navbar.scroll ul li {
         color: white;
@@ -73,7 +76,7 @@ nav.navbar.scroll {
 
 
 nav.navbar.navbar-expand-lg.scroll {
-    height: 12%;
+    height: 10%;
 }
 
 navbar.scroll .img-brand {
