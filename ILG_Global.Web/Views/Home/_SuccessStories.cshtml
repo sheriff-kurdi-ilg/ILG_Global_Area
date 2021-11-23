@@ -1,9 +1,12 @@
 ﻿@using ILG_Global.BussinessLogic.ViewModels
 @using ILG_Global.BussinessLogic.Models
 @using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization;
 @model SuccessStoriesVM
 
 @{
+    string PreferredLanguadge = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
     Layout = null;
 }
 <!-- success story section-->
@@ -73,13 +76,13 @@
                             </div>
                             <div class="col-sm">
                                 @*<button type="button" class="btn me-auto makeappointment">
-                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
-                                    <span class="txt">Make an appointmnent</span>
-                                </button>*@
+                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
+                                        <span class="txt">Make an appointmnent</span>
+                                    </button>*@
                             </div>
                             <div class="col-sm">
                                 <div>
-                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample" >
+                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
                                         <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
                                         <span class="txt">Share Via Email</span>
                                     </button>
@@ -97,7 +100,8 @@
                                     <div class="card  card-body">
 
                                         <form id="frmSendViaEmail" asp-controller="Home"
-                                              asp-action="ShareViaEmailSubscribe" method="post"  role="form">
+                                              asp-action="ShareViaEmailSubscribe" method="post" role="form" asp-route-culture="@PreferredLanguadge">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                                             <div class="row">
                                                 <div class="col-10">
@@ -106,25 +110,10 @@
                                                 <div class="col-2">
                                                     <button type="submit" class="btn SendButton">Send</button>
                                                 </div>
-
-                                                @Html.ValidationMessageFor(m => m.ShareViaEmailSubscriberEmail)
-
-                                                @*<span class="field-validation-error"
-
-                                                    onClick="document.getElementById('myForm').submit();"
-              data-valmsg-replace="true"
-              data-valmsg-for="ShareViaEmailSubscriberEmail">
-            The Email field is required.
-        </span>*@
-
+                                                <span asp-validation-for="ShareViaEmailSubscriberEmail" class="text-danger"></span>
                                             </div>
 
                                         </form>
-
-                         
-
-
-
                                     </div>
                                 </div>
 
@@ -141,36 +130,7 @@
     }
 </section>
 
-@*<style>
-        .ilg-modal-popup-window .modal-content {
-            border: solid 1px red;
-            border-radius:0;
 
-
-        }
-
-            .ilg-modal-popup-window .modal-content .modal-header {
-                border-bottom:none;
-            }
-
-            .ilg-modal-popup-window .modal-content .modal-body {
-            }
-
-
-            .ilg-modal-popup-window .modal-content .modal-footer {
-                border-top: none;
-
-            }
-
-            .ilg-modal-popup-window .modal-content .callus {
-                border-top: none;
-                background-color: rgba(12,188,171,1);
-                border: none;
-                border-radius: 35px;
-                padding: 15px 35px;
-            }
-
-    </style>*@
 
 
 

@@ -14,6 +14,7 @@ namespace ILG_Global.Web.Tools
            
         public override Task<ProviderCultureResult> DetermineProviderCultureResult(HttpContext httpContext)
         {
+            
             string CultureCode = null;
 
             if (httpContext.Request.Path.HasValue && httpContext.Request.Path.Value == "/")

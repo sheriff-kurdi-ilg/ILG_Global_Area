@@ -21,7 +21,8 @@ namespace ILG_Global.Web.Controllers
 {
     public class HomeController : Controller
     {
-        
+
+
 
         #region DI
 
@@ -45,7 +46,7 @@ namespace ILG_Global.Web.Controllers
             IImageDetailRepository imageDetailRepository,
             IImageMasterRepository imageMasterRepository,
             IEmailRepository emailRepository,
-            MailService mailService ,
+            MailService mailService,
             IILG_PathProvider iLG_PathProvider
             )
         {
@@ -65,6 +66,7 @@ namespace ILG_Global.Web.Controllers
 
         #region  Index 
 
+        [HttpGet]
         public async Task<ActionResult> Index()
         {
             HomePageVM oHomePageVM = await oHomePageVMCreate();
@@ -73,7 +75,7 @@ namespace ILG_Global.Web.Controllers
         }
 
 
-        private async Task<HomePageVM>  oHomePageVMCreate() 
+        private async Task<HomePageVM> oHomePageVMCreate()
         {
             HomePageVM oHomePageVM = new HomePageVM();
 
@@ -85,12 +87,12 @@ namespace ILG_Global.Web.Controllers
             oHomePageVM.SuccessStoriesViewModel = oSuccessStoriesViewModelCreate();
 
 
-            oHomePageVM.ContactUsSectionViewModel = await  oContactUsViewModelCreate();
+            oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
             //  SaveCurrentCultureToCookie(culture);
-            return  oHomePageVM;
+            return oHomePageVM;
         }
 
 
@@ -152,34 +154,11 @@ namespace ILG_Global.Web.Controllers
             return await Task.FromResult(oContactUsSectionVM);
         }
 
-        [HttpPost]
-        public async Task<IActionResult>  Index(string ShareViaEmailSubscriberEmail)
-        {
-            try
-            {
-                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = ShareViaEmailSubscriberEmail };
 
-                EmailRepository.Insert(oShareViaEmailSubscriber);
+        #endregion
 
-                string sFilePath =  ILG_PathProvider.MapPath("/UserFiles/PDF/SamplePDF1.pdf");
-
-                Attachment oAttachment = new Attachment(sFilePath); ;
-
-                MailService.Send(ShareViaEmailSubscriberEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
-            }
-            catch
-            {
-               
-            }
-
-            HomePageVM oHomePageVM = await oHomePageVMCreate();
-
-            return View(oHomePageVM);
-        }
-            #endregion
-
-            // GET: HomeController/Details/5
-            public ActionResult Details(int id)
+        // GET: HomeController/Details/5
+        public ActionResult Details(int id)
         {
             return View();
         }
@@ -190,13 +169,6 @@ namespace ILG_Global.Web.Controllers
             return View();
         }
 
-        //// POST: HomeController/Create
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult ShareViaEmailSubscribe(string email)
-        //{
-     
-        //}
 
         // GET: HomeController/Edit/5
         public ActionResult Edit(int id)
@@ -240,14 +212,31 @@ namespace ILG_Global.Web.Controllers
             }
         }
 
-        //[HttpPost]
-        //public IActionResult SetLanguage(string culture, string returnUrl)
-        //{
-        //    SaveCurrentCultureToCookie(culture);
-        //    return LocalRedirect(returnUrl);
-        //}
+        [Route("{culture}/Home/ShareViaEmailSubscribe")]
+        [HttpPost]
+        public async Task<IActionResult> ShareViaEmailSubscribe(string ShareViaEmailSubscriberEmail)
+        {
+            try
+            {
+                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = ShareViaEmailSubscriberEmail };
 
+                await EmailRepository.Insert(oShareViaEmailSubscriber);
 
+                string sFilePath = ILG_PathProvider.MapPath("/UserFiles/PDF/SamplePDF1.pdf");
+
+                Attachment oAttachment = new Attachment(sFilePath); ;
+
+                MailService.Send(ShareViaEmailSubscriberEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+            }
+            catch
+            {
+
+            }
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Route("{culture}/Home/SubscribeToNewsLetter")]
         [HttpPost]
         public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
         {
@@ -256,7 +245,7 @@ namespace ILG_Global.Web.Controllers
         }
 
 
-       
+
 
     }
 }
