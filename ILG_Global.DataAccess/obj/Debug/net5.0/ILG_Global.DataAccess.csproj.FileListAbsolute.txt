@@ -30,7 +30,10 @@ D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.Dat
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.AssemblyInfo.cs
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CoreCompileInputs.cache
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.csproj.CopyComplete
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 D:\ILG_Projects\ILG_Global\ILG_Global.DataAccess\obj\Debug\net5.0\ILG_Global.DataAccess.dll
