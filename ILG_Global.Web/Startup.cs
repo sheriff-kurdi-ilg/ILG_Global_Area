@@ -1,5 +1,6 @@
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
+using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Services;
 using ILG_Global.DataAccess;
 using ILG_Global.Web.Tools;
@@ -25,8 +26,6 @@ namespace ILG_Global.Web
 {
     public class Startup
     {
-        private readonly IHttpContextAccessor httpContextAccessor;
-
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -54,18 +53,15 @@ namespace ILG_Global.Web
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
-<<<<<<< HEAD
-            services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+
+            // services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped<IEmailRepository, EmailRepository>();
 
 
-=======
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddScoped<CultureSessions>();
 
             services.AddScoped<MailService>();
->>>>>>> parent of 61dc96b (service)
+            services.AddSingleton<IILG_PathProvider, ILG_PathProvider>();
 
 
 

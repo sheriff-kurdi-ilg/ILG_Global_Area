@@ -2,8 +2,9 @@
 
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
-
+using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.Services;
 using ILG_Global.BussinessLogic.ViewModels;
 using Microsoft.AspNetCore.Http;
 
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Threading.Tasks;
 
 namespace ILG_Global.Web.Controllers
@@ -28,8 +30,11 @@ namespace ILG_Global.Web.Controllers
         public ISucessStoryDetailRepository SucessStoryDetailRepository { get; }
         public IContactInformationDetailRepository ContactInformationDetailRepository { get; }
         public INewsLetterSubscribeRepository NewsLetterSubscribeRepository { get; set; }
-        private IImageDetailRepository ImageDetailRepository;
-        private IImageMasterRepository ImageMasterRepository;
+        private IImageDetailRepository ImageDetailRepository { get; set; }
+        private IImageMasterRepository ImageMasterRepository { get; set; }
+        private IEmailRepository EmailRepository { get; set; }
+        private MailService MailService { get; set; }
+        private IILG_PathProvider ILG_PathProvider { get; set; }
 
         public HomeController(
             IHtmlContentDetailRepository htmlContentDetailRepository,
@@ -38,7 +43,10 @@ namespace ILG_Global.Web.Controllers
             IContactInformationDetailRepository contactInformationDetailRepository,
             INewsLetterSubscribeRepository newsLetterSubscribeRepository,
             IImageDetailRepository imageDetailRepository,
-            IImageMasterRepository imageMasterRepository
+            IImageMasterRepository imageMasterRepository,
+            IEmailRepository emailRepository,
+            MailService mailService ,
+            IILG_PathProvider iLG_PathProvider
             )
         {
             this.HtmlContentDetailRepository = htmlContentDetailRepository;
@@ -48,6 +56,9 @@ namespace ILG_Global.Web.Controllers
             this.NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
             this.ImageDetailRepository = imageDetailRepository;
             this.ImageMasterRepository = imageMasterRepository;
+            this.EmailRepository = emailRepository;
+            this.MailService = mailService;
+            this.ILG_PathProvider = iLG_PathProvider;
         }
 
         #endregion
@@ -56,9 +67,14 @@ namespace ILG_Global.Web.Controllers
 
         public async Task<ActionResult> Index()
         {
+            HomePageVM oHomePageVM = await oHomePageVMCreate();
 
-            // HtmlContentDetail oHtmlContentDetail = new HtmlContentDetail();
-            // oHtmlContentDetail.HtmlContentMaster.ImageMasters[0]
+            return View(oHomePageVM);
+        }
+
+
+        private async Task<HomePageVM>  oHomePageVMCreate() 
+        {
             HomePageVM oHomePageVM = new HomePageVM();
 
             oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
@@ -69,13 +85,14 @@ namespace ILG_Global.Web.Controllers
             oHomePageVM.SuccessStoriesViewModel = oSuccessStoriesViewModelCreate();
 
 
-            oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
+            oHomePageVM.ContactUsSectionViewModel = await  oContactUsViewModelCreate();
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
 
-          //  SaveCurrentCultureToCookie(culture);
-            return View(oHomePageVM);
+            //  SaveCurrentCultureToCookie(culture);
+            return  oHomePageVM;
         }
+
 
         private SuccessStoriesVM oSuccessStoriesViewModelCreate()
         {
@@ -135,10 +152,36 @@ namespace ILG_Global.Web.Controllers
             return await Task.FromResult(oContactUsSectionVM);
         }
 
-        #endregion
+        [HttpPost]
+        public async Task<IActionResult>  Index(string ShareViaEmailSubscriberEmail)
+        {
+            try
+            {
+                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = ShareViaEmailSubscriberEmail };
 
-        // GET: HomeController/Details/5
-        public ActionResult Details(int id)
+                EmailRepository.Insert(oShareViaEmailSubscriber);
+
+                string sFilePath =  ILG_PathProvider.MapPath("/UserFiles/PDF/SamplePDF1.pdf");
+
+                Attachment oAttachment = new Attachment(sFilePath); ;
+
+                MailService.Send(ShareViaEmailSubscriberEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+
+            
+            }
+            catch
+            {
+               
+            }
+
+            HomePageVM oHomePageVM = await oHomePageVMCreate();
+
+            return View(oHomePageVM);
+        }
+            #endregion
+
+            // GET: HomeController/Details/5
+            public ActionResult Details(int id)
         {
             return View();
         }
@@ -149,29 +192,13 @@ namespace ILG_Global.Web.Controllers
             return View();
         }
 
-        // POST: HomeController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-<<<<<<< HEAD
-                emailRepository.Insert(email);
-
-
-
-                mailService.Send(email.EmailAddress, "Subscribing To ILG NewsLitter", "Thanks for subcribing to our newslitter");
-
-=======
->>>>>>> parent of 61dc96b (service)
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+        //// POST: HomeController/Create
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult ShareViaEmailSubscribe(string email)
+        //{
+     
+        //}
 
         // GET: HomeController/Edit/5
         public ActionResult Edit(int id)

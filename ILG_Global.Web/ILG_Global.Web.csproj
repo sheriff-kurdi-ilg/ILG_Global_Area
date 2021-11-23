@@ -1753,6 +1753,11 @@
     <None Include="wwwroot\Assets\UserFiles\OurServices\Spliter.png" />
     <None Include="wwwroot\Assets\UserFiles\SuccessStories\DNA_2x.jpg" />
     <None Include="wwwroot\Assets\UserFiles\SuccessStories\Splitter_2x.jpg" />
+    <None Include="wwwroot\UserFiles\PDF\SamplePDF1.pdf" />
+    <None Include="wwwroot\UserFiles\PDF\SamplePDF2.pdf" />
+    <None Include="wwwroot\UserFiles\PDF\SamplePDF3.pdf" />
+    <None Include="wwwroot\UserFiles\PDF\SamplePDF4.pdf" />
+    <None Include="wwwroot\UserFiles\PDF\SamplePDF5.pdf" />
   </ItemGroup>
 
 </Project>

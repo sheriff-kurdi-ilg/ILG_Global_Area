@@ -31,6 +31,7 @@ namespace ILG_Global.DataAccess
 
         public DbSet<ContactInformationMaster> ContactInformationMasters { get; set; }
         public DbSet<ContactInformationDetail> ContactInformationDetails { get; set; }
+        public DbSet<ShareViaEmailSubscriber> ShareViaEmailSubscriber { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

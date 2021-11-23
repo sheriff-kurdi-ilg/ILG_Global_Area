@@ -42,12 +42,14 @@
 
     <!-- style -->
     <link href="../../Assets/css/bootstrap.min.css" rel="stylesheet" />
-<link href="../../Assets/css/modal.css" rel="stylesheet" />
 
-    <link href="../../Assets/css/modal.css" rel="stylesheet" />
+
+   <link href="../../Assets/css/modal.css" rel="stylesheet" />
 
     <link href="~/Assets/css/site.en.css" rel="stylesheet" />
 
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 
 
 </head>
@@ -83,6 +85,7 @@
                         left: 10px;
                         width: 100%;
                         z-index: 20000;
+                      /*  border:solid 1px red;*/
                     }
 
                     .quick-contact-main-container .quick-contact {
@@ -97,44 +100,43 @@
                         height: 200px;
                     }
 
-                    .quick-contact-main-container .quick-contact .left-wing {
-                        background-image: url(../Assets/images/Quick-Call/left-wing.png);
-                        width: 36%;
-                        /* border: solid 1px green; */
-                        background-repeat: no-repeat;
-                        position: relative;
-                        left: 5%;
-                        background-position-y: -9px;
-                        z-index: 12;
-                        /* height: 10px!important; */
-                        background-position-x: 14px;
-                        background-position-y: 6px;
-                        background-size: 119%;
-                    }
+                        .quick-contact-main-container .quick-contact .left-wing {
+                            background-image: url(../Assets/images/Quick-Call/left-wing.png);
+                            width: 36%;
+                            /*border: solid 1px green;*/
+                            background-repeat: no-repeat;
+                            position: relative;
+                            left: 11%;
+                            background-position-y: -9px;
+                            z-index: 12;
+                            /* height: 10px!important; */
+                            background-position-x: 9px;
+                            background-position-y: -6px;
+                            /*border: solid 1px red;*/
+                        }
 
                     .quick-contact-main-container .quick-contact .center-circle {
                         background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
-                        background-position-x: 2;
+                        background-position-x: 2px!important;
                         background-repeat: no-repeat;
                         width: 26.5%;
                         z-index: 10;
                         position: static;
-                        background-size: 107%;
+                        
                     }
 
 
-                    .quick-contact-main-container .quick-contact .right-wing {
-                        background-image: url(../Assets/images/Quick-Call/right-wing.png);
-                        background-position-x: 189%;
-                        position: relative;
-                        /* left: -80px; */
-                        background-repeat: no-repeat;
-                        width: 36%;
-                        background-position-y: 40px;
-                        /* border: solid 1px blue; */
-                        z-index: 12;
-                        background-size: 119%;
-                    }
+                        .quick-contact-main-container .quick-contact .right-wing {
+                            background-image: url(../Assets/images/Quick-Call/right-wing.png);
+                            background-position-x: -24px;
+                            position: relative;
+                            left: -145px;
+                            background-repeat: no-repeat;
+                            width: 36%;
+                            background-position-y: 61px;
+                            /*border: solid 1px blue;*/
+                            z-index: 12;
+                        }
 
                     .quick-contact-main-container .quick-contact .wings {
                         visibility: hidden;
