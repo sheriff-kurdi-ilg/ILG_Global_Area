@@ -54,10 +54,10 @@ namespace ILG_Global.Web
 
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
 
-            // services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             services.AddScoped<IEmailRepository, EmailRepository>();
-
+            services.AddSingleton<CultureProvider>();
 
 
             services.AddScoped<MailService>();
