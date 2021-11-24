@@ -1,9 +1,10 @@
 @using Microsoft.AspNetCore.Localization;
 @using Microsoft.AspNetCore.Mvc.Localization;
-@using Microsoft.AspNetCore.Builder;
-@using System.Globalization;
-@using Microsoft.AspNetCore.Http.Features;
-@using Microsoft.Extensions.Options;
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IViewLocalizer Localizer
 
 
 @model ILG_Global.BussinessLogic.ViewModels.HomePageVM
@@ -44,9 +45,11 @@
     <link href="../../Assets/css/bootstrap.min.css" rel="stylesheet" />
 
 
-   <link href="../../Assets/css/modal.css" rel="stylesheet" />
+    <link href="../../Assets/css/modal.css" rel="stylesheet" />
 
-    <link href="~/Assets/css/site.en.css" rel="stylesheet" />
+    <link href="@Localizer["/Assets/css/site.en.css"]" rel="stylesheet" />
+
+
 
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
@@ -57,12 +60,6 @@
 
 
 <body>
-
-
-
-
-
-
     <div id="app">
         <!--navbar-->
         <header>
@@ -83,106 +80,10 @@
 
             <div class="quick-contact-main-container row .d-none .d-sm-block" id="floatCall">
                 <style>
-                    .quick-contact-main-container {
-                        position: fixed;
-                        bottom: 10px;
-                        left: 10px;
-                        width: 100%;
-                        z-index: 20000;
-                        /*  border:solid 1px red;*/
-                    }
 
-                        .quick-contact-main-container .quick-contact {
-                            bottom: 0;
-                            z-index: 100000;
-                        }
-
-                            .quick-contact-main-container .quick-contact .right-wing,
-                            .quick-contact-main-container .quick-contact .left-wing,
-                            .quick-contact-main-container .quick-contact .center-circle {
-                                /*  border: solid 1px red;*/
-                                height: 200px;
-                            }
-
-                            .quick-contact-main-container .quick-contact .left-wing {
-                                background-image: url(../Assets/images/Quick-Call/left-wing.png);
-                                width: 36%;
-                                /*border: solid 1px green;*/
-                                background-repeat: no-repeat;
-                                position: relative;
-                                left: 11%;
-                                background-position-y: -9px;
-                                z-index: 12;
-                                /* height: 10px!important; */
-                                background-position-x: 9px;
-                                background-position-y: -6px;
-                                /*border: solid 1px red;*/
-                            }
-
-                            .quick-contact-main-container .quick-contact .center-circle {
-                                background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
-                                background-position-x: 2px !important;
-                                background-repeat: no-repeat;
-                                width: 26.5%;
-                                z-index: 10;
-                                position: static;
-                            }
-
-
-                            .quick-contact-main-container .quick-contact .right-wing {
-                                background-image: url(../Assets/images/Quick-Call/right-wing.png);
-                                background-position-x: -24px;
-                                position: relative;
-                                left: -145px;
-                                background-repeat: no-repeat;
-                                width: 36%;
-                                background-position-y: 61px;
-                                /*border: solid 1px blue;*/
-                                z-index: 12;
-                            }
-
-                            .quick-contact-main-container .quick-contact .wings {
-                                visibility: hidden;
-                            }
-
-                            .quick-contact-main-container .quick-contact .left-wing a.link {
-                                cursor: pointer;
-                                padding: 15px 94px;
-                                /*border: solid 1px red;*/
-                                position: relative;
-                                top: 86px;
-                                left: -4px;
-                            }
-
-                            .quick-contact-main-container .quick-contact .right-wing a.link {
-                                cursor: pointer;
-                                padding: 15px 91px;
-                                /*border: solid 1px red;*/
-                                position: relative;
-                                top: 84px;
-                                right: -110px;
-                            }
-
-                    .ilg-to-oppisit-direction {
-                        float: right;
-                        position: fixed;
-                        bottom: 10px;
-                        right: -4%;
-                    }
-
-                    @@media screen and (max-width: 600px) {
-                        .ilg-to-oppisit-direction {
-                            float: right;
-                            position: fixed;
-                            bottom: 10px;
-                            right: -0%;
-                        }
-                    }
                 </style>
 
                 <div class="row quick-contact">
-
-
 
                     <div class="row col-md-6 col-sm-12 float-right ilg-to-oppisit-direction">
                         <div class="col-md-4 left-wing wings quick-contact-container">
@@ -200,16 +101,7 @@
                 </div>
 
                 <script>
-                    $(document).ready(function () {
 
-                        $(".quick-contact-container").mouseenter(function () {
-                            $(".wings").css('visibility', 'visible');
-                        });
-
-                        $(".quick-contact-container").mouseleave(function () {
-                            $(".wings").css('visibility', 'hidden');
-                        });
-                    });
                 </script>
             </div>
 
@@ -236,79 +128,12 @@
     </div>
 
     <script>
-        $(document).ready(function () {
-            $(".arrow-bottom").click(function () {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("footer").offset().top
-                }, 100);
-            });
 
-            $(".arrow-top").click(function () {
-                $([document.documentElement, document.body]).animate({
-                    scrollTop: $("header").offset().top
-                }, 100);
-            });
-        })
-        $('#success-story-slider').owlCarousel({
-            autoPlay: 3000,
-            speed: 0.5,
-            loop: true,
-            margin: 20,
-            nav: true,
-            navText: ["<i class=\"fas fa-arrow-left\"></i>", " <i class=\"fas fa-arrow-right\"></i>"],
-            dots: false,
-            responsiveClass: true,
-            responsive: {
-                0: {
-                    items: 1,
-                    nav: true
-                },
-                991: {
-                    items: 3,
-                    nav: false
-                },
-                1400: {
-                    items: 5,
-                    nav: true,
-                    loop: false
-                },
-                3500: {
-                    items: 8
-                }
-            }
-
-        })
-        $('#our-service-slider').owlCarousel({
-            autoPlay: 3000,
-            speed: 0.5,
-            loop: true,
-            margin: 20,
-            items: 1,
-        })
-
-        $.noConflict();
-
-        $(document).ready(function () {
-            let sizer = $('#sizer').find('div:visible').data('size');
-            console.log(sizer);
-            if (sizer == 'xs') {
-                $('#floatCall').hide();
-            } else {
-                $('#floatCall').show();
-
-            }
-        });
-
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
     </script>
 
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-    <script src="~/Assets/js/site.en.js"></script>
+    <script type="text/javascript" src="@Localizer["/Assets/js/site.en.js"]"></script>
+
 </body>
 
 </html>

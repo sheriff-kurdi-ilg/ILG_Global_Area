@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+
+    <!--font-->
+    <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
+
+    <!-- style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <link href="css/modal.css" rel="stylesheet" />
+    <link href="css/site.en.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+        <!--navbar-->
+        <header>
+            <nav class="navbar navbar-expand-lg position-absolute">
+                <div class="container py-4 px-3 px-sm-3 px-md-0">
+                    <a class="navbar-brand" href="#">
+                        <img loading="lazy" class="img-brand w-100"
+                             src="assets/images/Mask_Group_25.png"
+                             alt="Ideaeg logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                         aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end w-100">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">About</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Our Services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Success Stories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Contact us</a>
+                                    </li>
+                                </ul>
+                                <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+                                    <a class="nav-link" href="#">
+                                        <i class="fas fa-globe"></i>
+                                        <span>AR</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item row justify-content-center align-items-center icon-col">
+                                    <a class="nav-link col icon" href="#">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a class="nav-link col icon" href="#">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a class="nav-link col icon" href="#">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a class="nav-link col icon border-0" href="#">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--main-->
+        <main>
+            <!-- Leader Board starts here -->
+            <section class="header-banner d-flex justify-content-center align-item-center">
+                <img src="assets/images/Mask.png" class="card-img" alt="...">
+                <div class="overlay"></div>
+                <div class="container mx-auto header-content d-flex flex-column justify-content-center text-white">
+
+
+                    <h5 class="card-title pb-5">About</h5>
+                    <h1 class="card-text pt-3 pb-5">
+                        Integrated
+                        <br>
+                        Legal Group
+                    </h1>
+                    <p class="card-text">
+                        We provide various legal services and consultations by a team of
+                    </p>
+                    <p class="card-text">
+                        experts in order to reach legal and friendly solutions in the simplest ways.
+                    </p>
+
+                    <div class="w-100 position-absolute mx-auto d-flex justify-content-center arrow-bottom pb-4">
+                        <button class=""><i class="fas fa-arrow-down"></i></button>
+                    </div>
+                </div>
+
+
+            </section>
+            <!-- Leader Board ends here -->
+            <!-- OUR SERVICES section starts here-->
+            <section class="container our-service-section general-section">
+                <div id="our-service-slider" class="owl-carousel owl-theme">
+                    <div class="row contact-list justify-content-between align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                            <div class="our-service-slider-image-col">
+                                <div class="our-service-slider-image" style="bottom: 30px">
+                                    <img src="assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image" style="left: 30px;">
+                                    <img src="assets/images/Mask_gg@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image main-slider-image" style="left: 50px">
+                                    <img src="assets/images/Mask_bz@2x.png" class="w-100 h-100 ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
+                            <div class="row title">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h5 class="pb-4 pt-5">OUR SERVICES</h5>
+                                    <h6>
+                                        Learn More About
+                                        <br />
+                                        Family Conflicts
+                                    </h6>
+                                </div>
+                            </div>
+                            <p>
+                                <span>O</span>ur team of best family lawyers in Kuwait will help you stay ahead during
+                                these times of emotional distress. With our expert team of family lawyers,
+                                you will be girded with different strategies that will be helpful in your cause.
+                                You can be ensured that you will be well guided through every step of the
+                                legal proceedings by our family lawyers with an object to alleviate anxiety
+                                and reduce stress.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row contact-list justify-content-between align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                            <div class="our-service-slider-image-col">
+                                <div class="our-service-slider-image" style="bottom: 30px">
+                                    <img src="assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image main-slider-image" style="left: 30px;">
+                                    <img src="assets/images/Mask_gg@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image" style="left: 50px">
+                                    <img src="assets/images/Mask_bz@2x.png" class="w-100 h-100 ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
+                            <div class="row title">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h5 class="pb-4 pt-5">OUR SERVICES</h5>
+                                    <h6>
+                                        Learn More About
+                                        <br />
+                                        Family Conflicts
+                                    </h6>
+                                </div>
+                            </div>
+                            <p>
+                                <span>O</span>ur team of best family lawyers in Kuwait will help you stay ahead during
+                                these times of emotional distress. With our expert team of family lawyers,
+                                you will be girded with different strategies that will be helpful in your cause.
+                                You can be ensured that you will be well guided through every step of the
+                                legal proceedings by our family lawyers with an object to alleviate anxiety
+                                and reduce stress.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row contact-list justify-content-between align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row">
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                            <div class="our-service-slider-image-col">
+                                <div class="our-service-slider-image main-slider-image" style="bottom: 30px">
+                                    <img src="assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image" style="left: 30px;">
+                                    <img src="assets/images/Mask_gg@2x.png" class="w-100 h-100 ">
+                                </div>
+                                <div class="our-service-slider-image" style="left: 50px">
+                                    <img src="assets/images/Mask_bz@2x.png" class="w-100 h-100 ">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
+                            <div class="row title">
+                                <div class="col-12 col-sm-12 col-md-12">
+                                    <h5 class="pb-4 pt-5">OUR SERVICES</h5>
+                                    <h6>
+                                        Learn More About
+                                        <br />
+                                        Family Conflicts
+                                    </h6>
+                                </div>
+                            </div>
+                            <p>
+                                <span>O</span>ur team of best family lawyers in Kuwait will help you stay ahead during
+                                these times of emotional distress. With our expert team of family lawyers,
+                                you will be girded with different strategies that will be helpful in your cause.
+                                You can be ensured that you will be well guided through every step of the
+                                legal proceedings by our family lawyers with an object to alleviate anxiety
+                                and reduce stress.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+            <!-- OUR SERVICES section ends here-->
+
+            <!-- success story section starts here -->
+            <section class="container success-story-section general-section">
+                <div class="row title">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <h5 class="pb-4 pt-5">SUCCESS STORIES</h5>
+                        <h6>
+                            Connecting The Right
+                            Dots Is The Key To Success
+                        </h6>
+                    </div>
+                </div>
+                <div class="row contact-list flex-column-reverse flex-sm-column-reverse flex-md-row">
+                    <div id="success-story-slider" class="owl-carousel owl-theme">
+                        <div class="item position-relative">
+                            <img src="assets/images/Mask_bz@2x.png" class="w-100 h-100 position-absolute">
+                            <div class="overlay w-100 h-100 position-absolute"></div>
+                            <div class="slider-content text-white position-absolute p-4">
+                                <h5 class="pb-2">Heritage</h5>
+                                <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#btn-show-modal-popup1">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="item position-relative">
+                            <img src="assets/images/Mask_ce@2x.png" class="w-100 h-100 position-absolute">
+                            <div class="overlay w-100 h-100 position-absolute"></div>
+                            <div class="slider-content text-white position-absolute p-4">
+                                <h5 class="pb-2">Divorce</h5>
+                                <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#btn-show-modal-popup2">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="item position-relative">
+                            <img src="assets/images/Mask_b@2x.png" class="w-100 h-100 position-absolute">
+                            <div class="overlay w-100 h-100 position-absolute"></div>
+                            <div class="slider-content text-white position-absolute p-4">
+                                <h5 class="pb-2">kinship ties issues</h5>
+                                <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#btn-show-modal-popup3">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="item position-relative">
+                            <img src="assets/images/Mask_cf@2x.png" class="w-100 h-100 position-absolute">
+                            <div class="overlay w-100 h-100 position-absolute"></div>
+                            <div class="slider-content text-white position-absolute p-4">
+                                <h5 class="pb-2">Burden of proof child custody</h5>
+                                <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#btn-show-modal-popup4">
+                                    <span>Learn More</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- Modal starts here-->
+                <div class="modal fade ilg-modal-popup-window" id="btn-show-modal-popup1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
+                    <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
+                        <div class="modal-content">
+                            <div class="modal-header">
+
+
+                                <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
+                                    <img src="Assets/fontawesome/svgs/Modal/3-layers.svg">
+                                </button>
+                            </div>
+
+                            <div class="modal-body">
+                                <h2 class="modal-title" id="modal-title">Sample title here</h2>
+                                <p>
+                                    success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here success story details here.
+                                </p>
+                            </div>
+                            <div class="modal-footer ">
+                                <div class="row w-100">
+                                    <div class="col-sm">
+                                        <button type="button" class="btn me-auto callus" data-bs-dismiss="modal">
+                                            <img src="Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
+                                            <span class="txt">Call Us</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm">
+                                        <button type="button" class="btn me-auto makeappointment">
+                                            <img src="Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
+                                            <span class="txt">Make an appointmnent</span>
+                                        </button>
+                                    </div>
+                                    <div class="col-sm">
+                                        <div>
+                                            <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
+                                                <img src="Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
+                                                <span class="txt">Share Via Email</span>
+                                            </button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row w-100">
+
+                                    <div class="col-sm-6">
+
+                                        <div class="collapse" id="coll">
+                                            <div class="card  card-body">
+
+                                                <form id="frmSendViaEmail" asp-controller="Home"
+                                                      asp-action="ShareViaEmailSubscribe" method="post" role="form" asp-route-culture="@PreferredLanguadge">
+                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                                    <div class="row">
+                                                        <div class="col-10">
+                                                            <input asp-for="ShareViaEmailSubscriberEmail" class="form-control" type="email" placeholder="Enter Your Email" id="Email" onchange="Alert()">
+                                                        </div>
+                                                        <div class="col-2">
+                                                            <button type="submit" class="btn SendButton">Send</button>
+                                                        </div>
+                                                        <span asp-validation-for="ShareViaEmailSubscriberEmail" class="text-danger"></span>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Modal Ends here -->
+
+
+            </section>
+            <!-- success story section ends here -->
+
+
+            <!-- contact us section starts here -->
+            <section class="container contact-us-section general-section">
+                <div class="row title">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <h5 class="pb-4 pt-5">CONTACT US</h5>
+                        <h6>
+                            Ready To Solve Your Case,
+                            We Have Got You Covered!
+                        </h6>
+                    </div>
+                </div>
+                <div class="row contact-list flex-column-reverse flex-sm-column-reverse flex-md-row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <ul class="col-12 col-sm-12 col-md-9 px-0">
+                            <li class="py-4">
+                                <i class="fas fa-phone-volume"></i>
+                                <span class="px-4">+96522499777</span>
+                            </li>
+                            <li class="py-4">
+                                <i class="fas fa-envelope"></i>
+                                <span class="px-4"> info@ilgglobal.com</span>
+                            </li>
+                            <li class="py-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span class="px-4">Kuwait-Dasman- street 135-white house building #2-2nd floor</span>
+                            </li>
+                            <li class="py-4">
+                                <i class="fas fa-fax"></i>
+                                <span class="px-4">Kuwait-Dasman-15400</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.894945596146!2d47.99504577697576!3d29.386463226876852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf849d08e12009%3A0xda8f7499d20095bd!2sDasman%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2seg!4v1635987829024!5m2!1sen!2seg"
+                                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+            <!-- contact us section end here-->
+
+        </main>
+
+        <!--footer starts here -->
+        <footer class="d-flex align-items-center ">
+            <section class="container position-relative">
+                <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
+                    <button class=""><i class="fas fa-arrow-up"></i></button>
+                </div>
+                <div class="d-flex justify-content-between flex-wrap pt-5">
+                    <div class="col col-12 col-sm-12 col-md-3 pb-4 pb-sm-4 pb-md-0">
+                        <ul class="footer-col-content pb-4 pb-sm-4 pb-md-5 img-container">
+                            <img src="assets/images/Group_25@2x.png" class="w-100">
+                        </ul>
+                        <p class="footer-gn-text">
+                            We provide various legal services and consultations by a team of experts in order to reach legal
+                            and friendly solutions in the simplest ways.
+                        </p>
+                    </div>
+
+                    <div class="col col-12 col-sm-12 col-md-9">
+                        <div class="col-10 pb-5"></div>
+                        <div class="row col-12 pt-4 px-0 px-sm-0 px-md-5">
+                            <div class="col col-12 col-sm-12 col-md-3">
+                                <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                    <li class="footer-col-title d-block d-sm-block pb-4">MENU</li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="#">Success Stories</a></li>
+                                    <li><a href="#">Contact us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-4">
+                                <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                    <li class="footer-col-title d-block d-sm-block pb-4">SERVICE</li>
+                                    <li style="color:rgba(155,193,226,1);">Family Conflicts</li>
+                                    <li><a href="#">Heritage</a></li>
+                                    <li><a href="#">Divorce</a></li>
+                                    <li><a href="#">kinship ties issues</a></li>
+                                    <li><a href="#">Burden of proof child custody</a></li>
+                                </ul>
+                            </div>
+                            <div class="col col-12 col-sm-12 col-md-5">
+                                <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                    <li class="footer-col-title d-block  d-sm-block pb-4">JOIN OUR NEWSLETTER</li>
+                                    <li>
+                                        <div class="input-group mb-3 join-us-input">
+                                            <input type="text" class="form-control" placeholder="Enter Your Email Address"
+                                                   aria-label="Example text with button addon"
+                                                   aria-describedby="button-addon1">
+
+                                            <button class="btn shadow-sm px-4 py-2" type="button" id="button-addon1">
+                                                Subscribe
+                                            </button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row justify-content-between align-items-center py-3 footer-bottom">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <ul class="row flex-column flex-sm-column flex-md-row justify-content-between w-100 p-0 footer-bottom-row m-0">
+                            <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">Copyright © 2021 ilg. All Rights Reserved.</li>
+                            <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">Terms of Use</a></li>
+                            <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-icon-col col-6 col-sm-6 col-md-2 pt-4 pt-sm-4 pt-md-0">
+                        <div class="row justify-content-center align-items-center">
+                            <a class="col icon" href="#">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a class="nav-link col icon" href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a class="nav-link col icon" href="#">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a class="nav-link col icon border-0" href="#">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </footer>
+        <!--footer ends here -->
+
+    </div>
+
+    <script>
+        $(document).ready(function (){
+            $(".arrow-bottom").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("footer").offset().top
+                }, 100);
+            });
+
+            $(".arrow-top").click(function() {
+                $([document.documentElement, document.body]).animate({
+                    scrollTop: $("header").offset().top
+                }, 100);
+            });
+        })
+        $('#success-story-slider').owlCarousel({
+            autoPlay: 3000,
+            speed:0.5,
+            loop:true,
+            margin:20,
+            nav:true,
+            navText : ["<i class=\"fas fa-arrow-left\"></i>","<i class=\"fas fa-arrow-right\"></i>"],
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                991:{
+                    items:3
+                },
+                1400:{
+                    items:5
+                },
+                3500:{
+                    items:8
+                }
+            }
+        })
+        $('#our-service-slider').owlCarousel({
+            autoPlay: 3000,
+            speed:0.5,
+            loop:true,
+            margin:20,
+            items:1,
+        })
+    </script>
+
+</body>
+</html>

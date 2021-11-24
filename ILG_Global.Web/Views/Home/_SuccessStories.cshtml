@@ -27,7 +27,7 @@
                 foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
                 {
                     <div class="item position-relative">
-                        <img src="~/Assets/Template/ILG-Website-master/assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
+                        <img src="~/Assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
                         <div class="overlay w-100 h-100 position-absolute"></div>
                         <div class="slider-content text-white position-absolute p-4">
                             <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
@@ -56,7 +56,7 @@
 
 
                         <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
-                            <img src="~/Assets/fontawesome/svgs/Modal/3-layers.svg">
+                            <img src="/Assets/fontawesome/svgs/Modal/3-layers.svg">
                         </button>
                     </div>
 
@@ -70,7 +70,7 @@
                         <div class="row w-100">
                             <div class="col-sm">
                                 <button type="button" class="btn me-auto callus" data-bs-dismiss="modal">
-                                    <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
+                                    <img src="/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
                                     <span class="txt">Call Us</span>
                                 </button>
                             </div>
@@ -83,7 +83,7 @@
                             <div class="col-sm">
                                 <div>
                                     <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
-                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
+                                        <img src="/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
                                         <span class="txt">Share Via Email</span>
                                     </button>
                                 </div>
@@ -91,7 +91,7 @@
 
                             </div>
                         </div>
-
+                  
                         <div class="row w-100">
 
                             <div class="col-sm-6">
@@ -112,17 +112,12 @@
                                                 </div>
                                                 <span asp-validation-for="ShareViaEmailSubscriberEmail" class="text-danger"></span>
                                             </div>
-
                                         </form>
                                     </div>
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
@@ -134,17 +129,3 @@
 
 
 
-
-<script>
-    // to hide quick call icon once the popup opens 
-    $('.ilg-modal-popup-window').on('hidden.bs.modal', function (e) {
-        $(".quick-contact").show(500);
-    });
-
-    $('.ilg-modal-popup-window').on('show.bs.modal', function (e) {
-        $(".quick-contact").hide(500);
-    });
-
-
-
-</script>
