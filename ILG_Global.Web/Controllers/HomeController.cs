@@ -1,11 +1,10 @@
-
-
 using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.Services;
 using ILG_Global.BussinessLogic.ViewModels;
+using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Http;
 
 using Microsoft.AspNetCore.Localization;
@@ -22,8 +21,6 @@ namespace ILG_Global.Web.Controllers
     public class HomeController : Controller
     {
 
-
-
         #region DI
 
         public IHtmlContentDetailRepository HtmlContentDetailRepository { get; }
@@ -36,6 +33,8 @@ namespace ILG_Global.Web.Controllers
         private IEmailRepository EmailRepository { get; set; }
         private MailService MailService { get; set; }
         private IILG_PathProvider ILG_PathProvider { get; set; }
+        private CultureProvider CultureProvider { get; set; }
+
 
         public HomeController(
             IHtmlContentDetailRepository htmlContentDetailRepository,
@@ -47,7 +46,8 @@ namespace ILG_Global.Web.Controllers
             IImageMasterRepository imageMasterRepository,
             IEmailRepository emailRepository,
             MailService mailService,
-            IILG_PathProvider iLG_PathProvider
+            IILG_PathProvider iLG_PathProvider,
+            CultureProvider CultureProvider
             )
         {
             this.HtmlContentDetailRepository = htmlContentDetailRepository;
@@ -60,6 +60,7 @@ namespace ILG_Global.Web.Controllers
             this.EmailRepository = emailRepository;
             this.MailService = mailService;
             this.ILG_PathProvider = iLG_PathProvider;
+            this.CultureProvider = CultureProvider;
         }
 
         #endregion
@@ -79,7 +80,9 @@ namespace ILG_Global.Web.Controllers
         {
             HomePageVM oHomePageVM = new HomePageVM();
 
-            oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, "en");
+            string CultureCode = CultureProvider.GetCurrentCulture();
+            
+            oHomePageVM.LeaderBoardSectionHeaderContent = await HtmlContentDetailRepository.SelectByIdAsync(1, CultureCode);
             //  oHomePageVM.OurServiceDetails = OurServiceDetailRepository.
 
             oHomePageVM.OurServices = await oOurserviceViewModelCreate();
@@ -90,8 +93,6 @@ namespace ILG_Global.Web.Controllers
             oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
 
             oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
-
-            //  SaveCurrentCultureToCookie(culture);
             return oHomePageVM;
         }
 
@@ -99,19 +100,21 @@ namespace ILG_Global.Web.Controllers
         private SuccessStoriesVM oSuccessStoriesViewModelCreate()
         {
             SuccessStoriesVM oSuccessStoriesVM = new SuccessStoriesVM();
+            string CultureCode = CultureProvider.GetCurrentCulture();
 
-            oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, "en").Result;
-            oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync("en").Result;
+            oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, CultureCode).Result;
+            oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync(CultureCode).Result;
 
             return oSuccessStoriesVM;
         }
 
         private async Task<List<OurServiceVM>> oOurserviceViewModelCreate()
         {
-            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllAsync("en");
+            string CultureCode = CultureProvider.GetCurrentCulture();
+            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllAsync(CultureCode);
             List<OurServiceVM> lOurServiceVMs = new List<OurServiceVM>();
 
-            List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll("en");
+            List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll(CultureCode);
 
             foreach (OurServiceDetail oOurServiceDetail in lOurServiceDetails)
             {
@@ -147,9 +150,9 @@ namespace ILG_Global.Web.Controllers
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate()
         {
             ContactUsSectionVM oContactUsSectionVM = new ContactUsSectionVM();
-
-            oContactUsSectionVM.ContactUsSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, "en").Result;
-            oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync("en").Result;
+            string CultureCode = CultureProvider.GetCurrentCulture();
+            oContactUsSectionVM.ContactUsSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(4, CultureCode).Result;
+            oContactUsSectionVM.ContactInformationDetails = ContactInformationDetailRepository.SelectAllAsync(CultureCode).Result;
 
             return await Task.FromResult(oContactUsSectionVM);
         }
@@ -243,7 +246,6 @@ namespace ILG_Global.Web.Controllers
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
-
 
 
 
