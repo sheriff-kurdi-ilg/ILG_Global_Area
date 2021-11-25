@@ -1,10 +1,10 @@
 /*general style*/
 @font-face {
-    font-family: 'Gotham';
-    src: url(../Fonts/Cairo_ ssv/Gotham-Medium.eot);
-    src: local('☺'),url(../Fonts/Gotham_Medium/Gotham-Medium.woff) format('woff'),url(../Fonts/Gotham_Medium/Gotham-Medium.ttf) format('truetype'),url(../fonts/Gotham_Medium/Gotham-Medium.svg) format('svg');
-    font-weight: 400;
-    font-style: normal
+    font-family: 'Cairo';
+    src: url('../fonts/cairo/Cairo-Regular.eot');
+    src: local('☺'), url('../fonts/cairo/Cairo-Regular.woff') format('woff'), url('../fonts/cairo/Cairo-Regular.ttf') format('truetype'), url('../fonts/cairo/Cairo-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -30,7 +30,7 @@ label:focus,
 }
 
 body {
-    font-family: 'Gotham' !important,serif;
+    font-family: 'Cairo' !important;
 }
 
 header, footer {
@@ -663,7 +663,7 @@ footer {
         }
 
         .quick-contact-main-container .quick-contact .left-wing {
-            background-image: url(../Assets/images/Quick-Call/left-wing.png);
+            background-image: url(../images/Quick-Call/left-wing.png);
             width: 36%;
             /*border: solid 1px green;*/
             background-repeat: no-repeat;
@@ -678,7 +678,7 @@ footer {
         }
 
         .quick-contact-main-container .quick-contact .center-circle {
-            background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
+            background-image: url(../images/Quick-Call/quick-call-circle.png);
             background-position-x: 2px !important;
             background-repeat: no-repeat;
             width: 26.5%;
@@ -688,7 +688,7 @@ footer {
 
 
         .quick-contact-main-container .quick-contact .right-wing {
-            background-image: url(../Assets/images/Quick-Call/right-wing.png);
+            background-image: url(../images/Quick-Call/right-wing.png);
             background-position-x: -24px;
             position: relative;
             left: -145px;
@@ -722,10 +722,10 @@ footer {
         }
 
 .ilg-to-oppisit-direction {
-    float: right;
+    float: left;
     position: fixed;
     bottom: 10px;
-    right: -4%;
+    left: -4%;
 }
 
 @media screen and (max-width: 600px) {

@@ -662,7 +662,7 @@ footer {
         }
 
         .quick-contact-main-container .quick-contact .left-wing {
-            background-image: url(../Assets/images/Quick-Call/left-wing.png);
+            background-image: url(../images/Quick-Call/left-wing.png);
             width: 36%;
             /*border: solid 1px green;*/
             background-repeat: no-repeat;
@@ -677,7 +677,7 @@ footer {
         }
 
         .quick-contact-main-container .quick-contact .center-circle {
-            background-image: url(../Assets/images/Quick-Call/quick-call-circle.png);
+            background-image: url(../images/Quick-Call/quick-call-circle.png);
             background-position-x: 2px !important;
             background-repeat: no-repeat;
             width: 26.5%;
@@ -687,7 +687,7 @@ footer {
 
 
         .quick-contact-main-container .quick-contact .right-wing {
-            background-image: url(../Assets/images/Quick-Call/right-wing.png);
+            background-image: url(../images/Quick-Call/right-wing.png);
             background-position-x: -24px;
             position: relative;
             left: -145px;
