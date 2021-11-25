@@ -13,113 +13,119 @@
 
 }
 
+<div>
+    <div style=" position: absolute; z-index: 1; right: 0px;">
+        <img src="~/Assets/images/footerBackGround.svg">
+    </div>
+    <footer class="d-flex align-items-center" style="z-index: 2;">
 
-
-<footer class="d-flex align-items-center ">
-    <section class="container position-relative">
-        <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
-            <button class=""><i class="fas fa-arrow-up"></i></button>
-        </div>
-        <div class="d-flex justify-content-between flex-wrap pt-5">
-            <div class="col col-12 col-sm-12 col-md-3 pb-4 pb-sm-4 pb-md-0">
-                <ul class="footer-col-content pb-4 pb-sm-4 pb-md-5 img-container">
-                    <img alt="" src="assets/images/Group_25@2x.png" class="w-100" />
-                </ul>
-                <p class="footer-gn-text">
-                    @Localizer["We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways"]
-                </p>
+        <section class="container position-relative">
+            <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
+                <button class=""><i class="fas fa-arrow-up"></i></button>
             </div>
+            <div class="d-flex justify-content-between flex-wrap pt-5">
+                <div class="col col-12 col-sm-12 col-md-3 pb-4 pb-sm-4 pb-md-0">
+                    <ul class="footer-col-content pb-4 pb-sm-4 pb-md-5 img-container">
+                        <img alt="" src="assets/images/Group_25@2x.png" class="w-100" />
+                    </ul>
+                    <p class="footer-gn-text">
+                        @Localizer["We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways"]
+                    </p>
+                </div>
 
-            <div class="col col-12 col-sm-12 col-md-9">
-                <div class="col-10 pb-5"></div>
-                <div class="row col-12 pt-4 px-0 px-sm-0 px-md-5">
-                    <div class="col col-12 col-sm-12 col-md-3">
-                        <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
-                            <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["MENU"]</li>
-                            <li><a href="#">@Localizer["About"]</a></li>
-                            <li><a href="#">@Localizer["Services"]</a></li>
-                            <li><a href="#">@Localizer["Success Stories"]</a></li>
-                            <li><a href="#">@Localizer["Contact us"]</a></li>
-                        </ul>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-4">
-                        <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
-                            <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["SERVICE"]</li>
-                            <li style="color:rgba(155,193,226,1);">@Localizer["Family Conflicts"]</li>
-                            <li><a href="#">@Localizer["Heritage"]</a></li>
-                            <li><a href="#">@Localizer["Divorce"]</a></li>
-                            <li><a href="#">@Localizer["kinship ties issues"]</a></li>
-                            <li><a href="#">@Localizer["Burden of proof child custody"]</a></li>
-                        </ul>
-                    </div>
-                    <div class="col col-12 col-sm-12 col-md-5">
-                        <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
-                            <li class="footer-col-title d-block  d-sm-block pb-4">@Localizer["JOIN OUR NEWSLETTER"]</li>
-                            <li>
-                                <div class="input-group mb-3 join-us-input">
-                                    <form method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal" role="form">
-                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
-                                                           aria-label="Example text with button addon"
-                                                           aria-describedby="button-addon1"
-                                                           asp-for="@Model.Email" />
-                                                    <span asp-validation-for="Email" class="text-danger"></span>
-                                                    <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
-                                                </td>
-                                                <td>
-                                                    <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
-                                                        @Localizer["Subscribe"]
-                                                    </button>
-                                                </td>
-                                            </tr>
-                                        </table>
+                <div class="col col-12 col-sm-12 col-md-9">
+                    <div class="col-10 pb-5"></div>
+                    <div class="row col-12 pt-4 px-0 px-sm-0 px-md-5">
+                        <div class="col col-12 col-sm-12 col-md-3">
+                            <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["MENU"]</li>
+                                <li><a href="#">@Localizer["About"]</a></li>
+                                <li><a href="#">@Localizer["Services"]</a></li>
+                                <li><a href="#">@Localizer["Success Stories"]</a></li>
+                                <li><a href="#">@Localizer["Contact us"]</a></li>
+                            </ul>
+                        </div>
+                        <div class="col col-12 col-sm-12 col-md-4">
+                            <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["SERVICE"]</li>
+                                <li style="color:rgba(155,193,226,1);">@Localizer["Family Conflicts"]</li>
+                                <li><a href="#">@Localizer["Heritage"]</a></li>
+                                <li><a href="#">@Localizer["Divorce"]</a></li>
+                                <li><a href="#">@Localizer["kinship ties issues"]</a></li>
+                                <li><a href="#">@Localizer["Burden of proof child custody"]</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col col-12 col-sm-12 col-md-5">
+                            <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                                <li class="footer-col-title d-block  d-sm-block pb-4">@Localizer["JOIN OUR NEWSLETTER"]</li>
+                                <li>
+                                    <div class="input-group mb-3 join-us-input">
+                                        <form method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal" role="form">
+                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
+                                                               aria-label="Example text with button addon"
+                                                               aria-describedby="button-addon1"
+                                                               asp-for="@Model.Email" />
+                                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                                        <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
+                                                    </td>
+                                                    <td>
+                                                        <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
+                                                            @Localizer["Subscribe"]
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </table>
 
 
-                                    </form>
+                                        </form>
 
 
 
 
-                                </div>
-                            </li>
-                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="row justify-content-between align-items-center py-3 footer-bottom">
-            <div class="col-12 col-sm-12 col-md-6">
-                <ul class="row flex-column flex-sm-column flex-md-row justify-content-between w-100 p-0 footer-bottom-row m-0">
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
-                    <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Privacy Policy"]</a></li>
-                </ul>
-            </div>
-            <div class="footer-icon-col col-6 col-sm-6 col-md-2 pt-4 pt-sm-4 pt-md-0">
-                <div class="row justify-content-center align-items-center">
-                    <a class="col icon" href="#">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="nav-link col icon" href="#">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="nav-link col icon" href="#">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="nav-link col icon border-0" href="#">
-                        <i class="fab fa-youtube"></i>
-                    </a>
+            <div class="row justify-content-between align-items-center py-3 footer-bottom">
+                <div class="col-12 col-sm-12 col-md-6">
+                    <ul class="row flex-column flex-sm-column flex-md-row justify-content-between w-100 p-0 footer-bottom-row m-0">
+                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
+                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
+                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Privacy Policy"]</a></li>
+                    </ul>
                 </div>
+                <div class="footer-icon-col col-6 col-sm-6 col-md-2 pt-4 pt-sm-4 pt-md-0">
+                    <div class="row justify-content-center align-items-center">
+                        <a class="col icon" href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="nav-link col icon" href="#">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="nav-link col icon" href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="nav-link col icon border-0" href="#">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
+        </section>
 
-        </div>
-    </section>
-</footer>
-
+    </footer>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

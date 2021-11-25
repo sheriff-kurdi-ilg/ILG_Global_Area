@@ -6938,23 +6938,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\hesham.salem\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "projectUniqueName": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "projectName": "ILG_Global.DataAccess",
-      "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
-      "packagesPath": "C:\\Users\\sayed.talaat.ILG\\.nuget\\packages\\",
-      "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
+      "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "packagesPath": "C:\\Users\\hesham.salem\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\sayed.talaat.ILG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\hesham.salem\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6968,8 +6964,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
-              "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+            "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+              "projectPath": "D:\\Projects\\Bussiness\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
             }
           }
         }
@@ -7026,7 +7022,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

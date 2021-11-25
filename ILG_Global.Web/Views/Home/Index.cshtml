@@ -82,7 +82,6 @@
 
             <div class="quick-contact-main-container row .d-none .d-sm-block" id="floatCall">
                 <style>
-
                 </style>
 
                 <div class="row quick-contact">
@@ -107,9 +106,10 @@
                 </script>
             </div>
 
+            
+                @await Html.PartialAsync("_OurServices", Model.OurServices)
+            
 
-
-            @await Html.PartialAsync("_OurServices", Model.OurServices)
 
             @await Html.PartialAsync("_SuccessStories", Model.SuccessStoriesViewModel)
 

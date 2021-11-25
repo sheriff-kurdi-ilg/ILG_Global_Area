@@ -353,6 +353,11 @@ footer {
     background: var(--main-color);
     width: 100%;
     padding: 60px 0 40px;
+
+    background-image: url(/Assets/images/footerBackGround.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-position-y: 0px;
 }
 
     footer .container-fluid {
