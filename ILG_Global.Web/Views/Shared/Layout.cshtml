@@ -1,6 +1,7 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer
+
 @{
 
 }
@@ -14,19 +15,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrated Legal Group | Divorce Law issues</title>
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-          integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-          integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-          integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/innerPage-en.css">
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <!-- js -->
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/Assets/js/jquery.min.js"></script>
+
+    <script src="~/Assets/js/popper.min.js"></script>
+    <script src="~/Assets/js/bootstrap.min.js"></script>
+    <script src="~/Assets/js/owl.carousel.min.js"></script>
+    <link rel="icon" type="image/png" href="~/Assets/images/FaveIcon.svg" />
+
+    <!--font-->
+    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
+
+    <!-- Font Awesome-->
+    <link rel="stylesheet" href="~/Assets/fontawesome/css/all.css">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="~/Assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/css/owl.theme.default.min.css">
+
+    <!-- style -->
+    <link href="~/Assets/css/bootstrap.min.css" rel="stylesheet" />
+
+
+    <link href="~/Assets/css/modal.css" rel="stylesheet" />
+
+    <link href="@Localizer["/Assets/css/site.en.css"]" rel="stylesheet" />
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+    <link rel="stylesheet" href="~/Assets/css/innerPage-en.css">
 </head>
 
 <body>
@@ -35,7 +54,7 @@
     <div class="nav-section" id="nav">
         <nav class="navbar navbar-expand-lg navbar-light pt-4" id="full-nav">
             <div class="container">
-                <img class="navbar-brand" src="./images/Mask_Group_25.png" alt="ILg logo">
+                <img class="navbar-brand" src="~/Assets/images/Mask_Group_25.png" alt="ILg logo">
                 <button class="navbar-toggler border-0" type="button" id="toggler-btn">
                     <i class="fas fa-bars green fa-2x"></i>
                 </button>
@@ -130,9 +149,9 @@
                 <div class="row flex-column-reverse flex-lg-row item ">
                     <div class="col-lg-6 mb-5">
                         <div class="position-relative">
-                            <img src="images/Mask_et.png" class="w-100" alt="">
+                            <img src="~/Assets/images/Mask_et.png" class="w-100" alt="">
                             <div class="def">
-                                <img src="images/Mask_fc.png" class="w-100" alt="">
+                                <img src="~/Assets/images/Mask_fc.png" class="w-100" alt="">
                             </div>
                         </div>
                     </div>
@@ -155,9 +174,9 @@
                 <div class="row flex-column-reverse flex-lg-row item ">
                     <div class="col-lg-6 mb-5 ">
                         <div class="position-relative">
-                            <img src="images/Mask_et.png" class="w-100" alt="">
+                            <img src="~/Assets/images/Mask_et.png" class="w-100" alt="">
                             <div class="def">
-                                <img src="images/Mask_fc.png" class="w-100" alt="">
+                                <img src="~/Assets/images/Mask_fc.png" class="w-100" alt="">
                             </div>
                         </div>
                     </div>
@@ -181,9 +200,9 @@
                 <div class="row flex-column-reverse flex-lg-row item ">
                     <div class="col-lg-6 mb-5">
                         <div class="position-relative">
-                            <img src="images/Mask_et.png" class="w-100" alt="">
+                            <img src="~/Assets/images/Mask_et.png" class="w-100" alt="">
                             <div class="def">
-                                <img src="images/Mask_fc.png" class="w-100" alt="">
+                                <img src="~/Assets/images/Mask_fc.png" class="w-100" alt="">
                             </div>
                         </div>
                     </div>
@@ -207,9 +226,9 @@
                 <div class="row flex-column-reverse flex-lg-row item ">
                     <div class="col-lg-6 mb-5">
                         <div class="position-relative">
-                            <img src="images/Mask_et.png" class="w-100" alt="">
+                            <img src="~/Assets/images/Mask_et.png" class="w-100" alt="">
                             <div class="def">
-                                <img src="images/Mask_fc.png" class="w-100" alt="">
+                                <img src="~/Assets/images/Mask_fc.png" class="w-100" alt="">
                             </div>
                         </div>
                     </div>
@@ -340,9 +359,9 @@
                     </div>
                     <div class="col-lg-6 pt-1 ps-5">
                         <div class="position-relative text-end">
-                            <img src="images/Mask.middle.png" alt="">
+                            <img src="~/Assets/images/Mask.middle.png" alt="">
                             <div class="layer2">
-                                <img src="images/Mask_bq.png" alt="">
+                                <img src="~/Assets/images/Mask_bq.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -376,7 +395,7 @@
                                     <div class="circle mb-5">
                                         <div class="middle-circle">
                                             <div class="white-circle">
-                                                <img src="images/Message.svg" alt="Message icon">
+                                                <img src="~/Assets/images/Message.svg" alt="Message icon">
                                             </div>
                                         </div>
                                     </div>
@@ -419,7 +438,7 @@
                                     <div class="rotatedcircle mt-5">
                                         <div class="middle-circle">
                                             <div class="white-circle">
-                                                <img src="images/letter.svg" alt=" letter logo">
+                                                <img src="~/Assets/images/letter.svg" alt=" letter logo">
                                             </div>
                                         </div>
                                     </div>
@@ -462,7 +481,7 @@
                                     <div class="circle mb-5">
                                         <div class="middle-circle">
                                             <div class="white-circle">
-                                                <img src="images/customer-service.svg" alt="customer-service logo">
+                                                <img src="~/Assets/images/customer-service.svg" alt="customer-service logo">
                                             </div>
                                         </div>
                                     </div>
@@ -495,7 +514,7 @@
                                     <div class="rotatedcircle mt-5">
                                         <div class="middle-circle">
                                             <div class="white-circle">
-                                                <img src="images/court.svg" alt="">
+                                                <img src="~/Assets/images/court.svg" alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -593,7 +612,7 @@
         <div class="container ">
             <div class="row footer-bottom-border pb-4">
                 <div class="col-lg-3 footer-bottom">
-                    <img src="./images/Group_25.png" alt="ILG icon" class="navbar-brand">
+                    <img src="~/Assets/images/Group_25.png" alt="ILG icon" class="navbar-brand">
                     <p class="footer-description pt-4">
                         We provide various legal services and consultations by a team of experts in order to reach legal
                         and friendly solutions in the simplest ways.
@@ -676,15 +695,8 @@
     </div>
     <!-- ============================= /footer section =============================-->
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-    <script src="./js/innerPage.js"></script>
+    <script type="text/javascript" src="@Localizer["/Assets/js/site.en.js"]"></script>
+    <script src="~/Assets/js/innerPage.js"></script>
 
 </body>
 
