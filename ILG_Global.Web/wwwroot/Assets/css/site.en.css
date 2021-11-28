@@ -29,6 +29,11 @@ label:focus,
     box-shadow: none !important;
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Gotham' !important,serif;
 
