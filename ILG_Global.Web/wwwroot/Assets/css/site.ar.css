@@ -352,6 +352,11 @@ footer {
     background: var(--main-color);
     width: 100%;
     padding: 60px 0 40px;
+    background-image: url(/Assets/images/footerBackGround.ar.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-y: 0px;
+ 
 }
 
     footer .container-fluid {
@@ -663,18 +668,19 @@ footer {
         }
 
         .quick-contact-main-container .quick-contact .left-wing {
-            background-image: url(../images/Quick-Call/left-wing.png);
+   /*         background-image: url(../images/Quick-Call/left-wing.png);*/
             width: 36%;
             /*border: solid 1px green;*/
             background-repeat: no-repeat;
             position: relative;
-            left: 11%;
+            left: -18%;
             background-position-y: -9px;
             z-index: 12;
             /* height: 10px!important; */
-            background-position-x: 9px;
-            background-position-y: -6px;
+            background-position-x: -1px;
+            background-position-y: 61px;
             /*border: solid 1px red;*/
+            background-image: url(../images/Quick-Call/right-wing.ar.png);
         }
 
         .quick-contact-main-container .quick-contact .center-circle {
@@ -688,15 +694,16 @@ footer {
 
 
         .quick-contact-main-container .quick-contact .right-wing {
-            background-image: url(../images/Quick-Call/right-wing.png);
-            background-position-x: -24px;
+         /*   background-image: url(../images/Quick-Call/right-wing.ar.png);*/
+            background-position-x: -8px;
             position: relative;
-            left: -145px;
+            right: -130px;
             background-repeat: no-repeat;
-            width: 36%;
-            background-position-y: 61px;
+            width: 37%;
+            background-position-y: -5px;
             /*border: solid 1px blue;*/
             z-index: 12;
+            background-image: url(../images/Quick-Call/left-wing.ar.png);
         }
 
         .quick-contact-main-container .quick-contact .wings {
@@ -718,7 +725,7 @@ footer {
             /*border: solid 1px red;*/
             position: relative;
             top: 84px;
-            right: -110px;
+            left: -148px;
         }
 
 .ilg-to-oppisit-direction {
