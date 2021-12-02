@@ -1,0 +1,110 @@
+﻿@using Microsoft.AspNetCore.Builder;
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using Microsoft.Extensions.Localization;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model ILG_Global.BussinessLogic.Models.NewsLetterSubscribe
+@inject IViewLocalizer Localizer
+
+@{
+    string PreferredLanguadge = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
+    string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+
+}
+
+
+<!-- ============================= footer section =============================-->
+<div class="footer-section pt-5 position-relative" id="footer">
+    <div class="container ">
+        <div class="row footer-bottom-border pb-4">
+            <div class="col-lg-3 footer-bottom">
+                <img src="~/Assets/images/Group_25.png" alt="ILG icon" class="navbar-brand">
+                <p class="footer-description pt-4">
+                    @Localizer["We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways"]
+                </p>
+            </div>
+            <div class=" col-lg-3 pt-5 footer-bottom">
+                <p class="nav-color l-space">@Localizer["MENU"]</p>
+                <div class="pt-3 d-flex flex-column l-height">
+                    <a href="#Family" class="text-white">@Localizer["About"] </a>
+                    <a href="#about" class="text-white">@Localizer["Services"]</a>
+                    <!--################## href needed #############-->
+                    <a href="#ourwork" class="text-white">@Localizer["Success Stories"]</a>
+                    <a href="#contact" class="text-white">@Localizer["Contact us"]</a>
+                </div>
+
+            </div>
+            <div class="col-lg-3 pt-5 footer-bottom">
+                <p class="nav-color l-space">@Localizer["SERVICE"]</p>
+                <div class="pt-3 d-flex flex-column l-height big-screen-links">
+                    <a href="#Family" class="text-white">@Localizer["Family Conflicts"]</a>
+                    <!--################## href needed #############-->
+                    <a href="#Family" class="text-white">@Localizer["Heritage"]</a>
+                    <a href="#Family" class="text-white">@Localizer["Divorce"]</a>
+                    <a href="#Family" class="text-white">@Localizer["kinship ties issues"]</a>
+                    <a href="#Family" class="text-white">@Localizer["Burden of proof child custody"]</a>
+                </div>
+                <div class="pt-3  flex-column l-height small-screen-links">
+                    <a href="#Family" class="text-white">Family Conflicts</a>
+                    <!--################## href needed #############-->
+                    <a href="#Family" class="text-white">@Localizer["Hertiage"] </a>
+                    <a href="#Family" class="text-white">@Localizer["Divorce"] </a>
+                    <a href="#Family" class="text-white">@Localizer["Kinship ties issues"] </a>
+                    <a href="#Family" class="text-white">@Localizer["Burden of proof child custody"] </a>
+                </div>
+            </div>
+            <div class="col-lg-3 pt-5 text-left ps-0 footer-bottom">
+                <p class="nav-color l-space">@Localizer["JOIN OUR NEWSLETTER"]  </p>
+                <form method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal" role="form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="py-3 btnSubmit row ">
+                        <div class="col-lg-8">
+                           
+                            <input type="text" class="text-white" placeholder="@Localizer[" Enter Your Email Address"]"
+                                   aria-label="Example text with button addon"
+                                   aria-describedby="button-addon1"
+                                   asp-for="@Model.Email" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                            <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
+                        </div>
+                        <div class="col-lg-4">
+                            <button class="btn rounded-pill sub-btn text-white">@Localizer["Subscribe"] </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 footer-icons-small">
+                <a href="#"><i class="fab fa-instagram mob-social h5 pe-2 border-end text-white"></i> </a>
+                <a href="#"><i class="fab fa-twitter mob-social h5 px-2 border-end text-white"></i> </a>
+                <a href="#"><i class="fab fa-facebook-f mob-social h5 px-2 border-end text-white"></i> </a>
+                <a href="#"><i class="fab fa-youtube mob-social h5 ps-2 text-white"></i> </a>
+            </div>
+
+        </div>
+
+        <div class="footer-end py-4">
+            <div class="row">
+                <p class="footer-end-item col-lg-4">@Localizer["Copyright © 2021 ilg. All Rights Reserved."]  </p>
+                <div class="col-lg-4">
+                    <a href="#" class="footer-end-item px-3">@Localizer["Terms of Use"]  </a>
+                    <a href="#" class="footer-end-item">@Localizer["Privacy Policy"]  </a>
+                </div>
+                <div class="col-lg-4 footer-icons-big">
+                    <a href="#"><i class="fab fa-instagram mob-social h5 pe-2 border-end text-white"></i></a>
+                    <a href="#"><i class="fab fa-twitter mob-social h5 px-2 border-end text-white"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f mob-social h5 px-2 border-end text-white"></i></a>
+                    <a href="#"><i class="fab fa-youtube mob-social h5 ps-2 text-white"></i></a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="go-up">
+            <a href="#nav"><i class="fas fa-arrow-up fa-2x"></i></a>
+        </div>
+
+    </div>
+
+</div>
+<!-- ============================= /footer section =============================-->

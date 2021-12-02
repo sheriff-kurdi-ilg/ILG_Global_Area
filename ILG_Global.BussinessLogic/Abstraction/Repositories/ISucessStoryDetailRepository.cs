@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace ILG_Global.BussinessLogic.Abstraction
+namespace ILG_Global.BussinessLogic.Abstraction.Repositories
 {
     public interface ISucessStoryDetailRepository
     {

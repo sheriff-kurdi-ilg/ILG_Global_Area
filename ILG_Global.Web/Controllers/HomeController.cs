@@ -1,4 +1,3 @@
-using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Models;
@@ -7,10 +6,7 @@ using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.Web.Tools;
 using Microsoft.AspNetCore.Http;
 
-using Microsoft.AspNetCore.Localization;
-
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Mail;
@@ -92,7 +88,7 @@ namespace ILG_Global.Web.Controllers
 
             oHomePageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate();
 
-            oHomePageVM.NewsLetterSubscribe = new NewsLetterSubscribe();
+            ViewData["NewsLetterSubscribe"] = new NewsLetterSubscribe();
             return oHomePageVM;
         }
 

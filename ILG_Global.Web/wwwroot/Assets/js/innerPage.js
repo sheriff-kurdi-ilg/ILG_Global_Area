@@ -6,29 +6,35 @@ let hideNav = document.getElementById('hide-nav');
 let navlinks = document.getElementsByClassName('sm-link-click')
 
 
- window.addEventListener('mouseup',function(event){
-     if(event.target != hideNav && event.target.parentNode != hideNav){
-         hideNav.style.display = 'none';
-         socialNav.style.display = 'none'
-         fullNav.style.backgroundColor = 'transparent'
-         if(this.window.innerWidth < 992){
-            togglerBtn.style.display = 'block';
-         }
+if (hideNav != null) {
+    window.addEventListener('mouseup', function (event) {
+        if (event.target != hideNav && event.target.parentNode != hideNav) {
+            hideNav.style.display = 'none';
+            socialNav.style.display = 'none'
+            fullNav.style.backgroundColor = 'transparent'
+            if (this.window.innerWidth < 992) {
+                togglerBtn.style.display = 'block';
+            }
 
-     }
- });  
+        }
+    });
+}
 
-togglerBtn.addEventListener('click',function(event){
-    
 
-    togglerBtn.style.display = 'none';
-    hideNav.style.display = 'block'
-    socialNav.style.display = 'flex'
-    fullNav.style.backgroundColor = 'white'
 
- 
-    
-});  
+
+if (togglerBtn != null) {
+    togglerBtn.addEventListener('click', function (event) {
+
+        togglerBtn.style.display = 'none';
+        hideNav.style.display = 'block'
+        socialNav.style.display = 'flex'
+        fullNav.style.backgroundColor = 'white'
+
+    });
+}
+
+
 
 for (let index = 0; index < navlinks.length; index++) {
     navlinks[index].addEventListener('click',function(){
@@ -38,7 +44,6 @@ for (let index = 0; index < navlinks.length; index++) {
         togglerBtn.style.display = 'block';
         
     }) 
-    
 }
 
 $(document).ready(function(){

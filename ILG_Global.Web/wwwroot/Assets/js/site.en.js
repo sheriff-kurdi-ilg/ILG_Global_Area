@@ -109,3 +109,16 @@ $('.ilg-modal-popup-window').on('hidden.bs.modal', function (e) {
 $('.ilg-modal-popup-window').on('show.bs.modal', function (e) {
     $(".quick-contact").hide(500);
 });
+
+
+//// data-successStoryItem
+//$("[data-successStoryItem]").mouseenter(function () {
+//    $(this).insertBefore(".overlay.w-100.h-100.position-absolute");
+//    console.log("enter");
+//});
+
+//$("[data-successStoryItem]").mouseleave(function () {
+//    //$(this).prev().remove();
+//    console.log("leave");
+//});
+

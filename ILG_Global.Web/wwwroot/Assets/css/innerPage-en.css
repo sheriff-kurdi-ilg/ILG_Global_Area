@@ -941,4 +941,9 @@ section {
     .right-contact {
         left: 110px;
     }
+    .ilg-map-container {
+        width: 100%;
+        height: 100%;
+    }
 }
+

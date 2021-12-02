@@ -59,7 +59,7 @@ main {
 nav.navbar.scroll {
     padding: 11px;
     height: 19%;
-    background: rgba(12,188,171,1);
+    background: white;
     position: fixed;
     transition: 0.6s;
 }
@@ -104,7 +104,6 @@ navbar.scroll .img-brand {
 .navbar .nav-item .icon, footer .footer-bottom .icon {
     padding: 0 10px !important;
     border-right: 1px solid rgba(222, 220, 220, 0.73);
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;

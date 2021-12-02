@@ -1,0 +1,154 @@
+﻿@using Microsoft.AspNetCore.Builder;
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IViewLocalizer Localizer
+
+@{
+    IRequestCultureFeature requestCulture = Context.Features.Get<IRequestCultureFeature>();
+    string CurrentCulture = requestCulture.RequestCulture.Culture.Name;
+
+    //List<SelectListItem> cultureItems = LocOptions.SupportedCultures
+    //    .Select(c => new SelectListItem { Value = c.Name, Text = c.DisplayName })
+    //    .ToList();
+    string arculture = "ar";
+    string enculture = "en";
+    //CultureInfo enculture = LocOptions.SupportedUICultures.Where(SS => SS.Name == "en").SingleOrDefault();
+    //CultureInfo arculture = LocOptions.SupportedUICultures.Where(SS => SS.Name == "ar").SingleOrDefault();
+    //var dd = Context.Features.Get<QueryStringRequestCultureProvider>();
+    //var dl = Context.Request.QueryString.Value;
+    //string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value + Context.Request.QueryString.Value}";
+
+
+}
+
+
+<!-- =========================================== nav-section =========================================== -->
+<div class="nav-section" id="nav">
+    <nav class="navbar navbar-expand-lg navbar-light pt-4" id="full-nav">
+        <div class="container">
+            <img class="navbar-brand" src="~/Assets/images/Mask_Group_25.png" alt="ILg logo" />
+            <button class="navbar-toggler border-0" type="button" id="toggler-btn">
+                <i class="fas fa-bars green fa-2x"></i>
+            </button>
+
+            <!-- =========================================== social in mobile navbar =======================================================-->
+            <div class="social-nav" id="social-navbar">
+
+                <a href="#"><i class="fab fa-instagram mob-social h5 pe-2 border-end "></i> </a>
+                <a href="#"><i class="fab fa-twitter mob-social h5 px-2 border-end"></i> </a>
+                <a href="#"><i class="fab fa-facebook-f mob-social h5 px-2 border-end"></i> </a>
+                <a href="#"><i class="fab fa-youtube mob-social h5 ps-2"></i> </a>
+
+            </div>
+            <!-- =========================================== /social in mobile navbar ===================================================-->
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <div class="d-flex justify-content-around align-items-center w-100">
+                    <ul class="navbar-nav mb-lg-0 px-auto ">
+
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="#Family">@Localizer["Law Service"] </a>
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="#about">@Localizer["Who are we"] </a>
+                            <!-- ############################## href needed #######-->
+                        </li>
+                        <li class="nav-item px-3">
+                            <a class="nav-link text-dark" href="#ourwork">@Localizer["How we do"] </a>
+                        </li>
+                        <li class="nav-item  ps-3 ">
+                            <a class="nav-link text-dark" href="#contact">@Localizer["Contact us"] </a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex">
+                        <a href="innerPage-ar.html"
+                           class="language d-flex justify-content-center align-items-center pe-5  ">
+                            <!-- ############################## href needed #######-->
+                            <i class="fas fa-globe me-2"></i>
+                            <span>
+                                AR
+                            </span>
+                        </a>
+
+                        <div class="social d-flex mt-2 ps-3">
+
+                            <a href="#"><i class="fab fa-instagram darkBlue h5 pe-2 border-end "></i> </a>
+                            <a href="#"><i class="fab fa-twitter darkBlue h5 px-2 border-end"></i> </a>
+                            <a href="#"><i class="fab fa-facebook-f darkBlue h5 px-2 border-end"></i> </a>
+                            <a href="#"><i class="fab fa-youtube darkBlue h5 ps-2"></i> </a>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- =========================================== mobile navbar ========================================================= -->
+    <div class="mobile-nav text-center " id="hide-nav">
+        <h4 class="nav-color pt-5 pb-2">@Localizer["MENU"] </h4>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Law Service"] </a>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#about">@Localizer["Who are we"] </a>
+        <!-- #################### needs href ###3-->
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#ourwork">@Localizer["How we do"] </a>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#contact">@Localizer["Contact us"] </a>
+
+        <h4 class="nav-color pt-5 pb-2">@Localizer["SERVICE"] </h4>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Heritage"] </a>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Kinship ties issues"] </a>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Family Law | Divorce Law"] </a>
+        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Burden of proof child custody"] </a>
+
+        @if (requestCulture.RequestCulture.Culture.Name == "ar")
+        {
+            <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+                <form id="SelectEnglish" action="/en/">
+
+                    <button type="submit" class="btn btn-default btn-xs nav-link">
+                        <i class="fas fa-globe"></i>
+                        EN
+                    </button>
+
+                </form>
+            </div> }
+        else
+        {
+            <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+                <form id="SelectEnglish" action="/ar/">
+                    <button type="submit" class="btn btn-default btn-xs nav-link">
+                        <i class="fas fa-globe"></i>
+                        AR
+                    </button>
+
+                </form>
+            </div>
+
+        }
+
+
+        <a href="innerPage-ar.html" class="language d-flex justify-content-center align-items-center py-3  ">
+            <i class="fas fa-globe me-2 fa-2x"></i>
+            <span class="h4 mb-0">
+                @Localizer["AR"]
+            </span>
+        </a>
+
+        <a href="index.html" class="language d-flex justify-content-center align-items-center py-3 ">
+            <span class="h4 mb-0">
+                EN
+            </span>
+            <i class="fas fa-globe me-2 fa-2x"></i>
+        </a>
+
+    </div>
+    <!-- =========================================== /mobile navbar ========================================== -->
+
+
+</div>
+<!-- =========================================== /nav-section =========================================== -->

@@ -1,4 +1,3 @@
-using ILG_Global.BussinessLogic.Abstraction;
 using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Services;
@@ -52,6 +51,8 @@ namespace ILG_Global.Web
             services.AddScoped<IImageDetailRepository, ImageDetailRepository>();
             services.AddScoped<IImageMasterRepository, ImageMasterRepository>();
 
+            //services.AddScoped<ICaseProcessDetailRepository, CaseProcessDetailRepository>();
+
             services.AddScoped<INewsLetterSubscribeRepository, NewsLetterSubscribeRepository>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -100,8 +101,6 @@ namespace ILG_Global.Web
             services.AddLocalization(opts => opts.ResourcesPath = "Resources");
 
             services.AddMvc(opts=>opts.EnableEndpointRouting=false).AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix).AddDataAnnotationsLocalization();
-
-           
         }
 
 

@@ -33,6 +33,11 @@ namespace ILG_Global.DataAccess
         public DbSet<ContactInformationDetail> ContactInformationDetails { get; set; }
         public DbSet<ShareViaEmailSubscriber> ShareViaEmailSubscriber { get; set; }
 
+
+        public DbSet<CaseProcessMaster> CaseProcessMasters { get; set; }
+        public DbSet<CaseProcessDetail> CaseProcessDetails { get; set; }
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
@@ -54,7 +59,9 @@ namespace ILG_Global.DataAccess
 
             modelBuilder.Entity<ContactInformationDetail>()
                 .HasKey(a => new {  a.ContactInformationID, a.LanguageCode, });
-          
+
+            modelBuilder.Entity<CaseProcessDetail>()
+                .HasKey(a => new { a.CaseProcessID, a.LanguageCode, });
 
         }
 

@@ -1,4 +1,10 @@
-﻿
-@{
-    Layout = "~/views/Shared/Layout.cshtml";
+﻿@{
+Layout = "~/views/Shared/Layout.cshtml";
 }
+@using ILG_Global.BussinessLogic.ViewModels
+@model ServicesPageVM
+
+<partial name="_OurServices" model="Model.OurServices" />
+<partial name="_AboutILG" model="Model.AboutILGSectionVM" />
+<partial name="_HowWeWork" model="Model.HowWeWorkSectionContentDetail" />
+<partial name="_ContactUs" model="Model.ContactUsSectionViewModel"/>

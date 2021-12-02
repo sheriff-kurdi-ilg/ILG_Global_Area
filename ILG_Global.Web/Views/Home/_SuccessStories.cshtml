@@ -10,7 +10,7 @@
     Layout = null;
 }
 <!-- success story section-->
-<section class="container success-story-section general-section">
+<section id="succesStories" class="container success-story-section general-section">
     <div class="row title">
         <div class="col-12 col-sm-12 col-md-6">
             <h5 class="pb-4 pt-5">@Model.SuccessStoriesSectionHeaderContent.Title</h5>
@@ -29,7 +29,7 @@
                     <div class="item position-relative">
                         <img src="~/Assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
                         <div class="overlay w-100 h-100 position-absolute"></div>
-                        <div class="slider-content text-white position-absolute p-4">
+                        <div data-successStoryItem="" class="slider-content text-white position-absolute p-4">
                             <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
                             <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)">
                                 <span>Learn More</span>

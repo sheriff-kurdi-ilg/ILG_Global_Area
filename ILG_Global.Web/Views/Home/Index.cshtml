@@ -1,6 +1,6 @@
 @using Microsoft.AspNetCore.Localization;
 @using Microsoft.AspNetCore.Mvc.Localization;
-
+@using ILG_Global.BussinessLogic.Models
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
@@ -14,7 +14,7 @@
 }
 
 <!DOCTYPE html>
-<html dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
+<html dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft ? "rtl" : "ltr")">
 
 <head>
     <meta charset="UTF-8">
@@ -79,14 +79,14 @@
 
                     <div class="row col-md-6 col-sm-12 float-right ilg-to-oppisit-direction">
                         <div class="col-md-4 left-wing wings quick-contact-container">
-                            <a class="link" target="_blank" href="tel:0096522499777"></a>
+                            <a class="link" target="_blank" href="@Localizer["tel:0096522499777"]"></a>
                         </div>
 
                         <div class="col-md-3 center-circle quick-contact-container">
 
                         </div>
                         <div class="col-md-4 right-wing wings quick-contact-container">
-                            <a class="link" target="_blank" href="http://wa.me/96522499777"></a>
+                            <a class="link" target="_blank" href="@Localizer["http://wa.me/0096565669292"]"></a>
                         </div>
                     </div>
 
@@ -97,9 +97,9 @@
                 </script>
             </div>
 
-            
-                @await Html.PartialAsync("_OurServices", Model.OurServices)
-            
+
+            @await Html.PartialAsync("_OurServices", Model.OurServices)
+
 
 
             @await Html.PartialAsync("_SuccessStories", Model.SuccessStoriesViewModel)
@@ -108,8 +108,10 @@
 
         </main>
 
-
-        @await Html.PartialAsync("_Footer", Model.NewsLetterSubscribe)
+        @{
+            NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe)ViewData["NewsLetterSubscribe"];
+        }
+        @await Html.PartialAsync("_Footer", oNewsLetterSubscribe)
         <div id="sizer" class="sizer">
             <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none" data-size="xs"></div>
             <div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" data-size="sm"></div>
@@ -117,7 +119,6 @@
             <div class="d-none d-sm-none d-md-none d-lg-block d-xl-none" data-size="lg"></div>
             <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block" data-size="xl"></div>
         </div>
-
     </div>
 
     <script type="text/javascript" src="@Localizer["/Assets/js/site.en.js"]"></script>

@@ -117,16 +117,37 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>من نحن</value>
+  <data name="AR" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="Burden of proof child custody" xml:space="preserve">
+    <value>قضايا اثبات النسب</value>
   </data>
   <data name="Contact us" xml:space="preserve">
-    <value>تواصل معنا</value>
+    <value>اتصل بنا</value>
   </data>
-  <data name="Our Services" xml:space="preserve">
+  <data name="Family Law | Divorce Law" xml:space="preserve">
+    <value>قوانين الاسرة | قوانين الطلاق</value>
+  </data>
+  <data name="Heritage" xml:space="preserve">
+    <value>المواريث</value>
+  </data>
+  <data name="How we do" xml:space="preserve">
+    <value>كيف نعمل</value>
+  </data>
+  <data name="Kinship ties issues" xml:space="preserve">
+    <value>قضايا الاسرة</value>
+  </data>
+  <data name="Law Service" xml:space="preserve">
+    <value>الخدمات القانونية</value>
+  </data>
+  <data name="MENU" xml:space="preserve">
+    <value>القائمة</value>
+  </data>
+  <data name="SERVICE" xml:space="preserve">
     <value>خدماتنا</value>
   </data>
-  <data name="Success Stories" xml:space="preserve">
-    <value>قصص نجاح</value>
+  <data name="Who are we" xml:space="preserve">
+    <value>من نحن</value>
   </data>
 </root>
