@@ -2,9 +2,16 @@
 Layout = "~/views/Shared/Layout.cshtml";
 }
 @using ILG_Global.BussinessLogic.ViewModels
+@using Microsoft.AspNetCore.Localization;
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using ILG_Global.BussinessLogic.Models
 @model ServicesPageVM
 
 <partial name="_OurServices" model="Model.OurServices" />
 <partial name="_AboutILG" model="Model.AboutILGSectionVM" />
 <partial name="_HowWeWork" model="Model.HowWeWorkSectionContentDetail" />
 <partial name="_ContactUs" model="Model.ContactUsSectionViewModel"/>
+@*        @{
+            NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe)ViewData["NewsLetterSubscribe"];
+        }
+        @await Html.PartialAsync("_Footer", oNewsLetterSubscribe)*@
