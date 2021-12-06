@@ -126,7 +126,7 @@
   <data name="Contact us" xml:space="preserve">
     <value>تواصل معنا</value>
   </data>
-  <data name="Copyright © 2021 ilg. All Rights Reserved" xml:space="preserve">
+  <data name="Copyright © 2021 ilg. All Rights Reserved." xml:space="preserve">
     <value>حقوق النشر © 2021 ilg. جميع الحقوق محفوظة</value>
   </data>
   <data name="Divorce" xml:space="preserve">
@@ -146,6 +146,9 @@
   </data>
   <data name="kinship ties issues" xml:space="preserve">
     <value>قضايا علاقات القرابة</value>
+  </data>
+  <data name="l" xml:space="preserve">
+    <value />
   </data>
   <data name="MENU" xml:space="preserve">
     <value>القائمة</value>

@@ -6943,11 +6943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "projectUniqueName": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "projectName": "ILG_Global.DataAccess",
-      "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+      "projectPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
-      "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
+      "outputPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6964,8 +6964,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
-              "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
+            "D:\\ILG_Projects\\Ilg_global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj": {
+              "projectPath": "D:\\ILG_Projects\\Ilg_global\\ILG_Global.BussinessLogic\\ILG_Global.BussinessLogic.csproj"
             }
           }
         }

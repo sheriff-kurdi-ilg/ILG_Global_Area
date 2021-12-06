@@ -30,8 +30,8 @@
 <div class="nav-section" id="nav">
     <nav class="navbar navbar-expand-lg navbar-light pt-4" id="full-nav">
         <div class="container">
-            <img class="navbar-brand" src="~/Assets/images/Mask_Group_25.png" alt="ILg logo" />
-            <button class="navbar-toggler border-0" type="button" id="toggler-btn">
+<a href="/">            <img class="navbar-brand" src="~/Assets/images/Mask_Group_25.png" alt="ILg logo" />
+</a>            <button class="navbar-toggler border-0" type="button" id="toggler-btn">
                 <i class="fas fa-bars green fa-2x"></i>
             </button>
 
@@ -64,26 +64,53 @@
                         </li>
                     </ul>
 
-                    <div class="d-flex">
-                        <a href="innerPage-ar.html"
-                           class="language d-flex justify-content-center align-items-center pe-5  ">
-                            <!-- ############################## href needed #######-->
-                            <i class="fas fa-globe me-2"></i>
-                            <span>
-                                AR
-                            </span>
-                        </a>
-
-                        <div class="social d-flex mt-2 ps-3">
-
-                            <a href="#"><i class="fab fa-instagram darkBlue h5 pe-2 border-end "></i> </a>
-                            <a href="#"><i class="fab fa-twitter darkBlue h5 px-2 border-end"></i> </a>
-                            <a href="#"><i class="fab fa-facebook-f darkBlue h5 px-2 border-end"></i> </a>
-                            <a href="#"><i class="fab fa-youtube darkBlue h5 ps-2"></i> </a>
+                                <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+       
 
 
-                        </div>
-                    </div>
+                            @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                            {
+                                <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+                                    <form id="SelectEnglish" action="/en/services">
+                                       
+                                        <button type="submit" class="btn btn-default btn-xs nav-link">
+                                            <i class="fas fa-globe"></i>
+                                            EN
+                                        </button>
+                                        
+                                    </form>
+                                </div> }
+                            else
+                            {
+                                <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
+                                    <form id="SelectEnglish" action="/ar/services">
+                                        <button type="submit" class="btn btn-default btn-xs nav-link">
+                                            <i class="fas fa-globe"></i>
+                                            AR
+                                        </button>
+
+                                    </form>
+                                </div>
+                       
+                            }
+
+
+                            </li>
+                            <li class="nav-item row justify-content-center align-items-center icon-col">
+                                <a class="nav-link col icon" href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="nav-link col icon" href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="nav-link col icon" href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="nav-link col icon border-0" href="#">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
 
                 </div>
             </div>
