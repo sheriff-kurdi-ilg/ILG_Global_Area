@@ -10,6 +10,11 @@ namespace ILG_Global.BussinessLogic.Models
     public class HtmlContentMaster
     {
         public int ID { get; set; }
+        public int IsHasTitle { get; set; }
+        public int IsHasSubTitle { get; set; }
+        public int IsHasSummary { get; set; }
+        public int IsHasDescription { get; set; }
+
         public bool IsEnabled { get; set; }
         public bool CanBeDeletedByUser { get; set; }
         public List<HtmlContentDetail> HtmlContentDetails { get; set; }

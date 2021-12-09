@@ -22,13 +22,53 @@ function isInViewport(element) {
     return false;
 }
 
-$(document).on("click", "#share-via-mail", function () {
+$(document).on("click", "[data-share-via-email-a]", function () {
     /*
             $(".modal").removeClass("fade").modal("hide");
     */
-    $('.btn-close').trigger('click')
-    $('.shareViaMailModal-launch-btn').trigger('click')
+    $('.btn-close').trigger('click');
+    $('.shareViaMailModal-launch-btn').trigger('click');
+
+    var nSuccessStoryID = $(this).attr("data-success-story-id");
+    $("#txtLastClickedSuccessStoryID").val(nSuccessStoryID);
+
+    var nLanguageCode = $(this).attr("data-language-code");
+    $("#txtCurrentLanguageCode").val(nLanguageCode);
+
+
+
+
 });
+
+$(document).on("click", "#btnSuccessStorySend", function () {
+
+    var nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
+    var sLanguageCode = $("#txtCurrentLanguageCode").val();
+    var sSuccessStoryEmail = $("#txtSuccessStoryUserEmail").val();
+
+    console.log("nSuccessStoryID is: " + nSuccessStoryID);
+    console.log("sLanguageCode is: " + sLanguageCode);
+    console.log("sSuccessStoryEmail is: " + sSuccessStoryEmail);
+
+    var oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
+
+    alert(JSON.stringify(oApiRequest) );
+
+});
+
+function vDDDD() { // languageID
+    $.ajax({
+        type: "POST",
+        url: url,
+        data: data,
+        success: success,
+        dataType: dataType
+    });
+}
+
+
+
+
 
 $(document).ready(function () {
     if ($('body').children().has('.home')) {

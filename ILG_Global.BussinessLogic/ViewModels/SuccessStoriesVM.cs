@@ -13,6 +13,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
         public HtmlContentDetail SuccessStoriesSectionHeaderContent { get; set; }
 
         public List<SucessStoryDetail>  SucessStoryDetails { get; set; }
+       
         [Required(ErrorMessage = "Email Required.")]
         public string ShareViaEmailSubscriberEmail { get; set; }
 

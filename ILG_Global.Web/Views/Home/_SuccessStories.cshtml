@@ -43,6 +43,8 @@
                 }
             </div>
         </div>
+
+
         <button type="button" class="p-0 m-0 shareViaMailModal-launch-btn" style="visibility: hidden" data-bs-toggle="modal" data-bs-target="#shareViaMailModal"></button>
 
         <div class="modal fade " id="shareViaMailModal" tabindex="-1" aria-labelledby="shareViaMailModal"
@@ -56,30 +58,35 @@
                         </button>
                     </div>
                     <div class="container p-0">
-                        <h1>@Localizer["Share Via Mail"] </h1>
+                        <h1>
+                            @Localizer["Share Via Mail"]
+                        </h1>
+                        <input id="txtLastClickedSuccessStoryID" type="text" value="aa" />
+                        <input id="txtCurrentLanguageCode" type="text" value="aa" />
                     </div>
 
                     <div class="modal-body container hide-native-scrollbar">
                         <form>
                             <div class="">
-                                <!-- <label for="email" class="col-form-label">Email:</label>-->
-                                <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Email">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="email" class="form-control form-control-lg" id="txtSuccessStoryUserEmail" placeholder="Email">
                             </div>
+                            <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
+
+                                <li class="col-md-4 my-3 my-sm-3 my-md-0">
+                                    <button data-bs-dismiss="modal" class="close-btn border-0 bg-white w-100 py-3 text-black d-flex justify-content-center align-items-center mx-auto">
+                                        <span class="px-3">@Localizer["Cancel"]</span>
+                                    </button>
+                                </li>
+                                <li class="col-md-4 my-3 my-sm-3 my-md-0">
+                                    <button id="btnSuccessStorySend" class="btn w-100 py-3 d-flex justify-content-center align-items-center mx-auto">
+                                        <span class="px-3">@Localizer["Send"]</span>
+                                    </button>
+                                </li>
+                            </ul>
                         </form>
                     </div>
-                    <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
-
-                        <li class="col-md-4 my-3 my-sm-3 my-md-0">
-                            <button data-bs-dismiss="modal" class="close-btn border-0 bg-white w-100 py-3 text-black d-flex justify-content-center align-items-center mx-auto">
-                                <span class="px-3">@Localizer["Cancel"]</span>
-                            </button>
-                        </li>
-                        <li class="col-md-4 my-3 my-sm-3 my-md-0">
-                            <button class="btn w-100 py-3 d-flex justify-content-center align-items-center mx-auto">
-                                <span class="px-3">@Localizer["Send"]</span>
-                            </button>
-                        </li>
-                    </ul>
+           
                 </div>
             </div>
         </div>
@@ -121,7 +128,11 @@
                                 </a>*@
                             </li>
                             <li class="col-md-4 my-3 my-sm-3 my-md-0 d-flex justify-content-center align-items-center">
-                                <a id="share-via-mail" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">
+                                <a 
+                                   data-share-via-email-a="" 
+                                   data-success-story-id="@oSucessStoryDetail.SucessStoryID" 
+                                   data-language-code="@oSucessStoryDetail.LanguageCode" 
+                                   id="share-via-mail" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">
                                     <i class="fas fa-share-alt"></i>
                                     <span class="px-3">@Localizer["Share Via Mail"]</span>
                                 </a>

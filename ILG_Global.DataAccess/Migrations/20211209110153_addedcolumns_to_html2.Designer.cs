@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ILG_Global.DataAccess.Migrations
 {
     [DbContext(typeof(ILG_GlobalContext))]
-    [Migration("20211114152108_yyyy")]
-    partial class yyyy
+    [Migration("20211209110153_addedcolumns_to_html2")]
+    partial class addedcolumns_to_html2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,6 +20,45 @@ namespace ILG_Global.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.CaseProcessDetail", b =>
+                {
+                    b.Property<int>("CaseProcessID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LanguageCode")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("OurServiceID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TextLine")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CaseProcessID", "LanguageCode");
+
+                    b.HasIndex("LanguageCode");
+
+                    b.ToTable("CaseProcessDetails");
+                });
+
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.CaseProcessMaster", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsEnabled")
+                        .HasColumnType("bit");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("CaseProcessMasters");
+                });
 
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ContactInformationDetail", b =>
                 {
@@ -49,8 +88,14 @@ namespace ILG_Global.DataAccess.Migrations
                     b.Property<string>("FontAwsomeIconCssClass")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsClickable")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
+
+                    b.Property<string>("NavigationURL")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -96,6 +141,18 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.Property<bool>("IsEnabled")
                         .HasColumnType("bit");
+
+                    b.Property<int>("IsHasDescription")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IsHasSubTitle")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IsHasSummary")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IsHasTitle")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
@@ -188,6 +245,7 @@ namespace ILG_Global.DataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool?>("IsEnabled")
@@ -246,6 +304,22 @@ namespace ILG_Global.DataAccess.Migrations
                     b.ToTable("OurServiceMasters");
                 });
 
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ShareViaEmailSubscriber", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("ShareViaEmailSubscriber");
+                });
+
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.SucessStoryDetail", b =>
                 {
                     b.Property<int>("SucessStoryID")
@@ -253,6 +327,9 @@ namespace ILG_Global.DataAccess.Migrations
 
                     b.Property<string>("LanguageCode")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Summary")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
@@ -286,6 +363,25 @@ namespace ILG_Global.DataAccess.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("SucessStoryMasters");
+                });
+
+            modelBuilder.Entity("ILG_Global.BussinessLogic.Models.CaseProcessDetail", b =>
+                {
+                    b.HasOne("ILG_Global.BussinessLogic.Models.CaseProcessMaster", "CaseProcessMaster")
+                        .WithMany()
+                        .HasForeignKey("CaseProcessID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ILG_Global.BussinessLogic.Models.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageCode")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CaseProcessMaster");
+
+                    b.Navigation("Language");
                 });
 
             modelBuilder.Entity("ILG_Global.BussinessLogic.Models.ContactInformationDetail", b =>
