@@ -104,10 +104,6 @@ namespace ILG_Global.Web
         }
 
 
-
-
-
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -163,7 +159,10 @@ namespace ILG_Global.Web
 
             app.UseMvc(configureRoutes =>
             {
-                configureRoutes.MapRoute(name: "Default", template: "{culture}/{controller}/{action}/{id?}", defaults: new { culture = "", controller = "Home", action = "Index" });
+                configureRoutes.MapRoute(
+                    name: "Default", 
+                    template: "{culture}/{controller}/{action}/{id?}", 
+                    defaults: new { culture = "", controller = "Home", action = "Index" });
             });
 
         }

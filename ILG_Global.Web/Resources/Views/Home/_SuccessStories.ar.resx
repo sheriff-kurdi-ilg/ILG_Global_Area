@@ -117,67 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About" xml:space="preserve">
-    <value>من نحن</value>
+  <data name="..... Continue With Share Via Mail" xml:space="preserve">
+    <value>..... تواصل خلال المشاركة عبر البريد</value>
   </data>
-  <data name="Burden of proof child custody" xml:space="preserve">
-    <value>عبء اثبات حضانة الطفل</value>
+  <data name="Call Us" xml:space="preserve">
+    <value>اتصل بنا</value>
   </data>
-  <data name="Contact us" xml:space="preserve">
-    <value>تواصل معنا</value>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
   </data>
-  <data name="Copyright © 2021 ilg. All Rights Reserved" xml:space="preserve">
-    <value>حقوق النشر © 2021 ilg. جميع الحقوق محفوظة</value>
+  <data name="Learn More" xml:space="preserve">
+    <value>المزيد</value>
   </data>
-  <data name="Copyright © 2021 ilg. All Rights Reserved." xml:space="preserve">
-    <value>حقوق النشر © 2021 ilg. جميع الحقوق محفوظة</value>
+  <data name="Make an appointment" xml:space="preserve">
+    <value>طلب تحديد موعد</value>
   </data>
-  <data name="Divorce" xml:space="preserve">
-    <value>الطلاق</value>
+  <data name="Send" xml:space="preserve">
+    <value>ارسال</value>
   </data>
-  <data name="Enter Your Email Address" xml:space="preserve">
-    <value>أدخل بريدك بريدك الالكتروني</value>
-  </data>
-  <data name="Family Conflicts" xml:space="preserve">
-    <value>الخلافات العائلية</value>
-  </data>
-  <data name="Heritage" xml:space="preserve">
-    <value>المواريث</value>
-  </data>
-  <data name="JOIN OUR NEWSLETTER" xml:space="preserve">
-    <value>اشترك في صحيفتنا الإخبارية</value>
-  </data>
-  <data name="kinship ties issues" xml:space="preserve">
-    <value>قضايا علاقات القرابة</value>
-  </data>
-  <data name="l" xml:space="preserve">
-    <value />
-  </data>
-  <data name="MENU" xml:space="preserve">
-    <value>القائمة</value>
-  </data>
-  <data name="Privacy Policy" xml:space="preserve">
-    <value>سياسة خاصة</value>
-  </data>
-  <data name="SERVICE" xml:space="preserve">
-    <value>الخدمة</value>
-  </data>
-  <data name="Services" xml:space="preserve">
-    <value>خدمات</value>
-  </data>
-  <data name="Subscribe" xml:space="preserve">
-    <value>الإشتراك</value>
-  </data>
-  <data name="Success Stories" xml:space="preserve">
-    <value>قصص نجاح</value>
-  </data>
-  <data name="Terms of Use" xml:space="preserve">
-    <value>تعليمات الاستخدام</value>
-  </data>
-  <data name="We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways" xml:space="preserve">
-    <value>نقدم خدمات واستشارات قانونية متنوعة من قبل فريق من الخبراء من أجل الوصول إلى حلول قانونية وودية بأبسط الطرق</value>
-  </data>
-  <data name="~/Assets/css/site.en.css" xml:space="preserve">
-    <value>~/Assets/css/site.en.css</value>
+  <data name="Share Via Mail" xml:space="preserve">
+    <value>مشاركة عبر البريدالالكترونى</value>
   </data>
 </root>

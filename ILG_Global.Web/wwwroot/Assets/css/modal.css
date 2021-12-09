@@ -1,168 +1,168 @@
-.modal-content {
- 
-    border-radius: 0;
-}
+/*.modal-content {*/
+/* */
+/*    border-radius: 0;*/
+/*}*/
 
 
 
-.modal-header {
-    border-bottom: none;
-}
+/*.modal-header {*/
+/*    border-bottom: none;*/
+/*}*/
 
-.modal-body{
-    padding-left:146px ;
-    border-bottom:none;
-    border-top:none;
-}
+/*.modal-body{*/
+/*    padding-left:146px ;*/
+/*    border-bottom:none;*/
+/*    border-top:none;*/
+/*}*/
 
-.modal-body h2{
-width: 100%;
-height: 87px;
-color: #093b6d;
-font-family: Gotham;
-font-size: 60px;
-font-weight: 500;
-font-style: normal;
-letter-spacing: -1.68px;
-line-height: 80px;
-text-align: left;
-/* Text style for "Heritage" */
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-}
-
-
-.modal-body p{
-    /* Style for "Lorem ipsu" */
-    width: auto;
-    height: auto;
-    padding-right: 148px;
-    margin-top: 38px;
-    color: rgba(17, 17, 17, 0.5);
-    font-family: Gotham;
-    font-size: 21px;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: 32px;
-    text-align: left;
-/* Text style for "Lorem ipsu" */
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-}
+/*.modal-body h2{*/
+/*width: 100%;*/
+/*height: 87px;*/
+/*color: #093b6d;*/
+/*font-family: Gotham;*/
+/*font-size: 60px;*/
+/*font-weight: 500;*/
+/*font-style: normal;*/
+/*letter-spacing: -1.68px;*/
+/*line-height: 80px;*/
+/*text-align: left;*/
+/*!* Text style for "Heritage" *!*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*}*/
 
 
-.modal-footer {
-    display: flex;
-    flex-direction: column;
-    border-top: none;
-    
-}
-    .modal-footer .callus {
-        /* Style for "btn" */
-        width: 237px;
-        height: 66px;
-        border-radius: 250px;
-        box-shadow: 0 0 15px #0cbcab;
-        background-color: #0cbcab;
-
-        border-top: none;
-        /*background-color: rgba(12,188,171,1);*/
-        border: none;
-        /*border-radius: 35px;*/
-        padding: 15px 35px;
-    }
-
-.modal-footer .callus .txt {
-/* Style for "Call Us" */
-width: 73px;
-height: 22px;
-color: #ffffff;
-font-family: Gotham;
-font-size: 21px;
-font-weight: 300;
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-text-align: center;
-/* Text style for "Call Us" */
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-
-}
-
-.modal-footer .callus .icon {
-/* Style for "Icon mater" */
-width: 33px;
-height: 33px;
-}
-
-.modal-footer .makeappointment .txt{
-/* Style for "Make an ap" */
-width: 228px;
-height: 22px;
-color: #093b6d;
-font-family: Gotham;
-font-size: 21px;
-font-weight: 300;
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-text-align: center;
-/* Text style for "Make an ap" */
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-}
-
-.modal-footer .makeappointment .icon{
-
-box-shadow: 0 3px 35px rgba(7, 80, 154, 0.41);
-}
-
-.modal-footer .shareviaemail .txt{
-/* Style for "share via" */
-width: 150px;
-height: 22px;
-color: #093b6d;
-font-family: Gotham;
-font-size: 21px;
-font-weight: 300;
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-text-align: center;
-/* Text style for "share via" */
-font-style: normal;
-letter-spacing: normal;
-line-height: normal;
-}
-
-.modal-footer .shareviaemail .icon{
-/* Style for "Icon ionic" */
-width: 28px;
-height: 31px;
-}
-
-    .modal-footer .card  {
-        border:none;
-    }
-.SendButton {
-    width: auto;
-    height: auto;
-    box-shadow: 0 0 15px #0cbcab;
-    background-color: #0cbcab;
-}
+/*.modal-body p{*/
+/*    !* Style for "Lorem ipsu" *!*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    padding-right: 148px;*/
+/*    margin-top: 38px;*/
+/*    color: rgba(17, 17, 17, 0.5);*/
+/*    font-family: Gotham;*/
+/*    font-size: 21px;*/
+/*    font-weight: 300;*/
+/*    font-style: normal;*/
+/*    letter-spacing: normal;*/
+/*    line-height: 32px;*/
+/*    text-align: left;*/
+/*!* Text style for "Lorem ipsu" *!*/
+/*    font-style: normal;*/
+/*    letter-spacing: normal;*/
+/*    line-height: normal;*/
+/*}*/
 
 
-/*
-    .ilg-modal-popup-window .modal-content .callus {
-        border-top: none;
-        background-color: rgba(12,188,171,1);
-        border: none;
-        border-radius: 35px;
-        padding: 15px 35px;
-    }*/
+/*.modal-footer {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    border-top: none;*/
+/*    */
+/*}*/
+/*    .modal-footer .callus {*/
+/*        !* Style for "btn" *!*/
+/*        width: 237px;*/
+/*        height: 66px;*/
+/*        border-radius: 250px;*/
+/*        box-shadow: 0 0 15px #0cbcab;*/
+/*        background-color: #0cbcab;*/
+
+/*        border-top: none;*/
+/*        !*background-color: rgba(12,188,171,1);*!*/
+/*        border: none;*/
+/*        !*border-radius: 35px;*!*/
+/*        padding: 15px 35px;*/
+/*    }*/
+
+/*.modal-footer .callus .txt {*/
+/*!* Style for "Call Us" *!*/
+/*width: 73px;*/
+/*height: 22px;*/
+/*color: #ffffff;*/
+/*font-family: Gotham;*/
+/*font-size: 21px;*/
+/*font-weight: 300;*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*text-align: center;*/
+/*!* Text style for "Call Us" *!*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+
+/*}*/
+
+/*.modal-footer .callus .icon {*/
+/*!* Style for "Icon mater" *!*/
+/*width: 33px;*/
+/*height: 33px;*/
+/*}*/
+
+/*.modal-footer .makeappointment .txt{*/
+/*!* Style for "Make an ap" *!*/
+/*width: 228px;*/
+/*height: 22px;*/
+/*color: #093b6d;*/
+/*font-family: Gotham;*/
+/*font-size: 21px;*/
+/*font-weight: 300;*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*text-align: center;*/
+/*!* Text style for "Make an ap" *!*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*}*/
+
+/*.modal-footer .makeappointment .icon{*/
+
+/*box-shadow: 0 3px 35px rgba(7, 80, 154, 0.41);*/
+/*}*/
+
+/*.modal-footer .shareviaemail .txt{*/
+/*!* Style for "share via" *!*/
+/*width: 150px;*/
+/*height: 22px;*/
+/*color: #093b6d;*/
+/*font-family: Gotham;*/
+/*font-size: 21px;*/
+/*font-weight: 300;*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*text-align: center;*/
+/*!* Text style for "share via" *!*/
+/*font-style: normal;*/
+/*letter-spacing: normal;*/
+/*line-height: normal;*/
+/*}*/
+
+/*.modal-footer .shareviaemail .icon{*/
+/*!* Style for "Icon ionic" *!*/
+/*width: 28px;*/
+/*height: 31px;*/
+/*}*/
+
+/*    .modal-footer .card  {*/
+/*        border:none;*/
+/*    }*/
+/*.SendButton {*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    box-shadow: 0 0 15px #0cbcab;*/
+/*    background-color: #0cbcab;*/
+/*}*/
+
+
+/*!**/
+/*    .ilg-modal-popup-window .modal-content .callus {*/
+/*        border-top: none;*/
+/*        background-color: rgba(12,188,171,1);*/
+/*        border: none;*/
+/*        border-radius: 35px;*/
+/*        padding: 15px 35px;*/
+/*    }*!*/

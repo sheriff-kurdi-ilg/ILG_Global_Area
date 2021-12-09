@@ -14,27 +14,28 @@
 }
 
 <div>
-
-    <footer class="d-flex align-items-center" id="footer" >
-
-        <section class="container position-relative">
+    <footer class="d-flex align-items-center position-relative">
+        <div class="d-flex shield-bg w-100 p-0 m-0 col-2 col-sm-2 col-md-12 position-absolute h-100 justify-content-end" style="top: 0; opacity: 0.2">
+            <img class="w-auto h-100" src="/Assets/images/OurServiceBackGround.svg">
+        </div>
+        <div class="container position-relative">
             <div class="w-100 mx-auto d-flex justify-content-center arrow-top position-absolute">
                 <button class=""><i class="fas fa-arrow-up"></i></button>
             </div>
             <div class="d-flex justify-content-between flex-wrap pt-5">
                 <div class="col col-12 col-sm-12 col-md-3 pb-4 pb-sm-4 pb-md-0">
                     <ul class="footer-col-content pb-4 pb-sm-4 pb-md-5 img-container">
-                        <img alt="" src="~/assets/images/Group_25@2x.png" class="w-100" />
+                        <img src="/Assets/images/Group_25@2x.png" class="w-100">
                     </ul>
-                    <p class="footer-gn-text">
+                    <p class="footer-gn-text justify-text-center col-11 col-sm-11 col-md-12 mx-auto">
                         @Localizer["We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways"]
                     </p>
                 </div>
 
                 <div class="col col-12 col-sm-12 col-md-9">
-                    <div class="col-10 pb-5"></div>
+                    <div class="col-10 pb-5 d-none d-sm-none d-md-block"></div>
                     <div class="row col-12 pt-4 px-0 px-sm-0 px-md-5">
-                        <div class="col col-12 col-sm-12 col-md-3">
+                        <div class="col-sm-6 col-6 col-sm-12 col-md-3 py-4 py-sm-4 py-md-0">
                             <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
                                 <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["MENU"]</li>
                                 <li><a href="#leaderBoard">@Localizer["About"]</a></li>
@@ -43,32 +44,31 @@
                                 <li><a href="#contactUs">@Localizer["Contact us"]</a></li>
                             </ul>
                         </div>
-                        <div class="col col-12 col-sm-12 col-md-4">
+                        <div class="col-sm-6 col-6 col-sm-12 col-md-4 py-4 py-sm-4 py-md-0">
                             <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
                                 <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["SERVICE"]</li>
-                                <li style="color:rgba(155,193,226,1);">@Localizer["Family Conflicts"]</li>
+                                <li style="color:rgba(155,193,226,1);"> <a asp-controller="Services" asp-action="Index" asp-route-culture="@PreferredLanguadge">@Localizer["Family Conflicts"]</a> </li>
                                 <li><a href="#">@Localizer["Heritage"]</a></li>
                                 <li><a href="#">@Localizer["Divorce"]</a></li>
                                 <li><a href="#">@Localizer["kinship ties issues"]</a></li>
                                 <li><a href="#">@Localizer["Burden of proof child custody"]</a></li>
                             </ul>
                         </div>
-
-                        <div class="col col-12 col-sm-12 col-md-5">
-                            <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
+                        <div class="col-sm-12 col-12 col-sm-12 col-md-5">
+                            <ul class="footer-col-content pb-md-0">
                                 <li class="footer-col-title d-block  d-sm-block pb-4">@Localizer["JOIN OUR NEWSLETTER"]</li>
                                 <li>
                                     <div class="input-group mb-3 join-us-input">
-                                        <form method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal" role="form">
+                                        <form method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal w-100 " role="form">
                                             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                                            <table>
-                                                <tr>
+                                            <table class="w-100">
+                                                <tr class="w-100 d-flex justify-content-between align-items-center">
                                                     <td>
                                                         <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
                                                                aria-label="Example text with button addon"
                                                                aria-describedby="button-addon1"
                                                                asp-for="@Model.Email" />
-                                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                                        <span asp-validation-for="Email" class="validation-mesaage text-danger"></span>
                                                         <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
                                                     </td>
                                                     <td>
@@ -79,50 +79,47 @@
                                                 </tr>
                                             </table>
                                         </form>
-
-
-
-
                                     </div>
                                 </li>
                             </ul>
                         </div>
-
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-between align-items-center py-3 footer-bottom">
+            <div class="row flex-sm-column-reverse flex-column-reverse flex-md-row justify-content-between align-items-center py-0 py-sm-0 py-md-3 footer-bottom">
                 <div class="col-12 col-sm-12 col-md-6">
-                    <ul class="row flex-column flex-sm-column flex-md-row justify-content-between w-100 p-0 footer-bottom-row m-0">
-                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
-                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
-                        <li class="pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Privacy Policy"]</a></li>
+                    <ul class="row justify-content-between w-100 p-0 footer-bottom-row text-center m-0">
+                        <li class="col-12 col-sm-12 col-md-6 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0 ">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
+                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
+                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Privacy Policy"]</a></li>
                     </ul>
                 </div>
-                <div class="footer-icon-col col-6 col-sm-6 col-md-2 pt-4 pt-sm-4 pt-md-0">
+                <div class="my-4 d-md-none" style="border-top: 0.5px solid gray; height: 0.5px; opacity: 0.4"></div>
+
+                <div class="footer-icon-col col-12 col-sm-12 col-md-2 py-4 py-sm-4 py-md-0">
                     <div class="row justify-content-center align-items-center">
-                        <a class="col icon" href="#">
+                        <a class="col-1 icon" href="#">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a class="nav-link col icon" href="#">
+                        <a class="nav-link col-1 icon" href="#">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a class="nav-link col icon" href="#">
+                        <a class="nav-link col-1 icon" href="#">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a class="nav-link col icon border-0" href="#">
+                        <a class="nav-link col-1 icon border-0" href="#">
                             <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
 
             </div>
-        </section>
-
+        </div>
     </footer>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

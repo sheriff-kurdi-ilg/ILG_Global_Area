@@ -9,17 +9,8 @@ namespace ILG_Global.Web.Controllers
 {
     public class AboutController : Controller
     {
-        //public ICaseProcessDetailRepository CaseProcessDetailRepository { get; }
-
-        //public AboutController(ICaseProcessDetailRepository caseProcessDetailRepository)
-        //{
-        //    CaseProcessDetailRepository = caseProcessDetailRepository;
-        //}
-
-
         public IActionResult Index()
         {
-
             return View();
         }
     }

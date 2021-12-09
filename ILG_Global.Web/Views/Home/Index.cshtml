@@ -47,8 +47,12 @@
 
     <link href="../../Assets/css/modal.css" rel="stylesheet" />
 
-    <link href="@Localizer["/Assets/css/site.en.css"]" rel="stylesheet" />
+    <link href="~/Assets/css/site.en.css" rel="stylesheet" />
 
+    @if (System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft)
+    {
+           <link href="~/Assets/css/site.ar.css" rel="stylesheet" />
+    }
     <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
 </head>
@@ -63,7 +67,7 @@
         </header>
 
         <!--main-->
-        <main>
+        <main class="home">
 
             @await Html.PartialAsync("_LeaderBoard", Model.LeaderBoardSectionHeaderContent)
 
@@ -71,31 +75,31 @@
 
 
 
-            <div class="quick-contact-main-container row .d-none .d-sm-block" id="floatCall">
-                <style>
-                </style>
+<!--             <div class="quick-contact-main-container row .d-none .d-sm-block" id="floatCall"> -->
+<!--                 <style> -->
+<!--                 </style> -->
 
-                <div class="row quick-contact">
+<!--                 <div class="row quick-contact"> -->
 
-                    <div class="row col-md-6 col-sm-12 float-right ilg-to-oppisit-direction">
-                        <div class="col-md-4 left-wing wings quick-contact-container">
-                            <a class="link" target="_blank" href="@Localizer["tel:0096522499777"]"></a>
-                        </div>
+<!--                     <div class="row col-md-6 col-sm-12 float-right ilg-to-oppisit-direction"> -->
+<!--                         <div class="col-md-4 left-wing wings quick-contact-container"> -->
+<!--                             <a class="link" target="_blank" href="@Localizer["tel:0096522499777"]"></a> -->
+<!--                         </div> -->
 
-                        <div class="col-md-3 center-circle quick-contact-container">
+<!--                         <div class="col-md-3 center-circle quick-contact-container"> -->
 
-                        </div>
-                        <div class="col-md-4 right-wing wings quick-contact-container">
-                            <a class="link" target="_blank" href="@Localizer["http://wa.me/0096565669292"]"></a>
-                        </div>
-                    </div>
+<!--                         </div> -->
+<!--                         <div class="col-md-4 right-wing wings quick-contact-container"> -->
+<!--                             <a class="link" target="_blank" href="@Localizer["http://wa.me/0096565669292"]"></a> -->
+<!--                         </div> -->
+<!--                     </div> -->
 
-                </div>
+<!--                 </div> -->
 
-                <script>
+<!--                 <script> -->
 
-                </script>
-            </div>
+<!--                 </script> -->
+<!--             </div> -->
 
 
             @await Html.PartialAsync("_OurServices", Model.OurServices)

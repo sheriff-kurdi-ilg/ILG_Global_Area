@@ -1,7 +1,7 @@
 ﻿@using ILG_Global.BussinessLogic.Models
 @using ILG_Global.BussinessLogic.ViewModels
 
-@model List<OurServiceVM> 
+@model List<OurServiceVM>
 @{
     Layout = null;
 
@@ -24,20 +24,23 @@
 
 
     <!-- OUR SERVICES section-->
-<div class="wrapper">
+<div id="ourServices" class="wrapper">
     <div style="z-index: 2;">
-        <section id="ourService" class="container our-service-section general-section" dir="ltr">
-            <div id="our-service-slider" class="owl-carousel owl-theme">
+        <section id="ourService" class="home-section our-service-section general-section position-relative" dir="ltr">
+            <div class="shield-bg py-5 col-2 col-sm-2 col-md-12">
+                <img class="w-auto h-100" src="/Assets/images/OurServiceBackGround.svg">
+            </div>
+            <div id="our-service-slider" class="container owl-carousel owl-theme position-relative">
 
                 @foreach (OurServiceVM oOurServiceVM in Model)
                 {
                     vResetImageSpacing();
 
                     <div class="row contact-list justify-content-between align-items-center flex-column-reverse flex-sm-column-reverse flex-md-row">
-                        <div class="col-12 col-sm-12 col-md-6 col-lg-7">
-                            <div class="our-service-slider-image-col">
-                                <div class="our-service-slider-image" style="bottom: 30px">
-                                    <img src="~/assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                        @*<div class="col-12 col-sm-12 col-md-6 col-lg-7">
+                            <div class="our-service-slider-image-col position-relative" style="min-height: 65vh">
+                                <div class="our-service-bg-img our-service-slider-image" style="bottom: 30px">
+                                    <img src="/Assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
                                 </div>
 
                                 @foreach (ImageDetail oImageDetail in oOurServiceVM.ImageDetails)
@@ -49,6 +52,20 @@
                                     vIncreaseImageSpacing();
                                 }
                             </div>
+                        </div>*@
+                        
+                        <div class="img-col-container p-0 position-relative">
+                            <div class="img-container position-absolute back-img">
+                                <img src="/Assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                            </div>
+                             @foreach (ImageDetail oImageDetail in oOurServiceVM.ImageDetails){
+                                 <div class="img-container position-absolute top-img">
+                                     <img src="/Assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
+                                 </div>
+
+                                 vIncreaseImageSpacing();
+                             }
+                          
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
                             <div class="row title">
@@ -59,25 +76,14 @@
                                     </h6>
                                 </div>
                             </div>
-                            <p dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
-                                @oOurServiceVM.Summary
-                            </p>
+                            <div class="justify-text-center" dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
+                               @Html.Raw(oOurServiceVM.Summary)
+                            </div>
                         </div>
                     </div>
                 }
-
-
-
-
-
-
-
-
             </div>
         </section>
-    </div>
-    <div style=" position: absolute; z-index: 1; right: 0px;">
-        <img src="~/Assets/images/OurServiceBackGround.svg">
     </div>
 </div>
 

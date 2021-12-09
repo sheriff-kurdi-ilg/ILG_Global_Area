@@ -4,128 +4,132 @@
 @using Microsoft.AspNetCore.Localization;
 @using Microsoft.AspNetCore.Mvc.Localization;
 @model SuccessStoriesVM
+@inject IViewLocalizer Localizer
 
 @{
     string PreferredLanguadge = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
     Layout = null;
 }
 <!-- success story section-->
-<section id="succesStories" class="container success-story-section general-section">
-    <div class="row title">
-        <div class="col-12 col-sm-12 col-md-6">
-            <h5 class="pb-4 pt-5">@Model.SuccessStoriesSectionHeaderContent.Title</h5>
-            <h6>
-                @Model.SuccessStoriesSectionHeaderContent.SubTitle
-            </h6>
+<section id="successStories" class="success-story-section general-section">
+    <div class="container">
+        <div class="row title">
+            <div class="col-12 col-sm-12 col-md-6">
+                <h5 class="pb-4 pt-5">@Model.SuccessStoriesSectionHeaderContent.Title</h5>
+                <h6>
+                    @Model.SuccessStoriesSectionHeaderContent.SubTitle
+                </h6>
+            </div>
         </div>
-    </div>
-    <div class="row contact-list flex-column-reverse flex-sm-column-reverse flex-md-row">
-        <div id="success-story-slider" class="owl-carousel owl-theme">
+        <div class="row contact-list flex-column-reverse flex-sm-column-reverse flex-md-row">
+            <div id="success-story-slider" class="owl-carousel owl-theme">
 
-            @if (Model.SucessStoryDetails.Any())
-            {
-                foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
+                @if (Model.SucessStoryDetails.Any())
                 {
-                    <div class="item position-relative">
-                        <img src="~/Assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
-                        <div class="overlay w-100 h-100 position-absolute"></div>
-                        <div data-successStoryItem="" class="slider-content text-white position-absolute p-4">
-                            <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
-                            <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)">
-                                <span>Learn More</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-                }
-            }
-        </div>
-
-
-
-
-    </div>
-
-
-    @foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
-    {
-        <div class="modal fade ilg-modal-popup-window" id="@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="width:100%;">
-            <div class="modal-dialog modal-dialog-centered modal-xl" style="width:100%;">
-                <div class="modal-content">
-                    <div class="modal-header">
-
-
-                        <button type="button" class="btn me-auto" data-bs-dismiss="modal" aria-label="Close">
-                            <img src="/Assets/fontawesome/svgs/Modal/3-layers.svg">
-                        </button>
-                    </div>
-
-                    <div class="modal-body">
-                        <h2 class="modal-title" id="modal-title">@oSucessStoryDetail.Title</h2>
-                        <p>
-                            @oSucessStoryDetail.Summary
-                        </p>
-                    </div>
-                    <div class="modal-footer ">
-                        <div class="row w-100">
-                            <div class="col-sm">
-                                <button type="button" class="btn me-auto callus" data-bs-dismiss="modal">
-                                    <img src="/Assets/fontawesome/svgs/Modal/Icon_material-call.svg" class="icon">
-                                    <span class="txt">Call Us</span>
+                    foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
+                    {
+                        <div class="item position-relative">
+                            <img src="~/Assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
+                            <div class="overlay w-100 h-100 position-absolute"></div>
+                            <div data-successStoryItem="" class="slider-content text-white position-absolute p-4">
+                                <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
+                                <button class="btn p-0 ilg-modal-open-button " data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)">
+                                    <span>@Localizer["Learn More"]</span>
+                                    <i class="fas fa-arrow-right"></i>
                                 </button>
                             </div>
-                            <div class="col-sm">
-                                @*<button type="button" class="btn me-auto makeappointment">
-                                        <img src="~/Assets/fontawesome/svgs/Modal/Icon_material-perm-contact-calendar.svg" class="icon">
-                                        <span class="txt">Make an appointmnent</span>
-                                    </button>*@
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+        <button type="button" class="p-0 m-0 shareViaMailModal-launch-btn" style="visibility: hidden" data-bs-toggle="modal" data-bs-target="#shareViaMailModal"></button>
+
+        <div class="modal fade " id="shareViaMailModal" tabindex="-1" aria-labelledby="shareViaMailModal"
+             aria-hidden="true">
+            <div class="contact-list-modal modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                aria-label="Close">
+                            <i class="far fa-times-circle"></i>
+                        </button>
+                    </div>
+                    <div class="container p-0">
+                        <h1>@Localizer["Share Via Mail"] </h1>
+                    </div>
+
+                    <div class="modal-body container hide-native-scrollbar">
+                        <form>
+                            <div class="">
+                                <!-- <label for="email" class="col-form-label">Email:</label>-->
+                                <input type="email" class="form-control form-control-lg" id="colFormLabelLg" placeholder="Email">
                             </div>
-                            <div class="col-sm">
-                                <div>
-                                    <button type="button" class="btn me-auto shareviaemail" data-bs-toggle="collapse" href="#coll" aria-expanded="false" aria-controls="collapseExample">
-                                        <img src="/Assets/fontawesome/svgs/Modal/Icon_ionic-md-share.svg" class="icon">
-                                        <span class="txt">Share Via Email</span>
-                                    </button>
-                                </div>
+                        </form>
+                    </div>
+                    <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
+
+                        <li class="col-md-4 my-3 my-sm-3 my-md-0">
+                            <button data-bs-dismiss="modal" class="close-btn border-0 bg-white w-100 py-3 text-black d-flex justify-content-center align-items-center mx-auto">
+                                <span class="px-3">@Localizer["Cancel"]</span>
+                            </button>
+                        </li>
+                        <li class="col-md-4 my-3 my-sm-3 my-md-0">
+                            <button class="btn w-100 py-3 d-flex justify-content-center align-items-center mx-auto">
+                                <span class="px-3">@Localizer["Send"]</span>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
 
+        @foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
+        {
+            <div class="modal fade" id="@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="contact-list-modal modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close m-0" data-bs-dismiss="modal"
+                                    aria-label="Close">
+                                <i class="far fa-times-circle"></i>
+                            </button>
+                        </div>
+                        <div class="container p-0 mb-2">
+                            <h1>@oSucessStoryDetail.Title</h1>
+                        </div>
+
+                        <div class="modal-body container hide-native-scrollbar">
+                            <div class="justify-text-center" style="height: 350px;">
+                                @Html.Raw(oSucessStoryDetail.Summary)
+                                <span style="color: red; font-size: 15px">@Localizer["..... Continue With Share Via Mail"]</span>
                             </div>
                         </div>
-                  
-                        <div class="row w-100">
-
-                            <div class="col-sm-6">
-
-                                <div class="collapse" id="coll">
-                                    <div class="card  card-body">
-
-                                        <form id="frmSendViaEmail" asp-controller="Home"
-                                              asp-action="ShareViaEmailSubscribe" method="post" role="form" asp-route-culture="@PreferredLanguadge">
-                                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
-                                            <div class="row">
-                                                <div class="col-10">
-                                                    <input asp-for="ShareViaEmailSubscriberEmail" class="form-control" type="email" placeholder="Enter Your Email" id="Email" onchange="Alert()">
-                                                </div>
-                                                <div class="col-2">
-                                                    <button type="submit" class="btn SendButton">Send</button>
-                                                </div>
-                                                <span asp-validation-for="ShareViaEmailSubscriberEmail" class="text-danger"></span>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <ul class="row flex-wrap info py-md-4 justify-content-between align-items-center mx-auto container">
+                            <li class="col-md-3 my-3 my-sm-3 my-md-0">
+                                <button class="btn w-100 px-2 py-3 d-flex justify-content-center align-items-center mx-auto">
+                                    <i class="fas fa-phone"></i>
+                                    <span class="px-3">@Localizer["Call Us"]</span>
+                                </button>
+                            </li>
+                            <li class="col-md-5 my-3 my-sm-3 my-md-0 d-flex justify-content-center align-items-center">
+                                @*<a href="#" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">
+                                    <i class="fas fa-address-book"></i>
+                                    <span class="px-3">!Make an appointment</span>
+                                </a>*@
+                            </li>
+                            <li class="col-md-4 my-3 my-sm-3 my-md-0 d-flex justify-content-center align-items-center">
+                                <a id="share-via-mail" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">
+                                    <i class="fas fa-share-alt"></i>
+                                    <span class="px-3">@Localizer["Share Via Mail"]</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-
-        </div>
-    }
+        }
+    </div>
 </section>
-
-
-
-
-
