@@ -27,74 +27,67 @@
 
 
 <!-- =========================================== nav-section =========================================== -->
-<div class="nav-section" id="nav">
-    <nav class="navbar navbar-expand-lg navbar-light pt-4" id="full-nav">
-        <div class="container">
-<a href="/">            <img class="navbar-brand" src="~/Assets/images/Mask_Group_25.png" alt="ILg logo" />
-</a>            <button class="navbar-toggler border-0" type="button" id="toggler-btn">
-                <i class="fas fa-bars green fa-2x"></i>
-            </button>
+<nav class="navbar navbar-expand-lg">
+            <div class="container py-4 px-3 px-sm-3 px-md-0">
+                <a class="navbar-brand col-12 col-sm-12 col-md-2">
+                    <img loading="lazy" class="img-brand white-img"
+                         src="/Assets/images/Group_25@2x.png"
+                         alt="Ideaeg logo">
+                    <img loading="lazy" class="img-brand dark-img d-none"
+                         src="/Assets/images/Mask_Group_25.png"
+                         alt="Ideaeg logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                     aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end w-100 p-0">
+                            <ul class="navbar-nav p-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active hover-underline-animation px-2" href="#ourService">@Localizer["Law Service"] </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active hover-underline-animation px-2" href="#successStories">@Localizer["Who are we"]</a>
+                                </li>
+                                <li class="nav-item hover-underline-animation">
+                                </li>
+                                <li class="nav-item hover-underline-animation">
+                                    <a class="nav-link active hover-underline-animation px-2" href="#contactUs">@Localizer["How we do"] </a>
+                                </li>
+                                <li class="nav-item hover-underline-animation">
+                                    <a class="nav-link active hover-underline-animation px-2" href="#contactUs">@Localizer["Contact us"]  </a>
+                                </li>
+                            </ul>
+                            <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+                                <a class="nav-link toggle-lang" href="#">
 
-            <!-- =========================================== social in mobile navbar =======================================================-->
-            <div class="social-nav" id="social-navbar">
-
-                <a href="#"><i class="fab fa-instagram mob-social h5 pe-2 border-end "></i> </a>
-                <a href="#"><i class="fab fa-twitter mob-social h5 px-2 border-end"></i> </a>
-                <a href="#"><i class="fab fa-facebook-f mob-social h5 px-2 border-end"></i> </a>
-                <a href="#"><i class="fab fa-youtube mob-social h5 ps-2"></i> </a>
-
-            </div>
-            <!-- =========================================== /social in mobile navbar ===================================================-->
-            <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <div class="d-flex justify-content-around align-items-center w-100">
-                    <ul class="navbar-nav mb-lg-0 px-auto ">
-
-                        <li class="nav-item px-3">
-                            <a class="nav-link text-dark" href="#Family">@Localizer["Law Service"] </a>
-                        </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link text-dark" href="#about">@Localizer["Who are we"] </a>
-                            <!-- ############################## href needed #######-->
-                        </li>
-                        <li class="nav-item px-3">
-                            <a class="nav-link text-dark" href="#ourwork">@Localizer["How we do"] </a>
-                        </li>
-                        <li class="nav-item  ps-3 ">
-                            <a class="nav-link text-dark" href="#contact">@Localizer["Contact us"] </a>
-                        </li>
-                    </ul>
-
-                                <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
-       
-
-
-                            @if (requestCulture.RequestCulture.Culture.Name == "ar")
-                            {
-                                <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
-                                    <form id="SelectEnglish" action="/en/services">
-                                       
+                                    @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                                    {
+                                      <form id="SelectEnglish" action="/en/">
+                                          <button type="submit" class="btn btn-default btn-xs nav-link">
+                                              <i class="fas fa-globe px-2"></i>
+                                              EN
+                                          </button>
+                                      </form>
+                                    }
+                                    else
+                                    {
+                                     <form id="SelectEnglish" action="/ar/">
                                         <button type="submit" class="btn btn-default btn-xs nav-link">
-                                            <i class="fas fa-globe"></i>
-                                            EN
-                                        </button>
-                                        
-                                    </form>
-                                </div> }
-                            else
-                            {
-                                <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
-                                    <form id="SelectEnglish" action="/ar/services">
-                                        <button type="submit" class="btn btn-default btn-xs nav-link">
-                                            <i class="fas fa-globe"></i>
+                                            <i class="fas fa-globe px-2"></i>
                                             AR
                                         </button>
-
-                                    </form>
-                                </div>
-                       
-                            }
-
-
+                                      </form>
+                                    }
+                                </a>
                             </li>
                             <li class="nav-item row justify-content-center align-items-center icon-col">
                                 <a class="nav-link col icon" href="#">
@@ -111,71 +104,17 @@
                                 </a>
                             </li>
                         </ul>
-
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!-- =========================================== mobile navbar ========================================================= -->
-    <div class="mobile-nav text-center " id="hide-nav">
-        <h4 class="nav-color pt-5 pb-2">@Localizer["MENU"] </h4>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Law Service"] </a>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#about">@Localizer["Who are we"] </a>
-        <!-- #################### needs href ###3-->
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#ourwork">@Localizer["How we do"] </a>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#contact">@Localizer["Contact us"] </a>
+<script>
+    window.addEventListener("scroll", function () {
 
-        <h4 class="nav-color pt-5 pb-2">@Localizer["SERVICE"] </h4>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Heritage"] </a>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Kinship ties issues"] </a>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Family Law | Divorce Law"] </a>
-        <a class="nav-link accent-color fw-bold sm-link-click" href="#Family">@Localizer["Burden of proof child custody"] </a>
+        var header = this.document.querySelector("nav");
+        header.classList.toggle("scroll", this.window.scrollY > 0);
 
-        @if (requestCulture.RequestCulture.Culture.Name == "ar")
-        {
-            <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
-                <form id="SelectEnglish" action="/en/">
-
-                    <button type="submit" class="btn btn-default btn-xs nav-link">
-                        <i class="fas fa-globe"></i>
-                        EN
-                    </button>
-
-                </form>
-            </div> }
-        else
-        {
-            <div class="nav-link" title="@Localizer["Request culture provider:"] @requestCulture?.Provider?.GetType().Name">
-                <form id="SelectEnglish" action="/ar/">
-                    <button type="submit" class="btn btn-default btn-xs nav-link">
-                        <i class="fas fa-globe"></i>
-                        AR
-                    </button>
-
-                </form>
-            </div>
-
-        }
-
-
-        <a href="innerPage-ar.html" class="language d-flex justify-content-center align-items-center py-3  ">
-            <i class="fas fa-globe me-2 fa-2x"></i>
-            <span class="h4 mb-0">
-                @Localizer["AR"]
-            </span>
-        </a>
-
-        <a href="index.html" class="language d-flex justify-content-center align-items-center py-3 ">
-            <span class="h4 mb-0">
-                EN
-            </span>
-            <i class="fas fa-globe me-2 fa-2x"></i>
-        </a>
-
-    </div>
-    <!-- =========================================== /mobile navbar ========================================== -->
-
-
-</div>
+    })
+</script>
 <!-- =========================================== /nav-section =========================================== -->

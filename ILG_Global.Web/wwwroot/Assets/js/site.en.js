@@ -122,38 +122,6 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function () {
-    $(".arrow-bottom").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("footer").offset().top
-        }, 100);
-    });
-
-    $(".arrow-top").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $("header").offset().top
-        }, 100);
-    });
-
-    $(".ourService").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(".our-service-section").offset().top
-        }, 100);
-    });
-    $(".succesStories").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(".success-story-section").offset().top
-        }, 100);
-    });
-    $(".contactUs").click(function () {
-        $([document.documentElement, document.body]).animate({
-            scrollTop: $(".contact-us-section").offset().top
-        }, 100);
-    });
-})
-
-
-
 $('#success-story-slider').owlCarousel({
     autoPlay: 3000,
     speed: 0.5,

@@ -4,35 +4,37 @@
 }
 
 <!-- ============================= about-section ====================================================-->
-
-<section id="about" class="left position-relative">
-    <div class="container pt-5 mt-5">
-        <div class="pt-5 m-auto">
-            <div class="row">
-                <div class="col-lg-6">
-                    <p class="green ">@Model.AboutILGSectionContentDetail.Title </p>
-                    <h2 class="h1 pt-5 darkBlue fw-bold">@Model.AboutILGSectionContentDetail.SubTitle</h2>
-                    <p class="mb-5 pb-5">
-                        @Html.Raw(Model.AboutILGSectionContentDetail.Summary)
-
-                        @*<span class="h3">W</span>e are uniquely positioned to provide fully
-                        integrated
-                        services across a
-                        broad array of
-                        practice areas. We pursue each matter with both diligence and creativity to achieve optimal
-                        results.*@
-                    </p>
-                </div>
-                <div class="col-lg-6 pt-1 ps-5">
-                    <div class="position-relative text-end">
-                        <img src="~/Assets/images/Mask.middle.png" alt="">
-                        <div class="layer2">
-                            <img src="~/Assets/images/@Model.AboutILGSectionImageDetail.ImageMaster.Name" alt="@Model.AboutILGSectionImageDetail.AlternateText">
+        <section id="about" class="home-section our-service-section general-section position-relative" dir="ltr">
+            <div class="shield-bg py-5 col-2 col-sm-2 col-md-12">
+                <img class="w-auto h-100" src="~/Assets/images/OurServiceBackGround.svg">
+            </div>
+            <div id="about-container" class="container ">
+                <div class="row about-list justify-content-between align-items-center flex-column flex-sm-column flex-md-row">
+                 
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column">
+                        <div class="row title">
+                            <div class="col-12 col-sm-12 col-md-12">
+                                <h5 class="pb-4 pt-5">@Model.AboutILGSectionContentDetail.Title </h5>
+                                <h6>
+                                    @Model.AboutILGSectionContentDetail.SubTitle
+                                </h6>
+                            </div>
+                        </div>
+                        <div class="justify-text-center">
+                            @Html.Raw(Model.AboutILGSectionContentDetail.Summary)
                         </div>
                     </div>
+                    <div class="img-col-container p-0 position-relative my-5">
+                        <div class="img-container position-absolute back-img">
+                            <img src="/Assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
+                        </div>
+                        <div class="img-container position-absolute top-img">
+                            <img src="/Assets/images/vb.png" alt="@Model.AboutILGSectionImageDetail.AlternateText" class="w-100 h-100">
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+            </section>
 <!-- ============================= /about-section =============================-->
+   

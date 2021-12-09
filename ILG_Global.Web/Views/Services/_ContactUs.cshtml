@@ -1,69 +1,40 @@
 ﻿@using ILG_Global.BussinessLogic.ViewModels
 @model ContactUsSectionVM
+@using ILG_Global.BussinessLogic.Models
 @{
 }
 
 <!-- ============================= contact us section =============================-->
-<div class="contact-us " id="contact">
+<section id="contactUs" class="home-section contact-us-section general-section">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 pt-5 mt-5">
-                <p class="contact-title pt-5 green">@Model.ContactUsSectionHeaderContent.Title </p>
-                <p class="contact-description display-5 fw-bolder">
-                    Ready To Solve Your Case,
-                    We Have Got You Covered!
-                </p>
-                <p class="contact-description-sm display-5 fw-bolder">
-                    We Have Got You Covered!
-                </p>
+        <div class="row title">
+            <div class="col-12 col-sm-12 col-md-6">
+                <h5 class="pb-4 pt-5">@Model.ContactUsSectionHeaderContent.Title</h5>
+                <h6>
+                    @Model.ContactUsSectionHeaderContent.SubTitle
+                </h6>
             </div>
         </div>
-        <div class="row py-4">
-            <div class="col-md-6 pt-5">
-                <div class="contact-info">
-                    <div class="pb-4 d-flex">
-                        <i class="fas fa-phone fa-2x"></i>
-                        <a href="#" class="ps-5 fs-4">+96522499777</a>
-                    </div>
-                    <div class="py-4 d-flex">
-                        <i class="fas fa-envelope fa-2x"></i>
-                        <a href="#" class="ps-5 fs-4 ">info@ilgglobal.com</a>
-                    </div>
-                    <div class="py-4 d-flex">
-                        <i class="fas fa-map-marker-alt fa-2x"></i>
-                        <p class="fs-4 ps-5">
-                            Kuwait-Dasman- street 135-
-                            white house building #2-2nd floor
-                        </p>
-                    </div>
-                    <div class="py-4 d-flex">
-                        <i class="fas fa-map-marked-alt fa-2x"></i>
-                        <p class="fs-4 ps-5">
-                            Kuwait-Dasman-15400
-                        </p>
-                    </div>
-                </div>
+        <div class="row contact-list">
+            <div class="col-12 col-sm-12 col-md-6">
+                <ul class="col-12 col-sm-12 col-md-9 px-0">
+                    @if (Model.ContactInformationDetails.Any())
+                    {
+                        foreach (ContactInformationDetail oContactInformationDetail in Model.ContactInformationDetails)
+                        {
+                            <li class="py-4">
+                                <i class="@oContactInformationDetail.ContactInformationMaster.FontAwsomeIconCssClass hi123"></i>
+                                <a href="@oContactInformationDetail.ContactInformationMaster.NavigationURL" class="px-4"> @oContactInformationDetail.Text</a>
+                            </li>
+                        }
+                    }
+                </ul>
             </div>
-
-
-            <!--<div class="col-md-6 py-4">-->
-            @*<div class="map w-100 d-flex justify-content-center align-items-center">
-                    <button class="btn text-white rounded-pill px-5 py-3">
-            Explore map
-        </button>
-
-            </div>*@
-
-            <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.894945596146!2d47.99504577697576!3d29.386463226876852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf849d08e12009%3A0xda8f7499d20095bd!2sDasman%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2seg!4v1635987829024!5m2!1sen!2seg"
-                style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>-->
             <div class="col-12 col-sm-12 col-md-6">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6952.894945596146!2d47.99504577697576!3d29.386463226876852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf849d08e12009%3A0xda8f7499d20095bd!2sDasman%2C%20Kuwait%20City%2C%20Kuwait!5e0!3m2!1sen!2seg!4v1635987829024!5m2!1sen!2seg"
                         style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-
     </div>
-
-</div>
+</section>
 <!-- ============================= /contact us section =============================-->
