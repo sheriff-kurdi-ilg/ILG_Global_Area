@@ -2,7 +2,7 @@
 
 namespace ILG_Global.DataAccess.Migrations
 {
-    public partial class addedcolumns_to_html2 : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

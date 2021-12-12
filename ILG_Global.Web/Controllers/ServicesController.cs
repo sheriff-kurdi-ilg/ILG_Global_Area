@@ -4,6 +4,7 @@ using ILG_Global.BussinessLogic.ViewModels;
 using ILG_Global.Web.Tools;
 
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -70,16 +71,17 @@ namespace ILG_Global.Web.Controllers
 
             oServicesPageVM.AboutILGSectionVM = await oAboutILGSectionVMCreate(sCultureCode);
 
-            oServicesPageVM.HowWeWorkSectionContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(7, sCultureCode);
+            oServicesPageVM.HowWeWorkSectionVM = await oHowWeWorkSectionVMCreate(sCultureCode);  
 
             oServicesPageVM.ContactUsSectionViewModel = await oContactUsViewModelCreate(sCultureCode);
 
             return oServicesPageVM;
         }
 
+
         private async Task<List<OurServiceVM>> oOurserviceViewModelCreate(string sCultureCode)
         {
-            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllAsync(sCultureCode);
+            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllEnabledAsync(sCultureCode);
             List<OurServiceVM> lOurServiceVMs = new List<OurServiceVM>();
 
             List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll(sCultureCode);
@@ -122,6 +124,16 @@ namespace ILG_Global.Web.Controllers
 
             return oAboutILGSectionVM;
         }
+
+        private async Task<HowWeWorkSectionVM>  oHowWeWorkSectionVMCreate(string sCultureCode)
+        {
+            HowWeWorkSectionVM oHowWeWorkSectionVM = new HowWeWorkSectionVM();
+
+            oHowWeWorkSectionVM.HowWeWorkSectionContentDetail = await HtmlContentDetailRepository.SelectByIdAsync(7, sCultureCode);
+
+            return oHowWeWorkSectionVM;
+        }
+
 
         private async Task<ContactUsSectionVM> oContactUsViewModelCreate(string sCultureCode)
         {

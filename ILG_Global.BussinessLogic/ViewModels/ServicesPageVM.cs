@@ -10,7 +10,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
 
         public AboutILGSectionVM AboutILGSectionVM { get; set; }
 
-        public HtmlContentDetail HowWeWorkSectionContentDetail { get; set; }
+        public HowWeWorkSectionVM HowWeWorkSectionVM { get; set; }
         public SuccessStoriesVM SuccessStoriesViewModel { get; set; }
         /** regarding steps we will return to it once we made the animation **/
         public ContactUsSectionVM ContactUsSectionViewModel { get; set; }

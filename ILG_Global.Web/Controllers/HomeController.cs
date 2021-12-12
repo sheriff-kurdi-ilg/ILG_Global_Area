@@ -99,7 +99,7 @@ namespace ILG_Global.Web.Controllers
             string CultureCode = CultureProvider.GetCurrentCulture();
 
             oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, CultureCode).Result;
-            oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllAsync(CultureCode).Result;
+            oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllEnabledAsync(CultureCode).Result;
 
             return oSuccessStoriesVM;
         }
@@ -107,7 +107,7 @@ namespace ILG_Global.Web.Controllers
         private async Task<List<OurServiceVM>> oOurserviceViewModelCreate()
         {
             string CultureCode = CultureProvider.GetCurrentCulture();
-            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllAsync(CultureCode);
+            List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllEnabledAsync(CultureCode);
             List<OurServiceVM> lOurServiceVMs = new List<OurServiceVM>();
 
             List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll(CultureCode);

@@ -1,187 +1,190 @@
-﻿
-@{
-}
+﻿@model ILG_Global.BussinessLogic.ViewModels.HowWeWorkSectionVM
+@using Microsoft.AspNetCore.Mvc.Localization;
+
+@inject IViewLocalizer Localizer
 
 <!-- ============================= ourWork-section =============================-->
 
-        <section class="steps-container contact-us-section general-section py-3 py-sm-3 py-md-5 my-2 my-sm-2 my-md-5">
-            <div class="container row contact-list align-items-start">
-                <div class="col-12 col-sm-12 col-md-4">
-                    <div class="row title">
-                        <div class="col-12 col-sm-12 col-md-6 w-100">
-                            <h5 class="pb-4 pt-5">HOW WE DO</h5>
-                            <h6>
-                                Case Process
-                                <br>
-                                Steps
-                            </h6>
+<section class="steps-container contact-us-section general-section py-3 py-sm-3 py-md-5 my-2 my-sm-2 my-md-5">
+    <div class="container row contact-list align-items-start">
+        <div class="col-12 col-sm-12 col-md-4">
+            <div class="row title">
+                <div class="col-12 col-sm-12 col-md-6 w-100">
+                    <h5 class="pb-4 pt-5">@Model.HowWeWorkSectionContentDetail.Title </h5>
+                    <h6>
+                        @Model.HowWeWorkSectionContentDetail.SubTitle
+                    </h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-sm-12 col-md-8" style="padding: 200px 0">
+            <div class="d-flex justify-content-center justify--content-sm-center justify-content-md-end">
+                <div class="outerCircle" data-aos-delay="300" data-aos="fade-up">
+                    <div class="dots">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                        </div>
+                    </div>
+                    <div class=" position-relative">
+                        <div class="circle mb-5">
+                            <div class="middle-circle">
+                                <div class="white-circle">
+                                    <img src="~/Assets/images/Message.svg" alt="Message icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dotsData">
+                            <div class="d-flex flex-column justify-content-center align-items-center ">
+                                <div class="innerCircle">
+                                    <div class="greenDot"></div>
+                                </div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="triangleDown"></div>
+                                <div class="circle-text toleft">
+                                    @*<p class="mb-0">1."Receipt of case papers."</p>*@
+                                    <p class="mb-0">@Localizer["1.Receipt of case papers."] </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-sm-12 col-md-8" style="padding: 200px 0">
-                    <div class="d-flex justify-content-center justify--content-sm-center justify-content-md-end">
-                        <div class="outerCircle" data-aos-delay="300" data-aos="fade-up" >
-                            <div class="dots">
-                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                </div>
-                            </div>
-                            <div class=" position-relative">
-                                <div class="circle mb-5">
-                                    <div class="middle-circle">
-                                        <div class="white-circle">
-                                            <img src="~/Assets/images/Message.svg" alt="Message icon">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dotsData">
-                                    <div class="d-flex flex-column justify-content-center align-items-center ">
-                                        <div class="innerCircle">
-                                            <div class="greenDot"></div>
-                                        </div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="triangleDown"></div>
-                                        <div class="circle-text toleft">
-                                            <p class="mb-0">1."Receipt of case papers."</p>
-                                        </div>
-                                    </div>
+
+                <!-- ===============================================================SECOND CIRCLE==================================================================================== -->
+
+                <div class="outerCircle" data-aos-delay="600" data-aos="fade-up">
+                    <div class="dots">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                        </div>
+                    </div>
+                    <div class="position-relative">
+                        <div class="rotatedcircle mt-5">
+                            <div class="middle-circle">
+                                <div class="white-circle">
+                                    <img src="~/Assets/images/letter.svg" alt=" letter logo">
                                 </div>
                             </div>
                         </div>
-
-                        <!-- ===============================================================SECOND CIRCLE==================================================================================== -->
-
-                        <div class="outerCircle" data-aos-delay="600" data-aos="fade-up">
-                            <div class="dots">
-                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
+                        <div class="dotsDataFlipped">
+                            <div class="d-flex flex-column-reverse justify-content-center align-items-center ">
+                                <div class="innerCircle">
+                                    <div class="greenDot"></div>
                                 </div>
-                            </div>
-                            <div class="position-relative">
-                                <div class="rotatedcircle mt-5">
-                                    <div class="middle-circle">
-                                        <div class="white-circle">
-                                            <img src="~/Assets/images/letter.svg" alt=" letter logo">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dotsDataFlipped">
-                                    <div class="d-flex flex-column-reverse justify-content-center align-items-center ">
-                                        <div class="innerCircle">
-                                            <div class="greenDot"></div>
-                                        </div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="triangleUp"></div>
-                                        <div class="circle-text toRight">
-                                            <p class="mb-0">2."Filing and reviewing the case."</p>
-                                        </div>
-                                    </div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="triangleUp"></div>
+                                <div class="circle-text toRight">
+                                    @*<p class="mb-0">2."Filing and reviewing the case."</p>*@
+                                    <p class="mb-0">@Localizer["2.Filing and reviewing the case."]</p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- ===============================================================THIRD CIRCLE==================================================================================== -->
+                <!-- ===============================================================THIRD CIRCLE==================================================================================== -->
 
-                        <div class="outerCircle" data-aos-delay="900" data-aos="fade-up">
-                            <div class="dots">
-                                <div class="d-flex flex-column align-items-center justify-content-center">
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                    <div class="dots-sm"></div>
-                                </div>
-                            </div>
-                            <div class=" position-relative">
-                                <div class="circle mb-5">
-                                    <div class="middle-circle">
-                                        <div class="white-circle">
-                                            <img src="~/Assets/images/customer-service.svg" alt="customer-service logo">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dotsData">
-                                    <div class="d-flex flex-column justify-content-center align-items-center ">
-                                        <div class="innerCircle">
-                                            <div class="greenDot"></div>
-                                        </div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="triangleDown"></div>
-                                        <div class="circle-text toleft">
-                                            <p class="mb-0">3."Receipt of case papers."</p>
-                                        </div>
-                                    </div>
+                <div class="outerCircle" data-aos-delay="900" data-aos="fade-up">
+                    <div class="dots">
+                        <div class="d-flex flex-column align-items-center justify-content-center">
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                            <div class="dots-sm"></div>
+                        </div>
+                    </div>
+                    <div class=" position-relative">
+                        <div class="circle mb-5">
+                            <div class="middle-circle">
+                                <div class="white-circle">
+                                    <img src="~/Assets/images/customer-service.svg" alt="customer-service logo">
                                 </div>
                             </div>
                         </div>
-                        <!-- ===============================================================FOURTH CIRCLE==================================================================================== -->
-                        <div class="outerCircle" data-aos-delay="1200" data-aos="fade-up" >
-                            <div class="position-relative">
-                                <div class="rotatedcircle mt-5">
-                                    <div class="middle-circle">
-                                        <div class="white-circle">
-                                            <img src="~/Assets/images/court.svg" alt="">
-                                        </div>
-                                    </div>
+                        <div class="dotsData">
+                            <div class="d-flex flex-column justify-content-center align-items-center ">
+                                <div class="innerCircle">
+                                    <div class="greenDot"></div>
                                 </div>
-                                <div class="dotsDataFlipped">
-                                    <div class="d-flex flex-column-reverse justify-content-center align-items-center ">
-                                        <div class="innerCircle">
-                                            <div class="greenDot"></div>
-                                        </div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="biggerDots"></div>
-                                        <div class="triangleUp"></div>
-                                        <div class="circle-text toRight">
-                                            <p class="mb-0">4."The verdict in the case."</p>
-                                        </div>
-                                    </div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="triangleDown"></div>
+                                <div class="circle-text toleft">
+                                    @*<p class="mb-0">3."Receipt of case papers."</p>*@
+                                    <p class="mb-0">@Localizer["3.Receipt of case papers."]</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===============================================================FOURTH CIRCLE==================================================================================== -->
+                <div class="outerCircle" data-aos-delay="1200" data-aos="fade-up">
+                    <div class="position-relative">
+                        <div class="rotatedcircle mt-5">
+                            <div class="middle-circle">
+                                <div class="white-circle">
+                                    <img src="~/Assets/images/court.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dotsDataFlipped">
+                            <div class="d-flex flex-column-reverse justify-content-center align-items-center ">
+                                <div class="innerCircle">
+                                    <div class="greenDot"></div>
+                                </div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="biggerDots"></div>
+                                <div class="triangleUp"></div>
+                                <div class="circle-text toRight">
+                                    @*<p class="mb-0">4."The verdict in the case."</p>*@
+                                    <p class="mb-0">@Localizer["4.The verdict in the case."]</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 <!-- ============================= /ourWork-section =============================-->
-

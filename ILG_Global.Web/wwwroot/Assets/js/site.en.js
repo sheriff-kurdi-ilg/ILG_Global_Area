@@ -22,6 +22,10 @@ function isInViewport(element) {
     return false;
 }
 
+$("#frmShareViaEmail").submit(function (e) {
+    e.preventDefault();
+});
+
 $(document).on("click", "[data-share-via-email-a]", function () {
     /*
             $(".modal").removeClass("fade").modal("hide");
@@ -34,9 +38,6 @@ $(document).on("click", "[data-share-via-email-a]", function () {
 
     var nLanguageCode = $(this).attr("data-language-code");
     $("#txtCurrentLanguageCode").val(nLanguageCode);
-
-
-
 
 });
 
@@ -52,20 +53,43 @@ $(document).on("click", "#btnSuccessStorySend", function () {
 
     var oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
 
-    alert(JSON.stringify(oApiRequest) );
+    // alert(JSON.stringify(oApiRequest));
+    oApiRequest = JSON.stringify(oApiRequest);
+    vCallSuccessStoryShareViaEmailAPI(oApiRequest);
 
 });
 
-function vDDDD() { // languageID
+var oSuccessStoryShareViaEmailResponse; //  = { "SubscriptionID": 0, "IsSucceeded": false, "UserMessage": "" };
+function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
+    var sUrl = "/api/SuccessStoryShareViaEmail";
+
     $.ajax({
         type: "POST",
-        url: url,
-        data: data,
-        success: success,
-        dataType: dataType
+        dataType: "json",
+        contentType: "application/json",
+        url: sUrl,
+        async: true,
+        data: oApiRequest,
+    
+        success: function (xmlResponse) {
+            oSuccessStoryShareViaEmailResponse = JSON.parse(JSON.stringify(xmlResponse) );
+            console.log('returned response is: ', xmlResponse);
+
+            $('.btn-close').trigger('click');
+
+            $('#dvApiResultMessage').html(oSuccessStoryShareViaEmailResponse.userMessage);
+    
+            $('.shareViaMailModalGreeting-launch-btn').trigger('click');
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log('error is: ', errorThrown)
+        },
     });
 }
 
+$(document).on("click", "#btnUserMessage", function () {
+    $('.btn-close').trigger('click');
+});
 
 
 
