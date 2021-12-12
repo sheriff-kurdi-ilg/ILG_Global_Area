@@ -71,15 +71,27 @@ function vDDDD() { // languageID
 
 
 $(document).ready(function () {
+    $(".arrow-bottom").click(function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("footer").offset().top
+        }, 100);
+    });
+
+    $(".arrow-top").click(function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("header").offset().top
+        }, 100);
+    });
+
     if ($('body').children().has('.home')) {
         addBgToNavWhenScroll()
     }
     if (isInViewport($('footer'))) {
         $('header').addClass('d-none');
-        $('.contact-details').addClass('d-none');
+        $('.quick-contact-main-container').addClass('d-none');
     } else {
         $('header').removeClass('d-none');
-        $('.contact-details').removeClass('d-none');
+        $('.quick-contact-main-container').removeClass('d-none');
     }
 
 
@@ -90,10 +102,10 @@ $(document).ready(function () {
         }
         if (isInViewport($('footer'))) {
             $('header').addClass('d-none');
-            $('.contact-details').addClass('d-none');
+            $('.quick-contact-main-container').addClass('d-none');
         } else {
             $('header').removeClass('d-none');
-            $('.contact-details').removeClass('d-none');
+            $('.quick-contact-main-container').removeClass('d-none');
         }
     });
 
@@ -123,9 +135,11 @@ $(document).ready(function () {
 
 
 $('#success-story-slider').owlCarousel({
-    autoPlay: 3000,
-    speed: 0.5,
-    loop: true,
+    loop:true,
+    autoplay: true,
+    autoPlaySpeed: 5000,
+    autoPlayTimeout: 100,
+    stopOnHover : true,
     margin: 20,
     nav: true,
     navText: ["<i class=\"fas fa-arrow-left px-5\"></i>", " <i class=\"fas fa-arrow-right px-5\"></i>"],
@@ -152,12 +166,14 @@ $('#success-story-slider').owlCarousel({
 
 })
 $('#our-service-slider').owlCarousel({
-    autoPlay: 3000,
-    speed: 0.5,
+    autoplay: true,
+    autoPlaySpeed: 1000,
+    autoPlayTimeout: 200,
+    stopOnHover : true,    
     loop: true,
     margin: 20,
     items: 1,
-    rtl: false
+    rtl: false,
 })
 
 $.noConflict();

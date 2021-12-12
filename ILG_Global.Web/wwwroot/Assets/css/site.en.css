@@ -161,7 +161,7 @@ main {
 }
 
 .img-brand{
-    width: 70%;
+    width: 50%;
 }
 
 .navbar-nav .navbar-nav {
@@ -566,7 +566,7 @@ header {
 
 /*footer style*/
 footer .footer-gn-text {
-    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
     color: rgba(206, 216, 226, 0.31);
 }
 
@@ -590,7 +590,7 @@ footer .footer-col-title-container {
 }
 
 footer .footer-col-title {
-    font-size: calc(20px + (20 - 20) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(16px + (16 - 16) * ((100vw - 300px) / (1600 - 300)));
     color: rgba(12, 188, 171, 1);
     font-weight: 600;
     padding-bottom: 30px !important;
@@ -599,9 +599,10 @@ footer .footer-col-title {
 
 footer .footer-col-content, footer .footer-col-content a {
     text-decoration: none;
-    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(9px + (13 - 9) * ((100vw - 300px) / (1600 - 300)));
     color: rgba(255, 255, 255, 1);
     padding: 0;
+    font-weight: 300;
 }
 
 footer li {
@@ -620,7 +621,7 @@ footer .join-us-input button {
     border-radius: 25px !important;
     background: rgba(12, 188, 171, 1);
     color: white;
-    font-size: calc(13px + (13 - 13) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(9px + (13 - 9) * ((100vw - 300px) / (1600 - 300)));
 }
 
 footer .join-us-input {
@@ -642,7 +643,7 @@ footer .join-us-input input:focus {
     outline-width: 0 !important;
     color: white;
     outline: none;
-    font-size: calc(15px + (15 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(10px + (15 - 10) * ((100vw - 300px) / (1600 - 300)));
 }
 
 footer .footer-bottom {
@@ -652,9 +653,10 @@ footer .footer-bottom {
 }
 
 footer .footer-bottom .footer-bottom-row li, footer .footer-bottom .footer-bottom-row li a {
-    font-size: calc(18px + (18 - 18) * ((100vw - 300px) / (1600 - 300))) !important;
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300))) !important;
     text-decoration: none;
     cursor: pointer;
+    font-weight: 300;
 }
 
 footer .footer-bottom .footer-bottom-row li:hover {
@@ -666,8 +668,12 @@ footer .footer-bottom .footer-bottom-row li {
     padding: 0;
 }
 
+footer .copy-right:hover {
+    text-decoration: none !important;
+    cursor: inherit !important;
+}
 footer .footer-bottom .footer-bottom-row li a {
-    color: rgba(134, 147, 166, 1);
+    color: white;
 }
 
 
@@ -770,6 +776,15 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 
 @media (max-width: 1600px) {
+    .contact-details{
+        display: none !important;
+    }
+    .reversed-footer-col{
+        flex-direction: column-reverse !important;
+    }
+    .footer-line{
+        display: block !important;
+    }
     .navbar .navbar-brand {
         max-width: 100px;
     }
@@ -1152,6 +1167,7 @@ footer .footer-bottom .footer-bottom-row li a {
     max-height: auto !important;
 }
 
+
 .circle-text p {
     padding: 5px !important;
 }
@@ -1193,7 +1209,7 @@ footer .footer-bottom .footer-bottom-row li a {
 .contact-details {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 255px;
     cursor: pointer;
     z-index: 10000000;
 }
@@ -1249,32 +1265,42 @@ footer .footer-bottom .footer-bottom-row li a {
     justify-content: center;
     align-items: center;
     outline: 5px solid #093B6D;
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+
 }
 
 .arm1 {
-    left: -49px;
-    top: 70px;
+    left: -40px;
+    top: 54px;
     height: 10px;
     width: 50px;
     background-color: #093B6D;
+    display: none;
 }
 
 .arm2 {
-    right: -49px;
-    top: 80px;
+    right: -40px;
+    top: 47px;
     height: 10px;
     width: 50px;
     background-color: #093B6D;
+    display: none;
 }
 
 .left-contact {
     position: absolute;
-    left: 0px;
-    top: -39px;
+    left: -189px;
+    top: 30px;
     background-color: #0CBCAB;
     border-bottom-right-radius: 0px !important;
     padding: 10px 20px;
     border: 4px solid #093B6D;
+    display: none;
+
 }
 
 .fa-caret-left {
@@ -1302,15 +1328,35 @@ footer .footer-bottom .footer-bottom-row li a {
 
 }
 
-.contact-details .bigger-circle {
-    border-radius: 50%;
-    /*border: 10px solid #093B6D;*/
+.contact-details:hover .arm1,  .contact-details:hover .arm2, .arm2:hover, .arm1:hover,
+.contact-details:hover .left-contact,  .contact-details:hover .right-contact{
+    display: block;
+
+}
+
+.contact-details .left-contact a,
+.contact-details .right-contact a{
+    font-size: calc(10px + (10 - 10) * ((100vw - 300px) / (1600 - 300))) !important;
+    display: flex;
+    justify-content: start;
+    align-items: center;    
+
+}
+.contact-details:hover .bigger-circle {
+    border: 10px solid #093B6D;
     border-top-color: transparent;
     border-bottom-color: transparent;
+}
+.contact-details .bigger-circle {
+    border-radius: 50%;
+    padding: 10px !important;
+    border: none;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    transform: rotate(223deg);
+    -webkit-transform: rotate(223deg);
 }
 
 .contact-details:hover .contact-hover {
@@ -1319,12 +1365,14 @@ footer .footer-bottom .footer-bottom-row li a {
 
 .right-contact {
     position: absolute;
-    left: 0px;
-    top: 146px;
+    left: 150px;
+    top: 25px;
     background-color: #0CBCAB;
     border-top-left-radius: 0px !important;
     padding: 10px 20px;
     border: 4px solid #093B6D;
+    display: none;
+    font-size: calc(10px + (18 - 10) * ((100vw - 300px) / (1600 - 300))) !important;
 }
 
 .layer2 {

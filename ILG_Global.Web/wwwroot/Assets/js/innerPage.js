@@ -31,6 +31,12 @@ $(document).on("click", "#share-via-mail", function () {
 });
 
 $(document).ready(function () {
+
+    $(".arrow-top").click(function () {
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $("header").offset().top
+        }, 100);
+    });
     if (isInViewport($('footer'))) {
         $('header').addClass('d-none');
         $('.contact-details').addClass('d-none');
@@ -117,13 +123,18 @@ if (window.location.href.indexOf("ar") > -1) {
 $(document).ready(function(){
     $("#our-service-slider").owlCarousel({
         rtl: langAr,
-        autoPlay: 3000,
+        autoplay: true,
+        autoPlaySpeed: 3000,
+        autoPlayTimeout: 3000,
+        stopOnHover : true,
         speed: 0.5,
         loop: true,
         margin: 20,
         items: 1,
 
     });
+
 });
+
 
 

@@ -22,8 +22,8 @@
                     {
                         foreach (ContactInformationDetail oContactInformationDetail in Model.ContactInformationDetails)
                         {
-                            <li class="py-4">
-                                <i class="@oContactInformationDetail.ContactInformationMaster.FontAwsomeIconCssClass hi123"></i>
+                            <li class="py-2">
+                                <i class="d-flex justify-content-center align-items-center @oContactInformationDetail.ContactInformationMaster.FontAwsomeIconCssClass hi123"></i>
                                 <a href="@oContactInformationDetail.ContactInformationMaster.NavigationURL" class="px-4"> @oContactInformationDetail.Text</a>
                             </li>
                         }

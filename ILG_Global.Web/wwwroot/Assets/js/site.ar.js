@@ -28,10 +28,10 @@ $(document).ready(function () {
     }
     if (isInViewport($('footer'))) {
         $('header').addClass('d-none');
-        $('.contact-details').addClass('d-none');
+        $('.quick-contact-main-container').addClass('d-none');
     } else {
         $('header').removeClass('d-none');
-        $('.contact-details').removeClass('d-none');
+        $('.quick-contact-main-container').removeClass('d-none');
     }
 
 
@@ -42,10 +42,10 @@ $(document).ready(function () {
         }
         if (isInViewport($('footer'))) {
             $('header').addClass('d-none');
-            $('.contact-details').addClass('d-none');
+            $('.quick-contact-main-container').addClass('d-none');
         } else {
             $('header').removeClass('d-none');
-            $('.contact-details').removeClass('d-none');
+            $('.quick-contact-main-container').removeClass('d-none');
         }
     });
     $(document).on("click", "#share-via-mail", function () {

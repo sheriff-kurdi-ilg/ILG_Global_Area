@@ -28,9 +28,8 @@ body {
     left: 50px !important;
 }
 
-#succesStories .item .ilg-modal-open-button i{
-    transform: scaleX(-1);
-
+.success-story-section .item .ilg-modal-open-button i{
+    transform: scaleX(-1) !important;
 }
 
 #ourService .owl-item .row{
@@ -66,4 +65,9 @@ body {
 
 #app .contact-us-section .contact-list li .hi123 +a {
     direction:ltr!important;
+}
+
+.ilg-to-oppisit-direction
+{
+    direction: ltr;
 }
