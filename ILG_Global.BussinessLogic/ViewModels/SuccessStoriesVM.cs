@@ -14,8 +14,8 @@ namespace ILG_Global.BussinessLogic.ViewModels
 
         public List<SucessStoryDetail>  SucessStoryDetails { get; set; }
        
-        [Required(ErrorMessage = "Email Required.")]
-        public string ShareViaEmailSubscriberEmail { get; set; }
+        //[Required(ErrorMessage = "Email Required.")]
+        //public string ShareViaEmailSubscriberEmail { get; set; }
 
     }
 }

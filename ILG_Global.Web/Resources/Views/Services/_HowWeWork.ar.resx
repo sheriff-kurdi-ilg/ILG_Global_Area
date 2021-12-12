@@ -117,31 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="..... Continue With Share Via Mail" xml:space="preserve">
-    <value>..... تواصل خلال المشاركة عبر البريد</value>
+  <data name="1.Receipt of case papers." xml:space="preserve">
+    <value>1.استلام و استيفاء الاوراق المطلوبه</value>
   </data>
-  <data name="Call Us" xml:space="preserve">
-    <value>اتصل بنا</value>
+  <data name="2.Filing and reviewing the case." xml:space="preserve">
+    <value>2.مراجعة جميع الأوراق و رفع الدعوي</value>
   </data>
-  <data name="Cancel" xml:space="preserve">
-    <value>إلغاء</value>
+  <data name="3.Receipt of case papers." xml:space="preserve">
+    <value>3.التواصل مع العميل في مراحل ما بعد رفع الدعوي</value>
   </data>
-  <data name="Learn More" xml:space="preserve">
-    <value>المزيد</value>
-  </data>
-  <data name="Make an appointment" xml:space="preserve">
-    <value>طلب تحديد موعد</value>
-  </data>
-  <data name="Message" xml:space="preserve">
-    <value>رسالة</value>
-  </data>
-  <data name="OK" xml:space="preserve">
-    <value>موافق</value>
-  </data>
-  <data name="Send" xml:space="preserve">
-    <value>ارسال</value>
-  </data>
-  <data name="Share Via Mail" xml:space="preserve">
-    <value>مشاركة عبر البريدالالكترونى</value>
+  <data name="4.The verdict in the case." xml:space="preserve">
+    <value>4.البت في الدعوي وإصدار الحكم</value>
   </data>
 </root>

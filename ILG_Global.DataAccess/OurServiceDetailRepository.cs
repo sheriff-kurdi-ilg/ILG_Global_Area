@@ -18,10 +18,15 @@ namespace ILG_Global.DataAccess
             this.applicationDbContext = applicationDbContext;
         }
 
-        public async Task<List<OurServiceDetail>> SelectAllAsync(string sLanguageCode)
+
+        public async Task<List<OurServiceDetail>> SelectAllEnabledAsync(string sLanguageCode)
         {
             List<OurServiceDetail> lOurServiceDetails = new List<OurServiceDetail>();
-            lOurServiceDetails = await applicationDbContext.OurServiceDetails.Include(m => m.OurServiceMaster).ThenInclude(m =>m.ImageMasters).Include(m => m.OurServiceMaster.ImageDetails).Where(m => m.LanguageCode == sLanguageCode).ToListAsync();
+            lOurServiceDetails = await applicationDbContext.OurServiceDetails
+                .Include(m => m.OurServiceMaster)
+                .ThenInclude(m => m.ImageMasters)
+                .Include(m => m.OurServiceMaster.ImageDetails)
+                .Where(m => m.LanguageCode == sLanguageCode && m.OurServiceMaster.IsEnabled).ToListAsync();
 
             try
             {
@@ -34,7 +39,23 @@ namespace ILG_Global.DataAccess
             return lOurServiceDetails;
         }
 
-        public async Task<OurServiceDetail> SelectByIdAsync(int nID,string sLanguageCode)
+        public async Task<List<OurServiceDetail>> SelectAllAsync(string sLanguageCode)
+        {
+            List<OurServiceDetail> lOurServiceDetails = new List<OurServiceDetail>();
+            lOurServiceDetails = await applicationDbContext.OurServiceDetails.Include(m => m.OurServiceMaster).ThenInclude(m => m.ImageMasters).Include(m => m.OurServiceMaster.ImageDetails).Where(m => m.LanguageCode == sLanguageCode).ToListAsync();
+
+            try
+            {
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return lOurServiceDetails;
+        }
+
+        public async Task<OurServiceDetail> SelectByIdAsync(int nID, string sLanguageCode)
         {
             OurServiceDetail oOurServiceDetail = new OurServiceDetail();
 

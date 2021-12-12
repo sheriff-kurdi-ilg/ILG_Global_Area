@@ -18,13 +18,31 @@ namespace ILG_Global.DataAccess
             this.applicationDbContext = applicationDbContext;
         }
 
+        public async Task<IEnumerable<ContactInformationDetail>> SelectAllEnabledAsync(string sLanguageCode)
+        {
+            List<ContactInformationDetail> lContactInformationDetails = new List<ContactInformationDetail>();
+
+            try
+            {
+                lContactInformationDetails = 
+                    await applicationDbContext.ContactInformationDetails
+                    .Include(m => m.ContactInformationMaster)
+                    .Where(m => m.LanguageCode == sLanguageCode && m.ContactInformationMaster.IsEnabled).ToListAsync();
+            }
+            catch (Exception oException)
+            {
+
+            }
+
+            return lContactInformationDetails;
+        }
         public async Task<IEnumerable<ContactInformationDetail>> SelectAllAsync(string sLanguageCode)
         {
             List<ContactInformationDetail> lContactInformationDetails = new List<ContactInformationDetail>();
 
             try
             {
-                lContactInformationDetails = await applicationDbContext.ContactInformationDetails.Include(m=>m.ContactInformationMaster).Where(m=>m.LanguageCode == sLanguageCode).ToListAsync();
+                lContactInformationDetails = await applicationDbContext.ContactInformationDetails.Include(m => m.ContactInformationMaster).Where(m => m.LanguageCode == sLanguageCode).ToListAsync();
             }
             catch (Exception oException)
             {
@@ -34,7 +52,7 @@ namespace ILG_Global.DataAccess
             return lContactInformationDetails;
         }
 
-        public async Task<ContactInformationDetail> SelectByIdAsync(int nID,string sLanguageCode)
+        public async Task<ContactInformationDetail> SelectByIdAsync(int nID, string sLanguageCode)
         {
             ContactInformationDetail oContactInformationDetail = new ContactInformationDetail();
 

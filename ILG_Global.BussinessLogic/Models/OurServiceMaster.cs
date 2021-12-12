@@ -18,5 +18,8 @@ namespace ILG_Global.BussinessLogic.Models
         public List<OurServiceDetail> OurServiceDetails { get; set; }
 
         public List<ImageDetail> ImageDetails { get; set; }
+
+        public string ImageURL { get; set; }
+        
     }
 }

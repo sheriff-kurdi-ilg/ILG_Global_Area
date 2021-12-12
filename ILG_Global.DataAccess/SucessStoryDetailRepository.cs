@@ -18,6 +18,25 @@ namespace ILG_Global.DataAccess
         {
             this.applicationDbContext = applicationDbContext;
         }
+        
+                 public async Task<List<SucessStoryDetail>> SelectAllEnabledAsync(string sLanguageCode)
+        {
+            List<SucessStoryDetail> lSucessStoryDetails = new List<SucessStoryDetail>();
+
+            try
+            {
+                lSucessStoryDetails = 
+                    await applicationDbContext.SucessStoryDetails
+                    .Include(m => m.SucessStoryMaster)
+                    .Where(m => m.LanguageCode == sLanguageCode && m.SucessStoryMaster.IsEnabled).ToListAsync();
+            }
+            catch (Exception)
+            {
+
+            }
+
+            return lSucessStoryDetails;
+        }
 
         public async Task<List<SucessStoryDetail>> SelectAllAsync(string sLanguageCode)
         {
