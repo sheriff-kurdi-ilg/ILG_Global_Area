@@ -117,7 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="TestValue" xml:space="preserve">
-    <value>قيمة للاختبار</value>
+  <data name="EmailFormatValidate" xml:space="preserve">
+    <value>بريد الكترونى غير صحيح.</value>
+  </data>
+  <data name="EmailRequiredValidateMessage" xml:space="preserve">
+    <value>أدخل البريد الالكترونى.</value>
   </data>
 </root>

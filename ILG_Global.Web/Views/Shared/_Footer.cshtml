@@ -25,7 +25,7 @@
             <div class="d-flex justify-content-between flex-wrap pt-5">
                 <div class="col col-12 col-sm-12 col-md-3 pb-4 pb-sm-4 pb-md-0">
                     <ul class="footer-col-content pb-4 pb-sm-4 pb-md-5 img-container">
-                        <img src="/Assets/images/Group_25@2x.png" class="w-100">
+                        <img src="/Assets/images/Group_25@2x.png" class="w-100"/>
                     </ul>
                     <p class="footer-gn-text justify-text-center col-11 col-sm-11 col-md-10">
                         @Localizer["We provide various legal services and consultations by a team of experts in order to reach legal and friendly solutions in the simplest ways"]
@@ -64,11 +64,11 @@
                                             <table class="w-100">
                                                 <tr class="w-100 d-flex justify-content-between align-items-center">
                                                     <td>
-                                                        <input type="text" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
+                                                        <input type="email" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
                                                                aria-label="Example text with button addon"
                                                                aria-describedby="button-addon1"
                                                                asp-for="@Model.Email" />
-                                                        @*<span asp-validation-for="Email" class="validation-mesaage text-danger"></span>*@
+                                                        <span asp-validation-for="Email" class="validation-mesaage text-danger"></span>
                                                         <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
                                                     </td>
                                                     <td>

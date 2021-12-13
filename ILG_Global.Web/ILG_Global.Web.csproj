@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\SectionController.cs" />
+    <Compile Remove="Resources\ILGSharedResource.Designer.cs" />
     <Compile Remove="Services\ImageDetailService.cs" />
     <Compile Remove="Services\ImageMasterService.cs" />
     <Compile Remove="Services\SectionDetailService.cs" />
@@ -36,6 +37,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Resources\ILGSharedResource.ar.resx" />
+    <EmbeddedResource Remove="Resources\ILGSharedResource.resx" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.12" />
@@ -47,6 +53,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.2.3" />
@@ -60,6 +67,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Services\" />
   </ItemGroup>
 
@@ -1754,6 +1763,13 @@
     <None Include="wwwroot\UserFiles\PDF\SamplePDF3.pdf" />
     <None Include="wwwroot\UserFiles\PDF\SamplePDF4.pdf" />
     <None Include="wwwroot\UserFiles\PDF\SamplePDF5.pdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\Shared\_Footer.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>PublicResXFileCodeGenerator</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,6 @@
 ﻿@using ILG_Global.BussinessLogic.Models
 @using ILG_Global.BussinessLogic.ViewModels
+@using Microsoft.AspNetCore.Mvc.Rendering
 
 @model List<OurServiceVM>
 @{
@@ -19,6 +20,8 @@
     {
         nCurrentImageSpacing = 30;
     }
+
+
 }
 
 
@@ -38,15 +41,10 @@
                             <div class="img-container position-absolute back-img">
                                 <img src="/Assets/images/Mask_gc@2x.png" class="w-100 h-100 ">
                             </div>
-                            @foreach (ImageDetail oImageDetail in oOurServiceVM.ImageDetails)
-                            {
-                                <div class="img-container position-absolute top-img">
-                                    <img src="/Assets/UserFiles/OurServices/@oImageDetail.ImageMaster.Name" alt="@oImageDetail.AlternateText" class="w-100 h-100 ">
-                                </div>
-
-                                vIncreaseImageSpacing();
-                            }
-
+                          
+                            <div class="img-container position-absolute top-img">
+                                <img src="@ILGTools.ToCDN_URL("Uploads/OurServices", oOurServiceVM.ImageURL)" alt="" class="w-100 h-100 ">
+                            </div>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 col-lg-5 d-flex justify-content-center  flex-column px-5">
                             <div class="row title">

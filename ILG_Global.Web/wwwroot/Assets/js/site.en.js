@@ -23,7 +23,9 @@ function isInViewport(element) {
 }
 
 $("#frmShareViaEmail").submit(function (e) {
-    e.preventDefault();
+   // e.preventDefault();
+   // var x = $("#frmShareViaEmail").validate();
+   // console.log('x',x);
 });
 
 $(document).on("click", "[data-share-via-email-a]", function () {
@@ -41,7 +43,9 @@ $(document).on("click", "[data-share-via-email-a]", function () {
 
 });
 
-$(document).on("click", "#btnSuccessStorySend", function () {
+$(document).on("click", "#btnSuccessStorySend", function (e) {
+
+     // e.preventDefault();
 
     var nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
     var sLanguageCode = $("#txtCurrentLanguageCode").val();

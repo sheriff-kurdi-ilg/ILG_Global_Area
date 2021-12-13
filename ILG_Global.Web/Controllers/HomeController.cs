@@ -101,7 +101,7 @@ namespace ILG_Global.Web.Controllers
             oSuccessStoriesVM.SuccessStoriesSectionHeaderContent = HtmlContentDetailRepository.SelectByIdAsync(3, CultureCode).Result;
             oSuccessStoriesVM.SucessStoryDetails = SucessStoryDetailRepository.SelectAllEnabledAsync(CultureCode).Result;
 
-            return oSuccessStoriesVM;
+            return oSuccessStoriesVM; 
         }
 
         private async Task<List<OurServiceVM>> oOurserviceViewModelCreate()
@@ -110,33 +110,34 @@ namespace ILG_Global.Web.Controllers
             List<OurServiceDetail> lOurServiceDetails = await OurServiceDetailRepository.SelectAllEnabledAsync(CultureCode);
             List<OurServiceVM> lOurServiceVMs = new List<OurServiceVM>();
 
-            List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll(CultureCode);
+            //List<ImageDetail> lImageDetails = await ImageDetailRepository.SelectAll(CultureCode);
 
             foreach (OurServiceDetail oOurServiceDetail in lOurServiceDetails)
             {
-                List<ImageDetail> lCurrentServiceImageDetails =
-                    lImageDetails.Where(m =>
-                        m.ImageMaster.OurServiceMasterID == oOurServiceDetail.OurServiceID &&
-                        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m => m.ImageID).ToList();
+                //List<ImageDetail> lCurrentServiceImageDetails =
+                //    lImageDetails.Where(m =>
+                //        m.ImageMaster.OurServiceMasterID == oOurServiceDetail.OurServiceID &&
+                //        m.LanguageCode == oOurServiceDetail.LanguageCode).OrderBy(m => m.ImageID).ToList();
 
-                OurServiceVM oOurServiceVM = oOurServiceVMCreate(oOurServiceDetail, lCurrentServiceImageDetails);
+                OurServiceVM oOurServiceVM = oOurServiceVMCreate(oOurServiceDetail);
                 lOurServiceVMs.Add(oOurServiceVM);
             }
 
             return await Task.FromResult(lOurServiceVMs);
         }
 
-        private OurServiceVM oOurServiceVMCreate(OurServiceDetail oOurServiceDetail, List<ImageDetail> lImageDetails)
+        private OurServiceVM oOurServiceVMCreate(OurServiceDetail oOurServiceDetail)
         {
             OurServiceVM oOurServiceVM = new OurServiceVM();
 
             oOurServiceVM.OurServiceID = oOurServiceDetail.OurServiceID;
             oOurServiceVM.LanguageCode = oOurServiceDetail.LanguageCode;
+            oOurServiceVM.ImageURL = oOurServiceDetail.OurServiceMaster.ImageURL;
             oOurServiceVM.Title = oOurServiceDetail.Title;
             oOurServiceVM.SubTitle = oOurServiceDetail.SubTitle;
             oOurServiceVM.Summary = oOurServiceDetail.Summary;
             oOurServiceVM.Description = oOurServiceDetail.Description;
-            oOurServiceVM.ImageDetails = lImageDetails;
+            // oOurServiceVM.ImageDetails = lImageDetails;
 
             return oOurServiceVM;
         }
@@ -242,8 +243,5 @@ namespace ILG_Global.Web.Controllers
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
-
-
-
     }
 }

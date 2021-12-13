@@ -10,6 +10,6 @@ namespace ILG_Global.BussinessLogic.ViewModels.API
     {
         public int SuccessStoryID { get; set; }
         public string LanguauageCode { get; set; }
-        public string SuccessStoryEmail { get; set; }
+        public string SuccessStoryUserEmail { get; set; }
     }
 }

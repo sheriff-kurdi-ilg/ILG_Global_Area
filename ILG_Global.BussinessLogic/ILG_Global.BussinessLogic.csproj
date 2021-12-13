@@ -29,5 +29,23 @@
   <ItemGroup>
     <Folder Include="Services\" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Resources\ILGSharedResource.Designer.cs">
+      <DependentUpon>ILGSharedResource.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ILGSharedResource.ar.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\ILGSharedResource.resx">
+      <LastGenOutput>ILGSharedResource.Designer.cs</LastGenOutput>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>

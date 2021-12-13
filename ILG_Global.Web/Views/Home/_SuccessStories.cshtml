@@ -7,7 +7,7 @@
 @inject IViewLocalizer Localizer
 
 @{
-    string PreferredLanguadge = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
+    string PreferredLanguage = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
     Layout = null;
 }
 <!-- success story section-->
@@ -29,7 +29,7 @@
                     foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
                     {
                         <div class="item position-relative">
-                            <img src="~/Assets/images/@oSucessStoryDetail.SucessStoryMaster.ImageName" class="w-100 h-100 position-absolute">
+                            <img src="@ILGTools.ToCDN_URL("Uploads/SuccessStories", oSucessStoryDetail.SucessStoryMaster.ImageURL)" class="w-100 h-100 position-absolute">
                             <div class="overlay w-100 h-100 position-absolute"></div>
                             <div data-successStoryItem="" class="slider-content text-white position-absolute p-4">
                                 <h5 class="pb-2">@oSucessStoryDetail.Title</h5>
@@ -61,16 +61,20 @@
                         <h1>
                             @Localizer["Share Via Mail"]
                         </h1>
-                        <input id="txtLastClickedSuccessStoryID" type="hidden" value="aa" />
-                        <input id="txtCurrentLanguageCode" type="hidden" value="aa" />
+                        <input id="txtLastClickedSuccessStoryID" type="text" value="aa" />
+                        <input id="txtCurrentLanguageCode" type="text" value="aa" />
                     </div>
 
                     <div class="modal-body container hide-native-scrollbar">
-                        @*<form id="frmShareViaEmail">*@
-                        <div class="">
-                            <label for="email" class="col-form-label">Email:</label>
-                            <input type="email" class="form-control form-control-lg" id="txtSuccessStoryUserEmail" placeholder="Email">
-                        </div>
+                       <form id="frmShareViaEmail" method="dialog" >
+                           <div class="">
+                               <label for="email" class="col-form-label">@Localizer["Email:"]</label>
+
+                               @*<input type="email" class="form-control form-control-lg" id="txtSuccessStoryUserEmail" placeholder="Email"/>*@
+                               <input type="email" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" />
+                               <span asp-validation-for="SuccessStoryUserEmail" class="validation-mesaage text-danger"></span>
+                               <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguage" />
+                           </div>
                         <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
 
                             <li class="col-md-4 my-3 my-sm-3 my-md-0">
@@ -84,9 +88,8 @@
                                 </button>
                             </li>
                         </ul>
-                        <!--</form>-->
+                        </form>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -128,9 +131,7 @@
                                 </button>
                             </li>
                         </ul>
-        
                     </div>
-
                 </div>
             </div>
         </div>

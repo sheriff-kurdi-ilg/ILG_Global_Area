@@ -11,6 +11,7 @@ namespace ILG_Global.BussinessLogic.Models
         public int ID { get; set; }
         public string PhoneNumber { get; set; }
         public string ImageName { get; set; }
+        public string ImageURL { get; set; }
         public string PDF_FileName { get; set; }
         public bool IsEnabled { get; set; }
     }

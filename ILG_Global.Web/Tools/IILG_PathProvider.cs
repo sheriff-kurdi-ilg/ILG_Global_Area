@@ -23,5 +23,7 @@ namespace ILG_Global.Web.Tools
             string filePath = string.Format("{0}\\{1}", _hostEnvironment.WebRootPath, path);
             return filePath;
         }
+
+     
     }
 }

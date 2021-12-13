@@ -25,10 +25,12 @@ namespace ILG_Global.Web
 {
     public class Startup
     {
+        public static IConfiguration StaticConfiguration { get; private set; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
+            StaticConfiguration = configuration;
         }
 
         public IConfiguration Configuration { get; }
@@ -63,8 +65,6 @@ namespace ILG_Global.Web
 
             services.AddScoped<MailService>();
             services.AddSingleton<IILG_PathProvider, ILG_PathProvider>();
-
-
 
             services.AddSwaggerGen();
 
@@ -148,23 +148,39 @@ namespace ILG_Global.Web
 
             app.UseAuthorization();
 
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                             name: "default",
+                             pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
+                              defaults: new { culture = "", controller = "Home", action = "Index" });
+
+            });
+
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapControllerRoute(
-            //                 name: "default",
-            //                 pattern: "/{controller=Home}/{action=Index}/{id?}/{culture?}");
+            //                 name: "admin",
+            //                 pattern: "{area:admin}/{controller=Home}/{action=Index}/{id?}",
+            //                  defaults: new { culture = "", controller = "Home", action = "Index" });
 
             //});
 
+            //app.UseMvc(configureRoutes =>
+            //{
+            //    configureRoutes.MapRoute(
+            //        name: "Default", 
+            //        template: "{culture}/{controller}/{action}/{id?}", 
+            //        defaults: new { culture = "", controller = "Home", action = "Index" });
+            //});
 
-            app.UseMvc(configureRoutes =>
-            {
-                configureRoutes.MapRoute(
-                    name: "Default", 
-                    template: "{culture}/{controller}/{action}/{id?}", 
-                    defaults: new { culture = "", controller = "Home", action = "Index" });
-            });
-
+            //app.UseMvc(configureRoutes =>
+            //{
+            //    configureRoutes.MapRoute(
+            //        name: "Default",
+            //        template: "admin/{controller}/{action}/{id?}",
+            //        defaults: new { culture = "", controller = "Home", action = "Index" });
+            //});
         }
     }
 }

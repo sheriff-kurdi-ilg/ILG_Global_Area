@@ -53,7 +53,7 @@ namespace ILG_Global.Web.Controllers.API
 
             try
             {
-                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryEmail };
+                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryUserEmail };
 
                  EmailRepository.Insert(oShareViaEmailSubscriber);
 
@@ -61,7 +61,7 @@ namespace ILG_Global.Web.Controllers.API
 
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
-                // MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+                 // MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
 
                 oSuccessStoryShareViaEmailResponse = 
                     new SuccessStoryShareViaEmailResponse {
