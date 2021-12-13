@@ -1013,6 +1013,9 @@ footer .footer-bottom .footer-bottom-row li a {
     }*/
 }
 @media screen and (max-width: 600px) {
+    #app .header-banner {
+        min-height: 600px;
+    }
     .ilg-to-oppisit-direction {
         float: right;
         position: fixed;
@@ -1025,10 +1028,10 @@ footer .footer-bottom .footer-bottom-row li a {
     }
 
     .our-service-section .img-col-container{
-        height: 500px;
+        height: 400px;
     }
     .our-service-section .img-container{
-        height: 450px;
+        height: 350px;
     }
 }
 
