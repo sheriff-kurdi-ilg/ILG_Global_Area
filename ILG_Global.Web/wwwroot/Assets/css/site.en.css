@@ -175,7 +175,7 @@ main {
 }
 
 .navbar .nav-item .nav-link {
-    font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
     color: white;
     height: 100%;
     display: flex;
@@ -786,7 +786,7 @@ footer .footer-bottom .footer-bottom-row li a {
 
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 991px) {
   
     .reversed-footer-col{
         flex-direction: column-reverse !important;
