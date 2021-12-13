@@ -188,6 +188,7 @@ $('#success-story-slider').owlCarousel({
         },
         3500: {
             items: 8,
+            nav: true,
             loop:true,
         }
     }

@@ -126,19 +126,23 @@ $('#success-story-slider').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            nav: true
+            nav: true,
+            loop:true,
         },
         991: {
             items: 3,
-            nav: false
+            nav: false,
+            loop:true,
         },
         1400: {
             items: 5,
             nav: true,
-            loop: false
+            loop:true,
         },
         3500: {
-            items: 8
+            items: 8,
+            nav: true,
+            loop:true,
         }
     }
 
