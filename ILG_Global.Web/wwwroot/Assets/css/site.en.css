@@ -175,7 +175,7 @@ main {
 }
 
 .navbar .nav-item .nav-link {
-    font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
     color: white;
     height: 100%;
     display: flex;
