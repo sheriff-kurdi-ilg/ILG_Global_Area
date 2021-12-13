@@ -196,7 +196,7 @@ $('#success-story-slider').owlCarousel({
 })
 $('#our-service-slider').owlCarousel({
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoPlaySpeed: 1000,
     autoPlayTimeout: 200,
     stopOnHover : true,    
