@@ -134,7 +134,7 @@ $('#success-story-slider').owlCarousel({
             nav: false,
             loop:true,
         },
-        1400: {
+        1366: {
             items: 5,
             nav: true,
             loop:true,
