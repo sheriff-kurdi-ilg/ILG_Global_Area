@@ -163,45 +163,44 @@ $(document).ready(function () {
 
 
 $('#success-story-slider').owlCarousel({
-    loop:true,
     autoplay: true,
-    autoPlaySpeed: 5000,
+    autoPlaySpeed: 1000,
     autoPlayTimeout: 100,
-    stopOnHover : true,
     margin: 20,
     nav: true,
     navText: ["<i class=\"fas fa-arrow-left px-5\"></i>", " <i class=\"fas fa-arrow-right px-5\"></i>"],
     dots: false,
-    responsiveClass: true,
     responsive: {
         0: {
             items: 1,
-            nav: true
+            nav: true,
+            loop:true,
         },
         991: {
             items: 3,
-            nav: false
+            nav: false,
+            loop:true,
         },
         1400: {
             items: 5,
             nav: true,
-            loop: false
+            loop: true,
         },
         3500: {
-            items: 8
+            items: 8,
+            loop:true,
         }
     }
 
 })
 $('#our-service-slider').owlCarousel({
+    loop: true,
     autoplay: true,
     autoPlaySpeed: 1000,
     autoPlayTimeout: 200,
     stopOnHover : true,    
-    loop: true,
     margin: 20,
     items: 1,
-    rtl: false,
 })
 
 $.noConflict();

@@ -112,10 +112,12 @@ $(document).ready(function () {
 
 
 $('#success-story-slider').owlCarousel({
-    rtl: true,
-    autoPlay: 3000,
-    speed: 0.5,
     loop: true,
+    rtl: true,
+    autoplay: true,
+    autoPlaySpeed: 1000,
+    autoPlayTimeout: 100,
+    stopOnHover : true,
     margin: 20,
     nav: true,
     navText: ["<i class=\"fas fa-arrow-left px-5\"></i>", " <i class=\"fas fa-arrow-right px-5\"></i>"],
@@ -142,10 +144,12 @@ $('#success-story-slider').owlCarousel({
 
 })
 $('#our-service-slider').owlCarousel({
-    rtl: true,
-    autoPlay: 3000,
-    speed: 0.5,
+    rtl:true,
     loop: true,
+    autoplay: true,
+    autoPlaySpeed: 1000,
+    autoPlayTimeout: 200,
+    stopOnHover : true,
     margin: 20,
     items: 1,
 })
