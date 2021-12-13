@@ -1028,10 +1028,17 @@ footer .footer-bottom .footer-bottom-row li a {
     }
 
     .our-service-section .img-col-container{
-        height: 400px;
+        height: 400px !important;
     }
     .our-service-section .img-container{
-        height: 350px;
+        height: 350px !important;
+    }
+
+    #about #about-container .img-container{
+        height: 400px !important;
+    }
+    #about #about-container .img-col-container {
+        height: 450px !important;
     }
 }
 
