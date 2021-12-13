@@ -992,12 +992,25 @@ footer .footer-bottom .footer-bottom-row li a {
 
 
 @media screen and (max-width: 1310px) and  (min-width: 991px){
+    .our-service-section .img-col-container{
+        width:450px;
+        height: 450px;
+    }
+
+    .our-service-section .img-container {
+        width:400px;
+        height: 400px;
+    }
     #ourService .row  .p-container{
+        padding: 0px 10px !important;
+    }
+ 
+/*    #ourService .row  .p-container{
         width: 100% !important;
     }
     #ourService .row {
         flex-direction: column-reverse !important;
-    }
+    }*/
 }
 @media screen and (max-width: 600px) {
     .ilg-to-oppisit-direction {
