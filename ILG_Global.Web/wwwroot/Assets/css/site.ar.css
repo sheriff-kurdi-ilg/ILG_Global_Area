@@ -14,6 +14,15 @@ body {
     direction: rtl;
 }
 
+#app .header-banner .header-content h5, #app .header-banner .header-content p {
+    font-size: calc(20px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#app .header-banner .header-content h1 {
+    font-size: calc(50px + (75 - 50) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: inherit;
+}
+
 .our-service-section .img-col-container .top-img{
     left: 0 !important;
     right: auto;
@@ -71,3 +80,30 @@ body {
 {
     direction: ltr;
 }
+
+.quick-contact-main-container .quick-contact .left-wing {
+    background-image: url(../images/Quick-Call/left-wing.ar.png);
+    z-index: inherit;
+}
+
+.quick-contact-main-container .quick-contact .right-wing {
+    background-image: url(../images/Quick-Call/right-wing.ar.png);
+    z-index: inherit;
+}
+
+.ilg-to-oppisit-direction{
+    right: auto;
+    left: 0;
+    justify-content: start !important;
+}
+
+.quick-contact-main-container .quick-contact .left-wing a.link {
+    left: 209px;
+    z-index: 100;
+}
+
+.quick-contact-main-container .quick-contact .right-wing a.link {
+    z-index: 100;
+    right: 269px;
+}
+
