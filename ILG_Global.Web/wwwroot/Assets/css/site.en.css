@@ -991,6 +991,14 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 
 
+@media screen and (max-width: 1310px) and  (min-width: 991px){
+    #ourService .row  .p-container{
+        width: 100% !important;
+    }
+    #ourService .row {
+        flex-direction: column-reverse !important;
+    }
+}
 @media screen and (max-width: 600px) {
     .ilg-to-oppisit-direction {
         float: right;

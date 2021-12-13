@@ -195,11 +195,13 @@ $('#success-story-slider').owlCarousel({
 
 })
 $('#our-service-slider').owlCarousel({
+/*
     loop: true,
     autoplay: true,
     autoPlaySpeed: 1000,
     autoPlayTimeout: 200,
     stopOnHover : true,    
+*/
     margin: 20,
     items: 1,
 })
