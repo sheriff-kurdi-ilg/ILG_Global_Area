@@ -6,7 +6,14 @@
     <projectFile pubXmlPath="ILG_Global.Web/Properties/PublishProfiles/FolderProfile.pubxml">ILG_Global.Web/ILG_Global.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="" />
+    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.BussinessLogic/ViewModels/API/SuccessStoryShareViaEmailRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.BussinessLogic/ViewModels/API/SuccessStoryShareViaEmailRequest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/EmailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/EmailRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Controllers/API/SuccessStoryShareViaEmailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Controllers/API/SuccessStoryShareViaEmailController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_SuccessStories.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_SuccessStories.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,14 +27,46 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2fee4448dc86aca22bf086d284f3f93671f39a96c314d13510a96c8a34bbec/ValidationMessageTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ILG_Global.Web/Views/Services/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22H3m8WdqbXQee8qksc8Peq7aAj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="" />
+      <created>1639480845350</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639480845350</updated>
+      <workItem from="1639480845563" duration="1796000" />
+      <workItem from="1639483475369" duration="4540000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>

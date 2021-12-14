@@ -66,7 +66,7 @@
                     </div>
 
                     <div class="modal-body container hide-native-scrollbar">
-                       <form id="frmShareViaEmail" method="dialog" >
+                       <form id="frmShareViaEmail" method="dialog" class="needs-validation">
                            <div class="">
                                <label for="email" class="col-form-label">@Localizer["Email:"]</label>
 
@@ -75,6 +75,7 @@
                                @*<span asp-validation-for="SuccessStoryUserEmail" class="validation-mesaage text-danger"></span>*@
                                <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguage" />
                            </div>
+                           
                         <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
 
                             <li class="col-md-4 my-3 my-sm-3 my-md-0">

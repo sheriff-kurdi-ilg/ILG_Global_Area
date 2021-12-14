@@ -49,7 +49,7 @@ namespace ILG_Global.DataAccess
                 await applicationDbContext.ShareViaEmailSubscriber.AddAsync(oEmail);
                 applicationDbContext.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception oException)
             {
             }
         }
@@ -61,7 +61,7 @@ namespace ILG_Global.DataAccess
                 applicationDbContext.Entry(oEmail).State = EntityState.Modified;
                 await applicationDbContext.SaveChangesAsync();
             }
-            catch (Exception)
+            catch (Exception oException)
             {
             }
         }
@@ -76,7 +76,7 @@ namespace ILG_Global.DataAccess
                 await applicationDbContext.SaveChangesAsync();
 
             }
-            catch (Exception)
+            catch (Exception oException)
             {
             }
         }
