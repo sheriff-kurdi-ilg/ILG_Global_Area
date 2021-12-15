@@ -142,7 +142,7 @@ function vRemoveErrorCssClassesFromTextField(oFormToValidate) {
 
 function vAddErrorCssClassesToTextField(oFormToValidate) {
     $(oFormToValidate).addClass('was-validated');
-    $(".invalid-feedback").html("Email Invalid");
+    $(".invalid-feedback").html("البريد الالكتروني غير صحيح");
     $(".invalid-feedback").addClass("error");
     $("#SuccessStoryUserEmail").addClass("error-text");
 }

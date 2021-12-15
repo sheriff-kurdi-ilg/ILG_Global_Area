@@ -1519,3 +1519,10 @@ footer .footer-bottom .footer-bottom-row li a {
 .how-we-do-col-padding{
     padding: 200px 0;
 }
+
+.form-control.is-invalid, .was-validated .form-control:invalid, .was-validated .form-control:invalid:focus,
+.was-validated .form-control:valid, .was-validated .form-control:valid:focus{
+    background-position: left calc(0.375em + 0.1875rem) center;
+    padding-left: calc(1.5em + .75rem);
+    padding-right: 10px;
+}
