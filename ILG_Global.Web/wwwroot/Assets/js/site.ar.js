@@ -77,7 +77,111 @@ $(document).ready(function () {
         $(".wings").css('visibility', 'hidden');
     });
 });
+$(document).on("click", "[data-share-via-email-a]", function () {
+    /*
+            $(".modal").removeClass("fade").modal("hide");
+    */
+    $('.btn-close').trigger('click');
+    $('.shareViaMailModal-launch-btn').trigger('click');
 
+    var nSuccessStoryID = $(this).attr("data-success-story-id");
+    $("#txtLastClickedSuccessStoryID").val(nSuccessStoryID);
+
+    var nLanguageCode = $(this).attr("data-language-code");
+    $("#txtCurrentLanguageCode").val(nLanguageCode);
+
+});
+
+
+
+$("#frmShareViaEmail").submit(function(e){
+
+    vPreventFormSubmition(e);
+
+    var oApiRequest = oSuccessStoryShareViaEmailRequestCreate();
+
+    if (isEmail(oApiRequest.SuccessStoryEmail)) {
+        vRemoveErrorCssClassesFromTextField(this);
+        vCallSuccessStoryShareViaEmailAPI(oApiRequest);
+    }
+    else{
+        vAddErrorCssClassesToTextField(this);
+        vPreventFormSubmition(e);
+    }
+
+});
+
+function vPreventFormSubmition(oFormEventArg) {
+    oFormEventArg.preventDefault();
+    oFormEventArg.stopPropagation();
+}
+
+function oSuccessStoryShareViaEmailRequestCreate() {
+
+    let nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
+    let sLanguageCode = $("#txtCurrentLanguageCode").val();
+    let sSuccessStoryEmail = $("#SuccessStoryUserEmail").val();
+
+    let oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
+
+    oApiRequest = JSON.stringify(oApiRequest);
+
+    return oApiRequest;
+}
+
+function isEmail(email) {
+    let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
+
+function vRemoveErrorCssClassesFromTextField(oFormToValidate) {
+    $(".invalid-feedback").removeClass("error");
+    $(oFormToValidate).removeClass('was-validated');
+    $("#SuccessStoryUserEmail").removeClass("error-text");
+}
+
+function vAddErrorCssClassesToTextField(oFormToValidate) {
+    $(oFormToValidate).addClass('was-validated');
+    $(".invalid-feedback").html("Email Invalid");
+    $(".invalid-feedback").addClass("error");
+    $("#SuccessStoryUserEmail").addClass("error-text");
+}
+
+
+
+
+let oSuccessStoryShareViaEmailResponse; //  = { "SubscriptionID": 0, "IsSucceeded": false, "UserMessage": "" };
+function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
+    let sUrl = "/api/SuccessStoryShareViaEmail";
+
+    console.log('before send to api:', oApiRequest);
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        url: sUrl,
+        async: true,
+        data: oApiRequest,
+
+        success: function (xmlResponse) {
+            oSuccessStoryShareViaEmailResponse = JSON.parse(JSON.stringify(xmlResponse) );
+            if (xmlResponse.isSucceeded){
+                $('.btn-close').trigger('click');
+                $('#dvApiResultMessage').html(oSuccessStoryShareViaEmailResponse.userMessage);
+                $('.shareViaMailModalGreeting-launch-btn').trigger('click');
+                $("#SuccessStoryUserEmail").val('')
+            }
+        },
+
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log('error is: ', XMLHttpRequest)
+        },
+    });
+}
+
+$(document).on("click", "#btnUserMessage", function () {
+    $('.btn-close').trigger('click');
+});
 
 $(document).ready(function () {
     $(".arrow-bottom").click(function () {

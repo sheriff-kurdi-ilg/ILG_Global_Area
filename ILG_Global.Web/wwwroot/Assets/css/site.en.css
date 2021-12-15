@@ -443,7 +443,7 @@ header {
     list-style: none;
 }
 
-.contact-list-modal h1 {
+.contact-list-modal h2 {
     font-size: calc(25px + (50 - 25) * ((100vw - 300px) / (1600 - 300)));
     color: rgba(9, 59, 109, 1);
     font-weight: bold;
@@ -1484,4 +1484,38 @@ footer .footer-bottom .footer-bottom-row li a {
         bottom: 0px;
     }
 
+}
+
+.ourServices-div-container{
+    z-index: 2;
+}
+
+.leaderBoard .leaderBoard-summary{
+    line-height: 40px;
+}
+
+.continue-with-share-via-mail-text{
+    color: rgba(12, 188, 171, 1);
+    font-size: 15px
+}
+
+
+.success-story-section .shareViaMailModal-launch-btn{
+    visibility: hidden
+}
+
+#shareViaMailModalGreeting .shareViaMailModalGreeting-cancel-btn{
+    visibility: hidden
+}
+
+.contact-list-modal .success-storyDetail-Summary-container{
+    height: 350px;
+}
+
+.modal{
+    z-index: 10000000;
+}
+
+.how-we-do-col-padding{
+    padding: 200px 0;
 }
