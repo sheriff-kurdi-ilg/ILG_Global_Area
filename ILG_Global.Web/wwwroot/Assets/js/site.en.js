@@ -21,12 +21,6 @@ function isInViewport(element) {
     return false;
 }
 
-$("#frmShareViaEmail").submit(function (e) {
-    // e.preventDefault();
-    // var x = $("#frmShareViaEmail").validate();
-    // console.log('x',x);
-});
-
 $(document).on("click", "[data-share-via-email-a]", function () {
     /*
             $(".modal").removeClass("fade").modal("hide");

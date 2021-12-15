@@ -45,7 +45,7 @@
         </div>
 
 
-        <button type="button" class="p-0 m-0 shareViaMailModal-launch-btn" style="visibility: hidden" data-bs-toggle="modal" data-bs-target="#shareViaMailModal"></button>
+        <button type="button" class="p-0 m-0 shareViaMailModal-launch-btn" data-bs-toggle="modal" data-bs-target="#shareViaMailModal"></button>
 
         <div class="modal fade " id="shareViaMailModal" tabindex="-1" aria-labelledby="shareViaMailModal"
              aria-hidden="true">
@@ -58,9 +58,9 @@
                         </button>
                     </div>
                     <div class="container p-0">
-                        <h1>
+                        <h2>
                             @Localizer["Share Via Mail"]
-                        </h1>
+                        </h2>
                         <input id="txtLastClickedSuccessStoryID" type="text" value="aa" />
                         <input id="txtCurrentLanguageCode" type="text" value="aa" />
                     </div>
@@ -96,7 +96,7 @@
         </div>
 
 
-        <button type="button" class="p-0 m-0 shareViaMailModalGreeting-launch-btn" style="visibility: hidden " data-bs-toggle="modal" data-bs-target="#shareViaMailModalGreeting"></button>
+        <button type="button" class="p-0 m-0 shareViaMailModalGreeting-launch-btn" data-bs-toggle="modal" data-bs-target="#shareViaMailModalGreeting"></button>
 
         <div class="modal fade " id="shareViaMailModalGreeting" tabindex="-1" aria-labelledby="shareViaMailModalGreeting"
              aria-hidden="true">
@@ -109,9 +109,9 @@
                         </button>
                     </div>
                     <div class="container p-0">
-                        <h1>
+                        <h2>
                             @Localizer["Message"]
-                        </h1>
+                        </h2>
                     </div>
 
                     <div class="modal-body container hide-native-scrollbar">
@@ -120,7 +120,7 @@
                             Sample Message
                         </div>
                         <ul class="row flex-column-reverse flex-sm-column-reverse flex-md-row  flex-wrap info py-4 justify-content-between align-items-center mx-auto container">
-                            <li class="col-md-4 my-3 my-sm-3 my-md-0" style="visibility:hidden">
+                            <li class="shareViaMailModalGreeting-cancel-btn col-md-4 my-3 my-sm-3 my-md-0">
                                 <button data-bs-dismiss="modal" class="close-btn border-0 bg-white w-100 py-3 text-black d-flex justify-content-center align-items-center mx-auto">
                                     <span class="px-3">@Localizer["Cancel"]</span>
                                 </button>
@@ -153,13 +153,13 @@
                             </button>
                         </div>
                         <div class="container p-0 mb-2">
-                            <h1>@oSucessStoryDetail.Title</h1>
+                            <h2>@oSucessStoryDetail.Title</h2>
                         </div>
 
                         <div class="modal-body container hide-native-scrollbar">
-                            <div class="justify-text-center" style="height: 350px;">
+                            <div class="success-storyDetail-Summary-container justify-text-center">
                                 @Html.Raw(oSucessStoryDetail.Summary)
-                                <span style="color: rgba(12, 188, 171, 1); font-size: 15px">@Localizer["..... Continue With Share Via Mail"]</span>
+                                <span class="continue-with-share-via-mail-text">@Localizer["..... Continue With Share Via Mail"]</span>
                             </div>
                         </div>
                         <ul class="row flex-wrap info py-md-4 justify-content-between align-items-center mx-auto container">
