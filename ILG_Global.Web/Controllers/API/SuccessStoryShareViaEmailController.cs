@@ -53,7 +53,7 @@ namespace ILG_Global.Web.Controllers.API
 
             try
             {
-                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryUserEmail };
+                ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryEmail };
 
                  EmailRepository.Insert(oShareViaEmailSubscriber);
 

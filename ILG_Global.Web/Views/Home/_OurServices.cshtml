@@ -69,7 +69,8 @@
                                 <div class="col-12 col-sm-12 col-md-12">
                                     <h5 class="pb-4 pt-5" dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">@oOurServiceVM.Title</h5>
                                     <h6 dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
-                                        @oOurServiceVM.SubTitle
+                                        @Html.Raw(oOurServiceVM.SubTitle)
+                                       
                                     </h6>
                                 </div>
                             </div>
