@@ -67,7 +67,7 @@
                                     <a class="nav-link active hover-underline-animation px-2" href="#contactUs">@Localizer["Contact us"]</a>
                                 </li>
                             </ul>
-                            <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+         @*                   <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
 
                                 <a class="nav-link toggle-lang" href="#">
 
@@ -90,7 +90,32 @@
                                       </form>
                                     }
                                 </a>
-                            </li>
+                            </li>*@
+                      
+                            @********************************@
+
+
+
+                             <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+                                                                @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                                    {
+                                                           <i class="fas fa-globe px-2"></i>
+
+                                      <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN</a>
+                                    }
+                                    else
+                                    {                                              <i class="fas fa-globe px-2"></i>
+
+                                       <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR</a>
+
+
+                                    }
+                                    </li>
+                            @********************************@
+
+
+                           
+
                             <li class="nav-item row justify-content-center align-items-center social-container icon-col">
                                 <a class="nav-link col icon" href="#">
                                     <i class="fab fa-instagram"></i>
@@ -111,6 +136,20 @@
             </div>
         </nav>
 
+
+                                    <script>
+                                    $(".nav-link").click(function () {
+            let url = window.location.href
+            let id = url.substring(url.lastIndexOf('/') + 1);
+              $("#enbutton").attr("href", "/en/"+id)
+                $("#arbutton").attr("href", "/ar/"+id)
+        })
+
+              
+                //$("a").attr("href", "/ar/"+id)
+
+
+                            </script>
 <script>
     window.addEventListener("scroll", function () {
 
