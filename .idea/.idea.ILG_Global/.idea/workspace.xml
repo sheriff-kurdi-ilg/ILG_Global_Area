@@ -8,9 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.BussinessLogic/ViewModels/API/SuccessStoryShareViaEmailRequest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.BussinessLogic/ViewModels/API/SuccessStoryShareViaEmailRequest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/EmailRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/EmailRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Controllers/API/SuccessStoryShareViaEmailController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Controllers/API/SuccessStoryShareViaEmailController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_SuccessStories.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_SuccessStories.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" afterDir="false" />
     </list>
@@ -55,6 +55,7 @@
       <updated>1639480845350</updated>
       <workItem from="1639480845563" duration="1796000" />
       <workItem from="1639483475369" duration="4540000" />
+      <workItem from="1639565088738" duration="6334000" />
     </task>
     <servers />
   </component>
@@ -72,7 +73,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml</url>
-          <line>64</line>
+          <line>66</line>
           <properties documentPath="D:\ILG_Projects\ILG_Global\ILG_Global.Web\Views\Home\Index.cshtml" initialLine="60" isMultiMethodBreakpoint="true">
             <option name="multiMethodBreakpoint" value="true" />
             <startOffsets>

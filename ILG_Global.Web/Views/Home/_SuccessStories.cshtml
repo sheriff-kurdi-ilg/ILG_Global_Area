@@ -15,10 +15,9 @@
     <div class="container">
         <div class="row title">
             <div class="col-12 col-sm-12 col-md-6">
-                <h5 class="pb-4 pt-5">
-                </h5>
+                <h5 class="pb-4 pt-5">@Model.SuccessStoriesSectionHeaderContent.Title</h5>
                 <h6>
-                    @Html.Raw(Model.SuccessStoriesSectionHeaderContent.SubTitle)
+                    @Model.SuccessStoriesSectionHeaderContent.SubTitle
                 </h6>
             </div>
         </div>
@@ -62,20 +61,18 @@
                         <h1>
                             @Localizer["Share Via Mail"]
                         </h1>
-                        <input id="txtLastClickedSuccessStoryID" type="hidden" value="aa" />
-                        <input id="txtCurrentLanguageCode" type="hidden" value="aa" />
+                        <input id="txtLastClickedSuccessStoryID" type="text" value="aa" />
+                        <input id="txtCurrentLanguageCode" type="text" value="aa" />
                     </div>
 
                     <div class="modal-body container hide-native-scrollbar">
-                       <form id="frmShareViaEmail" method="dialog" class="needs-validation">
+                       <form id="frmShareViaEmail" method="dialog" class="needs-validation" novalidate>
                            <div class="">
                                <label for="email" class="col-form-label">@Localizer["Email:"]</label>
 
                                @*<input type="email" class="form-control form-control-lg" id="txtSuccessStoryUserEmail" placeholder="Email"/>*@
-                               <input type="email" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+                               <input type="text" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
                                <span asp-validation-for="SuccessStoryUserEmail" class="invalid-feedback feedback-pos validation-mesaage text-danger">Email is not valid</span>
-                               <input type="email" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" />
-                               @*<span asp-validation-for="SuccessStoryUserEmail" class="validation-mesaage text-danger"></span>*@
                                <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguage" />
                            </div>
                            
@@ -167,10 +164,10 @@
                         </div>
                         <ul class="row flex-wrap info py-md-4 justify-content-between align-items-center mx-auto container">
                             <li class="col-md-3 my-3 my-sm-3 my-md-0">
-                                <a href="tel:0096522499777" class="btn w-100 px-2 py-3 d-flex justify-content-center align-items-center mx-auto">
+                                <button class="btn w-100 px-2 py-3 d-flex justify-content-center align-items-center mx-auto">
                                     <i class="fas fa-phone"></i>
                                     <span class="px-3">@Localizer["Call Us"]</span>
-                                </a>
+                                </button>
                             </li>
                             <li class="col-md-5 my-3 my-sm-3 my-md-0 d-flex justify-content-center align-items-center">
                                 @*<a href="#" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">

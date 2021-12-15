@@ -1,39 +1,6 @@
 
 console.log(" en loaded");
 
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-        var forms = document.getElementsByClassName('needs-validation');
-        var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-                if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                var email = $("#email").val();
-                var confirmemail = $("#confirm_email").val();
-                if(email !== confirmemail){
-                    form.classList.add('was-validated');
-                    $("#validate").html("Email Should Match");
-                    $("#validate").addClass("error");
-                    $("#confirm_email").addClass("error-text");
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
-                else{
-                    $("#validate").removeClass("error");
-                    form.classList.add('was-validated');
-                    $("#confirm_email").removeClass("error-text");
-                    $("#validate").html("Looks Good!");
-                }
-
-            }, false);
-        });
-    }, false);
-})();
-
 function addBgToNavWhenScroll() {
     var scroll_pos = 0;
     scroll_pos = $(this).scrollTop();
@@ -54,11 +21,11 @@ function isInViewport(element) {
     return false;
 }
 
-//$("#frmShareViaEmail").submit(function (e) {
-//   //e.preventDefault();
-//   //// var x = $("#frmShareViaEmail").validate();
-//   //console.log('x',x);
-//});
+$("#frmShareViaEmail").submit(function (e) {
+    // e.preventDefault();
+    // var x = $("#frmShareViaEmail").validate();
+    // console.log('x',x);
+});
 
 $(document).on("click", "[data-share-via-email-a]", function () {
     /*
@@ -74,90 +41,19 @@ $(document).on("click", "[data-share-via-email-a]", function () {
     $("#txtCurrentLanguageCode").val(nLanguageCode);
 
 });
-
-
-jQuery.validator.setDefaults({
-    debug: true,
-    success: "valid"
-});
-
-
-var frmShareViaEmail = $("#frmShareViaEmail");
-
-$(document).ready(function () {
-
-    //frmShareViaEmail.validate({
-    //    rules: {
-    //        'SuccessStoryUserEmail': {
-    //            required: true,
-    //            email: true
-    //        },
-    //        messages: {
-    //            'SuccessStoryUserEmail': {
-    //                required: 'Please provide an Email',
-    //                email: 'Invalid Email.'
-    //            }
-    //        }
-    //});
-});
-
-/*$(document).on("click", "#btnSuccessStorySend", function (e) {
-
-     e.preventDefault();
-
-
-
-    //var nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
-    //var sLanguageCode = $("#txtCurrentLanguageCode").val();
-    //var sSuccessStoryEmail = $("#txtSuccessStoryUserEmail").val();
-
-    //console.log("nSuccessStoryID is: " + nSuccessStoryID);
-    //console.log("sLanguageCode is: " + sLanguageCode);
-    //console.log("sSuccessStoryEmail is: " + sSuccessStoryEmail);
-
-    //var oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
-
-    //// alert(JSON.stringify(oApiRequest));
-    //oApiRequest = JSON.stringify(oApiRequest);
-    //vCallSuccessStoryShareViaEmailAPI(oApiRequest);
-/*$(document).on("click", "#btnSuccessStorySend", function (e) {
-
-     e.preventDefault();
-
-    let nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
-    let sLanguageCode = $("#txtCurrentLanguageCode").val();
-    let sSuccessStoryEmail = $("#SuccessStoryUserEmail").val();
-
-    console.log("nSuccessStoryID is: " + nSuccessStoryID);
-    console.log("sLanguageCode is: " + sLanguageCode);
-    console.log("sSuccessStoryEmail is: " + sSuccessStoryEmail);
-
-    var oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
-
-    // alert(JSON.stringify(oApiRequest));
-    oApiRequest = JSON.stringify(oApiRequest);
-    vCallSuccessStoryShareViaEmailAPI(oApiRequest);
-
-});*/
 function isEmail(email) {
     let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
-$("#frmShareViaEmail").submit(function (e) {
 
-
-
-
+$("#frmShareViaEmail").submit(function(e){
     e.preventDefault();
+    e.stopPropagation();
 
     let nSuccessStoryID = $("#txtLastClickedSuccessStoryID").val();
     let sLanguageCode = $("#txtCurrentLanguageCode").val();
     let sSuccessStoryEmail = $("#SuccessStoryUserEmail").val();
 
-    var oForm = document.getElementsByClassName('needs-validation');
-    
-    console.log("--------------------------------------------");
-    // console.log( oForm.checkValidity() === false);
     console.log("nSuccessStoryID is: " + nSuccessStoryID);
     console.log("sLanguageCode is: " + sLanguageCode);
     console.log("sSuccessStoryEmail is: " + sSuccessStoryEmail);
@@ -166,8 +62,22 @@ $("#frmShareViaEmail").submit(function (e) {
 
     // alert(JSON.stringify(oApiRequest));
     oApiRequest = JSON.stringify(oApiRequest);
-    vCallSuccessStoryShareViaEmailAPI(oApiRequest);
-    
+
+    if(isEmail(sSuccessStoryEmail)){
+        $(".invalid-feedback").removeClass("error");
+        $(this).removeClass('was-validated');
+        $("#SuccessStoryUserEmail").removeClass("error-text");
+        vCallSuccessStoryShareViaEmailAPI(oApiRequest);
+    }
+    else{
+        $(this).addClass('was-validated');
+        $(".invalid-feedback").html("Email Invalid");
+        $(".invalid-feedback").addClass("error");
+        $("#SuccessStoryUserEmail").addClass("error-text");
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
 });
 
 let oSuccessStoryShareViaEmailResponse; //  = { "SubscriptionID": 0, "IsSucceeded": false, "UserMessage": "" };
@@ -182,18 +92,17 @@ function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
         url: sUrl,
         async: true,
         data: oApiRequest,
-    
+
         success: function (xmlResponse) {
             oSuccessStoryShareViaEmailResponse = JSON.parse(JSON.stringify(xmlResponse) );
             if (xmlResponse.isSucceeded){
                 $('.btn-close').trigger('click');
-
                 $('#dvApiResultMessage').html(oSuccessStoryShareViaEmailResponse.userMessage);
-
                 $('.shareViaMailModalGreeting-launch-btn').trigger('click');
+                $("#SuccessStoryUserEmail").val('')
             }
         },
-     
+
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log('error is: ', XMLHttpRequest)
         },
@@ -203,6 +112,8 @@ function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
 $(document).on("click", "#btnUserMessage", function () {
     $('.btn-close').trigger('click');
 });
+
+
 
 
 $(document).ready(function () {
@@ -306,7 +217,7 @@ $('#our-service-slider').owlCarousel({
     autoplay: true,
     autoPlaySpeed: 1000,
     autoPlayTimeout: 200,
-    stopOnHover : true,    
+    stopOnHover : true,
     margin: 20,
     items: 1,
 })
