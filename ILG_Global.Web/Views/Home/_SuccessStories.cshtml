@@ -74,6 +74,8 @@
                                @*<input type="email" class="form-control form-control-lg" id="txtSuccessStoryUserEmail" placeholder="Email"/>*@
                                <input type="email" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
                                <span asp-validation-for="SuccessStoryUserEmail" class="invalid-feedback feedback-pos validation-mesaage text-danger">Email is not valid</span>
+                               <input type="email" asp-for="SuccessStoryUserEmail" class="form-control form-control-lg" placeholder="Email" />
+                               @*<span asp-validation-for="SuccessStoryUserEmail" class="validation-mesaage text-danger"></span>*@
                                <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguage" />
                            </div>
                            
@@ -165,10 +167,10 @@
                         </div>
                         <ul class="row flex-wrap info py-md-4 justify-content-between align-items-center mx-auto container">
                             <li class="col-md-3 my-3 my-sm-3 my-md-0">
-                                <button class="btn w-100 px-2 py-3 d-flex justify-content-center align-items-center mx-auto">
+                                <a href="tel:0096522499777" class="btn w-100 px-2 py-3 d-flex justify-content-center align-items-center mx-auto">
                                     <i class="fas fa-phone"></i>
                                     <span class="px-3">@Localizer["Call Us"]</span>
-                                </button>
+                                </a>
                             </li>
                             <li class="col-md-5 my-3 my-sm-3 my-md-0 d-flex justify-content-center align-items-center">
                                 @*<a href="#" class="w-100 p-3 d-flex justify-content-center align-items-center mx-auto">
