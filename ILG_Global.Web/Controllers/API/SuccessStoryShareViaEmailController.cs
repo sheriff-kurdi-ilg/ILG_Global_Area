@@ -61,7 +61,7 @@ namespace ILG_Global.Web.Controllers.API
 
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
-                MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryUserEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+                MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
 
                 oSuccessStoryShareViaEmailResponse = 
                     new SuccessStoryShareViaEmailResponse {
