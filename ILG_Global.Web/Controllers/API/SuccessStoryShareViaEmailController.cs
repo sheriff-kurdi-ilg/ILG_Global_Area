@@ -1,6 +1,7 @@
 ﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Abstraction.Services;
 using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.Resources;
 using ILG_Global.BussinessLogic.Services;
 using ILG_Global.BussinessLogic.ViewModels.API;
 using Microsoft.AspNetCore.Mvc;
@@ -61,13 +62,13 @@ namespace ILG_Global.Web.Controllers.API
 
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
-                MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
-
+                // MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+                
                 oSuccessStoryShareViaEmailResponse = 
                     new SuccessStoryShareViaEmailResponse {
                         SubscriptionID = oShareViaEmailSubscriber.ID,
                         IsSucceeded = oShareViaEmailSubscriber.ID !=0,
-                        UserMessage = oShareViaEmailSubscriber.ID != 0? "Your request Saved Successfully.": "An Error has occured hile saving your request."
+                        UserMessage = oShareViaEmailSubscriber.ID != 0? ILGSharedResource.RequestSavedSuccessfully : ILGSharedResource.RequestSavingError
                     };
             }
             catch (Exception oException)

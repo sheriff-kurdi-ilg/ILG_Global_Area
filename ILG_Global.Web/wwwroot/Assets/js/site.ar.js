@@ -124,7 +124,7 @@ function oSuccessStoryShareViaEmailRequestCreate() {
 
     let oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
 
-    oApiRequest = JSON.stringify(oApiRequest);
+    // oApiRequest = JSON.stringify(oApiRequest);
 
     return oApiRequest;
 }
@@ -161,7 +161,7 @@ function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
         contentType: "application/json",
         url: sUrl,
         async: true,
-        data: oApiRequest,
+        data: JSON.stringify(oApiRequest),
 
         success: function (xmlResponse) {
             oSuccessStoryShareViaEmailResponse = JSON.parse(JSON.stringify(xmlResponse) );

@@ -123,4 +123,10 @@
   <data name="EmailRequiredValidateMessage" xml:space="preserve">
     <value>Email Required.</value>
   </data>
+  <data name="RequestSavedSuccessfully" xml:space="preserve">
+    <value>Your request Saved Successfully.</value>
+  </data>
+  <data name="RequestSavingError" xml:space="preserve">
+    <value>An Error has occured hile saving your request.</value>
+  </data>
 </root>

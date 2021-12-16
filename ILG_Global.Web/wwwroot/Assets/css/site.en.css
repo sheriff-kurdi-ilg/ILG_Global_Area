@@ -1536,3 +1536,7 @@ footer .footer-bottom .footer-bottom-row li a {
     padding-left: calc(1.5em + .75rem);
     padding-right: 10px;
 }
+
+.shareViaMailModalGreeting-launch-btn {
+    visibility:hidden!important;
+}

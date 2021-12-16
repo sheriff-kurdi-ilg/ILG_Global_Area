@@ -44,6 +44,10 @@ $("#frmShareViaEmail").submit(function(e){
 
     var oApiRequest = oSuccessStoryShareViaEmailRequestCreate();
 
+    //console.log('oApiRequest', oApiRequest);
+    //console.log('oApiRequest.SuccessStoryEmail', oApiRequest.SuccessStoryEmail);
+    //console.log('isEmail(oApiRequest.SuccessStoryEmail)', isEmail(oApiRequest.SuccessStoryEmail));
+
     if (isEmail(oApiRequest.SuccessStoryEmail)) {
         vRemoveErrorCssClassesFromTextField(this);
         vCallSuccessStoryShareViaEmailAPI(oApiRequest);
@@ -68,12 +72,11 @@ function oSuccessStoryShareViaEmailRequestCreate() {
 
     let oApiRequest = { "SuccessStoryID": nSuccessStoryID, "LanguauageCode": sLanguageCode, "SuccessStoryEmail": sSuccessStoryEmail };
 
-    oApiRequest = JSON.stringify(oApiRequest);
-
     return oApiRequest;
 }
 
 function isEmail(email) {
+    console.log('email', email);
     let regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
 }
@@ -94,8 +97,8 @@ function vAddErrorCssClassesToTextField(oFormToValidate) {
 
 
 
-let oSuccessStoryShareViaEmailResponse; //  = { "SubscriptionID": 0, "IsSucceeded": false, "UserMessage": "" };
-function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
+let oSuccessStoryShareViaEmailResponse; 
+function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { 
     let sUrl = "/api/SuccessStoryShareViaEmail";
 
     console.log('before send to api:', oApiRequest);
@@ -105,7 +108,7 @@ function vCallSuccessStoryShareViaEmailAPI(oApiRequest) { // languageID
         contentType: "application/json",
         url: sUrl,
         async: true,
-        data: oApiRequest,
+        data: JSON.stringify(oApiRequest),
 
         success: function (xmlResponse) {
             oSuccessStoryShareViaEmailResponse = JSON.parse(JSON.stringify(xmlResponse) );

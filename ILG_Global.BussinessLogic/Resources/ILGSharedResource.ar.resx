@@ -123,4 +123,10 @@
   <data name="EmailRequiredValidateMessage" xml:space="preserve">
     <value>أدخل البريد الالكترونى.</value>
   </data>
+  <data name="RequestSavedSuccessfully" xml:space="preserve">
+    <value>تم حفظ طلبك بنجاح</value>
+  </data>
+  <data name="RequestSavingError" xml:space="preserve">
+    <value>حدث خطأ اثناء حفظ طلبك.</value>
+  </data>
 </root>

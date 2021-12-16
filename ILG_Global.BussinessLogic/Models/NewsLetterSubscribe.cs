@@ -23,6 +23,9 @@ namespace ILG_Global.BussinessLogic.Models
         [Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(ILGSharedResource))]
         //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
         //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILGSharedResource))]
+
+        //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
+        //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILGSharedResource))]
         public string Email { get; set; }
         public bool? IsEnabled { get; set; }
     }

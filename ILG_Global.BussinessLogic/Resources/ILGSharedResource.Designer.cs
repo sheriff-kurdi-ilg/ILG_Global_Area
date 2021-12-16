@@ -77,5 +77,23 @@ namespace ILG_Global.BussinessLogic.Resources {
                 return ResourceManager.GetString("EmailRequiredValidateMessage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your request Saved Successfully..
+        /// </summary>
+        public static string RequestSavedSuccessfully {
+            get {
+                return ResourceManager.GetString("RequestSavedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An Error has occured hile saving your request..
+        /// </summary>
+        public static string RequestSavingError {
+            get {
+                return ResourceManager.GetString("RequestSavingError", resourceCulture);
+            }
+        }
     }
 }
