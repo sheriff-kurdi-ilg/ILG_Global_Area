@@ -243,5 +243,13 @@ namespace ILG_Global.Web.Controllers
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return RedirectToAction(nameof(Index));
         }
+
+        [Route("{culture}/Home/SubscribeToNewsLetter")]
+        [HttpPost]
+        public IActionResult SubscribeToNewsLetterAPI(NewsLetterSubscribe newsLetterSubscribe)
+        {
+            NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+            return Ok(new { Message ="success."});
+        }
     }
 }
