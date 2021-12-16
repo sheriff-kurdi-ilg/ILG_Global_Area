@@ -271,3 +271,50 @@ $('.ilg-modal-popup-window').on('show.bs.modal', function (e) {
 //    console.log("leave");
 //});
 
+$("#subscribe-email-form").submit(function(e){
+    vPreventFormSubmition(e);
+
+    let email = $("#subscribe-email-form #Email").val();
+
+    let oApiRequest = { "Email": email };
+
+
+    oApiRequest = JSON.stringify(oApiRequest);
+
+    if (isEmail(email)) {
+        sendEmailSubscription(oApiRequest);
+    }
+    else{
+        vPreventFormSubmition(e);
+    }
+
+});
+
+function sendEmailSubscription(oApiRequest) { // languageID
+    let sUrl = "/en/Home/SubscribeToNewsLetter";
+
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        url: sUrl,
+        async: true,
+        data: oApiRequest,
+
+        success: function (xmlResponse) {
+            new swal(
+                'Good job!',
+                'Subscribed Successfully!',
+                'success'
+            )
+            $("#subscribe-email-form #Email").val("")
+            console.log(xmlResponse)
+            
+        },
+
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+           
+            console.log('error is: ', XMLHttpRequest)
+        },
+    });
+}

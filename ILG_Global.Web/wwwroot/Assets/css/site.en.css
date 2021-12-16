@@ -238,7 +238,7 @@ header {
     color: rgba(255, 255, 255, 1);
     font-size: calc(50px + (93 - 50) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
-    letter-spacing: -6.5px;
+    letter-spacing: inherit;
 }
 
 #app .header-banner .header-content .arrow-bottom button:focus, .arrow-top button:focus {
@@ -530,7 +530,7 @@ header {
     padding-bottom: 100px;
 }
 
-#app .contact-us-section iframe {
+ iframe {
     width: 100%;
     height: 650px;
 }
@@ -557,6 +557,16 @@ header {
  
  #app .contact-us-section .contact-list li a{
     font-weight: 350;
+}
+
+#app .contact-us-section .contact-us-sub-title p{
+    font-size: calc(35px + (50 - 35) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 600;
+    color: var(--main-color);
+    padding-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
 }
 
 #app .contact-us-section .contact-list i {
@@ -1504,7 +1514,7 @@ footer .footer-bottom .footer-bottom-row li a {
     visibility: hidden
 }
 
-#shareViaMailModalGreeting .shareViaMailModalGreeting-cancel-btn{
+#shareViaMailModalGreeting .shareViaMailModalGreeting-cancel-btn, .shareViaMailModalGreeting-launch-btn{
     visibility: hidden
 }
 

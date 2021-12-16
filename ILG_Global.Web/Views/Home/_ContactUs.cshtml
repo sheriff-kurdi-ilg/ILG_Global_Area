@@ -8,14 +8,14 @@
     Layout = null;
 }
 
-<section id="contactUs" class="home-section contact-us-section general-section">
+<section id="contactUs" class="home-section contact-us-section general-section flex-column pb-0">
     <div class="container">
         <div class="row title">
             <div class="col-12 col-sm-12 col-md-6">
                 <h5 class="pb-4 pt-5">
                     @Html.Raw(Model.ContactUsSectionHeaderContent.Title)
                 </h5>
-                <h6>
+                <h6 class="contact-us-sub-title">
                     @Html.Raw(Model.ContactUsSectionHeaderContent.SubTitle)
              
                 </h6>
@@ -36,9 +36,10 @@
                     }
                 </ul>
             </div>
-            <div class="col-12 col-sm-12 col-md-6">
-                <iframe class="border-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d217.27620049680084!2d47.9931967!3d29.3872904!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf84852400ffeb%3A0x10ca28f807d59958!2zSW50ZWdyYXRlZCBMZWdhbCBHcm91cCB8INin2YTZhdis2YXZiNi52Kkg2KfZhNmC2KfZhtmI2YbZitipINin2YTZhdiq2YPYp9mF2YTYqQ!5e0!3m2!1sen!2seg!4v1639412121286!5m2!1sen!2seg"  allowfullscreen="" loading="lazy"></iframe>
-            </div>
+ 
         </div>
+    </div>
+    <div class="w-100 pt-3">
+        <iframe class="border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3476.415552272205!2d47.991190115099776!3d29.387397382126075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fcf84852400ffeb%3A0x10ca28f807d59958!2zSW50ZWdyYXRlZCBMZWdhbCBHcm91cCB8INin2YTZhdis2YXZiNi52Kkg2KfZhNmC2KfZhtmI2YbZitipINin2YTZhdiq2YPYp9mF2YTYqQ!5e0!3m2!1sen!2skw!4v1639647492861!5m2!1sen!2skw"  allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>

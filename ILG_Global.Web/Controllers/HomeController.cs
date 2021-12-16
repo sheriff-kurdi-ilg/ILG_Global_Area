@@ -246,8 +246,13 @@ namespace ILG_Global.Web.Controllers
 
         [Route("{culture}/Home/SubscribeToNewsLetter")]
         [HttpPost]
-        public IActionResult SubscribeToNewsLetterAPI(NewsLetterSubscribe newsLetterSubscribe)
+        public IActionResult SubscribeToNewsLetterAPI([FromBody] string email)
         {
+            NewsLetterSubscribe newsLetterSubscribe = new NewsLetterSubscribe();
+            newsLetterSubscribe.Email = email;
+            newsLetterSubscribe.ID = 1;
+            newsLetterSubscribe.IsEnabled = true;
+            newsLetterSubscribe.PreferredLanguage = "en";
             NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
             return Ok(new { Message ="success."});
         }
