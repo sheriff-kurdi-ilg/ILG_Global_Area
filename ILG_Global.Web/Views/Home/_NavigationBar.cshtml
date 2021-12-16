@@ -99,14 +99,18 @@
                              <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
                                                                 @if (requestCulture.RequestCulture.Culture.Name == "ar")
                                     {
-                                                           <i class="fas fa-globe px-2"></i>
 
-                                      <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN</a>
+                                      <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN
+                                                                                                     <i class="fas fa-globe px-2"></i>
+
+                                          </a>
                                     }
-                                    else
-                                    {                                              <i class="fas fa-globe px-2"></i>
+                                    else{
 
-                                       <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR</a>
+                                       <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR
+                                                                                                                          <i class="fas fa-globe px-2"></i>
+
+                                       </a>
 
 
                                     }
