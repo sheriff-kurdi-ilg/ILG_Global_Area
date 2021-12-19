@@ -8,33 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web.dir/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web/.idea/projectSettingsUpdater.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.idea.ILG_Global.Web/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/ILG_Global.Web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_ContactUs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_ContactUs.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_ContactUs.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_ContactUs.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_Footer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_Footer.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/x_Footer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/x_Footer.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/innerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/innerPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/site.en.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +51,9 @@
       <workItem from="1639480845563" duration="1796000" />
       <workItem from="1639483475369" duration="4540000" />
       <workItem from="1639565088738" duration="13246000" />
-      <workItem from="1639642887122" duration="9740000" />
+      <workItem from="1639642887122" duration="11093000" />
+      <workItem from="1639902693085" duration="5000" />
+      <workItem from="1639906722742" duration="599000" />
     </task>
     <servers />
   </component>
