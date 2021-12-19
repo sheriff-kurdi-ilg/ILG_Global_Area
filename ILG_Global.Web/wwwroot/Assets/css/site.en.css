@@ -1566,6 +1566,8 @@ footer .footer-bottom .footer-bottom-row li a {
     width: 112px;
     height: 112px;
     z-index: 1000;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .new-call-action .main-icon-container{
