@@ -226,7 +226,7 @@ namespace ILG_Global.Web.Controllers
 
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
-                MailService.Send(ShareViaEmailSubscriberEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+                await MailService.Send(ShareViaEmailSubscriberEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
             }
             catch
             {

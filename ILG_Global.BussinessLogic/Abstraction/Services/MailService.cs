@@ -18,14 +18,14 @@ namespace ILG_Global.BussinessLogic.Services
             this.configuration = configuration;
         }
 
-        public void Send(string sendTo, string subject, string body)
+        public async Task Send(string sendTo, string subject, string body)
         {
-            MailMessage message = new MailMessage();
+            MailMessage oMailMessage = new MailMessage();
 
-            message.From = new MailAddress(configuration["Email:EmailAddress"]);
-            message.To.Add(sendTo);
-            message.Subject = subject;
-            message.Body = body;
+            oMailMessage.From = new MailAddress(configuration["Email:EmailAddress"]);
+            oMailMessage.To.Add(sendTo);
+            oMailMessage.Subject = subject;
+            oMailMessage.Body = body;
 
 
             using (SmtpClient client = new SmtpClient())
@@ -37,19 +37,19 @@ namespace ILG_Global.BussinessLogic.Services
                 client.Port = 587;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-                client.Send(message);
+               await client.SendMailAsync( oMailMessage);
             }
         }
 
-        public void Send(string sendTo, string subject, string body, Attachment oAttachment)
+        public async Task Send(string sendTo, string subject, string body, Attachment oAttachment)
         { 
-            MailMessage message = new MailMessage();
+            MailMessage oMailMessage = new MailMessage();
 
-            message.From = new MailAddress(configuration["Email:EmailAddress"]);
-            message.To.Add(sendTo);
-            message.Subject = subject;
-            message.Body = body;
-            message.Attachments.Add(oAttachment);
+            oMailMessage.From = new MailAddress(configuration["Email:EmailAddress"]);
+            oMailMessage.To.Add(sendTo);
+            oMailMessage.Subject = subject;
+            oMailMessage.Body = body;
+            oMailMessage.Attachments.Add(oAttachment);
 
             using (SmtpClient client = new SmtpClient())
             {
@@ -61,7 +61,7 @@ namespace ILG_Global.BussinessLogic.Services
                 client.Port = 587;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-                client.Send(message);
+               await client.SendMailAsync(oMailMessage);
             }
         }
     }
