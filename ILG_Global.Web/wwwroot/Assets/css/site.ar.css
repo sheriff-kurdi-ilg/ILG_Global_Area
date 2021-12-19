@@ -107,3 +107,13 @@ body {
     right: 269px;
 }
 
+/************************************************** new-call-action **********************************************************************/
+.new-call-action{
+    position: fixed;
+    bottom: 158px;
+    right: auto;
+    left: 222px;
+    width: 112px;
+    height: 112px;
+    z-index: 1000;
+}
