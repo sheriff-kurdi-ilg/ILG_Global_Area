@@ -153,6 +153,11 @@ namespace ILG_Global.Web
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapAreaControllerRoute(
+               name: "MyAreaAdmin",
+               areaName: "Admin",
+               pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
                 endpoints.MapControllerRoute(
                              name: "default",
                              pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
