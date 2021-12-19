@@ -48,7 +48,7 @@ namespace ILG_Global.Web.Controllers.API
         }
 
         [HttpPost]
-        public SuccessStoryShareViaEmailResponse Post([FromBody] SuccessStoryShareViaEmailRequest oSuccessStoryShareViaEmailRequest)
+        public async Task<SuccessStoryShareViaEmailResponse>  Post([FromBody] SuccessStoryShareViaEmailRequest oSuccessStoryShareViaEmailRequest)
         {
             SuccessStoryShareViaEmailResponse oSuccessStoryShareViaEmailResponse = new SuccessStoryShareViaEmailResponse(); 
 
@@ -56,13 +56,13 @@ namespace ILG_Global.Web.Controllers.API
             {
                 ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryEmail };
 
-                 EmailRepository.Insert(oShareViaEmailSubscriber);
+               await EmailRepository.Insert(oShareViaEmailSubscriber);
 
                 string sFilePath = ILG_PathProvider.MapPath("/UserFiles/PDF/SamplePDF1.pdf");
 
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
-                // MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
+                await MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
                 
                 oSuccessStoryShareViaEmailResponse = 
                     new SuccessStoryShareViaEmailResponse {
