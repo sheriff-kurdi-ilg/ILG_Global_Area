@@ -1572,7 +1572,7 @@ footer .footer-bottom .footer-bottom-row li a {
     width: 112px;
     height: 112px;
     transform: rotate(0deg);
-    transition: transform 1s;
+    transition: transform 0.5s;
 }
 .new-call-action .main-icon-container .img-container{
     cursor: pointer;
