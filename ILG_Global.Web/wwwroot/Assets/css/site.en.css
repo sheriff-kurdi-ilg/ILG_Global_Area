@@ -1571,6 +1571,8 @@ footer .footer-bottom .footer-bottom-row li a {
 .new-call-action .main-icon-container{
     width: 112px;
     height: 112px;
+    transform: rotate(0deg);
+    transition: transform 1s;
 }
 .new-call-action .main-icon-container .img-container{
     cursor: pointer;
@@ -1579,8 +1581,6 @@ footer .footer-bottom .footer-bottom-row li a {
     background: rgba(12, 188, 171, 1);
     color: white;
     border-radius: 50%;
-    transform: rotate(0deg);
-    transition: transform 1s;
 }
 
 .new-call-action .main-icon-container .main-icon{
