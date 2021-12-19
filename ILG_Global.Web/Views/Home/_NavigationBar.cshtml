@@ -39,10 +39,34 @@
                          src="/Assets/images/Mask_Group_25.png"
                          alt="Ideaeg logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                <div class="row mobile-nav">
+                    @***************************************** language element *****************************************@
+                    <li class="nav-item mobile-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center w-fit-content d-none">
+                        @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                        {
+                                            
+                            <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN
+                                <i class="fas fa-globe px-2"></i>
+                                            
+                            </a>
+                        }
+                        else
+                        {
+                                            
+                            <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR
+                                <i class="fas fa-globe px-2"></i>
+                                            
+                            </a>
+                                            
+                                            
+                        }
+                    </li>
+                    <button class="navbar-toggler w-fit-content" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                    <i class="fas fa-bars"></i>
-                </button>
+                        <i class="fas fa-bars"></i>
+                        </button>
+                </div>
+              
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                      aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
@@ -51,7 +75,9 @@
                                 aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+
                         <ul class="navbar-nav justify-content-end w-100 p-0">
+                            @***************************************** navbar elements *****************************************@
                             <ul class="navbar-nav p-0">
                                 <li class="nav-item">
                                     <a class="nav-link active hover-underline-animation px-2" aria-current="page"
@@ -67,59 +93,30 @@
                                     <a class="nav-link active hover-underline-animation px-2" href="#contactUs">@Localizer["Contact us"]</a>
                                 </li>
                             </ul>
-         @*                   <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
 
-                                <a class="nav-link toggle-lang" href="#">
+                            @***************************************** language element *****************************************@
+                            <li class="nav-item web-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+                                @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                                {
 
-                                    @if (requestCulture.RequestCulture.Culture.Name == "ar")
-                                    {
-                                      <form id="SelectEnglish" action="/en/">
-                                          <button type="submit" class="btn btn-default btn-xs nav-link">
-                                              <i class="fas fa-globe px-2"></i>
-                                              EN
-                                          </button>
-                                      </form>
-                                    }
-                                    else
-                                    {
-                                     <form id="SelectEnglish" action="/ar/">
-                                        <button type="submit" class="btn btn-default btn-xs nav-link">
-                                            <i class="fas fa-globe px-2"></i>
-                                            AR
-                                        </button>
-                                      </form>
-                                    }
-                                </a>
-                            </li>*@
-                      
-                            @********************************@
+                                    <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN
+                                        <i class="fas fa-globe px-2"></i>
+
+                                    </a>
+                                }
+                                else
+                                {
+
+                                    <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR
+                                        <i class="fas fa-globe px-2"></i>
+
+                                    </a>
 
 
+                                }
+                            </li>
 
-                             <li class="nav-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
-                                                                @if (requestCulture.RequestCulture.Culture.Name == "ar")
-                                    {
-
-                                      <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN
-                                                                                                     <i class="fas fa-globe px-2"></i>
-
-                                          </a>
-                                    }
-                                    else{
-
-                                       <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR
-                                                                                                                          <i class="fas fa-globe px-2"></i>
-
-                                       </a>
-
-
-                                    }
-                                    </li>
-                            @********************************@
-
-
-                           
-
+                            @***************************************** social media icons *****************************************@
                             <li class="nav-item row justify-content-center align-items-center social-container icon-col">
                                 <a class="nav-link col icon" href="#">
                                     <i class="fab fa-instagram"></i>

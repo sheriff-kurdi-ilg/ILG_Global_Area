@@ -7,7 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/Lottie.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_NavigationBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_NavigationBar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +28,14 @@
         <option value="JavaScript File" />
       </list>
     </option>
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2fee4448dc86aca22bf086d284f3f93671f39a96c314d13510a96c8a34bbec/ValidationMessageTagHelper.cs" root0="SKIP_HIGHLIGHTING" />
@@ -53,7 +69,7 @@
       <workItem from="1639565088738" duration="13246000" />
       <workItem from="1639642887122" duration="11093000" />
       <workItem from="1639902693085" duration="5000" />
-      <workItem from="1639906722742" duration="599000" />
+      <workItem from="1639906722742" duration="4376000" />
     </task>
     <servers />
   </component>
@@ -63,6 +79,17 @@
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
