@@ -105,7 +105,7 @@ namespace ILG_Global.Web
 
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env,IConfiguration configuration)
         {
             //var LocaOptions = app.ApplicationServices.GetServices<IOptions<RequestLocalizationOptions>>();
             
@@ -134,7 +134,7 @@ namespace ILG_Global.Web
             RequestLocalizationOptions.SupportedCultures = RequestLocalizationOptions.SupportedUICultures =
               new CultureInfo[] { new CultureInfo("en"),new CultureInfo("ar") }.ToList();
 
-            RequestLocalizationOptions.DefaultRequestCulture = new RequestCulture("ar");
+            RequestLocalizationOptions.DefaultRequestCulture = new RequestCulture(configuration["localization:DefaultLanguge"]);
 
 
 
