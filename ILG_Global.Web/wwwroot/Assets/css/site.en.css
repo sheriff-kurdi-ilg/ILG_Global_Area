@@ -1637,7 +1637,7 @@ footer .footer-bottom .footer-bottom-row li a {
         bottom: 40px;
         right: 30px;
         width: 56px;
-        height: 56px;
+        height: 64px;
     }
     
     .new-call-action .main-icon-container img{
@@ -1646,11 +1646,11 @@ footer .footer-bottom .footer-bottom-row li a {
     
     .new-call-action .main-icon-container{
         width: 56px;
-        height: 56px;
+        height: 64px;
     }
     .new-call-action .main-icon-container .img-container{
-        width: 56px;
-        height: 56px;
+        width: 56px !important;
+        height: 56px !important;
     }
 
     .new-call-action .phone-icon-container .img-container{
