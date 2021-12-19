@@ -133,9 +133,12 @@ namespace ILG_Global.Web
 
             RequestLocalizationOptions.SupportedCultures = RequestLocalizationOptions.SupportedUICultures =
               new CultureInfo[] { new CultureInfo("en"),new CultureInfo("ar") }.ToList();
-            
-           
-            
+
+            RequestLocalizationOptions.DefaultRequestCulture = new RequestCulture("ar");
+
+
+
+
             RequestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = RequestLocalizationOptions });
 
            
