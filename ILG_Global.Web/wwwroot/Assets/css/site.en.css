@@ -1557,3 +1557,88 @@ footer .footer-bottom .footer-bottom-row li a {
 .shareViaMailModalGreeting-launch-btn {
     visibility:hidden!important;
 }
+
+/************************************************** new-call-action **********************************************************************/
+.new-call-action{
+    position: fixed;
+    bottom: 158px;
+    right: 222px;
+    width: 112px;
+    height: 112px;
+    z-index: 1000;
+}
+
+.new-call-action .main-icon-container{
+    width: 112px;
+    height: 112px;
+    transform: rotate(0deg);
+    transition: transform 0.5s;
+}
+.new-call-action .main-icon-container .img-container{
+    cursor: pointer;
+    width: 112px;
+    height: 112px;
+    background: rgba(12, 188, 171, 1);
+    color: white;
+    border-radius: 50%;
+}
+
+.new-call-action .main-icon-container .main-icon{
+
+}
+
+.new-call-action:hover .main-icon-container{
+    transform: rotate(360deg);
+    transition: transform 1s;
+}
+
+.new-call-action .phone-icon-container .img-container{
+    cursor: pointer;
+    width: 72px;
+    height: 72px;
+    background: rgba(12, 188, 171, 1);
+    color: white;
+    border-radius: 50%;
+}
+.new-call-action .phone-icon-container{
+    height: 92px;
+    width: 112px;
+    position: absolute;
+    top: 0;
+    transition: top 1s;
+}
+.new-call-action:hover .phone-icon-container{
+    top: -90px;
+    transition:  top 1s;
+    -webkit-transition: top 1s;
+}
+
+.new-call-action .phone-icon-container .phone-icon{
+
+}
+
+.new-call-action .whats-app-icon-container .img-container{
+    cursor: pointer;
+    width: 63px;
+    height: 63px;
+    background: rgba(12, 188, 171, 1);
+    color: white;
+    border-radius: 50%;
+}
+.new-call-action .whats-app-icon-container{
+    width: 112px;
+    height: 83px;
+    position: absolute;
+    top: 0;
+    transition: top 1s;
+}
+
+.new-call-action:hover .whats-app-icon-container{
+    top: -160px;
+    transition:  top 1s;
+    -webkit-transition: top 1s;
+}
+
+.new-call-action .whats-app-icon-container .whats-app-icon{
+
+}

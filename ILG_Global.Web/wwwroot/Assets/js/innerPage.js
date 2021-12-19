@@ -138,3 +138,22 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function () {
+
+    if (isInViewport($('footer'))) {
+        $('.new-call-action').addClass('d-none');
+    } else {
+        $('.new-call-action').removeClass('d-none');
+    }
+
+
+    $(document).scroll(function () {
+
+        if (isInViewport($('footer'))) {
+            $('.new-call-action').addClass('d-none');
+        } else {
+            $('.new-call-action').removeClass('d-none');
+        }
+    });
+
+});

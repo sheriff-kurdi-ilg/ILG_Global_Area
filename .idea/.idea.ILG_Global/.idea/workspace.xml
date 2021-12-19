@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/Lottie.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/Debug/net5.0/ILG_Global.DataAccess.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_NavigationBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_NavigationBar.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +62,7 @@
       <workItem from="1639565088738" duration="13246000" />
       <workItem from="1639642887122" duration="11093000" />
       <workItem from="1639902693085" duration="5000" />
-      <workItem from="1639906722742" duration="4376000" />
+      <workItem from="1639906722742" duration="13257000" />
     </task>
     <servers />
   </component>
