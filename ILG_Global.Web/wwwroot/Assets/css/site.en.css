@@ -1583,10 +1583,6 @@ footer .footer-bottom .footer-bottom-row li a {
     border-radius: 50%;
 }
 
-.new-call-action .main-icon-container .main-icon{
-
-}
-
 .new-call-action:hover .main-icon-container{
     transform: rotate(360deg);
     transition: transform 1s;
@@ -1613,10 +1609,6 @@ footer .footer-bottom .footer-bottom-row li a {
     -webkit-transition: top 1s;
 }
 
-.new-call-action .phone-icon-container .phone-icon{
-
-}
-
 .new-call-action .whats-app-icon-container .img-container{
     cursor: pointer;
     width: 63px;
@@ -1639,6 +1631,58 @@ footer .footer-bottom .footer-bottom-row li a {
     -webkit-transition: top 1s;
 }
 
-.new-call-action .whats-app-icon-container .whats-app-icon{
+@media (max-width: 991px) {
+    /************************************************** new-call-action **********************************************************************/
+    .new-call-action{
+        bottom: 40px;
+        right: 30px;
+        width: 56px;
+        height: 56px;
+    }
+    
+    .new-call-action .main-icon-container img{
+        width: 67% !important;
+    }
+    
+    .new-call-action .main-icon-container{
+        width: 56px;
+        height: 56px;
+    }
+    .new-call-action .main-icon-container .img-container{
+        width: 56px;
+        height: 56px;
+    }
 
+    .new-call-action .phone-icon-container .img-container{
+        cursor: pointer;
+        width: 44px;
+        height: 44px;
+    }
+    .new-call-action .phone-icon-container img{
+        width: 45% !important;
+    }
+    .new-call-action .phone-icon-container{
+        height: 64px;
+        width: 56px;
+    }
+    .new-call-action:hover .phone-icon-container{
+        top: -63px;
+    }
+
+    .new-call-action .whats-app-icon-container .img-container{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+    .new-call-action .whats-app-icon-container img{
+        width: 50% !important;
+    }
+    .new-call-action .whats-app-icon-container{
+        width: 56px;
+        height: 56px;
+    }
+
+    .new-call-action:hover .whats-app-icon-container{
+        top: -108px;
+    }
 }
