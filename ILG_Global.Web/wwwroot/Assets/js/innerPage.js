@@ -14,12 +14,13 @@ function addBgToNavWhenScroll() {
 }
 
 function isInViewport(element) {
-    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+    var elementTop = element.offset().top;
+    var elementBottom = elementTop + element.outerHeight();
 
-    if (clientHeight + scrollTop >= scrollHeight - 5) {
-        return true;
-    }
-    return false;
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
 }
 
 $(document).on("click", "#share-via-mail", function () {
@@ -146,6 +147,14 @@ $(document).ready(function () {
         $('.new-call-action').removeClass('d-none');
     }
 
+    let player = document.querySelector("lottie-player");
+    let play = document.querySelector("#steps-lottie-item");
+
+    if (isInViewport($('#steps-lottie-item'))) {
+        player.play();
+    } else {
+        player.stop();
+    }
 
     $(document).scroll(function () {
 
@@ -153,6 +162,9 @@ $(document).ready(function () {
             $('.new-call-action').addClass('d-none');
         } else {
             $('.new-call-action').removeClass('d-none');
+        }
+        if (isInViewport($('#steps-lottie-item'))) {
+            player.play();
         }
     });
 
