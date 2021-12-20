@@ -45,7 +45,7 @@
                         @if (requestCulture.RequestCulture.Culture.Name == "ar")
                         {
                                             
-                            <a class="nav-link toggle-lang" id="enbutton" href="/en/#ourService">EN
+                            <a class="nav-link toggle-lang"  href="/en/#ourService">EN
                                 <i class="fas fa-globe px-2"></i>
                                             
                             </a>
@@ -53,7 +53,7 @@
                         else
                         {
                                             
-                            <a class="nav-link toggle-lang" id="arbutton" href="/ar/#ourService">AR
+                            <a class="nav-link toggle-lang"  href="/ar/#ourService">AR
                                 <i class="fas fa-globe px-2"></i>
                                             
                             </a>
@@ -142,6 +142,7 @@
                                     $(".nav-link").click(function () {
             let url = window.location.href
             let id = url.substring(url.lastIndexOf('/') + 1);
+
               $("#enbutton").attr("href", "/en/"+id)
                 $("#arbutton").attr("href", "/ar/"+id)
         })
