@@ -1714,3 +1714,7 @@ footer .footer-bottom .footer-bottom-row li a {
         top: -108px;
     }
 }
+
+.owl-carousel .owl-item img{
+    object-fit: cover;
+}

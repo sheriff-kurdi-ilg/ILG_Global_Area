@@ -128,7 +128,7 @@ namespace ILG_Global.Web
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             RequestLocalizationOptions RequestLocalizationOptions = new RequestLocalizationOptions();
 
             RequestLocalizationOptions.SupportedCultures = RequestLocalizationOptions.SupportedUICultures =
