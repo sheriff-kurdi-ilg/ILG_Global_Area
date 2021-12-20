@@ -120,3 +120,11 @@ body {
         left: 30px;
     }
 }
+.navbar .nav-item .icon, footer .footer-bottom .icon {
+    border-left: 1px solid rgba(222, 220, 220, 0.73);
+    border-right: 0 !important;
+}
+
+.navbar .nav-item .icon:last-of-type, footer .footer-bottom .icon:last-of-type {
+    border: 0 !important;
+}

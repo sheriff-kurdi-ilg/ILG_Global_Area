@@ -215,6 +215,10 @@ main {
     height: 20px;
     text-decoration: none !important;
 }
+
+.navbar .nav-item .icon:last-of-type, footer .footer-bottom .icon:last-of-type {
+    border: 0 !important;
+}
 .mobile-nav  .nav-item .nav-link{
     color: white !important;
 }
