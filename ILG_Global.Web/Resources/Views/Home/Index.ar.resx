@@ -124,9 +124,9 @@
     <value>/Assets/js/site.ar.js</value>
   </data>
   <data name="http://wa.me/0096565669292" xml:space="preserve">
-    <value>tel:0096522499777</value>
+    <value>http://wa.me/0096565669292</value>
   </data>
   <data name="tel:0096522499777" xml:space="preserve">
-    <value>http://wa.me/0096565669292</value>
+    <value>tel:0096522499777</value>
   </data>
 </root>

@@ -17,6 +17,6 @@ namespace ILG_Global.BussinessLogic.Models
         public string SubTitle { get; set; }
         public string Summary { get; set; }
         public string Description { get; set; }
-    
+        public string ImageURL { get; set; }
     }
 }

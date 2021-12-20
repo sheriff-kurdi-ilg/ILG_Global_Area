@@ -56,7 +56,7 @@ namespace ILG_Global.Web.Controllers.API
             {
                 ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryEmail };
 
-               await EmailRepository.Insert(oShareViaEmailSubscriber);
+                await EmailRepository.Insert(oShareViaEmailSubscriber);
 
                 string sFilePath = ILG_PathProvider.MapPath("/UserFiles/PDF/SamplePDF1.pdf");
 

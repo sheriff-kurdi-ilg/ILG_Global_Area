@@ -236,14 +236,16 @@ header {
     font-size: calc(15px + (20 - 15) * ((100vw - 300px) / (1600 - 300)));
 }
 
-#app .header-banner .header-content h5, #app .header-banner .header-content p {
-    font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
-}
+    #app .header-banner .header-content h5, #app .header-banner .header-content p,
+    #app .header-banner .header-content .leaderBoard-summary {
+        font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
+    }
 
-#app .header-banner .header-content h5, #app .header-banner .header-content p {
-    color: rgba(224, 224, 224, 0.769);
-    font-weight: 350;
-}
+    #app .header-banner .header-content h5, #app .header-banner .header-content p,
+    #app .header-banner .header-content .leaderBoard-summary {
+        color: rgba(224, 224, 224, 0.769);
+        font-weight: 350;
+    }
 
 #app .header-banner .header-content h1 {
     color: rgba(255, 255, 255, 1);
