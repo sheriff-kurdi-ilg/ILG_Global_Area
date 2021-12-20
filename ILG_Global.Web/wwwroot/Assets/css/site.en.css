@@ -1722,3 +1722,7 @@ footer .footer-bottom .footer-bottom-row li a {
 .owl-carousel .owl-item img{
     object-fit: cover;
 }
+
+.terms-container section{
+    padding: 30px 0px;
+}

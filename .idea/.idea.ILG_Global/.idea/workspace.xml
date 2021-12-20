@@ -8,9 +8,8 @@
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_Footer.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_Footer.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.ar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Shared/_NavigationBar.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Terms/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Terms/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
       <workItem from="1639642887122" duration="11093000" />
       <workItem from="1639902693085" duration="5000" />
       <workItem from="1639906722742" duration="25325000" />
-      <workItem from="1640002916791" duration="3362000" />
+      <workItem from="1640002916791" duration="7616000" />
     </task>
     <servers />
   </component>

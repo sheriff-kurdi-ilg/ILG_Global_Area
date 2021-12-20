@@ -75,7 +75,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end w-100 p-0">
-                            <ul class="navbar-nav p-0">
+                            <ul class="navbar-nav p-0 not-terms-element" >
                                 <li class="nav-item">
                                     <a class="nav-link active hover-underline-animation px-2" href="#ourService">@Localizer["Law Service"] </a>
                                 </li>
@@ -90,7 +90,7 @@
                                     <a class="nav-link active hover-underline-animation px-2" href="#contactUs">@Localizer["Contact us"]  </a>
                                 </li>
                             </ul>
-                        <li class="nav-item web-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center">
+                            <li class="nav-item web-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center not-terms-element">
                                                         @***************************************** language element *****************************************@
 
                                 @if (requestCulture.RequestCulture.Culture.Name == "ar")
@@ -133,6 +133,9 @@
         </nav>
 
                                            <script>
+                                                     if (window.location.href.indexOf("terms") > -1){
+                                                          $(".not-terms-element").addClass('d-none')
+                                                     }
                                     $(".nav-link").click(function () {
             let url = window.location.href
             let id = url.substring(url.lastIndexOf('/') + 1);
