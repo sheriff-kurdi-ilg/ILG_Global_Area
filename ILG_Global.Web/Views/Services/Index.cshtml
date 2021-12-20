@@ -7,10 +7,14 @@ Layout = "~/views/Shared/Layout.cshtml";
 @using ILG_Global.BussinessLogic.Models
 @model ServicesPageVM
 
-<partial name="_OurServices" model="Model.OurServices" />
-<partial name="_AboutILG" model="Model.AboutILGSectionVM" />
-<partial name="_HowWeWork" model="Model.HowWeWorkSectionVM" />
-<partial name="_ContactUs" model="Model.ContactUsSectionViewModel"/>
+<div class="inner-page-container">
+    <partial name="_OurServices" model="Model.OurServices" />
+    <partial name="_AboutILG" model="Model.AboutILGSectionVM" />
+    <partial name="_HowWeWork" model="Model.HowWeWorkSectionVM" />
+    <partial name="_ContactUs" model="Model.ContactUsSectionViewModel"/>
+</div>
+
+
 @*        @{
             NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe)ViewData["NewsLetterSubscribe"];
         }

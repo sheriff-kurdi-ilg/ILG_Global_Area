@@ -6938,7 +6938,11 @@
     ]
   },
   "packageFolders": {
+<<<<<<< Updated upstream
     "C:\\Users\\Kurdi\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\merehan.assad\\.nuget\\packages\\": {}
+>>>>>>> Stashed changes
   },
   "project": {
     "version": "1.0.0",
@@ -6946,11 +6950,19 @@
       "projectUniqueName": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
       "projectName": "ILG_Global.DataAccess",
       "projectPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\ILG_Global.DataAccess.csproj",
+<<<<<<< Updated upstream
       "packagesPath": "C:\\Users\\Kurdi\\.nuget\\packages\\",
       "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kurdi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+      "packagesPath": "C:\\Users\\merehan.assad\\.nuget\\packages\\",
+      "outputPath": "D:\\ILG_Projects\\ILG_Global\\ILG_Global.DataAccess\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\merehan.assad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> Stashed changes
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7022,7 +7034,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }

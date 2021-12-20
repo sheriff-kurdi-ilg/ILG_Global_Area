@@ -106,6 +106,13 @@ main {
     transform-origin: bottom left;
 }
 
+.sticky-nav .hover-underline-animation {
+    color: var(--main-color) !important;
+}
+
+.sticky-nav .hover-underline-animation:after {
+    background: var(--main-color) !important;
+}
 .container {
     max-width: 85% !important;
     height: 100%;
@@ -117,6 +124,10 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.inner-page-container .home-section{
+    min-height: 75vh;
 }
 
 .hide-native-scrollbar {
@@ -202,6 +213,7 @@ main {
     align-items: center;
     width: 40px;
     height: 20px;
+    text-decoration: none !important;
 }
 .mobile-nav  .nav-item .nav-link{
     color: white !important;
@@ -541,6 +553,11 @@ header {
 /*contact us section style*/
 #app .contact-us-section {
     padding-bottom: 100px;
+}
+
+
+.inner-page-container .contact-us-section{
+    padding-bottom: 0 !important;
 }
 
  iframe {
@@ -1563,26 +1580,29 @@ footer .footer-bottom .footer-bottom-row li a {
 /************************************************** new-call-action **********************************************************************/
 .new-call-action{
     position: fixed;
-    bottom: 158px;
-    right: 222px;
-    width: 112px;
-    height: 112px;
+    bottom: 108px;
+    right: 172px;
+    width: 140px;
+    height: 140px;
     z-index: 1000;
 }
 
 .new-call-action .main-icon-container{
-    width: 112px;
-    height: 112px;
+    width: 92px;
+    height: 92px;
     transform: rotate(0deg);
     transition: transform 0.5s;
 }
 .new-call-action .main-icon-container .img-container{
     cursor: pointer;
-    width: 112px;
-    height: 112px;
+    width: 100%;
     background: rgba(12, 188, 171, 1);
     color: white;
     border-radius: 50%;
+}
+
+.new-call-action .main-icon-container .img-container img{
+    width: 65% !important;
 }
 
 .new-call-action:hover .main-icon-container{
@@ -1592,35 +1612,40 @@ footer .footer-bottom .footer-bottom-row li a {
 
 .new-call-action .phone-icon-container .img-container{
     cursor: pointer;
-    width: 72px;
-    height: 72px;
+    width: 52px;
+    height: 52px;
     background: rgba(12, 188, 171, 1);
     color: white;
     border-radius: 50%;
 }
 .new-call-action .phone-icon-container{
     height: 92px;
-    width: 112px;
+    width: 140px;
     position: absolute;
     top: 0;
     transition: top 1s;
 }
 .new-call-action:hover .phone-icon-container{
-    top: -90px;
+    top: -80px;
     transition:  top 1s;
     -webkit-transition: top 1s;
 }
 
+.new-call-action .whats-app-icon-container .img-container img,
+.new-call-action .phone-icon-container .img-container img{
+    width: 50% !important;
+}
+
 .new-call-action .whats-app-icon-container .img-container{
     cursor: pointer;
-    width: 63px;
-    height: 63px;
+    width: 43px;
+    height: 43px;
     background: rgba(12, 188, 171, 1);
     color: white;
     border-radius: 50%;
 }
 .new-call-action .whats-app-icon-container{
-    width: 112px;
+    width: 140px;
     height: 83px;
     position: absolute;
     top: 0;
@@ -1628,7 +1653,7 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 
 .new-call-action:hover .whats-app-icon-container{
-    top: -160px;
+    top: -135px;
     transition:  top 1s;
     -webkit-transition: top 1s;
 }

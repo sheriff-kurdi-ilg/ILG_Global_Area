@@ -6,7 +6,15 @@
     <projectFile pubXmlPath="ILG_Global.Web/Properties/PublishProfiles/FolderProfile.pubxml">ILG_Global.Web/ILG_Global.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="" />
+    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_HowWeWork.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.ar.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.ar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/innerPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/js/innerPage.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +52,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\JetBrains Rider 2021.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -59,7 +68,7 @@
       <workItem from="1639565088738" duration="13246000" />
       <workItem from="1639642887122" duration="11093000" />
       <workItem from="1639902693085" duration="5000" />
-      <workItem from="1639906722742" duration="16482000" />
+      <workItem from="1639906722742" duration="22113000" />
     </task>
     <servers />
   </component>
