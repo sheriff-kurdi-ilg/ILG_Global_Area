@@ -64,12 +64,12 @@ namespace ILG_Global.Web.Controllers.API
                 Attachment oAttachment = new Attachment(sFilePath); ;
 
                 await MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
-                
-                oSuccessStoryShareViaEmailResponse = 
+
+                oSuccessStoryShareViaEmailResponse =
                     new SuccessStoryShareViaEmailResponse {
                         SubscriptionID = oShareViaEmailSubscriber.ID,
-                        IsSucceeded = oShareViaEmailSubscriber.ID !=0,
-                        UserMessage = oShareViaEmailSubscriber.ID != 0? ILG_SharedResources .RequestSavedSuccessfully : ILG_SharedResources.RequestSavingError
+                        IsSucceeded = oShareViaEmailSubscriber.ID != 0,
+                        UserMessage = oShareViaEmailSubscriber.ID != 0 ? ILG_GlobalResources.Your_request_Saved_Successfully_ : ILG_GlobalResources.An_Error_has_occurred_while_saving_your_request_
                     };
             }
             catch (Exception oException)

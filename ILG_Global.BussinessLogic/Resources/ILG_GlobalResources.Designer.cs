@@ -22,14 +22,14 @@ namespace ILG_Global.BussinessLogic.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ILG_SharedResources {
+    public class ILG_GlobalResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ILG_SharedResources() {
+        internal ILG_GlobalResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILG_SharedResources", typeof(ILG_SharedResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILG_GlobalResources", typeof(ILG_GlobalResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,47 +61,47 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Invalid Email Address..
+        ///   Looks up a localized string similar to حدث خطأ اثناء حفظ طلبك..
         /// </summary>
-        public static string EmailFormatValidate {
+        public static string An_Error_has_occurred_while_saving_your_request_ {
             get {
-                return ResourceManager.GetString("EmailFormatValidate", resourceCulture);
+                return ResourceManager.GetString("An Error has occurred while saving your request.", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email Required..
+        ///   Looks up a localized string similar to أدخل البريد الالكترونى..
         /// </summary>
-        public static string EmailRequiredValidateMessage {
+        public static string Email_Required_ {
             get {
-                return ResourceManager.GetString("EmailRequiredValidateMessage", resourceCulture);
+                return ResourceManager.GetString("Email Required.", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You Subscribed to Newsletter Successfully..
+        ///   Looks up a localized string similar to بريد الكترونى غير صحيح..
         /// </summary>
-        public static string NewsLetterRequestSavedSuccessfully {
+        public static string Invalid_Email_Address_ {
             get {
-                return ResourceManager.GetString("NewsLetterRequestSavedSuccessfully", resourceCulture);
+                return ResourceManager.GetString("Invalid Email Address.", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Your request Saved Successfully..
+        ///   Looks up a localized string similar to لقد اشتركت في النشرة الإخبارية بنجاح..
         /// </summary>
-        public static string RequestSavedSuccessfully {
+        public static string You_Subscribed_to_Newsletter_Successfully_ {
             get {
-                return ResourceManager.GetString("RequestSavedSuccessfully", resourceCulture);
+                return ResourceManager.GetString("You Subscribed to Newsletter Successfully.", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An Error has occurred while saving your request..
+        ///   Looks up a localized string similar to تم حفظ طلبك بنجاح.
         /// </summary>
-        public static string RequestSavingError {
+        public static string Your_request_Saved_Successfully_ {
             get {
-                return ResourceManager.GetString("RequestSavingError", resourceCulture);
+                return ResourceManager.GetString("Your request Saved Successfully.", resourceCulture);
             }
         }
     }

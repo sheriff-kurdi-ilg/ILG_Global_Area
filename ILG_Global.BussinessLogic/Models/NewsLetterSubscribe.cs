@@ -11,6 +11,7 @@ namespace ILG_Global.BussinessLogic.Models
     {
         public NewsLetterSubscribe()
         {
+            // ILG_GlobalResources.Invalid_Email_Address_
             //ResourceManager resourceManager =
             //new ResourceManager("Resources.xxx", Assembly.Load("App_GlobalResources"));
             //string myString = resourceManager.GetString("StringKey");
@@ -20,9 +21,9 @@ namespace ILG_Global.BussinessLogic.Models
 
         public string PreferredLanguage { get; set; }
 
-        [Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(ILG_SharedResources))]
-        //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
-        //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILGSharedResource))]
+        [Required(ErrorMessageResourceName = "Email_Required_", ErrorMessageResourceType = typeof(ILG_GlobalResources))]
+        //[RegularExpression(@"[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$",
+        //    ErrorMessageResourceName = "Invalid_Email_Address_", ErrorMessageResourceType = typeof(ILG_GlobalResources))]
 
         //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
         //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILGSharedResource))]

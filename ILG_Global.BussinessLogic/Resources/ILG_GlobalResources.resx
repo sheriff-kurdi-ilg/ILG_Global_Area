@@ -117,19 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="EmailFormatValidate" xml:space="preserve">
-    <value>Invalid Email Address.</value>
+  <data name="An Error has occurred while saving your request." xml:space="preserve">
+    <value>حدث خطأ اثناء حفظ طلبك.</value>
   </data>
-  <data name="EmailRequiredValidateMessage" xml:space="preserve">
-    <value>Email Required.</value>
+  <data name="Email Required." xml:space="preserve">
+    <value>أدخل البريد الالكترونى.</value>
   </data>
-  <data name="NewsLetterRequestSavedSuccessfully" xml:space="preserve">
-    <value>You Subscribed to Newsletter Successfully.</value>
+  <data name="Invalid Email Address." xml:space="preserve">
+    <value>بريد الكترونى غير صحيح.</value>
   </data>
-  <data name="RequestSavedSuccessfully" xml:space="preserve">
-    <value>Your request Saved Successfully.</value>
+  <data name="You Subscribed to Newsletter Successfully." xml:space="preserve">
+    <value>لقد اشتركت في النشرة الإخبارية بنجاح.</value>
   </data>
-  <data name="RequestSavingError" xml:space="preserve">
-    <value>An Error has occurred while saving your request.</value>
+  <data name="Your request Saved Successfully." xml:space="preserve">
+    <value>تم حفظ طلبك بنجاح</value>
   </data>
 </root>

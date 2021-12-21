@@ -21,7 +21,6 @@
   <ItemGroup>
     <EmbeddedResource Remove="Resources\ILGSharedResource.ar.resx" />
     <EmbeddedResource Remove="Resources\ILGSharedResource.resx" />
-    <EmbeddedResource Remove="Resources\ILG_SharedResources.ar.resx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -38,21 +37,17 @@
   </ItemGroup>
   
   <ItemGroup>
-    <None Include="Resources\ILG_SharedResources.ar.resx" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Compile Update="Resources\ILG_SharedResources.Designer.cs">
+    <Compile Update="Resources\ILG_GlobalResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>ILG_SharedResources.resx</DependentUpon>
+      <DependentUpon>ILG_GlobalResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Update="Resources\ILG_SharedResources.resx">
+    <EmbeddedResource Update="Resources\ILG_GlobalResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ILG_SharedResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>ILG_GlobalResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

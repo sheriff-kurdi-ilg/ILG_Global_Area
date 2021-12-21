@@ -3,9 +3,4 @@
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
-  <ItemGroup>
-    <None Update="Resources\ILG_SharedResources.ar.resx">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
 </Project>

@@ -8,7 +8,7 @@
 @inject IViewLocalizer Localizer
 
 @{
-    string PreferredLanguadge = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
+    string PreferredLanguage = Context.Features.Get<IRequestCultureFeature>().RequestCulture.Culture.Name;
     string returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 
 }
@@ -47,7 +47,7 @@
                         <div class="col-sm-6 col-6 col-sm-6 col-md-4 py-4 py-sm-4 py-md-0">
                             <ul class="footer-col-content pb-4 pb-sm-4 pb-md-0">
                                 <li class="footer-col-title d-block d-sm-block pb-4">@Localizer["SERVICE"]</li>
-                                <li style="color:rgba(155,193,226,1);"> <a asp-controller="Services" asp-action="Index" asp-route-culture="@PreferredLanguadge">@Localizer["Family Conflicts"]</a> </li>
+                                <li style="color:rgba(155,193,226,1);"> <a asp-controller="Services" asp-action="Index" asp-route-culture="@PreferredLanguage">@Localizer["Family Conflicts"]</a> </li>
                                 <li><a href="#">@Localizer["Heritage"]</a></li>
                                 <li><a href="#">@Localizer["Divorce"]</a></li>
                                 <li><a href="#">@Localizer["kinship ties issues"]</a></li>
@@ -60,18 +60,18 @@
                                 <li>
                                     <div class="input-group mb-3 join-us-input">
 
-                                        <form id="subscribe-email-form" method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal w-100 " role="form" novalidate>
+                                        <form id="subscribe-email-form" method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguage" class="form-horizontal w-100 " role="form" novalidate>
                                             @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
                                             <table class="w-100">
                                                 <tr class="w-100 d-flex justify-content-between align-items-center">
-                                                    <td>
+                                                    <td class="w-100">
                                                         <input autocomplete="off" type="email" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
                                                                pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$"
                                                                aria-label="Example text with button addon"
                                                                aria-describedby="button-addon1"
                                                                asp-for="@Model.Email" />
                                                         <span asp-validation-for="Email" class="validation-mesaage text-danger"></span>
-                                                        <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
+                                                        <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguage" />
                                                     </td>
                                                     <td>
                                                         <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
@@ -95,7 +95,7 @@
                     <ul class="row justify-content-between w-100 p-0 footer-bottom-row text-center m-0">
                         <li class="col-12 col-sm-12 col-md-6 py-2 py-sm-2 py-md-0 px-2 px-lg-0 copy-right">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
                         <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
-                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a asp-all-route-culture="@PreferredLanguadge" asp-controller="terms" asp-action="index">!!@Localizer["Privacy Policy"].</a></li>
+                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a asp-all-route-culture="@PreferredLanguage" asp-controller="terms" asp-action="index">!!@Localizer["Privacy Policy"].</a></li>
                     </ul>
                 </div>
                 <div class="my-4 d-lg-none footer-line" style="border-top: 0.5px solid gray; height: 0.5px; opacity: 0.4"></div>
