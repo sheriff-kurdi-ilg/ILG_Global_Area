@@ -32,9 +32,9 @@ namespace ILG_Global.Web.Controllers.API
 
 
         [HttpPost]
-        public NewsLetterResponse Post([FromHeader] string lang  , [FromBody] NewsLetterRequest oNewsLetterRequest)
+        public NewsLetterResponse Post([FromBody] NewsLetterRequest oNewsLetterRequest)
         {
-            NewsLetterSubscribe oNewsLetterSubscribe = oNewsLetterSubscribeCreate(lang,oNewsLetterRequest);
+            NewsLetterSubscribe oNewsLetterSubscribe = oNewsLetterSubscribeCreate(oNewsLetterRequest);
             NewsLetterSubscribeRepository.Insert(oNewsLetterSubscribe);
 
             NewsLetterResponse oNewsLetterResponse = oNewsLetterResponseCreate(oNewsLetterSubscribe);
@@ -44,11 +44,11 @@ namespace ILG_Global.Web.Controllers.API
 
 
 
-        private NewsLetterSubscribe oNewsLetterSubscribeCreate(string sPreferredLanguage, NewsLetterRequest oNewsLetterRequest)
+        private NewsLetterSubscribe oNewsLetterSubscribeCreate( NewsLetterRequest oNewsLetterRequest)
         {
             NewsLetterSubscribe oNewsLetterSubscribe = new NewsLetterSubscribe();
 
-            oNewsLetterSubscribe.PreferredLanguage = sPreferredLanguage;
+            oNewsLetterSubscribe.PreferredLanguage = oNewsLetterRequest.LanguageCode;
             oNewsLetterSubscribe.Email = oNewsLetterRequest.Email;
 
             return oNewsLetterSubscribe;

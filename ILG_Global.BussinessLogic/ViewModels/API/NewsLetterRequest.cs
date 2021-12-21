@@ -9,7 +9,7 @@ namespace ILG_Global.BussinessLogic.ViewModels.API
 {
     public class NewsLetterRequest
     {
-       // public string PreferredLanguage { get; set; }
+        public string LanguageCode { get; set; }
         public string Email { get; set; }
     }
 }

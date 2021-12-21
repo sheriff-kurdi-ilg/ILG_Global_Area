@@ -279,7 +279,7 @@ $("#subscribe-email-form").submit(function(e){
 
     let email = $("#subscribe-email-form #Email").val();
 
-    let oApiRequest = { "Email": email };
+    let oApiRequest = { "LanguageCode":"en", "Email": email };
 
 
     oApiRequest = JSON.stringify(oApiRequest);
@@ -294,7 +294,7 @@ $("#subscribe-email-form").submit(function(e){
 });
 
 function sendEmailSubscription(oApiRequest) { // languageID
-    let sUrl = "/en/Home/SubscribeToNewsLetter";
+    let sUrl = "/api/NewsLetter";
 
     $.ajax({
         type: "POST",

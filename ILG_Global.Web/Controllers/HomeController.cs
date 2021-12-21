@@ -236,25 +236,25 @@ namespace ILG_Global.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        [Route("{culture}/Home/SubscribeToNewsLetter")]
-        [HttpPost]
-        public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
-        {
-            NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
-            return RedirectToAction(nameof(Index));
-        }
+        //[Route("{culture}/Home/SubscribeToNewsLetter")]
+        //[HttpPost]
+        //public IActionResult SubscribeToNewsLetter(NewsLetterSubscribe newsLetterSubscribe)
+        //{
+        //    NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+        //    return RedirectToAction(nameof(Index));
+        //}
 
-        [Route("{culture}/Home/SubscribeToNewsLetter")]
-        [HttpPost]
-        public IActionResult SubscribeToNewsLetterAPI([FromBody] string email)
-        {
-            NewsLetterSubscribe newsLetterSubscribe = new NewsLetterSubscribe();
-            newsLetterSubscribe.Email = email;
-            newsLetterSubscribe.ID = 1;
-            newsLetterSubscribe.IsEnabled = true;
-            newsLetterSubscribe.PreferredLanguage = "en";
-            NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
-            return Ok(new { Message ="success."});
-        }
+        //[Route("{culture}/Home/SubscribeToNewsLetter")]
+        //[HttpPost]
+        //public IActionResult SubscribeToNewsLetterAPI([FromBody] string email)
+        //{
+        //    NewsLetterSubscribe newsLetterSubscribe = new NewsLetterSubscribe();
+        //    newsLetterSubscribe.Email = email;
+        //    newsLetterSubscribe.ID = 1;
+        //    newsLetterSubscribe.IsEnabled = true;
+        //    newsLetterSubscribe.PreferredLanguage = "en";
+        //    NewsLetterSubscribeRepository.Insert(newsLetterSubscribe);
+        //    return Ok(new { Message ="success."});
+        //}
     }
 }

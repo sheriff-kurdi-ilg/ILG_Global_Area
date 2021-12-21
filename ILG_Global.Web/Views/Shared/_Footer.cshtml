@@ -59,6 +59,28 @@
                                 <li class="footer-col-title d-block  d-sm-block pb-4">@Localizer["JOIN OUR NEWSLETTER"]</li>
                                 <li>
                                     <div class="input-group mb-3 join-us-input">
+                                        <!--<form id="subscribe-email-form" method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal w-100 " role="form" novalidate>-->
+                                        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+                                        <!--<table class="w-100">
+            <tr class="w-100 d-flex justify-content-between align-items-center">
+                <td>
+                    <input autocomplete="off" type="email" class="form-control" placeholder="@Localizer["Enter Your Email Address"]"
+                           pattern="[a-z0-9._%+-]+@@[a-z0-9.-]+\.[a-z]{2,4}$"
+                           aria-label="Example text with button addon"
+                           aria-describedby="button-addon1"
+                           asp-for="@Model.Email" />
+                    <span asp-validation-for="Email" class="validation-mesaage text-danger"></span>
+                    <input type="hidden" asp-for="@Model.PreferredLanguage" value="@PreferredLanguadge" />
+                </td>
+                <td>
+                    <button type="submit" class="btn shadow-sm px-4 py-2" id="button-addon1">
+                        @Localizer["Subscribe"]
+                    </button>
+                </td>
+            </tr>
+        </table>
+    </form>-->
+
                                         <form id="subscribe-email-form" method="post" asp-controller="Home" asp-action="SubscribeToNewsLetter" asp-route-culture="@PreferredLanguadge" class="form-horizontal w-100 " role="form" novalidate>
                                             @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
                                             <table class="w-100">
@@ -80,6 +102,12 @@
                                                 </tr>
                                             </table>
                                         </form>
+
+                                        <script>
+
+
+                                        </script>
+
                                     </div>
                                 </li>
                             </ul>
