@@ -1,8 +1,11 @@
 ﻿using ILG_Global.BussinessLogic.Abstraction.Repositories;
 using ILG_Global.BussinessLogic.Models;
+using ILG_Global.BussinessLogic.Resources;
+using ILG_Global.BussinessLogic.Services;
 using ILG_Global.BussinessLogic.ViewModels.API;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ILG_Global.Web.Controllers.API
 {
@@ -11,10 +14,13 @@ namespace ILG_Global.Web.Controllers.API
     public class NewsLetterController : ControllerBase
     {
         public INewsLetterSubscribeRepository NewsLetterSubscribeRepository { get; }
+        public MailService MailService { get; }
 
-        public NewsLetterController(INewsLetterSubscribeRepository newsLetterSubscribeRepository)
+        public NewsLetterController(INewsLetterSubscribeRepository newsLetterSubscribeRepository, MailService mailService)
         {
             NewsLetterSubscribeRepository = newsLetterSubscribeRepository;
+            MailService = mailService;
+
         }
 
         [HttpGet]
@@ -32,10 +38,12 @@ namespace ILG_Global.Web.Controllers.API
 
 
         [HttpPost]
-        public NewsLetterResponse Post([FromBody] NewsLetterRequest oNewsLetterRequest)
+        public async Task<NewsLetterResponse>  Post([FromBody] NewsLetterRequest oNewsLetterRequest)
         {
             NewsLetterSubscribe oNewsLetterSubscribe = oNewsLetterSubscribeCreate(oNewsLetterRequest);
-            NewsLetterSubscribeRepository.Insert(oNewsLetterSubscribe);
+            await NewsLetterSubscribeRepository.Insert(oNewsLetterSubscribe);
+
+            await MailService.Send(oNewsLetterRequest.Email, "Greeting From ILG", "You Subscribed to ILG Newsletter.");
 
             NewsLetterResponse oNewsLetterResponse = oNewsLetterResponseCreate(oNewsLetterSubscribe);
 
@@ -58,26 +66,11 @@ namespace ILG_Global.Web.Controllers.API
         {
             NewsLetterResponse oNewsLetterResponse = new NewsLetterResponse();
 
-            if (oNewsLetterSubscribe.ID != 0) 
-            {
-                oNewsLetterResponse.code = "200";
-                oNewsLetterResponse.status = true;
-                // for test only.
-                if (oNewsLetterSubscribe.PreferredLanguage.ToLower() == "en")
-                {
-                    oNewsLetterResponse.message = "Your News Letter subscription created Successfully";
-                }
-
-                if (oNewsLetterSubscribe.PreferredLanguage.ToLower() == "ar")
-                {
-                    oNewsLetterResponse.message = "تم الاشتراك فى حدمة رسائلنا الاخبارية بنجاح.";
-                }
-            }
-
-            oNewsLetterResponse.data = oNewsLetterSubscribe;
-
+            oNewsLetterResponse.SubscriptionID = oNewsLetterSubscribe.ID;
+            oNewsLetterResponse.IsSucceeded = oNewsLetterSubscribe.ID != 0;
+            oNewsLetterResponse.UserMessage = oNewsLetterSubscribe.ID != 0 ? ILG_SharedResources.NewsLetterRequestSavedSuccessfully : ILG_SharedResources.RequestSavingError;
+  
             return oNewsLetterResponse;
-
         }
 
 

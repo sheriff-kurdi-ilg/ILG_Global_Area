@@ -123,10 +123,13 @@
   <data name="EmailRequiredValidateMessage" xml:space="preserve">
     <value>Email Required.</value>
   </data>
+  <data name="NewsLetterRequestSavedSuccessfully" xml:space="preserve">
+    <value>You Subscribed to Newsletter Successfully.</value>
+  </data>
   <data name="RequestSavedSuccessfully" xml:space="preserve">
     <value>Your request Saved Successfully.</value>
   </data>
   <data name="RequestSavingError" xml:space="preserve">
-    <value>An Error has occured hile saving your request.</value>
+    <value>An Error has occurred while saving your request.</value>
   </data>
 </root>

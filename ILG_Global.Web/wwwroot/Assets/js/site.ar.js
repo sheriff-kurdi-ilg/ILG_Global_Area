@@ -297,3 +297,55 @@ $('.ilg-modal-popup-window').on('show.bs.modal', function (e) {
 //    console.log("leave");
 //});
 
+
+$("#subscribe-email-form").submit(function (e) {
+    vPreventFormSubmition(e);
+
+    let email = $("#subscribe-email-form #Email").val();
+
+    let oApiRequest = { "LanguageCode": "ar", "Email": email };
+
+
+    oApiRequest = JSON.stringify(oApiRequest);
+
+    if (isEmail(email)) {
+        sendEmailSubscription(oApiRequest);
+    }
+    else {
+        vPreventFormSubmition(e);
+    }
+
+});
+
+function sendEmailSubscription(oApiRequest) { 
+    let sUrl = "/api/NewsLetter";
+
+    $.ajax({
+        type: "POST",
+        dataType: "json",
+        contentType: "application/json",
+        url: sUrl,
+        async: true,
+        data: oApiRequest,
+
+        success: function (xmlResponse) {
+            new swal(
+                'رسالة',
+                xmlResponse.userMessage,
+                'success'
+            )
+            $("#subscribe-email-form #Email").val("")
+            console.log(xmlResponse)
+
+        },
+
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            new swal(
+                'رسالة',
+                xmlResponse.userMessage,
+                'error'
+            )
+            console.log('error is: ', XMLHttpRequest)
+        },
+    });
+}

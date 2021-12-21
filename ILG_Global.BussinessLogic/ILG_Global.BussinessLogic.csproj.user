@@ -4,8 +4,8 @@
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Resources\ILGSharedResource.ar.resx">
+    <None Update="Resources\ILG_SharedResources.ar.resx">
       <SubType>Designer</SubType>
-    </EmbeddedResource>
+    </None>
   </ItemGroup>
 </Project>

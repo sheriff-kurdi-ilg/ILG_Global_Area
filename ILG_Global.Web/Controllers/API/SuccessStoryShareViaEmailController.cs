@@ -22,6 +22,7 @@ namespace ILG_Global.Web.Controllers.API
         public IEmailRepository EmailRepository { get; }
         public MailService MailService { get; }
         public IILG_PathProvider ILG_PathProvider { get; }
+
         #region MyRegion
         public SuccessStoryShareViaEmailController(
             IEmailRepository emailRepository,
@@ -68,7 +69,7 @@ namespace ILG_Global.Web.Controllers.API
                     new SuccessStoryShareViaEmailResponse {
                         SubscriptionID = oShareViaEmailSubscriber.ID,
                         IsSucceeded = oShareViaEmailSubscriber.ID !=0,
-                        UserMessage = oShareViaEmailSubscriber.ID != 0? ILGSharedResource.RequestSavedSuccessfully : ILGSharedResource.RequestSavingError
+                        UserMessage = oShareViaEmailSubscriber.ID != 0? ILG_SharedResources .RequestSavedSuccessfully : ILG_SharedResources.RequestSavingError
                     };
             }
             catch (Exception oException)

@@ -306,8 +306,8 @@ function sendEmailSubscription(oApiRequest) { // languageID
 
         success: function (xmlResponse) {
             new swal(
-                'Good job!',
-                'Subscribed Successfully!',
+                'Message',
+                xmlResponse.userMessage,
                 'success'
             )
             $("#subscribe-email-form #Email").val("")
@@ -316,7 +316,11 @@ function sendEmailSubscription(oApiRequest) { // languageID
         },
 
         error: function (XMLHttpRequest, textStatus, errorThrown) {
-           
+            new swal(
+                'Message',
+                xmlResponse.userMessage,
+                'error'
+            )
             console.log('error is: ', XMLHttpRequest)
         },
     });

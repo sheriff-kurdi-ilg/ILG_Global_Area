@@ -20,7 +20,7 @@ namespace ILG_Global.BussinessLogic.Models
 
         public string PreferredLanguage { get; set; }
 
-        [Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(ILGSharedResource))]
+        [Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(ILG_SharedResources))]
         //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
         //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILGSharedResource))]
 

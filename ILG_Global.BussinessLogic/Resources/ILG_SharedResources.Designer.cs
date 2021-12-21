@@ -22,14 +22,14 @@ namespace ILG_Global.BussinessLogic.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ILGSharedResource {
+    public class ILG_SharedResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ILGSharedResource() {
+        internal ILG_SharedResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILGSharedResource", typeof(ILGSharedResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILG_SharedResources", typeof(ILG_SharedResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -79,6 +79,15 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to You Subscribed to Newsletter Successfully..
+        /// </summary>
+        public static string NewsLetterRequestSavedSuccessfully {
+            get {
+                return ResourceManager.GetString("NewsLetterRequestSavedSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your request Saved Successfully..
         /// </summary>
         public static string RequestSavedSuccessfully {
@@ -88,7 +97,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An Error has occured hile saving your request..
+        ///   Looks up a localized string similar to An Error has occurred while saving your request..
         /// </summary>
         public static string RequestSavingError {
             get {

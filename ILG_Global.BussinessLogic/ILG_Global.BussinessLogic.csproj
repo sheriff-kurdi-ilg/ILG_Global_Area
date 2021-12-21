@@ -11,10 +11,17 @@
     <Compile Remove="Abstraction\Services\IImageMasterService .cs" />
     <Compile Remove="Abstraction\Services\ISectionDetailService.cs" />
     <Compile Remove="Abstraction\Services\ISectionMasterService.cs" />
+    <Compile Remove="Resources\ILGSharedResource.Designer.cs" />
     <Compile Remove="ViewModels\ImageDetailViewModel.cs" />
     <Compile Remove="ViewModels\ImageMasterViewModel.cs" />
     <Compile Remove="ViewModels\SectionDetailViewModel.cs" />
     <Compile Remove="ViewModels\SectionMasterViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Resources\ILGSharedResource.ar.resx" />
+    <EmbeddedResource Remove="Resources\ILGSharedResource.resx" />
+    <EmbeddedResource Remove="Resources\ILG_SharedResources.ar.resx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,20 +38,21 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Update="Resources\ILGSharedResource.Designer.cs">
-      <DependentUpon>ILGSharedResource.resx</DependentUpon>
+    <None Include="Resources\ILG_SharedResources.ar.resx" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Update="Resources\ILG_SharedResources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>ILG_SharedResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Update="Resources\ILGSharedResource.ar.resx">
+    <EmbeddedResource Update="Resources\ILG_SharedResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\ILGSharedResource.resx">
-      <LastGenOutput>ILGSharedResource.Designer.cs</LastGenOutput>
-      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ILG_SharedResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

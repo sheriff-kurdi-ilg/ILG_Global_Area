@@ -8,12 +8,9 @@ namespace ILG_Global.BussinessLogic.ViewModels.API
 {
     public class NewsLetterResponse
     {
-        public bool status { get; set; }
-        public string code { get; set; }
-
-        public string message { get; set; }
-
-        public object data { get; set; }
+        public bool IsSucceeded { get; set; }
+        public int SubscriptionID { get; set; }
+        public string UserMessage { get; set; }
     }
 
 
