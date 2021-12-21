@@ -1725,4 +1725,51 @@ footer .footer-bottom .footer-bottom-row li a {
 
 .terms-container section{
     padding: 30px 0px;
+    font-size: calc(14px + (17 - 14) * ((100vw - 300px) / (1600 - 300)));
+    color: #555555;
+
+}
+
+.terms-container h1{
+    font-size: calc(30px + (35 - 30) * ((100vw - 300px) / (1600 - 300)));
+    color: #093B6D;
+    font-weight: bold;
+}
+
+.terms-container h1, .terms-container h2{
+    font-size: calc(25px + (30 - 25) * ((100vw - 300px) / (1600 - 300)));
+    color: #093B6D;
+}
+
+.terms-container .ul.dashed {
+    margin: 0;
+}
+
+.terms-container .ul.dashed li {
+    padding: 5px;
+}
+
+.terms-container ul.dashed {
+    list-style-type: none;
+}
+.terms-container ul.dashed > li {
+    text-indent: -5px;
+}
+
+.terms-container ul.dashed > li:before {
+    content: "-";
+    text-indent: -5px;
+}
+
+.terms-container ul.square{
+    list-style: none; /* Remove default bullets */
+}
+
+.terms-container ul.square li h2{
+    padding-left: 1em;
+    text-indent: -.7em;
+}
+.terms-container ul.square li h2::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #093B6D; /* Change the color */
 }
