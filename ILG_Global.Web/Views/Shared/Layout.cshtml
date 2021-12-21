@@ -57,55 +57,52 @@
     <script src="~/Assets/js/lottie-player.js"></script>
 
     <script type="text/javascript" src="~/Assets/js/innerPage.js"></script>
-    
+
 
 </head>
 
 <body id="app">
-        <!--navbar-->
+    <!--navbar-->
     <header class="sticky-nav w-100">
         @Html.Partial("_NavigationBar")
     </header>
 
-<main class="services">
-    @RenderBody()
-</main>
+    <main class="services">
+        @RenderBody()
+    </main>
 
-  <div class="new-call-action d-flex flex-column justify-content-between align-content-center">
-                <div  class="whats-app-icon-container d-flex justify-content-center align-items-center mx-auto">
-                    <a target="_blank" href="@Localizer["http://wa.me/0096565669292"]" class="img-container d-flex justify-content-center align-items-center mx-auto">
-                        <img src="/Assets/images/whatsup.svg"/>
-                    </a>
-                </div>
-                <div  class="phone-icon-container d-flex justify-content-center align-items-center mx-auto">
-                    <a target="_blank" href="@Localizer["tel:0096522499777"]" class="img-container d-flex justify-content-center align-items-center mx-auto">
-                        <img src="/Assets/images/phone.svg"/>
-                    </a>
-                </div>
-                <div class="main-icon-container d-flex justify-content-center align-items-center mx-auto">
-                    <div class="img-container w-100 h-100 d-flex justify-content-center align-items-center mx-auto">
-                        <img src="/Assets/images/main icons.svg"/>
-                    </div>
-                </div>
-            </div>
-
-
-
-@{
-    NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe) ViewData["NewsLetterSubscribe"];
-}
-
-        @await Html.PartialAsync("_Footer", oNewsLetterSubscribe)
-        <div id="sizer" class="sizer">
-            <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none" data-size="xs"></div>
-            <div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" data-size="sm"></div>
-            <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none" data-size="md"></div>
-            <div class="d-none d-sm-none d-md-none d-lg-block d-xl-none" data-size="lg"></div>
-            <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block" data-size="xl"></div>
+    <div class="new-call-action d-flex flex-column justify-content-between align-content-center">
+        <div class="whats-app-icon-container d-flex justify-content-center align-items-center mx-auto">
+            <a target="_blank" href="@Localizer["http://wa.me/0096565669292"]" class="img-container d-flex justify-content-center align-items-center mx-auto">
+                <img src="/Assets/images/whatsup.svg" />
+            </a>
         </div>
+        <div class="phone-icon-container d-flex justify-content-center align-items-center mx-auto">
+            <a target="_blank" href="@Localizer["tel:0096522499777"]" class="img-container d-flex justify-content-center align-items-center mx-auto">
+                <img src="/Assets/images/phone.svg" />
+            </a>
+        </div>
+        <div class="main-icon-container d-flex justify-content-center align-items-center mx-auto">
+            <div class="img-container w-100 h-100 d-flex justify-content-center align-items-center mx-auto">
+                <img src="/Assets/images/main icons.svg" />
+            </div>
+        </div>
+    </div>
 
 
 
+    @{
+        NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe)ViewData["NewsLetterSubscribe"];
+    }
+
+    @await Html.PartialAsync("_Footer", oNewsLetterSubscribe)
+    <div id="sizer" class="sizer">
+        <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none" data-size="xs"></div>
+        <div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" data-size="sm"></div>
+        <div class="d-none d-sm-none d-md-block d-lg-none d-xl-none" data-size="md"></div>
+        <div class="d-none d-sm-none d-md-none d-lg-block d-xl-none" data-size="lg"></div>
+        <div class="d-none d-sm-none d-md-none d-lg-none d-xl-block" data-size="xl"></div>
+    </div>
 </body>
 
 </html>

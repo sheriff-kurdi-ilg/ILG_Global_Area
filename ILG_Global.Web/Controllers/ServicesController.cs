@@ -53,7 +53,7 @@ namespace ILG_Global.Web.Controllers
         #endregion
 
         #region Index
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(int id)
         {
             string sCultureCode = CultureProvider.GetCurrentCulture();
             ServicesPageVM oServicesPageVM = await oServicesPageVMCreate(sCultureCode);
@@ -62,6 +62,16 @@ namespace ILG_Global.Web.Controllers
 
             return View(oServicesPageVM);
         }
+
+        //public async Task<ActionResult> Index()
+        //{
+        //    string sCultureCode = CultureProvider.GetCurrentCulture();
+        //    ServicesPageVM oServicesPageVM = await oServicesPageVMCreate(sCultureCode);
+
+        //    //ViewData["NewsLetterSubscribe"] = new NewsLetterSubscribe();
+
+        //    return View(oServicesPageVM);
+        //}
 
         private async Task<ServicesPageVM> oServicesPageVMCreate(string sCultureCode)
         {

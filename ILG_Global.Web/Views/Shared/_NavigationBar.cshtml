@@ -28,34 +28,36 @@
 
 <!-- =========================================== nav-section =========================================== -->
 <nav class="navbar navbar-expand-lg py-3">
-            <div class="container py-2 px-3 px-sm-3 px-md-0">
-                <a href="/" class="navbar-brand col-12 col-sm-12 col-md-2">
-                    <img loading="lazy" class="img-brand white-img"
-                         src="/Assets/images/Group_25@2x.png"
-                         alt="Ideaeg logo">
-                    <img loading="lazy" class="img-brand dark-img d-none"
-                         src="/Assets/images/Mask_Group_25.png"
-                         alt="Ideaeg logo"/>
-                </a>
-              
-                <div class="row mobile-nav">
-                    @***************************************** language element *****************************************@
-                    <li class="nav-item mobile-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center w-fit-content d-none">
-                        @if (requestCulture.RequestCulture.Culture.Name == "ar")
-                        {
+    <div class="container py-2 px-3 px-sm-3 px-md-0">
+        <a href="/" class="navbar-brand col-12 col-sm-12 col-md-2">
+            <img loading="lazy" class="img-brand white-img"
+                 src="/Assets/images/Group_25@2x.png"
+                 alt="Ideaeg logo">
+            <img loading="lazy" class="img-brand dark-img d-none"
+                 src="/Assets/images/Mask_Group_25.png"
+                 alt="Ideaeg logo" />
+        </a>
 
-                            <a class="nav-link toggle-lang"  href="/en/#ourService">EN
-                                <i class="fas fa-globe px-2"></i>
+        <div class="row mobile-nav">
+            @***************************************** language element *****************************************@
+            <li class="nav-item mobile-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center w-fit-content d-none">
+                @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                {
 
-                            </a>
-                        }
-                        else
-                        {
+                    <a class="nav-link toggle-lang" href="/en/#ourService">
+                        EN
+                        <i class="fas fa-globe px-2"></i>
 
-                            <a class="nav-link toggle-lang"  href="/ar/#ourService">AR
-                                <i class="fas fa-globe px-2"></i>
+                    </a>
+                }
+                else
+                {
 
-                            </a>
+                    <a class="nav-link toggle-lang" href="/ar/#ourService">
+                        AR
+                        <i class="fas fa-globe px-2"></i>
+
+                    </a>
 
 
                         }
@@ -93,21 +95,23 @@
                             <li class="nav-item web-lang-item col-12 col-sm-12 col-md-2 d-flex justify-content-center align-items-center not-terms-element">
                                                         @***************************************** language element *****************************************@
 
-                                @if (requestCulture.RequestCulture.Culture.Name == "ar")
-                                {
+                        @if (requestCulture.RequestCulture.Culture.Name == "ar")
+                        {
 
-                                    <a class="nav-link toggle-lang" id="enbutton" href="#">EN
-                                        <i class="fas fa-globe px-2"></i>
+                            <a class="nav-link toggle-lang" id="enbutton" href="#">
+                                EN
+                                <i class="fas fa-globe px-2"></i>
 
-                                    </a>
-                                }
-                                else
-                                {
-                                    
-                                    <a class="nav-link toggle-lang" id="arbutton" href="#">AR
-                                        <i class="fas fa-globe px-2"></i>
+                            </a>
+                        }
+                        else
+                        {
 
-                                    </a>
+                            <a class="nav-link toggle-lang" id="arbutton" href="#">
+                                AR
+                                <i class="fas fa-globe px-2"></i>
+
+                            </a>
 
 
                                 }
@@ -140,15 +144,12 @@
             let url = window.location.href
             let id = url.substring(url.lastIndexOf('/') + 1);
 
-              $("#enbutton").attr("href", "/en/"+ id)
-                $("#arbutton").attr("href", "/ar/"+id)
-        })
-
-              
-                //$("a").attr("href", "/ar/"+id)
 
 
-                            </script>
+    //$("a").attr("href", "/ar/"+id)
+
+
+</script>
 
 <script>
     window.addEventListener("scroll", function () {
