@@ -161,7 +161,7 @@ namespace ILG_Global.Web
                 endpoints.MapControllerRoute(
                              name: "default",
                              pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
-                              defaults: new { culture = "", controller = "Home", action = "Index" });
+                              defaults: new { culture = "ar", controller = "Home", action = "Index" });
 
             });
 
