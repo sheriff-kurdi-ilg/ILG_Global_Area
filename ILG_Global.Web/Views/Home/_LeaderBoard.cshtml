@@ -7,21 +7,35 @@
 }
 @inject IViewLocalizer Localizer
 
- <div id="leaderBoard" class="header-banner d-flex justify-content-center align-item-center">
-    <img src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" class="card-img" alt="...">
+<div id="leaderBoard" class="header-banner d-flex justify-content-center align-item-center">
+
+    @if (Model.ImageURL.ToLower().EndsWith("jpg") || Model.ImageURL.ToLower().EndsWith("jpge") || Model.ImageURL.ToLower().EndsWith("png"))
+    {
+        <img src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" class="card-img" alt="..." />
+    }
+
+    @if (Model.ImageURL.ToLower().EndsWith("mp4") || Model.ImageURL.ToLower().EndsWith("ogg"))
+    {
+        <video class="w-100" style="height:vh100" autoplay muted playsinline preload="metadata">
+            <source src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" type="video/mp4" />
+            <source src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" type="video/ogg" />
+            Your browser does not support the video tag.
+        </video>
+    }
+
     <div class="overlay"></div>
     <div class="container mx-auto header-content d-flex flex-column justify-content-center text-white">
-            <h1 class="card-text pt-3 pb-5">
-                @Html.Raw(Model.SubTitle)
-            </h1>
+        <h1 class="card-text pt-3 pb-5">
+            @Html.Raw(Model.SubTitle)
+        </h1>
 
-            <div class="leaderBoard-summary card-text col-12 col-sm-12 col-md-6 justify-text-center justify-text-center">
+        <div class="leaderBoard-summary card-text col-12 col-sm-12 col-md-6 justify-text-center justify-text-center">
             @Html.Raw(Model.Summary)
-            </div>
+        </div>
 
-            <div class="w-100 position-absolute mx-auto d-flex justify-content-center arrow-bottom pb-4">
-                <button href="#footer" class=""><i class="fas fa-arrow-down"></i></button>
-            </div>
+        <div class="w-100 position-absolute mx-auto d-flex justify-content-center arrow-bottom pb-4">
+            <button href="#footer" class=""><i class="fas fa-arrow-down"></i></button>
+        </div>
     </div>
- </div>
+</div>
 

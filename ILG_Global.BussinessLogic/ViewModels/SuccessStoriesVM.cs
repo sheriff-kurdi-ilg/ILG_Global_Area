@@ -1,5 +1,6 @@
 ﻿using ILG_Global.BussinessLogic.Models;
 using ILG_Global.BussinessLogic.Resources;
+//using ILG_Global.BussinessLogic.Resources;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -17,7 +18,7 @@ namespace ILG_Global.BussinessLogic.ViewModels
 
         public string PreferredLanguage { get; set; }
 
-        //[Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(ILGSharedResource))]
+        //[Required(ErrorMessageResourceName = "EmailRequiredValidateMessage", ErrorMessageResourceType = typeof(AllSharedResources))]
         //[RegularExpression(@"\A(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
         //    ErrorMessageResourceName = "EmailFormatValidate", ErrorMessageResourceType = typeof(ILG_Global.BussinessLogic.Resources.ILGSharedResource))]
         public string SuccessStoryUserEmail { get; set; }

@@ -137,16 +137,21 @@
         </nav>
 
                                            <script>
-                                                     if (window.location.href.indexOf("terms") > -1){
-                                                          $(".not-terms-element").addClass('d-none')
-                                                     }
-                                    $(".nav-link").click(function () {
-            let url = window.location.href
-            let id = url.substring(url.lastIndexOf('/') + 1);
+
+                                              //  arbutton
+
+                                               var sURL = window.location.href;
+
+                                               if (sURL.indexOf('/ar/') > -1) {
+                                                   sURL = sURL.replace('ar','en')
+                                                   $("#enbutton").attr('href', sURL);
+                                               }
+                                               if (sURL.indexOf('/en/') > -1) {
+                                                   sURL = sURL.replace('en', 'ar')
+                                                   $("#arbutton").attr('href', sURL);
+                                               }
 
 
-
-    //$("a").attr("href", "/ar/"+id)
 
 
 </script>

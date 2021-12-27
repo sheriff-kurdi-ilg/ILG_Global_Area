@@ -1,6 +1,4 @@
 
-console.log(" en loaded");
-
 
 function addBgToNavWhenScroll() {
     var scroll_pos = 0;
@@ -39,10 +37,10 @@ $(document).ready(function () {
         }, 100);
     });
     if (isInViewport($('footer'))) {
-        $('header').addClass('d-none');
+        //$('header').addClass('d-none');
         $('.contact-details').addClass('d-none');
     } else {
-        $('header').removeClass('d-none');
+        //$('header').removeClass('d-none');
         $('.contact-details').removeClass('d-none');
     }
 

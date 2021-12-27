@@ -68,7 +68,7 @@ namespace ILG_Global.Web.Controllers.API
 
             oNewsLetterResponse.SubscriptionID = oNewsLetterSubscribe.ID;
             oNewsLetterResponse.IsSucceeded = oNewsLetterSubscribe.ID != 0;
-            oNewsLetterResponse.UserMessage = oNewsLetterSubscribe.ID != 0 ? ILG_GlobalResources.You_Subscribed_to_Newsletter_Successfully_ : ILG_GlobalResources.An_Error_has_occurred_while_saving_your_request_;
+            oNewsLetterResponse.UserMessage = oNewsLetterSubscribe.ID != 0 ? ILGResources.You_Subscribed_to_Newsletter_Successfully_ : ILGResources.An_Error_has_occurred_while_saving_your_request_;
   
             return oNewsLetterResponse;
         }

@@ -20,7 +20,6 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="Resources\ILGSharedResource.ar.resx" />
-    <EmbeddedResource Remove="Resources\ILGSharedResource.resx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,17 +36,22 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Compile Update="Resources\ILG_GlobalResources.Designer.cs">
+    <Compile Update="Resources\AllSharedResources - Copy.Designer.cs">
+      <DependentUpon>AllSharedResources.Designer.cs</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>ILG_GlobalResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\ILGResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ILGResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   
   <ItemGroup>
-    <EmbeddedResource Update="Resources\ILG_GlobalResources.resx">
+    <EmbeddedResource Update="Resources\ILGResources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ILG_GlobalResources.Designer.cs</LastGenOutput>
+      <LastGenOutput>ILGResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
 

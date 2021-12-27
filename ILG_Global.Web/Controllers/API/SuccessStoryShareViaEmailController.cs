@@ -22,6 +22,7 @@ namespace ILG_Global.Web.Controllers.API
         public IEmailRepository EmailRepository { get; }
         public MailService MailService { get; }
         public IILG_PathProvider ILG_PathProvider { get; }
+        public object ILG_GlobalResources { get; private set; }
 
         #region MyRegion
         public SuccessStoryShareViaEmailController(
@@ -51,6 +52,8 @@ namespace ILG_Global.Web.Controllers.API
         [HttpPost]
         public async Task<SuccessStoryShareViaEmailResponse>  Post([FromBody] SuccessStoryShareViaEmailRequest oSuccessStoryShareViaEmailRequest)
         {
+            var x = System.Threading.Thread.CurrentThread.CurrentCulture;
+
             SuccessStoryShareViaEmailResponse oSuccessStoryShareViaEmailResponse = new SuccessStoryShareViaEmailResponse(); 
 
             try
@@ -71,11 +74,12 @@ namespace ILG_Global.Web.Controllers.API
 
                 await MailService.Send(oSuccessStoryShareViaEmailRequest.SuccessStoryEmail, "Greeting From ILG", "You have a document shared from ILG, please find it.", oAttachment);
 
+
                 oSuccessStoryShareViaEmailResponse =
                     new SuccessStoryShareViaEmailResponse {
                         SubscriptionID = oShareViaEmailSubscriber.ID,
                         IsSucceeded = oShareViaEmailSubscriber.ID != 0,
-                        UserMessage = oShareViaEmailSubscriber.ID != 0 ? ILG_GlobalResources.Your_request_Saved_Successfully_ : ILG_GlobalResources.An_Error_has_occurred_while_saving_your_request_
+                        UserMessage = oShareViaEmailSubscriber.ID != 0 ? ILGResources.Your_request_Saved_Successfully_ : ILGResources.An_Error_has_occurred_while_saving_your_request_
                     };
             }
             catch (Exception oException)

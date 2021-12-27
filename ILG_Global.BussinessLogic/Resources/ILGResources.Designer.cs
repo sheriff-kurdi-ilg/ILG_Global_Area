@@ -22,14 +22,14 @@ namespace ILG_Global.BussinessLogic.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ILG_GlobalResources {
+    public class ILGResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ILG_GlobalResources() {
+        internal ILGResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILG_GlobalResources", typeof(ILG_GlobalResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ILG_Global.BussinessLogic.Resources.ILGResources", typeof(ILGResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to حدث خطأ اثناء حفظ طلبك..
+        ///   Looks up a localized string similar to An Error has occurred while saving your request..
         /// </summary>
         public static string An_Error_has_occurred_while_saving_your_request_ {
             get {
@@ -70,7 +70,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to أدخل البريد الالكترونى..
+        ///   Looks up a localized string similar to Email Required..
         /// </summary>
         public static string Email_Required_ {
             get {
@@ -79,7 +79,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to بريد الكترونى غير صحيح..
+        ///   Looks up a localized string similar to Invalid Email Address..
         /// </summary>
         public static string Invalid_Email_Address_ {
             get {
@@ -88,7 +88,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to لقد اشتركت في النشرة الإخبارية بنجاح..
+        ///   Looks up a localized string similar to You Subscribed to Newsletter Successfully..
         /// </summary>
         public static string You_Subscribed_to_Newsletter_Successfully_ {
             get {
@@ -97,7 +97,7 @@ namespace ILG_Global.BussinessLogic.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to تم حفظ طلبك بنجاح.
+        ///   Looks up a localized string similar to Your request Saved Successfully..
         /// </summary>
         public static string Your_request_Saved_Successfully_ {
             get {

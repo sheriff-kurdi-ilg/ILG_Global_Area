@@ -3,4 +3,9 @@
   <PropertyGroup>
     <ShowAllFiles>true</ShowAllFiles>
   </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ILGResources.ar.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
