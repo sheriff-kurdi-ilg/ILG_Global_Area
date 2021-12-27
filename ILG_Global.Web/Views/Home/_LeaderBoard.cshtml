@@ -16,7 +16,7 @@
 
     @if (Model.ImageURL.ToLower().EndsWith("mp4") || Model.ImageURL.ToLower().EndsWith("ogg"))
     {
-        <video class="w-100" style="height:vh100" autoplay muted playsinline preload="metadata">
+        <video class="w-100" autoplay muted playsinline preload="metadata">
             <source src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" type="video/mp4" />
             <source src="@ILGTools.ToCDN_URL("Uploads/HtmlContent",Model.ImageURL)" type="video/ogg" />
             Your browser does not support the video tag.

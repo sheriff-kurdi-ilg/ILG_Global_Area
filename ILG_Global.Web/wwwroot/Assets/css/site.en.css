@@ -239,6 +239,11 @@ header {
     min-height: 100Vh;
 }
 
+#app .header-banner video {
+    height: 100vh;
+    object-fit: cover;
+    
+}
 #app .header-banner img {
     position: absolute;
     width: 100%;

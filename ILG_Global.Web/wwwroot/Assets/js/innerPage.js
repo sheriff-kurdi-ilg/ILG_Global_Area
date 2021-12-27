@@ -148,6 +148,17 @@ $(document).ready(function () {
     let player = document.querySelector("lottie-player");
     let play = document.querySelector("#steps-lottie-item");
 
+    if(langAr){
+        player.load(
+            '/Assets/js/lottie-ar.json'
+        );
+    }else {
+        player.load(
+            '/Assets/js/lottie.json'
+        );
+    }
+
+
     if (isInViewport($('#steps-lottie-item'))) {
         player.play();
     } else {
