@@ -268,7 +268,7 @@ header {
         font-weight: 350;
     }
 
-#app .header-banner .header-content h1 {
+#app .header-banner .header-content .header-content-title {
     color: rgba(255, 255, 255, 1);
     font-size: calc(50px + (93 - 50) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
@@ -535,13 +535,13 @@ header {
 }
 
 /*general section style*/
-#app .general-section .title h5 {
+#app .general-section .title .title-subtext {
     font-size: calc(16px + (20 - 16) * ((100vw - 300px) / (1600 - 300)));
     color: rgba(12, 188, 171, 1);
     font-weight: 350;
 }
 
-#app .general-section .title h6 {
+#app .general-section .title .title-text {
     font-size: calc(35px + (50 - 35) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
     color: var(--main-color);
@@ -1068,8 +1068,9 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 @media screen and (max-width: 600px) {
     
-    #app .header-banner {
-        min-height: 600px;
+    #app .header-banner,
+    #app .header-banner video{
+        min-height: 150vh;
     }
 
     .ilg-to-oppisit-direction {
