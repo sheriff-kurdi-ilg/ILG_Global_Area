@@ -543,7 +543,7 @@ header {
 }
 
 #app .general-section .title .title-text {
-    font-size: calc(35px + (50 - 35) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(30px + (35 - 30) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
     color: var(--main-color);
     padding-bottom: 50px;
