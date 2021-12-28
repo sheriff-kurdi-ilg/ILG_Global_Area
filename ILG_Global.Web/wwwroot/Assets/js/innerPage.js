@@ -175,6 +175,8 @@ $(document).ready(function () {
         }
         if (isInViewport($('#steps-lottie-item'))) {
             player.play();
+        } else {
+            player.stop();
         }
     });
 
