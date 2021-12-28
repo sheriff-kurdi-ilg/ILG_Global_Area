@@ -216,7 +216,7 @@ $(document).ready(function () {
 
 
 $('#success-story-slider').owlCarousel({
-    loop: true,
+    loop: false,
     rtl: true,
     autoplay: true,
     autoPlaySpeed: 1000,
@@ -231,22 +231,18 @@ $('#success-story-slider').owlCarousel({
         0: {
             items: 1,
             nav: true,
-            loop:true,
         },
         991: {
             items: 3,
             nav: false,
-            loop:true,
         },
         1366: {
             items: 5,
             nav: true,
-            loop:true,
         },
         3500: {
             items: 8,
             nav: true,
-            loop:true,
         }
     }
 
