@@ -206,6 +206,7 @@ $('#success-story-slider').owlCarousel({
     nav: true,
     navText: ["<i class=\"fas fa-arrow-left px-5\"></i>", " <i class=\"fas fa-arrow-right px-5\"></i>"],
     dots: false,
+    autoplayHoverPause:true,
     responsive: {
         0: {
             items: 1,
@@ -229,11 +230,12 @@ $('#success-story-slider').owlCarousel({
 $('#our-service-slider').owlCarousel({
     loop: true,
     autoplay: true,
-    autoPlaySpeed: 1000,
-    autoPlayTimeout: 200,
+    autoPlaySpeed: 5000,
+    autoPlayTimeout: 1000,
     stopOnHover : true,
     margin: 20,
     items: 1,
+    autoplayHoverPause:true,
 })
 
 $.noConflict();

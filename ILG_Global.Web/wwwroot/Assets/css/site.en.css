@@ -241,6 +241,7 @@ header {
 
 #app .header-banner video {
     height: 100vh;
+    min-height: 900px;
     object-fit: cover;
     
 }
@@ -1048,15 +1049,15 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 
 
-@media screen and (max-width: 1310px) and  (min-width: 991px){
+@media screen and (max-width: 1310px) and  (min-width: 992px){
     .our-service-section .img-col-container{
-        width:450px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
     }
 
     .our-service-section .img-container {
-        width:400px;
-        height: 400px;
+        width:300px;
+        height: 300px;
     }
     #ourService .row  .p-container{
         padding: 0px 10px !important;
@@ -1069,11 +1070,22 @@ footer .footer-bottom .footer-bottom-row li a {
         flex-direction: column-reverse !important;
     }*/
 }
+@media screen and (max-width: 1835px) and  (min-width: 1310px) {
+    .our-service-section .img-col-container{
+        width: 450px !important;
+        height: 450px !important;
+    }
+
+    .our-service-section .img-container {
+        width:400px !important;
+        height: 400px !important;
+    }
+}
 @media screen and (max-width: 600px) {
     
     #app .header-banner,
     #app .header-banner video{
-        min-height: 150vh;
+        min-height: 600px;
     }
 
     .ilg-to-oppisit-direction {
@@ -1593,8 +1605,8 @@ footer .footer-bottom .footer-bottom-row li a {
 /************************************************** new-call-action **********************************************************************/
 .new-call-action{
     position: fixed;
-    bottom: 108px;
-    right: 172px;
+    bottom: 20px;
+    right: 30px;
     width: 140px;
     height: 140px;
     z-index: 1000;

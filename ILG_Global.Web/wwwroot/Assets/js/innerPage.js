@@ -123,13 +123,14 @@ $(document).ready(function(){
     $("#our-service-slider").owlCarousel({
         rtl: langAr,
         autoplay: true,
-        autoPlaySpeed: 3000,
-        autoPlayTimeout: 3000,
+        autoPlaySpeed: 5000,
+        autoPlayTimeout: 500,
         stopOnHover : true,
-        speed: 0.5,
+        speed: 2,
         loop: true,
         margin: 20,
         items: 1,
+        autoplayHoverPause:true,
 
     });
 
