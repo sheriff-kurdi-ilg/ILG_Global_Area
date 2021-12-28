@@ -123,10 +123,16 @@
   <data name="/Assets/js/site.en.js" xml:space="preserve">
     <value>/Assets/js/site.ar.js</value>
   </data>
-  <data name="http://wa.me/0096565669292" xml:space="preserve">
-    <value>http://wa.me/0096565669292</value>
+  <data name="Home Page" xml:space="preserve">
+    <value>الرئيسية</value>
   </data>
-  <data name="tel:0096522499777" xml:space="preserve">
-    <value>tel:0096522499777</value>
+  <data name="http://wa.me/0096590974747" xml:space="preserve">
+    <value>http://wa.me/0096590974747</value>
+  </data>
+  <data name="ILG" xml:space="preserve">
+    <value>المتكاملة</value>
+  </data>
+  <data name="tel:0096590974747" xml:space="preserve">
+    <value>tel:0096590974747</value>
   </data>
 </root>
