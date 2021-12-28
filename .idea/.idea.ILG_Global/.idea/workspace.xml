@@ -6,11 +6,7 @@
     <projectFile pubXmlPath="ILG_Global.Web/Properties/PublishProfiles/FolderProfile.pubxml">ILG_Global.Web/ILG_Global.Web.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.DataAccess/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_OurServices.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_OurServices.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_OurServices.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_OurServices.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,7 +63,7 @@
       <workItem from="1639906722742" duration="25325000" />
       <workItem from="1640002916791" duration="13362000" />
       <workItem from="1638857407245" duration="5282000" />
-      <workItem from="1640702613965" duration="2201000" />
+      <workItem from="1640702613965" duration="3060000" />
     </task>
     <servers />
   </component>

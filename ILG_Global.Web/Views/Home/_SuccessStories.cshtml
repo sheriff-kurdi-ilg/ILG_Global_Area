@@ -28,7 +28,7 @@
                 {
                     foreach (SucessStoryDetail oSucessStoryDetail in Model.SucessStoryDetails)
                     {
-                        <div class="item position-relative">
+                        <div data-bs-toggle="modal" data-bs-target="#@string.Concat("btn-show-modal-popup",oSucessStoryDetail.SucessStoryID)" class="item position-relative">
                             <img src="@ILGTools.ToCDN_URL("Uploads/SuccessStories", oSucessStoryDetail.SucessStoryMaster.ImageURL)" class="w-100 h-100 position-absolute">
                             <div class="overlay w-100 h-100 position-absolute"></div>
                             <div data-successStoryItem="" class="slider-content text-white position-absolute p-4">
