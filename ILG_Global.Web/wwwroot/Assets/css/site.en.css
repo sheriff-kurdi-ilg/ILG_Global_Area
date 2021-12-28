@@ -396,7 +396,7 @@ header {
 }
 
 /*success story section*/
-.success-story-section #success-story-slider .owl-stage-outer .item .overlay:hover {
+.success-story-section #success-story-slider .owl-stage-outer .item:hover .overlay {
     background: gray;
     opacity: 0.3;
     cursor: pointer;

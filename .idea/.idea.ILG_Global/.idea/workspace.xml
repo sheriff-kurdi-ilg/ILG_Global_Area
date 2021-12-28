@@ -8,10 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="017ed049-849e-44b8-9868-8d557d4ad9c1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ILG_Global/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_OurServices.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Home/_OurServices.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_AboutILG.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_AboutILG.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_OurServices.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/Views/Services/_OurServices.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" beforeDir="false" afterPath="$PROJECT_DIR$/ILG_Global.Web/wwwroot/Assets/css/site.en.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
