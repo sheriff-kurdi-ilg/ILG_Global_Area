@@ -260,7 +260,7 @@ header {
 
     #app .header-banner .header-content h5, #app .header-banner .header-content p,
     #app .header-banner .header-content .leaderBoard-summary {
-        font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
+        font-size:calc(18px + (23 - 18) * ((100vw - 300px) / (1600 - 300)));
     }
 
     #app .header-banner .header-content h5, #app .header-banner .header-content p,
@@ -271,7 +271,7 @@ header {
 
 #app .header-banner .header-content .header-content-title {
     color: rgba(255, 255, 255, 1);
-    font-size: calc(50px + (93 - 50) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(35px + (65 - 35) * ((100vw - 300px) / (1600 - 300)));
     font-weight: 600;
     letter-spacing: inherit;
 }
