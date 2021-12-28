@@ -202,6 +202,7 @@ $('#success-story-slider').owlCarousel({
     autoPlaySpeed: 1000,
     autoPlayTimeout: 100,
     margin: 20,
+    loop: false,
     nav: true,
     navText: ["<i class=\"fas fa-arrow-left px-5\"></i>", " <i class=\"fas fa-arrow-right px-5\"></i>"],
     dots: false,
@@ -209,22 +210,18 @@ $('#success-story-slider').owlCarousel({
         0: {
             items: 1,
             nav: true,
-            loop:true,
         },
         991: {
             items: 3,
             nav: false,
-            loop:true,
         },
         1366: {
             items: 5,
             nav: true,
-            loop: true,
         },
         3500: {
             items: 8,
             nav: true,
-            loop:true,
         }
     }
 
