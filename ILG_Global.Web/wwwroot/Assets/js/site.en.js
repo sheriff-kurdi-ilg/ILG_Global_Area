@@ -199,8 +199,8 @@ $(document).ready(function () {
 
 $('#success-story-slider').owlCarousel({
     autoplay: true,
-    autoPlaySpeed: 1000,
-    autoPlayTimeout: 100,
+    autoPlaySpeed: 5000,
+    autoPlayTimeout: 500,
     margin: 20,
     loop: false,
     nav: true,
