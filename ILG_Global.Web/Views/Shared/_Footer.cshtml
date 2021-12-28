@@ -97,9 +97,11 @@
                     <ul class="row justify-content-between w-100 p-0 footer-bottom-row text-center m-0">
                         <li class="col-12 col-sm-12 col-md-6 py-2 py-sm-2 py-md-0 px-2 px-lg-0 copy-right">@Localizer["Copyright © 2021 ilg. All Rights Reserved"].</li>
                         @*
-                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
+        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a href="#">@Localizer["Terms of Use"]</a></li>
                         *@
-                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a asp-all-route-culture="@PreferredLanguage" asp-controller="terms" asp-action="index">@Localizer["Privacy Policy"].</a></li>
+@*                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a asp-all-route-culture="@PreferredLanguage" asp-controller="terms" asp-action="index">@Localizer["Privacy Policy"].</a></li>
+*@
+                        <li class="col-6 col-sm-6 col-md-3 pb-2 pb-sm-2 pb-md-0 px-2 px-lg-0"><a>@Localizer["Privacy Policy"].</a></li>
                     </ul>
                 </div>
                 <div class="my-4 d-lg-none footer-line" style="border-top: 0.5px solid gray; height: 0.5px; opacity: 0.4"></div>
