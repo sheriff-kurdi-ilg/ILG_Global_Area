@@ -158,10 +158,19 @@ namespace ILG_Global.Web
                areaName: "Admin",
                pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
 
+                //endpoints.MapControllerRoute(
+                // name: "Calt",
+                // pattern: "{culture}",
+                // defaults: new { culture = "ar", controller = "Home", action = "Index" });
+                //**********************
+
                 endpoints.MapControllerRoute(
+
                              name: "default",
-                             pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
-                              defaults: new { culture = "ar", controller = "Home", action = "Index" });
+                             pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",                        
+                             defaults: new { culture = "ar", controller = "Home", action = "Index" });
+                //***************
+
 
             });
 
