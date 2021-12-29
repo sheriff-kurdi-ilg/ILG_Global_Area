@@ -561,6 +561,7 @@ header {
 
 #our-service-slider .service-card-text{
     height: 450px ;
+    overflow-y: scroll;
 }
 
 #app .general-section p span {
