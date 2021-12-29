@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Localization.Routing;
 using Microsoft.AspNetCore.Mvc.Razor;
-
+using Microsoft.AspNetCore.Rewrite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,6 +19,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 
 namespace ILG_Global.Web
@@ -34,6 +35,7 @@ namespace ILG_Global.Web
         }
 
         public IConfiguration Configuration { get; }
+        public object MethodRules { get; private set; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -127,6 +129,14 @@ namespace ILG_Global.Web
                 app.UseHsts();
             }
 
+
+
+            var options = new RewriteOptions()
+                .AddRedirect(@"en$", "en/")
+                .AddRedirect(@"ar$", "ar/");
+            app.UseRewriter(options);
+           
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             RequestLocalizationOptions RequestLocalizationOptions = new RequestLocalizationOptions();
@@ -153,35 +163,36 @@ namespace ILG_Global.Web
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapAreaControllerRoute(
-               name: "MyAreaAdmin",
-               areaName: "Admin",
-               pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
-
-                //endpoints.MapControllerRoute(
-                // name: "Calt",
-                // pattern: "{culture}",
-                // defaults: new { culture = "ar", controller = "Home", action = "Index" });
-                //**********************
-
                 endpoints.MapControllerRoute(
-
-                             name: "default",
-                             pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",                        
-                             defaults: new { culture = "ar", controller = "Home", action = "Index" });
-                //***************
-
+                        name: "default",
+                        pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
+                        defaults: new { culture = "ar", controller = "Home", action = "Index" });
 
             });
 
             //app.UseEndpoints(endpoints =>
             //{
+            //    endpoints.MapAreaControllerRoute(
+            //   name: "MyAreaAdmin",
+            //   areaName: "Admin",
+            //   pattern: "Admin/{controller=Home}/{action=Index}/{id?}");
+
             //    endpoints.MapControllerRoute(
-            //                 name: "admin",
-            //                 pattern: "{area:admin}/{controller=Home}/{action=Index}/{id?}",
-            //                  defaults: new { culture = "", controller = "Home", action = "Index" });
+            //     name: "Calt",
+            //     pattern: "{culture}",
+            //     defaults: new { culture = "ar", controller = "Home", action = "Index" });
+            //    **********************
+
+            //    endpoints.MapControllerRoute(
+
+            //                 name: "default",
+            //                 pattern: "{culture}/{controller=Home}/{action=Index}/{id?}",
+            //                 defaults: new { culture = "ar", controller = "Home", action = "Index" });
+            //    ***************
+
 
             //});
+
 
             //app.UseMvc(configureRoutes =>
             //{
