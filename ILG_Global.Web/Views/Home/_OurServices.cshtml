@@ -57,9 +57,12 @@
                                     </h6>
                                 </div>
                             </div>
-                            <div class="justify-text-center service-card-text hide-native-scrollbar" dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
-                               @Html.Raw(oOurServiceVM.Summary)
-                            </div>
+                             <div class="scroll-container" id="style-3">
+                                 <div class="justify-text-center service-card-text inner-scroll-container" dir="@(System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft? "rtl" : "ltr")">
+                                     @Html.Raw(oOurServiceVM.Summary)
+                                 </div>
+                             </div>
+                           
                         </div>
                     </div>
                 }
