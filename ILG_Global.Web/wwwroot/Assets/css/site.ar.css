@@ -137,5 +137,5 @@ body {
     overflow: hidden;
 }
 .inner-scroll-container {
-    padding: 0rem 0rem 0.5rem 0.5rem;
+    padding: 0 0 16PX 16PX;
 }
