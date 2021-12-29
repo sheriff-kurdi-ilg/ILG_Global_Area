@@ -1809,3 +1809,37 @@ footer .footer-bottom .footer-bottom-row li a {
     content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: #093B6D; /* Change the color */
 }
+
+.scroll-container {
+    --scrollbarBG: none;
+    --thumbBG: #BCBBBC;
+}
+.inner-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+.inner-scroll-container {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.inner-scroll-container::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+.inner-scroll-container::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 10px;
+    border: 3px solid var(--scrollbarBG);
+}
+
+
+.scroll-container {
+    overflow: hidden;
+}
+.inner-scroll-container {
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0 16PX 16PX 0;
+}
+
+.general-section{
+    padding-top: 120px !important;
+}

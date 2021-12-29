@@ -132,3 +132,10 @@ body {
 .navbar .nav-item .icon:last-of-type, footer .footer-bottom .icon:last-of-type {
     border: 0 !important;
 }
+
+.scroll-container {
+    overflow: hidden;
+}
+.inner-scroll-container {
+    padding: 0 0 16PX 16PX;
+}
