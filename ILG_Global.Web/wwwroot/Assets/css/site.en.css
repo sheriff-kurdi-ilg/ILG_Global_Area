@@ -868,12 +868,13 @@ footer .footer-bottom .footer-bottom-row li a {
         flex-direction: column-reverse !important;
     }
     
-    #our-service-slider .contact-list {
+  /*  #our-service-slider .contact-list {
         flex-direction: column !important;
     }
-
+*/
     #our-service-slider .service-card-text{
         height: 200px ;
+        overflow-y: scroll;
     }
 
 
