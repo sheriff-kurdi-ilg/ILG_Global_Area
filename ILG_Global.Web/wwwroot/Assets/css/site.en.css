@@ -561,7 +561,6 @@ header {
 
 #our-service-slider .service-card-text{
     height: 450px ;
-    overflow-y: scroll;
 }
 
 #app .general-section p span {
@@ -869,6 +868,15 @@ footer .footer-bottom .footer-bottom-row li a {
         flex-direction: column-reverse !important;
     }
     
+    #our-service-slider .contact-list {
+        flex-direction: column !important;
+    }
+
+    #our-service-slider .service-card-text{
+        height: 200px ;
+    }
+
+
     #about-container .contact-list {
         flex-direction: column-reverse !important;
     }
