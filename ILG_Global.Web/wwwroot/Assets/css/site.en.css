@@ -1815,7 +1815,7 @@ footer .footer-bottom .footer-bottom-row li a {
     --thumbBG: rgba(12, 188, 171, 1);
 }
 .inner-scroll-container::-webkit-scrollbar {
-    width: 11px;
+    width: 7px;
 }
 .inner-scroll-container {
     scrollbar-width: thin;
@@ -1826,7 +1826,7 @@ footer .footer-bottom .footer-bottom-row li a {
 }
 .inner-scroll-container::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG) ;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 3px solid var(--scrollbarBG);
 }
 
@@ -1837,5 +1837,5 @@ footer .footer-bottom .footer-bottom-row li a {
 .inner-scroll-container {
     overflow-y: auto;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0rem 0.5rem 0.5rem 0;
 }
