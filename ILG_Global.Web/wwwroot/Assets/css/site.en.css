@@ -559,6 +559,11 @@ header {
     font-width: 350;
 }
 
+#our-service-slider .service-card-text{
+    height: 450px ;
+    overflow-y: scroll;
+}
+
 #app .general-section p span {
     font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1600 - 300)));
 }
