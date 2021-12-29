@@ -51,6 +51,7 @@ namespace ILG_Global.DataAccess
             }
             catch (Exception oException)
             {
+                throw ;
             }
         }
 

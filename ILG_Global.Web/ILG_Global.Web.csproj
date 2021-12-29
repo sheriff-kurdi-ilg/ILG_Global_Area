@@ -1769,6 +1769,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Resources\Views\Shared\_FooterForHomePage.ar.resx">
+      <CustomToolNamespace>PublicResXFileCodeGenerator</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\Views\Shared\_Footer.ar.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <CustomToolNamespace>PublicResXFileCodeGenerator</CustomToolNamespace>

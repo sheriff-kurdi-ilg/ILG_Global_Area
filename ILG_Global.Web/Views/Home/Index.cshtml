@@ -64,7 +64,7 @@
 
     @if (System.Threading.Thread.CurrentThread.CurrentCulture.TextInfo.IsRightToLeft)
     {
-        <link href="~/Assets/css/site.ar.css" rel="stylesheet" />
+    <link href="~/Assets/css/site.ar.css" rel="stylesheet" />
     }
     <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
     @*
@@ -72,9 +72,16 @@
     *@
 
     <script src="~/lib/jquery-validation/dist/additional-methods.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9Z251ED69"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-R9Z251ED69');</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z55XX8243C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z55XX8243C');
+    </script>
 </head>
 
 
@@ -124,7 +131,7 @@
         @{
             NewsLetterSubscribe oNewsLetterSubscribe = (NewsLetterSubscribe)ViewData["NewsLetterSubscribe"];
         }
-        @await Html.PartialAsync("_Footer", oNewsLetterSubscribe)
+        @await Html.PartialAsync("_FooterForHomePage", oNewsLetterSubscribe)
         <div id="sizer" class="sizer">
             <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none" data-size="xs"></div>
             <div class="d-none d-sm-block d-md-none d-lg-none d-xl-none" data-size="sm"></div>

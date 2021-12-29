@@ -84,7 +84,7 @@ namespace ILG_Global.Web.Controllers.API
             }
             catch (Exception oException)
             {
-
+                throw;
             }
 
             return  oSuccessStoryShareViaEmailResponse;
