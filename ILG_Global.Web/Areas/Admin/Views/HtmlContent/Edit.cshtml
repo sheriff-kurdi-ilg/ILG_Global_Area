@@ -1,0 +1,224 @@
+﻿@model ILG_Global_Admin.BussinessLogic.ViewModels.HtmlContentVM
+
+@{ ViewData["Title"] = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h1 style="padding:20px">Html Content </h1>
+
+<form enctype="multipart/form-data" asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="@Model.HtmlContenID" />
+    <input type="hidden" asp-for="@Model.IsHasTitle" />
+    <input type="hidden" asp-for="@Model.IsHasSubTitle" />
+    <input type="hidden" asp-for="@Model.IsHasSummary" />
+    <input type="hidden" asp-for="@Model.IsHasDescription" />
+    <input type="hidden" asp-for="@Model.IsEnabled" />
+    <input type="hidden" asp-for="@Model.CanBeDeletedByUser" />
+    <input type="hidden" asp-for="@Model.ImageWidth" />
+    <input type="hidden" asp-for="@Model.ImageHeight" />
+    <input type="hidden" asp-for="@Model.IsHasImage" />
+    <div class="card">
+        <div class="card-header">
+            <h4>Html Content Edit</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                @if (true)
+                {
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="card-title">English Details</h1>
+                            </div>
+                            <div class="card-body">
+                                @if (Model.IsHasTitle)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="Title" class="control-label"></label>
+                                        <input asp-for="Title" class="form-control" />
+                                        <span asp-validation-for="Title" class="text-danger"></span>
+                                    </div>}
+
+                                @if (Model.IsHasSubTitle)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="SubTitle" class="control-label"></label>
+                                        <textarea data-ck-editor id="txtSubTitle" asp-for="SubTitle" class="form-control"></textarea>
+                                        <span asp-validation-for="SubTitle" class="text-danger"></span>
+                                    </div>}
+
+                                @if (Model.IsHasSummary)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="Summary" class="control-label"></label>
+                                        <textarea data-ck-editor id="txtSummary" asp-for="Summary" class="form-control"></textarea>
+                                        <span asp-validation-for="Summary" class="text-danger"></span>
+                                    </div>}
+
+
+                                @if (Model.IsHasImage)
+                                {
+                                    <div class="row">
+
+                                        <div style="padding:20px" class="col-11">
+                                            <div class="form-group">
+                                                <label asp-for="ImageEn" class="control-label"></label>
+                                                <input asp-for="ImageEn" type="file" class="form-control" />
+                                                <span asp-validation-for="ImageEn" class="text-danger"></span>
+                                            </div>
+
+
+                                            <input type="hidden" asp-for="ImageURLEn" />
+                                            @if (Model.ImageURLEn != null)
+                                            {
+                                                <div class="col-3">
+                                                    <img width="200px" src="~/Uploads/HtmlContent/@Model.ImageURLEn" />
+                                                </div>
+                                                <div class="text-success">
+                                                    To display the image in the recommended way, the image dimensions are <b><u>@Model.ImageWidth</u></b>  width x <b><u>@Model.ImageHeight</u></b> height.
+                                                </div> }
+                                            else
+                                            {
+                                                <img width="200px" src="~/no-image-png.png" />}
+
+                                        </div>
+                                    </div>
+
+
+                                }
+
+
+                            </div>
+                        </div>
+                    </div>}
+                @if (true)
+                {
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h1 class="card-title">Arabic Details</h1>
+                            </div>
+                            <div class="card-body">
+                                @if (Model.IsHasTitle)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="TitleAr" class="control-label"></label>
+                                        <input asp-for="TitleAr" class="form-control" />
+                                        <span asp-validation-for="TitleAr" class="text-danger"></span>
+                                    </div>}
+                                @if (Model.IsHasSubTitle)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="SubTitleAr" class="control-label"></label>
+                                        <textarea data-ck-editor id="txtSubTitleAr" asp-for="SubTitleAr" class="form-control"></textarea>
+                                        <span asp-validation-for="SubTitleAr" class="text-danger"></span>
+                                    </div>}
+                                @if (Model.IsHasSummary)
+                                {
+                                    <div class="form-group">
+                                        <label asp-for="SummaryAr" class="control-label"></label>
+                                        <textarea data-ck-editor id="txtSummaryAr" asp-for="SummaryAr" class="form-control"></textarea>
+                                        <span asp-validation-for="SummaryAr" class="text-danger"></span>
+                                    </div>}
+
+
+                                @if (Model.IsHasImage)
+                                {
+                                    <div class="row">
+
+                                        <div style="padding:20px" class="col-11">
+                                            <div class="form-group">
+                                                <label asp-for="ImageAr" class="control-label"></label>
+                                                <input asp-for="ImageAr" type="file" class="form-control" />
+                                                <span asp-validation-for="ImageAr" class="text-danger"></span>
+                                            </div>
+                                            <input type="hidden" asp-for="ImageURLAr" />
+                                            @if (Model.ImageURLAr != null)
+                                            {
+                                                <div class="col-3">
+                                                    <img width="200px" src="~/Uploads/HtmlContent/@Model.ImageURLAr" />
+                                                </div>
+                                                <div class="text-success">
+                                                    To display the image in the recommended way, the image dimensions are <b><u>@Model.ImageWidth</u></b>  width x <b><u>@Model.ImageHeight</u></b> height.
+                                                </div> }
+                                            else
+                                            {
+                                                <img width="200px" src="~/no-image-png.png" />}
+
+                                        </div>
+                                    </div>
+                                }
+
+
+
+
+                            </div>
+                        </div>
+                    </div>}
+            </div>
+
+        </div>
+
+
+    </div>
+    <input hidden asp-for="IsEnabled" type="checkbox" class="custom-control-input" id="customSwitch3">
+
+    @*    <div class="card-footer">
+            <div class="form-group">
+                <div class="custom-control custom-switch custom-switch-off-danger custom-switch-on-success">
+                    <input asp-for="IsEnabled" type="checkbox" class="custom-control-input" id="customSwitch3">
+                    <label class="custom-control-label" for="customSwitch3">Status</label>
+                </div>
+            </div>
+
+        </div>*@
+
+
+
+
+    <div class="row">
+
+
+        <br />
+
+        <div class="form-group float-end">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+    </div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+
+        $(document).ready(function () {
+            $("[data-ck-editor]").each(function () {
+                var sCkEditorID = $(this).attr('id');
+                CKEDITOR.replace(sCkEditorID, {
+                    enterMode: CKEDITOR.ENTER_BR
+                });
+            });
+        });
+
+    </script>
+
+}
