@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{5B3C32FF-F93D-4998-8A7B-3229A9276E79}"
 	ProjectSection(SolutionItems) = preProject
@@ -13,6 +13,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global.DataAccess", "ILG_Global.DataAccess\ILG_Global.DataAccess.csproj", "{1295B526-5D44-46B5-AE37-9D054C7E1A53}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global.BussinessLogic", "ILG_Global.BussinessLogic\ILG_Global.BussinessLogic.csproj", "{5FDF2BDE-B7F2-485C-B816-7C770034DBAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global_Admin.BussinessLogic", "ILG_Global_Admin.BussinessLogic\ILG_Global_Admin.BussinessLogic.csproj", "{4E00DABF-CEE8-41A9-B456-0E911361F53D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ILG_Global_Admin.DataAccess", "ILG_Global_Admin.DataAccess\ILG_Global_Admin.DataAccess.csproj", "{0F176508-B5C5-408E-AB83-78438360514C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +36,14 @@ Global
 		{5FDF2BDE-B7F2-485C-B816-7C770034DBAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FDF2BDE-B7F2-485C-B816-7C770034DBAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FDF2BDE-B7F2-485C-B816-7C770034DBAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E00DABF-CEE8-41A9-B456-0E911361F53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E00DABF-CEE8-41A9-B456-0E911361F53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E00DABF-CEE8-41A9-B456-0E911361F53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E00DABF-CEE8-41A9-B456-0E911361F53D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F176508-B5C5-408E-AB83-78438360514C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F176508-B5C5-408E-AB83-78438360514C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F176508-B5C5-408E-AB83-78438360514C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F176508-B5C5-408E-AB83-78438360514C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

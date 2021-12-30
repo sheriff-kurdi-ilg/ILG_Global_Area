@@ -55,6 +55,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.14.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
@@ -67,6 +68,8 @@
   <ItemGroup>
     <ProjectReference Include="..\ILG_Global.BussinessLogic\ILG_Global.BussinessLogic.csproj" />
     <ProjectReference Include="..\ILG_Global.DataAccess\ILG_Global.DataAccess.csproj" />
+    <ProjectReference Include="..\ILG_Global_Admin.BussinessLogic\ILG_Global_Admin.BussinessLogic.csproj" />
+    <ProjectReference Include="..\ILG_Global_Admin.DataAccess\ILG_Global_Admin.DataAccess.csproj" />
   </ItemGroup>
 
   <ItemGroup>
