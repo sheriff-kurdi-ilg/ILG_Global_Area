@@ -60,8 +60,6 @@ namespace ILG_Global.Web.Controllers.API
             {
                 ShareViaEmailSubscriber oShareViaEmailSubscriber = new ShareViaEmailSubscriber { EmailAddress = oSuccessStoryShareViaEmailRequest.SuccessStoryEmail };
 
-      
-
                 await EmailRepository.Insert(oShareViaEmailSubscriber);
 
                 // get sucess story object
@@ -84,7 +82,7 @@ namespace ILG_Global.Web.Controllers.API
             }
             catch (Exception oException)
             {
-                throw;
+                throw oException;
             }
 
             return  oSuccessStoryShareViaEmailResponse;

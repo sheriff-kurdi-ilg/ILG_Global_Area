@@ -37,32 +37,40 @@ namespace ILG_Global.BussinessLogic.Services
                 client.Port = 587;
                 client.DeliveryMethod = SmtpDeliveryMethod.Network;
 
-               await client.SendMailAsync( oMailMessage);
+                client.SendMailAsync( oMailMessage);
             }
         }
 
         public async Task Send(string sendTo, string subject, string body, Attachment oAttachment)
-        { 
-            MailMessage oMailMessage = new MailMessage();
-
-            oMailMessage.From = new MailAddress(configuration["Email:EmailAddress"]);
-            oMailMessage.To.Add(sendTo);
-            oMailMessage.Subject = subject;
-            oMailMessage.Body = body;
-            oMailMessage.Attachments.Add(oAttachment);
-
-            using (SmtpClient client = new SmtpClient())
+        {
+            try
             {
-                
-                client.EnableSsl = true;
-                client.UseDefaultCredentials = false;
-                client.Credentials = new NetworkCredential(configuration["Email:EmailAddress"], configuration["Email:EmailPassword"]);
-                client.Host = "smtp.gmail.com";
-                client.Port = 587;
-                client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                MailMessage oMailMessage = new MailMessage();
 
-               await client.SendMailAsync(oMailMessage);
+                oMailMessage.From = new MailAddress(configuration["Email:EmailAddress"]);
+                oMailMessage.To.Add(sendTo);
+                oMailMessage.Subject = subject;
+                oMailMessage.Body = body;
+                oMailMessage.Attachments.Add(oAttachment);
+
+                using (SmtpClient client = new SmtpClient())
+                {
+                    client.EnableSsl = true;
+                    client.UseDefaultCredentials = false;
+                    client.Credentials = new NetworkCredential(configuration["Email:EmailAddress"], configuration["Email:EmailPassword"]);
+                    client.Host = "smtp.gmail.com";
+                    client.Port = 587;
+                    client.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+                    await client.SendMailAsync(oMailMessage);
+                }
             }
+            catch (Exception oException)
+            {
+
+                throw oException;
+            }
+
         }
     }
 }

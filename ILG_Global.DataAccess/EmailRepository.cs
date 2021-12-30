@@ -46,7 +46,7 @@ namespace ILG_Global.DataAccess
         {
             try
             {
-                await applicationDbContext.ShareViaEmailSubscriber.AddAsync(oEmail);
+                applicationDbContext.ShareViaEmailSubscriber.AddAsync(oEmail);
                 applicationDbContext.SaveChanges();
             }
             catch (Exception oException)

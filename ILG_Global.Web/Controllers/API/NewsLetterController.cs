@@ -41,9 +41,9 @@ namespace ILG_Global.Web.Controllers.API
         public async Task<NewsLetterResponse>  Post([FromBody] NewsLetterRequest oNewsLetterRequest)
         {
             NewsLetterSubscribe oNewsLetterSubscribe = oNewsLetterSubscribeCreate(oNewsLetterRequest);
-            await NewsLetterSubscribeRepository.Insert(oNewsLetterSubscribe);
+             NewsLetterSubscribeRepository.Insert(oNewsLetterSubscribe);
 
-            await MailService.Send(oNewsLetterRequest.Email, "Greeting From ILG", "You Subscribed to ILG Newsletter.");
+             MailService.Send(oNewsLetterRequest.Email, "Greeting From ILG", "You Subscribed to ILG Newsletter.");
 
             NewsLetterResponse oNewsLetterResponse = oNewsLetterResponseCreate(oNewsLetterSubscribe);
 

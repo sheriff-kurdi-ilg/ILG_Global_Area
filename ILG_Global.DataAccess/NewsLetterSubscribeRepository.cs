@@ -56,7 +56,7 @@ namespace ILG_Global.DataAccess
             {
                 applicationDbContext.NewsLetterSubscribes.Add(oNewsLetterSubscribe);
                 applicationDbContext.SaveChanges();
-                return await Task.FromResult(true);
+                return true;
             }
             catch (Exception)
             {
